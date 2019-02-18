@@ -9,10 +9,10 @@ To download the latest release of MSFragger:
 2.	Download the initial release of MSFragger software using instructions received from the U-M Tech Transfer Office.
 3.	Once you obtained the MSFragger software, the latest version of the software can be downloaded (under the same license terms as the original version) using the [Upgrade site](https://msfragger.arsci.com/upgrader/). 
 
-## Changelog
+## Release Notes
 The latest version of MSFragger was released on 2018-11-10. 
 
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ## How to Cite
-Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry-based proteomics. [Manuscript](https://www.nature.com/articles/nmeth.4256) 
+Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry-based proteomics. Nature Methods 14:513–520 (2017). [Manuscript](https://www.nature.com/articles/nmeth.4256) 
