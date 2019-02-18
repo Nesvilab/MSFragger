@@ -6,7 +6,7 @@ MSFragger is an ultrafast database search tool that uses a fragment ion indexing
 Check [here](CHANGELOG.md) for the recent changes implemented into MSFragger
 
 
-## How to Upgrade
+## Download
 If you already downloaded MSFragger before and want to use a more recent version, click [here](https://msfragger.arsci.com/upgrader/).
 
 ## How to Cite
