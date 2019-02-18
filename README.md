@@ -1,7 +1,7 @@
 # MSFragger
 MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics.  It differs from conventional search engines by computing similarity scores in a fragment-centric fashion using a theoretical fragment index of candidate peptides. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance is set to hundreds of Daltons) for the identification of modified peptides. 
 
-MSFragger is implemented in the cross-platform Java programming language and is compatible with standard open file formats for mass spectrometry data (mzML recommended). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and Philosopher. MSFragger is available as a standalone JAR file. On Windows, the easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe).
+MSFragger is implemented in the cross-platform Java programming language, and is available as a standalone JAR file. It is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/). On Windows, the easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe).
 
 ## Download
 To download the latest release of MSFragger:
