@@ -1,5 +1,7 @@
 # MSFragger
-MSFragger is an ultrafast database search tool that uses a fragment ion indexing method to rapidly perform spectra similarity comparisons. On a typical quad-core workstation, MSFragger is able to perform open searching (500 Da precursor mass window tolerance) in under 10 minutes for a single LC-MS/MS run. It is implemented in the Java programming language and is available as a standalone JAR.
+MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics.  It differs from conventional search engines by computing similarity scores in a fragment-centric fashion using a theoretical fragment index of candidate peptides. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance is set to hundreds of Daltons) for the identification of modified peptides. 
+
+MSFragger is implemented in the cross-platform Java programming language and is compatible with standard open file formats for mass spectrometry data (mzML recommended). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and Philosopher. MSFragger is available as a standalone JAR file. On Windows, the easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe).
 
 ## Download
 To download the latest release of MSFragger:
@@ -9,7 +11,8 @@ To download the latest release of MSFragger:
 
 ## Changelog
 The latest version of MSFragger was released on 2018-11-10. 
-Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes
+
+Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ## How to Cite
 Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry-based proteomics. [Manuscript](https://www.nature.com/articles/nmeth.4256) 
