@@ -4,9 +4,6 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## Upgrading
-Use this [site](https://msfragger.arsci.com/upgrader/) to upgrade your old version of MSFragger.
-
 ## 20190218 - 2019-02-18
 - write input file type in `msms_pipeline_analysis` tag, previously was hardcoded as `".mzXML"`
 - write alternative proteins
