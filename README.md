@@ -1,4 +1,3 @@
-# MSFragger
 MSFragger is an ultrafast database search tool that uses a fragment ion indexing method to rapidly perform spectra similarity comparisons. On a typical quad-core workstation, MSFragger is able to perform open searching (500 Da precursor mass window tolerance) in under 10 minutes for a single LC-MS/MS run. It is implemented in the Java programming language and is available as a standalone JAR.
 
 
