@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 20190220 - 2019-02-20
+- Improved error messages for `OutOfMemoryError` and when too many peptides were generated durning digestion
+- `report_alternative_proteins` option added. Turned off by default.
+
 ## 20190218 - 2019-02-18
 - write input file type in `msms_pipeline_analysis` tag, previously was hardcoded as `".mzXML"`
 - write alternative proteins
