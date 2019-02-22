@@ -25,7 +25,7 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 For documentation on MSFragger itself (the search parameters), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki).  
 
 ## Questions and Technical Support
-Please post your questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page] (https://github.com/Nesvilab/FragPipe).
+Please post your questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe).
 
 ## Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact Alexey Nesvizhskii directly. 
