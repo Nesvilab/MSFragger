@@ -12,7 +12,7 @@ To download the latest release of MSFragger:
 ## Release Notes
 The latest version of MSFragger was released on 2019-02-22.
 
-## [Changelog](CHANGELOG.md)
+## Changelog
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ## FragPipe GUI
