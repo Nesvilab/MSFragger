@@ -10,8 +10,9 @@ To download the latest release of MSFragger:
 3.	Once you obtained the MSFragger software, the latest version of the software can be downloaded (under the same license terms as the original version) using the [Upgrade site](https://msfragger.arsci.com/upgrader/). 
 
 ## Release Notes
-The latest version of MSFragger was released on 2018-11-10. 
+The latest version of MSFragger was released on 2019-02-22.
 
+## [Changelog](CHANGELOG.md)
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ## FragPipe GUI
