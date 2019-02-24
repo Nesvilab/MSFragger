@@ -29,4 +29,4 @@ If you would like to propose a new collaboration that can take advantage of MSFr
 ## How to Cite
 Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry-based proteomics. Nature Methods 14:513–520 (2017). [Manuscript](https://www.nature.com/articles/nmeth.4256). 
 
-For other tools developed by Nesvizhskii lab, go to our website www.nesvilab.org
+For other tools developed by Nesvizhskii lab, go to our website [www.nesvilab.org](http://www.nesvilab.org)
