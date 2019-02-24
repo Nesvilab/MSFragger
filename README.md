@@ -1,13 +1,13 @@
 # MSFragger
-MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics.  It differs from conventional search engines by computing similarity scores in a fragment-centric fashion using a theoretical fragment index of candidate peptides. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance is set to hundreds of Daltons) for the identification of modified peptides. 
+MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics.  It differs from conventional search engines by computing similarity scores in a fragment-centric fashion using a theoretical fragment index of candidate peptides. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for the identification of modified peptides. 
 
 MSFragger is implemented in the cross-platform Java programming language, and is available as a standalone JAR file. It is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
 ## Download MSFragger
 If you never downloaded MSFragger before, please complete steps 1-3. To upgrade to the most recent version from a previosly downloaded version (JAR file), skip to step 3.
 
-1.	Complete the license agreement form on the [U-M Tech Transfer site](http://inventions.umich.edu/technologies/7143_msfragger-ultrafast-and-comprehensive-identification-of-peptides-from-tandem-mass-spectra). The software is available free of charge for academic and non-profit research, and for educational purposes. For other uses, please contact the U-M Tech Transfer Office.
-2.	Download the initial release of MSFragger software using instructions received from the U-M Tech Transfer Office.
+1.	Complete the [license agreement form](http://inventions.umich.edu/technologies/7143_msfragger-ultrafast-and-comprehensive-identification-of-peptides-from-tandem-mass-spectra).
+2.	Download the initial release of MSFragger software using instructions received by email.
 3.	Once you obtained the MSFragger software, the latest version of the software can be downloaded (under the same license terms as the original version) using the [Upgrade site](https://msfragger.arsci.com/upgrader/). 
 
 ## FragPipe GUI
@@ -18,10 +18,10 @@ The latest version of MSFragger was released on 2019-02-22.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
  
 ## Documentation
-For documentation on MSFragger itself (the search parameters), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki).  
+For documentation on MSFragger itself (the search parameters), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki). 
 
 ## Questions and Technical Support
-Please post your questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe).
+Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe GitHub page](https://github.com/Nesvilab/FragPipe).
 
 ## Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
