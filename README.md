@@ -16,8 +16,6 @@ FragPipe also includes additional tools such as DIA-Umpire SE module for DIA dat
 
 For command-line option, see a detailed [Tutorial](http://philosopher.nesvilab.org/example_2.html). 
 
-## Hardware Requirements
-
 ## Release Notes
 The latest version of MSFragger was released on 2019-02-22.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
@@ -26,7 +24,7 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 For documentation on MSFragger itself (hardware requirements, search parameters, etc.), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki).  
 
 ## Questions and Technical Support
-Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe GitHub page](https://github.com/Nesvilab/FragPipe).
+Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philsopher page](https://github.com/Nesvilab/philosopher).
 
 ## Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
