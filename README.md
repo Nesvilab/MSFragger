@@ -1,5 +1,5 @@
 # MSFragger
-MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics.  It differs from conventional search engines by computing similarity scores in a fragment-centric fashion using a theoretical fragment index of candidate peptides. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for the identification of modified peptides. 
+MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for the identification of modified peptides. 
 
 MSFragger is implemented in the cross-platform Java programming language, and is available as a standalone JAR file. It is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
@@ -11,9 +11,9 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 3.	Once you obtained the MSFragger software, the latest version of the software can be downloaded (under the same license terms as the original version) using the [Upgrade site](https://msfragger.arsci.com/upgrader/). 
 
 ## Running MSFragger
-The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe).
+The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe). FragPipe also includes additional tools such as DIA-Umpire SE module for DIA data, and spectral library building module.    
 
-For users who prefer the command-line option, please see a detailed tutorial on running MSFragger/Philosopher on the Philosopher [site](http://philosopher.nesvilab.org/example_2.html). 
+For command-line option, see a detailed [Tutorial](http://philosopher.nesvilab.org/example_2.html). 
 
 ## Release Notes
 The latest version of MSFragger was released on 2019-02-22.
