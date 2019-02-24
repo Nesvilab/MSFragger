@@ -10,8 +10,10 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 2.	Download the initial release of MSFragger software using instructions received by email.
 3.	Once you obtained the MSFragger software, the latest version of the software can be downloaded (under the same license terms as the original version) using the [Upgrade site](https://msfragger.arsci.com/upgrader/). 
 
-## FragPipe GUI
+## Running MSFragger
 The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe).
+
+For users who prefer the command-line option, please see a detailed tutorial on running MSFragger/Philosopher on the Philosopher [site](http://philosopher.nesvilab.org/example_2.html). 
 
 ## Release Notes
 The latest version of MSFragger was released on 2019-02-22.
