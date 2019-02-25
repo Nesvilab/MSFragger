@@ -11,7 +11,7 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 3.	Once you obtained the MSFragger software, the latest version of the software can be downloaded (under the same license terms as the original version) using the [Upgrade site](https://msfragger.arsci.com/upgrader/). 
 
 ## Running MSFragger
-The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://github.com/Nesvilab/FragPipe). 
+The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://fragpipe.nesvilab.org/). 
 FragPipe also includes additional tools such as DIA-Umpire SE module for DIA data, and SpectraST-based spectral library building module. 
 
 For command-line option to run MSFragger/Philosopher tools see [Tutorial](http://philosopher.nesvilab.org/example_2.html). 
