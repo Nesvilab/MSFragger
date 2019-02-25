@@ -14,7 +14,7 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://fragpipe.nesvilab.org). 
 FragPipe also includes additional tools such as DIA-Umpire SE module for DIA data, and SpectraST-based spectral library building module. 
 
-For command-line option to run MSFragger/Philosopher tools see [Tutorial](http://philosopher.nesvilab.org/example_2.html). 
+For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher). 
 
 ## Release Notes
 The latest version of MSFragger was released on 2019-02-22.
