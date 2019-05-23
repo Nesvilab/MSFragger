@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 20190523 - 2019-05-23
+- Support mass calibration.
+- Support optimal parameters finding.
+- Support additional ion series including a-, b-, c-, x-, y-, and z-ions.
+- Write localized modifications to `.tsv` file if `localize_delta_mass = 1`.
+- Improve `.tsv` file's columns.
+- Support command line parameters.
+- Print parameters to the command line.
+- Write parameters to the pepXML file.
+- Re-implement alternative protein mapping for efficiency.
+- Make the MGF file parsing more robust.
+- Fix a bug about the inaccuracy of the searching speed printed to the command line.
+- Showing the numbers of unique peptides in the command line.
+- Various bug fixes and improvement.
+
 ## 20190222 - 2019-02-22
 - Improved error messages for `OutOfMemoryError` and when too many peptides were generated durning digestion
 - `report_alternative_proteins` option added. Turned off by default.
@@ -44,10 +59,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Open search times are reduced by about a quarter.
 - Fixed bug with peptide mass calculation less termini.
 
-## v20180224-RC1 - 2018-02-25
+## 20180224-RC1 - 2018-02-25
 - MSFTBX upgraded to version 1.8.2.
 
-## v20180223-RC1 - 2018-02-23 (public release)
+## 20180223-RC1 - 2018-02-23 (public release)
 - Java 9 compatible JAR
 - Protein names are escaped to produce valid pepXML
 
