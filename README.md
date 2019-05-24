@@ -17,7 +17,7 @@ FragPipe also includes additional tools such as DIA-Umpire SE module for DIA dat
 For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher). 
 
 ## Release Notes
-The latest version of MSFragger was released on 2019-02-22.
+The latest version of MSFragger was released on 2019-05-23.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
  
 ## Documentation
