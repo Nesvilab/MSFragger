@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## 20190523 - 2019-05-23
+## 20190530 - 2019-05-30
 - Support mass calibration.
 - Support optimal parameters finding.
 - Support additional ion series including a-, b-, c-, x-, y-, and z-ions.
