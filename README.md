@@ -50,7 +50,7 @@ We implement MSFragger and Philosopher (PeptideProphet) as part of processing no
 Currently, our MSFragger-PD node can be used for PD v2.2 and v2.3.
 
 Please visit our PD-Nodes repository for more information: [https://github.com/Nesvilab/PD-Nodes](https://github.com/Nesvilab/PD-Nodes).
-<br><br><br><br><br>
+<br><br><br><br>
 
 
 ## Release Notes
