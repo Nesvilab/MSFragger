@@ -27,7 +27,7 @@ For the versions after 20190222, detailed command-line options can be displayed 
 java -jar <path to msfragger.jar file>
 ```
 
-When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command line, one can download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/gh-pages/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
+When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command line, one can download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/develop/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
 ```
 python3 <path to msfragger_pep_split.py file> <num> "java -Xmx20g -jar" <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
