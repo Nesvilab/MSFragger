@@ -14,7 +14,15 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 The easiest way to run MSFragger/Philosopher tools is using [FragPipe GUI](https://fragpipe.nesvilab.org). 
 FragPipe also includes additional tools such as DIA-Umpire SE module for DIA data, and SpectraST-based spectral library building module. 
 
-For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher). 
+For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
+
+If your database is too large to be searched, there is a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/gh-pages/MSFragger-GUI/tools/msfragger_pep_split.py) to split the database, search each of them one-by-one, and combine the results.
+
+Usage:
+```
+python3 <path to msfragger_pep_split.py file> <num> "java -Xmx20g -jar" <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
+```
+Replacing `<num>` with the number (e.g. 10) of splitting.
 
 ## Release Notes
 The latest version of MSFragger was released on 2019-05-30.
