@@ -4,7 +4,7 @@ MSFragger is an ultrafast database search tool for peptide identifications in ma
 MSFragger is implemented in the cross-platform Java programming language, and is available as a standalone JAR file. It is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
 ## Download MSFragger
-If you never downloaded MSFragger before, please complete steps 1-3. To upgrade to the most recent version from a previosly downloaded version (JAR file), skip to step 3.
+If you never downloaded MSFragger before, please complete steps 1-3. To upgrade to the most recent version from a previously downloaded version (JAR file), skip to step 3.
 
 1.	Complete the [license agreement form](http://inventions.umich.edu/technologies/7143_msfragger-ultrafast-and-comprehensive-identification-of-peptides-from-tandem-mass-spectra).
 2.	Download the initial release of MSFragger software using instructions received by email.
@@ -42,7 +42,7 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 For documentation on MSFragger itself (hardware requirements, search parameters, etc.), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki).  
 
 ## Questions and Technical Support
-Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philsopher page](https://github.com/Nesvilab/philosopher).
+Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philosopher page](https://github.com/Nesvilab/philosopher).
 
 ## Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
