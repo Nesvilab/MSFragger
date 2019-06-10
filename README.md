@@ -22,6 +22,7 @@ FragPipe includes additional tools such as Philosopher (for downstream analysis 
 
 
 
+
 For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
 
 To run MSFragger alone, using the command:
