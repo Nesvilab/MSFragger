@@ -12,6 +12,7 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 
 ## Running MSFragger
 <img src="images/4.jpg" width="300px" hspace="3px" align="right"/>
+
 On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface).  
 
 <br>
