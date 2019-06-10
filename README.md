@@ -12,9 +12,20 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 
 ## Running MSFragger
 The easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org). 
-FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data, and SpectraST-based spectral library building module. 
+FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data and SpectraST-based spectral library building module.
 
 For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
+
+To run MSFragger alone, using the command:
+```
+java -Xmx20g -jar <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
+```
+`-Xmx20g` specifies the maximum memory assigned to Java virtual machine. In this example, the maximum value is 20 GB. Need to change it according to your computer.
+
+For the versions after 20190222, detailed command-line options can be displayed with
+```
+java -jar <path to msfragger.jar file>
+```
 
 When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command line, one can download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/gh-pages/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
 ```
