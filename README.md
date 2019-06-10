@@ -16,26 +16,23 @@ On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fra
 
 FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data and SpectraST-based spectral library building module.
 
-
-
-For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
-
-To run MSFragger alone, using the command:
+To run MSFragger alone, using the command-line:
 ```
 java -Xmx20g -jar <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
-`-Xmx20g` specifies the maximum memory assigned to Java virtual machine. In this example, the maximum value is 20 GB. Need to change it according to your computer.
+`-Xmx20g` specifies the maximum memory assigned to Java virtual machine. In this example, the maximum value is 20 GB. This needs to be changed depending on the computer configuration. 
 
-For the versions after 20190222, detailed command-line options can be displayed with
+Detailed command-line options can be displayed with:
 ```
 java -jar <path to msfragger.jar file>
 ```
+For more information on how to run MSFragger/Philosopher tools using command-line see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
 
-When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command line, one can download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/develop/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
+When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command-line, download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/develop/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
 ```
 python3 <path to msfragger_pep_split.py file> <num> "java -Xmx20g -jar" <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
-Replacing `<num>` with the number (e.g. 10) of splitting.
+Replacing `<num>` with the number (e.g. 4) of slices for database splitting, and also changing the maxium allowed memory as described above.  
 
 ## Release Notes
 The latest version of MSFragger was released on 2019-05-30.
