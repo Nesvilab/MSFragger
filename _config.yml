@@ -2,3 +2,4 @@ theme: jekyll-theme-slate
 title: MSFragger
 description: Ultrafast and comprehensive peptide identification in mass spectrometry–based proteomics
 google_analytics: [UA-111428141-3]
+markdown: kramdown
