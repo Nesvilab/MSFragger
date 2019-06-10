@@ -20,8 +20,6 @@ FragPipe includes additional tools such as Philosopher (for downstream analysis 
 <br>
 <br>
 <br>
-<br>
-<br>
 
 To run MSFragger alone, using the command-line:
 ```
