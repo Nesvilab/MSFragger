@@ -16,6 +16,13 @@ On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fra
 
 FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data and SpectraST-based spectral library building module.
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 To run MSFragger alone, using the command-line:
 ```
 java -Xmx20g -jar <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
