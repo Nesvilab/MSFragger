@@ -13,6 +13,7 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 ## Running MSFragger
 <img src="images/4.jpg" width="300px" hspace="3px" align="right"/>
 
+### FragPipe
 On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface).  
 
 <br>
@@ -22,7 +23,8 @@ FragPipe includes additional tools such as Philosopher (for downstream analysis 
 <br>
 <br>
 
-To run MSFragger alone, using the command-line:
+### Command-line
+To run MSFragger using the command-line:
 ```
 java -Xmx20g -jar <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
@@ -34,11 +36,14 @@ java -jar <path to msfragger.jar file>
 ```
 For more information on how to run MSFragger/Philosopher tools using command-line see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
 
+
 When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command-line, download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/develop/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
 ```
 python3 <path to msfragger_pep_split.py file> <num> "java -Xmx20g -jar" <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
 Replacing `<num>` with the number (e.g. 4) of slices for database splitting, and also changing the maxium allowed memory as described above.  
+
+### As ProteomeDiscoverer Node
 
 ## Release Notes
 The latest version of MSFragger was released on 2019-05-30.
