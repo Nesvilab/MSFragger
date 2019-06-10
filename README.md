@@ -12,9 +12,10 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 
 ## Running MSFragger
 <img src="images/4.jpg" width="300px" hspace="2px" align="right"/>
-The easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org). 
+On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org). 
 
 FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data and SpectraST-based spectral library building module.
+
 
 
 
