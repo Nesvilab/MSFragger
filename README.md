@@ -43,11 +43,11 @@ python3 <path to msfragger_pep_split.py file> <num> "java -Xmx20g -jar" <path to
 ```
 Replacing `<num>` with the number (e.g. 4) of slices for database splitting, and also changing the maxium allowed memory as described above.  
 
-### As ProteomeDiscoverer Node
+### ProteomeDiscoverer Node
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" width="300px" hspace="3px" align="right"/>
-We implement MSFragger and Philosopher (PeptideProphet) as part of processing nodes in Proteome Discoverer (PD, Thermo Scientific) so users can easily manipulate MSFragger and Philosopher via the graphical user interfaces of PD.
+MSFragger and Philosopher (PeptideProphet) are also available as processing nodes in Proteome Discoverer (PD, Thermo Scientific), allowing the users to use MSFragger and Philosopher via the graphical user interfaces of PD.
 
-Currently, our MSFragger-PD node can be used for PD v2.2 and v2.3.
+Currently, MSFragger-PD node can be used in PD v2.2 and v2.3.
 
 Please visit our PD-Nodes repository for more information: [https://github.com/Nesvilab/PD-Nodes](https://github.com/Nesvilab/PD-Nodes).
 <br><br><br><br>
