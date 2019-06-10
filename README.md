@@ -16,7 +16,7 @@ FragPipe includes additional tools such as Philosopher (for downstream analysis 
 
 For command-line option to run MSFragger/Philosopher tools see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
 
-When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be nessesary to use the database splitting option in FragPipe. This option requires Python installation. If running using command line, one can download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/gh-pages/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
+When searching very large sequence databases, performing nonspecific searches, and/or specifying many variable modifications, it may be necessary to use the database splitting option in FragPipe. This option requires Python installation. If running using command line, one can download a [Python script](https://raw.githubusercontent.com/Nesvilab/FragPipe/gh-pages/MSFragger-GUI/tools/msfragger_pep_split.py) and run MSFragger using the following command:
 ```
 python3 <path to msfragger_pep_split.py file> <num> "java -Xmx20g -jar" <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
