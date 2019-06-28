@@ -1,10 +1,17 @@
 # MSFragger
-MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides. 
+MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides.
 
-MSFragger is implemented in the cross-platform Java programming language, and is available as a standalone JAR file. It is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). It writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
+MSFragger can be used in three different ways:
+1) Through [FragPipe](https://fragpipe.nesvilab.org)
+3) As a standalone Java executable (JAR) file
+4) Through [ProteomeDiscoverer](https://planetorbitrap.com/proteome-discoverer)
+
+In each case, you will need to download the latest MSFragger JAR file.
+
+MSFragger is implemented in the cross-platform Java programming language, and is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). The standalone JAR file and the ProteomeDiscoverer node now support reading Thermo RAW files directly. MSFragger writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
 ## Download MSFragger
-If you never downloaded MSFragger before, please complete steps 1-3. To upgrade to the most recent version from a previously downloaded version (JAR file), skip to step 3.
+If you haven't downloaded MSFragger before, please complete steps 1-3. To upgrade to the most recent version from a previously downloaded version (JAR file), skip to step 3.
 
 1.	Complete the [license agreement form](http://inventions.umich.edu/technologies/7143_msfragger-ultrafast-and-comprehensive-identification-of-peptides-from-tandem-mass-spectra).
 2.	Download the initial release of MSFragger software using instructions received by email.
@@ -14,7 +21,7 @@ If you never downloaded MSFragger before, please complete steps 1-3. To upgrade 
 <img src="images/4.jpg" width="300px" hspace="3px" align="right"/>
 
 ### FragPipe
-On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface).  
+On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface). A tutorial on how to convert raw files (Thermo Orbitrap and Bruker TIMS-TOF data) can be found [here](tutorial_convert.md), and a FragPipe tutorial can be found [here](tutorial_fragpipe.md). 
 
 <br>
 FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data and SpectraST-based spectral library building module.
@@ -22,17 +29,21 @@ FragPipe includes additional tools such as Philosopher (for downstream analysis 
 <br>
 <br>
 
-### Command-line
-To run MSFragger using the command-line:
+### Command line
+
+To run MSFragger using the command line:
 ```
 java -Xmx20g -jar <path to msfragger.jar file> <path to fragger.params file> <path to mzML/mzXML/MGF files>
 ```
 `-Xmx20g` specifies the maximum memory assigned to Java virtual machine. In this example, the maximum value is 20 GB. This needs to be changed depending on the computer configuration. 
 
-Detailed command-line options can be displayed with:
+Detailed command line options can be displayed with:
 ```
 java -jar <path to msfragger.jar file>
 ```
+**Linux users:**
+An example shell script is provided [here](tutorial_linux.md).
+
 For more information on how to run MSFragger/Philosopher tools using command-line see [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
 
 
