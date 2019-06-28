@@ -9,7 +9,7 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 2) Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'.
 3) Python is needed to perform database splitting (necessary in large database situation) and spectral library generation. We recommend you install version 3.7 or later [here](https://www.python.org/downloads/). Also install the following Python packages: **numpy**, **pandas**, **Cython**, **msproteomicstools** (only needed for spectral library generation).
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/1.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/1.jpg)
  
 
  <br>
@@ -18,7 +18,7 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 In the next tab, 'Select LC/MS Files',
 1) Drag & drop mzML files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/2.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/2.jpg)
  
 
  <br>
@@ -29,7 +29,7 @@ In the 'Sequence DB' tab,
 1) 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot.
 2) Make sure the decoy prefix tag in the sequence database file is correct (necessary for target/decoy validation of identifications). If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag.
   
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/3.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/3.jpg)
 
 
  <br>
@@ -45,7 +45,7 @@ In the 'Sequence DB' tab,
  2) Fill in the amount of memory (in GB) that FragPipe can use.
  3) Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
  
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/5.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/5.jpg)
  
  
  <br>
@@ -56,7 +56,7 @@ In the 'Sequence DB' tab,
 3) Select 'Run ProteinProphet' to validate your protein identifications. (More information about ProteinProphet [here](http://proteinprophet.sourceforge.net/)).
 4) If you are performing an open search, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to further improve filtering and interpretability of your results.
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/6.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/6.jpg)
 
 
  <br>
@@ -66,7 +66,7 @@ In the 'Sequence DB' tab,
 2) Select 'Label-free Quant' to perform label-free quantification if you need it.
 3) Select 'Generate Spectral Library from search results' to generate spectral library if you need it.
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/7.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/7.jpg)
 
 
  <br>
@@ -76,6 +76,6 @@ In the 'Sequence DB' tab,
 2) Press 'RUN' to begin the analysis!
 
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/8.jpg)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/8.jpg)
  
 
