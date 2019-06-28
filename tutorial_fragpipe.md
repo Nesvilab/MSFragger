@@ -57,7 +57,6 @@ In the 'Sequence DB' tab,
 4) If you want completely separate reports for each input file, leave this box unchecked and also select the 'Separate ProteinProphet' prot.xml file per group/experiment' option.
 5) If you are performing an open search, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to further improve filtering and interpretability of your results.
 
-**\! replace this image:**
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/tutorial/images/6.jpg)
 
 
