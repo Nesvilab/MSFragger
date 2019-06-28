@@ -2,8 +2,11 @@
 MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. MSFragger has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides.
 
 MSFragger can be used in three different ways:
+
 1) Through [FragPipe](https://fragpipe.nesvilab.org)
+
 3) As a standalone Java executable (JAR) file
+
 4) Through [ProteomeDiscoverer](https://planetorbitrap.com/proteome-discoverer)
 
 In each case, you will need to download the latest MSFragger JAR file.
@@ -41,6 +44,7 @@ Detailed command line options can be displayed with:
 ```
 java -jar <path to msfragger.jar file>
 ```
+
 **Linux users:**
 An example shell script is provided [here](tutorial_linux.md).
 
