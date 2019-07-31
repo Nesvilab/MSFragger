@@ -5,9 +5,9 @@
 
 ## Configure FragPipe:
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
-1) Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button.
-2) Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'.
-3) Python is needed to perform database splitting (necessary in large database situation) and spectral library generation. We recommend you install version 3.7 or later [here](https://www.python.org/downloads/). Also install the following Python packages: **numpy**, **pandas**, **Cython**, **msproteomicstools** (only needed for spectral library generation).
+1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button.
+2. Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'.
+3. Python is needed to perform database splitting (necessary in large database situation) and spectral library generation. We recommend you install version 3.7 or later [here](https://www.python.org/downloads/). Also install the following Python packages: **numpy**, **pandas**, **Cython**, **msproteomicstools** (only needed for spectral library generation).
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/1.jpg)
  
@@ -16,7 +16,7 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 
 ## Specify input files:
 In the next tab, 'Select LC/MS Files',
-1) Drag & drop mzML files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).
+1. Drag & drop mzML files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/2.jpg)
  
@@ -26,8 +26,8 @@ In the next tab, 'Select LC/MS Files',
  
 ## Specify a protein sequence database:
 In the 'Sequence DB' tab,
-1) 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot.
-2) Make sure the decoy prefix tag in the sequence database file is correct (necessary for target/decoy validation of identifications). If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag.
+1. 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot.
+2. Make sure the decoy prefix tag in the sequence database file is correct (necessary for target/decoy validation of identifications). If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag.
   
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/3.jpg)
 
@@ -35,15 +35,15 @@ In the 'Sequence DB' tab,
  <br>
 
 ## Set MSFragger search parameters:
-1) Select the type of database search you want to perform.
+1. Select the type of database search you want to perform.
 
    **Closed search**: To perform a closed search (normal precursor mass tolerance), select 'Closed Search'. This will prompt you to also update the downstream parameters for closed searching, select 'Yes'.
 
    **Open search**: To perform an open search (large precursor mass tolerance, used for finding unspecified post translational modifications), select 'Open Search'. This will prompt you to also update the downstream parameters for open searching, select 'Yes'.
 
    **Non-specific search**: To perform a closed search where peptides are not required to have any enzymatic terminus, select 'Non-specific Search'. This will prompt you to also update the downstream parameters for non-specific search, select 'Yes'.
- 2) Fill in the amount of memory (in GB) that FragPipe can use.
- 3) Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
+ 2. Fill in the amount of memory (in GB) that FragPipe can use.
+ 3. Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
  
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/5.jpg)
  
@@ -51,10 +51,10 @@ In the 'Sequence DB' tab,
  <br>
 
 ## Set downstream processing parameters:
-1) Select 'Run PeptideProphet' to validate your search results. (More information about PeptideProphet can be found [here](http://peptideprophet.sourceforge.net/).
-2) If you previously updated the downstream parameters when setting MSFragger search parameters, you can skip to the next section. You can also re-load default downstream processing parameters by selecting the appropriate 'Load defaults' button.
-3) Select 'Run ProteinProphet' to validate your protein identifications. (More information about ProteinProphet [here](http://proteinprophet.sourceforge.net/)).
-4) If you are performing an open search, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to further improve filtering and interpretability of your results.
+1. Select 'Run PeptideProphet' to validate your search results. (More information about PeptideProphet can be found [here](http://peptideprophet.sourceforge.net/).
+2. If you previously updated the downstream parameters when setting MSFragger search parameters, you can skip to the next section. You can also re-load default downstream processing parameters by selecting the appropriate 'Load defaults' button.
+3. Select 'Run ProteinProphet' to validate your protein identifications. (More information about ProteinProphet [here](http://proteinprophet.sourceforge.net/)).
+4. If you are performing an open search, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to further improve filtering and interpretability of your results.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/6.jpg)
 
@@ -62,9 +62,9 @@ In the 'Sequence DB' tab,
  <br>
  
 ## Specify filtering criteria and reports:
-1) Select 'Create report' to output tab-delimited tables of the search results.
-2) Select 'Label-free Quant' to perform label-free quantification if you need it.
-3) Select 'Generate Spectral Library from search results' to generate spectral library if you need it.
+1. Select 'Create report' to output tab-delimited tables of the search results.
+2. Select 'Label-free Quant' to perform label-free quantification if you need it.
+3. Select 'Generate Spectral Library from search results' to generate spectral library if you need it.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/7.jpg)
 
@@ -72,8 +72,8 @@ In the 'Sequence DB' tab,
  <br>
  
 ## Run FragPipe:
-1) Browse for the folder where you would like the search results to be written.
-2) Press 'RUN' to begin the analysis!
+1. Browse for the folder where you would like the search results to be written.
+2. Press 'RUN' to begin the analysis!
 
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/8.jpg)

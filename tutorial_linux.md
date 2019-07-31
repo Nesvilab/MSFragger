@@ -42,8 +42,12 @@ $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --ac
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # For open search
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --nontt --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # For non-specific closed search
 
-$philosopherPath proteinprophet --maxppmdiff 2000000 ./interact.pep.xml
-$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./interact.prot.xml
+$philosopherPath proteinprophet --maxppmdiff 2000000 ./*.pep.xml
+
+# Pick one from the following two commands and comment the other one.
+$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./interact.prot.xml # closed or non-specific closed search
+$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./interact.prot.xml # open search
+
 $philosopherPath report
 $philosopherPath workspace --clean
 

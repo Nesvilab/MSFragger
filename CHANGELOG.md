@@ -6,8 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 20190628 - 2019-06-28
 - Supporting direct reading from Thermo RAW files through the command line and the ProteomeDiscoverer node. FragPipe will be able to read raw files soon.
-- Add a `excluded_scan_list_file` parameter that takes the path of a text file containing scan names. MSFragger would skip those scans if the path is not empty.
-- If there was no spectral file specified, generating pepindex and exiting.
+- Add an `excluded_scan_list_file` parameter that takes the path of a text file containing scan names. MSFragger would skip those scans if the path is not empty. Comment or delete this parameter name and its value if you don't want to use it.
+- If there is no spectral file specified, generating pepindex and exiting.
 
 ## 20190530 - 2019-05-30
 - Support mass calibration.
