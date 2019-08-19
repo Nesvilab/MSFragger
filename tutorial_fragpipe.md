@@ -26,7 +26,7 @@ In the next tab, 'Select LC/MS Files',
  
 ## Specify a protein sequence database:
 In the 'Sequence DB' tab,
-1. 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot.
+1. 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot. The FASTA file must contain decoy sequences. For help adding decoys and database formatting, see [this page](https://github.com/Nesvilab/philosopher/wiki/Database).
 2. Make sure the decoy prefix tag in the sequence database file is correct (necessary for target/decoy validation of identifications). If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag.
   
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/3.jpg)
