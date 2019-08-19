@@ -8,7 +8,7 @@ MSFragger can be used three different ways:
 2. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 3. As a standalone Java executable (JAR) file
 
-In each case, you will need to download the latest MSFragger JAR file. Complete documentation can be found [here](https://github.com/Nesvilab/MSFragger/wiki).
+In each case, you will need to download the latest MSFragger JAR file. Please see the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions).
 
 MSFragger is implemented in the cross-platform Java programming language, and is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). The standalone JAR file and the ProteomeDiscoverer node now support reading Thermo RAW files directly. MSFragger writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
