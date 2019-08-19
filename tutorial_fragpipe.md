@@ -42,7 +42,7 @@ In the 'Sequence DB' tab,
    **Open search**: To perform an open search (large precursor mass tolerance, used for finding unspecified post translational modifications), select 'Open Search'. This will prompt you to also update the downstream parameters for open searching, select 'Yes'.
 
    **Non-specific search**: To perform a closed search where peptides are not required to have any enzymatic terminus, select 'Non-specific Search'. This will prompt you to also update the downstream parameters for non-specific search, select 'Yes'.
- 2. Fill in the amount of memory (in GB) that FragPipe can use. We recommend using a minimum of 32 GB.
+ 2. Fill in the amount of memory (in GB) that FragPipe can use. We recommend at least 8-16 GB, but complex closed searches and open searches will require more.
  3. Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
  
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/5.jpg)
