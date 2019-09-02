@@ -5,18 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 2.0 - 2019-09-03
-- Support Bruker .d folder.
+- Swithing from 'date' to 'version number' in naming released versions. This version is named 2.0 in recognition of the many improvements implemented in MSFragger in the last six months. 
+- Support direct reading from Bruker raw files (.d folder).
 - Support MGF file converted by Bruker DataAnalysis.
-- Pass ion mobility (if applicable) from spectra file (mzML, MGF, and .d folder) to pepXML.
-- Support removing precursor peaks from tandem mass spectra (`remove_precursor_peak` and `remove_precursor_range` parameters).
-- Support sqrt root transforming for peak intensities (`intensity_transform` parameter).
-- Support calibrating precursor masses when there is no MS1 scan.
+- Pass ion mobility information (if applicable) from the spectral file (mzML, MGF, and .d folder) to the resulting pepXML file.
+- Support removing precursor peaks from tandem mass spectra (`remove_precursor_peak` and `remove_precursor_range` parameters). Recommended option for ETD/EThcD data.
+- Support sqrt root transforming of fragment ion intensities (`intensity_transform` parameter). Recommended option for ETD/EThcD data.
+- Support calibrating precursor masses even when there are no MS1 scans in the input spectral file.
 - Support assigning mass offsets to the localized amino acid sites.
 - Add a `--version` flag to print version to console.
 - Add a `--help` flag to print help information to console.
 - Add a `--config` flag to write three fragger.params templates to current folder.
 - Limit maximum precursor charge to 7.
-- Make many improvements and fix some bugs.
+- Other minor improvements and bug fixes.
 
 ## 20190628 - 2019-06-28
 - Support direct reading from Thermo RAW files through the command line and the ProteomeDiscoverer node. FragPipe will be able to read raw files soon.
