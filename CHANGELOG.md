@@ -8,20 +8,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Swithing from 'date' to 'version number' in naming released versions. This version is named 2.0 in recognition of the many improvements implemented in MSFragger in the last six months. 
 - Support direct reading from Bruker raw files (.d folder).
 - Support MGF file converted by Bruker DataAnalysis.
+- FragPipe now supports running MSFragger with raw Thermo or Bruker files as input within FragPipe (limited functionality). 
 - Pass ion mobility information (if applicable) from the spectral file (mzML, MGF, and .d folder) to the resulting pepXML file.
-- Support removing precursor peaks from tandem mass spectra (`remove_precursor_peak` and `remove_precursor_range` parameters). Recommended option for ETD/EThcD data.
-- Support sqrt root transforming of fragment ion intensities (`intensity_transform` parameter). Recommended option for ETD/EThcD data.
+- New option to remove unfragmented precursor peaks from tandem mass spectra (`remove_precursor_peak` and `remove_precursor_range` parameters). Recommended option for ETD/EThcD data.
+- New option to apply sqrt root transform to fragment ion intensities (`intensity_transform` parameter). Recommended option for ETD/EThcD data.
 - Support calibrating precursor masses even when there are no MS1 scans in the input spectral file.
 - Support assigning mass offsets to the localized amino acid sites.
 - Add a `--version` flag to print version to console.
 - Add a `--help` flag to print help information to console.
 - Add a `--config` flag to write three fragger.params templates to current folder.
 - Limit maximum precursor charge to 7.
-- Other minor improvements and bug fixes.
+- Various minor bug fixes and improvements.
 
 ## 20190628 - 2019-06-28
 - Support direct reading from Thermo RAW files through the command line and the ProteomeDiscoverer node. FragPipe will be able to read raw files soon.
-- Add an `excluded_scan_list_file` parameter that takes the path of a text file containing scan names. MSFragger would skip those scans if the path is not empty. Comment or delete this parameter name and its value if you don't want to use it.
+- Add an `excluded_scan_list_file` parameter that takes the path of a text file containing scan names. MSFragger would skip those scans if the path is not empty. Comment or delete this parameter name and its value if you do not want to use it.
 - If there is no spectral file specified, generating pepindex and exiting.
 
 ## 20190530 - 2019-05-30
