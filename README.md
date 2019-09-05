@@ -36,7 +36,7 @@ Complete analyses can be performed with the Philosopher pipeline, a command line
 
 
 ## Release Notes
-The latest version of MSFragger was released on 2019-06-28.
+The latest version of MSFragger was released on 2019-09-05.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
  
 ## Documentation
