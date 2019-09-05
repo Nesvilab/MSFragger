@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 2.0 - 2019-09-05
-- Swithing from 'date' to 'version number' in naming released versions. This version is named 2.0 in recognition of the many improvements implemented in MSFragger in the last six months. 
+- Switching from 'date' to 'version number' in naming released versions. This version is named 2.0 in recognition of the many improvements implemented in MSFragger in the last six months. 
 - Support direct reading from Bruker raw files (.d folder).
 - Support MGF file converted by Bruker DataAnalysis.
 - FragPipe now supports running MSFragger with raw Thermo or Bruker files as input within FragPipe (limited functionality). 
