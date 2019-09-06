@@ -18,7 +18,7 @@ In the MSConvert window:
 
 <br>
 
-### Convert Bruker timsTOF raw files:
+### Convert Bruker timsTOF raw files (Deprecated. MSFragger-2.0 can load raw folder (.d) directly):
 In the MSConvert window:
 1. Browse for the raw files you want to convert, then
 2. add them to the input list.
