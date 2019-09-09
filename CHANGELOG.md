@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 2.1 - 2019-09-08
 - Fixed bugs.
-- In parameter optimization step, delete 50 from the top-N candidates.
+- In parameter optimization step, improve the top-N peak candidates.
 
 ## 2.0 - 2019-09-05
 - Switching from 'date' to 'version number' in naming released versions. This version is named 2.0 in recognition of the many improvements implemented in MSFragger in the last six months. 
