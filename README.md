@@ -11,14 +11,11 @@ MSFragger is implemented in the cross-platform Java programming language, and ca
 MSFragger writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
 ## Supported instruments and file formats  
-### mzML/mzXML 
-MSFragger is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). Data from any instrument in mzML/mzXML format can be used. 
+mzML/mzXML: MSFragger is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). Data from any instrument in mzML/mzXML format can be used. 
 
-###Thermo RAW files:
-MSFragger supports direct reading Thermo RAW files. ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools. When running using FragPipe, some downstream tools (e.g. label-free quantification) will not work.   
+Thermo RAW: MSFragger supports direct reading Thermo RAW files. ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools. When running using FragPipe, some downstream tools (e.g. label-free quantification) will not work.   
 
-###TimsTOF:
-MSFragger supports direct reading from Bruker timsTOF raw files (.d folder) and MGF file converted by Bruker DataAnalysis. 
+TimsTOF: MSFragger supports direct reading from Bruker timsTOF raw files (.d folder) and MGF file converted by Bruker DataAnalysis. 
 When running using FragPipe, some downstream tools will not work.  
 
 ## Download MSFragger 
