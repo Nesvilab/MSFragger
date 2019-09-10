@@ -4,7 +4,7 @@ MSFragger is an ultrafast database search tool for peptide identification in mas
 
 MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
 
-1. With [FragPipe GUI] (https://fragpipe.nesvilab.org) (Graphical User Interface)
+1. With [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface)
 2. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 3. As a standalone Java executable (JAR) file
 
