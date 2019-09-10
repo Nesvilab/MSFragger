@@ -13,9 +13,9 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 ## Supported instruments and file formats  
 **mzML/mzXML**: Data from any instrument in mzML/mzXML format can be used.
 
-**Thermo RAW**: MSFragger supports direct reading Thermo RAW files. ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools. FragPipe has limited support for RAW files (no MS1-based label-free quantification); conversion to mzML when running FragPipe is recommended.      
+**Thermo RAW**: MSFragger supports direct reading Thermo RAW files. MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools. FragPipe has limited support for RAW files (no MS1-based label-free quantification); conversion to mzML when running FragPipe is recommended.      
 
-**Bruker TimsTOF**: MSFragger support direct reading from Bruker timsTOF raw files (.d folder) and MGF files converted by Bruker DataAnalysis. Note that FragPipe has limited support for timsTOF data (no MS1-based label-free quantification yet). 
+**Bruker TimsTOF**: MSFragger support direct reading from Bruker timsTOF raw files (.d folder) and MGF files converted by Bruker DataAnalysis. Note that FragPipe currently has limited support for timsTOF data (no MS1-based label-free quantification yet). 
 
 ## Download MSFragger 
 Whether you run it through FragPipe, PD, or stand-alone, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger). Also see the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
