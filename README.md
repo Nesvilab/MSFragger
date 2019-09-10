@@ -4,7 +4,7 @@ MSFragger is an ultrafast database search tool for peptide identification in mas
 
 MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
 
-1. With [FragPipe] GUI (https://fragpipe.nesvilab.org)
+1. With [FragPipe] (https://fragpipe.nesvilab.org) GUI
 2. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 3. As a standalone Java executable (JAR) file
 
@@ -28,9 +28,9 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 <img src="images/4.jpg" width="300px" hspace="3px" align="right"/>
 
 ### FragPipe
-On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface). A tutorial on how to convert raw files (Thermo Orbitrap ~~and Bruker TIMS-TOF data~~(MSFragger-2.0 supports Bruker's raw files)) can be found [here](tutorial_convert.md), and a FragPipe tutorial can be found [here](tutorial_fragpipe.md). 
+On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org) (Graphical User Interface). A tutorial on how to convert Thermo RAW files to mzML/mzXML (recommended for Thermo data to ensure full FragPipe functionality) can be found [here](tutorial_convert.md). FragPipe tutorial can be found [here](tutorial_fragpipe.md). 
 
-FragPipe includes additional tools such as Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). It also includes DIA-Umpire SE module for DIA data and SpectraST-based spectral library building module.
+FragPipe includes post-database search tool Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). Additional tools (currently supporting Thermo data in mzML/mzXML format only) include DIA-Umpire SE module for DIA data, PTM-Shepherd for generating global PTM profiles, and SpectraST-based spectral library building module.  
 
 ### ProteomeDiscoverer node
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" width="200px" hspace="3px" align="right"/>
