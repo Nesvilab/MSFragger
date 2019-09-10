@@ -2,15 +2,31 @@
 
 MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides.
 
-MSFragger can be used three different ways:
+MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
 
-1. With [FragPipe](https://fragpipe.nesvilab.org)
+1. With [FragPipe] GUI (https://fragpipe.nesvilab.org)
 2. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 3. As a standalone Java executable (JAR) file
 
-In each case, you will need to download the latest MSFragger JAR file, see instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger). Also see the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
+MSFragger writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
 
-MSFragger is implemented in the cross-platform Java programming language, and is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). The standalone JAR file and the ProteomeDiscoverer node now support reading Thermo RAW files directly. MSFragger writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).
+## Supported instruments and file formats  
+### mzML/mzXML 
+MSFragger is compatible with standard open file formats for mass spectrometry data (mzXML/mzML). Data from any instrument in mzML/mzXML format can be used. 
+
+###Thermo RAW files:
+MSFragger supports direct reading Thermo RAW files. ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools. When running using FragPipe, some downstream tools (e.g. label-free quantification) will not work.   
+
+###TimsTOF:
+MSFragger supports direct reading from Bruker timsTOF raw files (.d folder) and MGF file converted by Bruker DataAnalysis. 
+When running using FragPipe, some downstream tools will not work.  
+
+## Download MSFragger 
+Whether you run it through FragPipe, PD, or stand-alone, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger). Also see the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
+
+## Release Notes
+The latest version of MSFragger was released on 2019-09-08.
+Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ## Running MSFragger
 <img src="images/4.jpg" width="300px" hspace="3px" align="right"/>
@@ -34,11 +50,6 @@ See the [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launchi
 ### Philosopher pipeline
 Complete analyses can be performed with the Philosopher pipeline, a command line tool: [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
 
-
-## Release Notes
-The latest version of MSFragger was released on 2019-09-08.
-Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
- 
 ## Documentation
 For documentation on MSFragger (hardware requirements, search parameters, etc.), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki).  
 
