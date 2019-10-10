@@ -15,7 +15,7 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 
 ## Specify input files:
 In the next tab, 'Select LC/MS Files',
-1. Drag & drop mzML files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders). If you have multiple fractions or experimental groups, specify the Experiment/Group for each file. Each unique identifier will have its own column in the resulting combined peptide & protein reports. Experimental conditions should be separated from the replicate number with an underscore ('\_'). Shown here are two experimental conditions (A, B) with three replicates each (1-3). The same identifier can be specified for multiple fractions belonging to the same sample. If no Experiment/Group identifiers are given, only one PSM/peptide/protein report will be generated.
+1. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders). If you have multiple fractions or experimental groups, specify the Experiment/Group for each file. Each unique identifier will have its own column in the resulting combined peptide & protein reports. Experimental conditions should be separated from the replicate number with an underscore ('\_'). Shown here are two experimental conditions (A, B) with three replicates each (1-3). The same identifier can be specified for multiple fractions belonging to the same sample. If no Experiment/Group identifiers are given, only one PSM/peptide/protein report will be generated.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_2.png)
  
