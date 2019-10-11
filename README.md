@@ -25,7 +25,7 @@ The latest version of MSFragger was released on 2019-09-08.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ### Running MSFragger
-<img src="images/fragpipe_snapshot4.jpg" width="300px" hspace="3px" align="right"/>
+<img src="images/fragpipe_snapshot4.PNG" width="300px" hspace="3px" align="right"/>
 
 #### FragPipe
 On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org). A tutorial on how to convert Thermo RAW files to mzML/mzXML (recommended for Thermo data to ensure full FragPipe functionality) can be found [here](tutorial_convert.md). FragPipe tutorial can be found [here](tutorial_fragpipe.md). 
