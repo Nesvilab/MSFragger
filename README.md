@@ -1,5 +1,5 @@
 <div align="center">
-<img src="logo/msfragger-logo.png" width="350px"/>
+<img src="images/msfragger-logo.png" width="350px"/>
 </div>
 
 # MSFragger
