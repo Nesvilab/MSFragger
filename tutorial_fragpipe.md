@@ -1,8 +1,8 @@
-# Performing a database search with FragPipe
+## Performing a database search with FragPipe
 
-#### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
+##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
-## Configure FragPipe:
+#### Configure FragPipe:
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button.
 2. Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'.
@@ -13,7 +13,7 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 
  <br>
 
-## Specify input files:
+#### Specify input files:
 In the next tab, 'Select LC/MS Files',
 1. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders). If you have multiple fractions or experimental groups, specify the Experiment/Group for each file. Each unique identifier will have its own column in the resulting combined peptide & protein reports. Experimental conditions should be separated from the replicate number with an underscore ('\_'). Shown here are two experimental conditions (A, B) with three replicates each (1-3). The same identifier can be specified for multiple fractions belonging to the same sample. If no Experiment/Group identifiers are given, only one PSM/peptide/protein report will be generated.
 
@@ -23,7 +23,7 @@ In the next tab, 'Select LC/MS Files',
  <br>
 
  
-## Specify a protein sequence database:
+#### Specify a protein sequence database:
 In the 'Database' tab,
 1. 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot. The FASTA file must contain decoy sequences. For help adding decoys and database formatting, see [this page](https://github.com/Nesvilab/philosopher/wiki/Database).
 2. Make sure the decoy prefix tag in the sequence database file is correct (necessary for target/decoy validation of identifications). If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag.
@@ -33,7 +33,7 @@ In the 'Database' tab,
 
  <br>
 
-## Set MSFragger search parameters:
+#### Set MSFragger search parameters:
 In the 'MSFragger' tab,
 1. Select the type of database search you want to perform.
 
@@ -50,7 +50,7 @@ In the 'MSFragger' tab,
  
  <br>
 
-## Set downstream processing parameters:
+#### Set downstream processing parameters:
 In the 'Downstream' tab,
 1. Select 'Run PeptideProphet' to validate your search results. (More information about PeptideProphet can be found [here](http://peptideprophet.sourceforge.net/).
 2. If you previously updated the downstream parameters when setting MSFragger search parameters, you can skip to the next section. You can also re-load default downstream processing parameters by selecting the appropriate 'Load defaults' button.
@@ -62,7 +62,7 @@ In the 'Downstream' tab,
 
  <br>
  
-## Specify filtering criteria and reports:
+#### Specify filtering criteria and reports:
 In the 'Report' tab,
 1. Select 'Create report' to output tab-delimited tables of the search results.
 2. Select 'Run Quantitation' to perform label-free quantification if desired.
@@ -74,7 +74,7 @@ In the 'Report' tab,
 
  <br>
  
-## Run FragPipe:
+#### Run FragPipe:
 1. Browse for the folder where you would like the search results to be written.
 2. The 'Print Commands' button can be used to see every line of commands that will be executed without actually running them.
 3. Press 'RUN' to begin the analysis! See the MSFragger [wiki](https://github.com/Nesvilab/MSFragger/wiki), [FAQ](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions), and previous questions on [Github](https://github.com/Nesvilab/FragPipe/issues?utf8=%E2%9C%93&q=) for help.
