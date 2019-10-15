@@ -2,6 +2,7 @@
 
 FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.  When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 
+<br>
 #### Install, update, or use an already downloaded version of MSFragger
 **Use an existing MSFragger .jar file:** Use the 'Browse' button to select the .jar file.
 
@@ -13,11 +14,11 @@ FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases)
 3. Use the 'Update' button in FragPipe to upgrade this first release to the latest version. Click 'Choose file' to select the .jar file you just downloaded, and select the latest release (the zip version is recommended, as it can read raw LC-MS files).
 4. In FragPipe, click 'Browse' to select the updated .jar file.
 
-
+<br>
 #### Install, update, or use an already downloaded version of Philosopher
 If you have already downloaded Philosopher, use the 'Browse' button to select the latest Philosopher executable file. To upgrade to the most recent release or to download for the first time, use the 'Download' button.
 
-
+<br>
 #### Optional: install, update, or use an already installed version of Python
 Database splitting (to reduce the size of the in-memory fragment ion index-- helpful for workstations with limited memory or for complex searches) and/or spectral library generation will require Python 3 or above.
 
