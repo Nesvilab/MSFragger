@@ -1,7 +1,7 @@
 ## Setting up FragPipe
-
+<br>
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.  When FragPipe launches, the first tab in the window ('Config') will be used to configure the program. A basic usage tutorial can be found [here (https://msfragger.nesvilab.org/tutorial_fragpipe.html).
-
+<br>
 #### Install, update, or use an already downloaded version of MSFragger
 **Use an existing MSFragger .jar file:** Use the 'Browse' button to select the .jar file.
 
