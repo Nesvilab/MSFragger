@@ -4,7 +4,7 @@
 <br>
 #### Install or update Java
 FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [here](https://www.java.com/en/download/manual.jsp) by selecting the Windows Offline 64-bit version. Launch the installer and follow the prompts. (You may need to restart FragPipe after updating Java.)  
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/java_version_selection.png" width="500px" align="middle"/>
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/java_version_selection.png" width="700px" align="middle"/>
 
 
 <br>
@@ -41,7 +41,7 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install_path.png" width="500px" align="middle"/>
 
 3. From the start menu, search for "Anaconda Prompt" and launch it.
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width="500px" align="middle"/>
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width="700px" align="middle"/>
 
 4. In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the package required for spectral library generation.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/pip_install.png" width="700px" align="middle"/>
