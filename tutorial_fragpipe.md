@@ -6,7 +6,9 @@
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button.
 2. Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'.
-3. Python is needed to perform database splitting (necessary in large database situation) and spectral library generation. We recommend you install version 3.7 or later [here](https://www.python.org/downloads/). Also install the following Python packages: **numpy**, **pandas**, **Cython**, **msproteomicstools** (only needed for spectral library generation).
+3. Optional: Python is needed to perform database splitting (necessary in complex searches/low memory situations) and spectral library generation. If you already have Python 3 or greater plus a few additional packages installed (**numpy**, **pandas**, **Cython**, and **msproteomicstools**) use 'Browse' to locate your python.exe file.
+
+For more help, see our [tutorial for FragPipe configuration](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html).
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_1.png)
  
