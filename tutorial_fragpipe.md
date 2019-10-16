@@ -31,9 +31,6 @@ In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein rep
 **For reports with results from different fractionated replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates_fractions.png)
 
-**To search a list of input files completely independent of one another (not usually)**, you can use the 'By file name' button to assign unique names to each input file. On the 'Downstream' tab, uncheck 'single combined pep-xml file per experiment/group', and check 'Separate ProteinProphet prot.xml file per group/experiment'. On the 'Report' tab, check 'Multi-Experiment Report'.
-
-
 Note: for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
 
  <br>
