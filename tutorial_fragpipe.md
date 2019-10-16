@@ -13,12 +13,29 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 
  <br>
 
-#### Specify input files:
+#### Add input files:
 In the next tab, 'Select LC/MS Files',
 1. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders). If you have multiple fractions or experimental groups, specify the Experiment/Group for each file. Each unique identifier will have its own column in the resulting combined peptide & protein reports. Experimental conditions should be separated from the replicate number with an underscore ('\_'). Shown here are two experimental conditions (A, B) with three replicates each (1-3). The same identifier can be specified for multiple fractions belonging to the same sample. If no Experiment/Group identifiers are given, only one PSM/peptide/protein report will be generated.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_2.png)
+
+<br>
  
+#### Group input files:
+In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein reports to be generated.
+
+**For a single set of reports (search results from all input files merged)**, leave the 'Experiment' and 'Replicate' fields blank, and ensure that the 'Multi-Experiment Report' box on the 'Report' tab is not checked.
+
+**For reports with results from different replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where there are three replicates for two experimental conditions. On the 'Report' tab, check 'Multi-Experiment Report'. 
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates.png)
+
+**For reports with results from different fractionated replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates_fractions.png)
+
+**To search a list of input files completely independent of one another (not usually)**, you can use the 'By file name' button to assign unique names to each input file. On the 'Downstream' tab, uncheck 'single combined pep-xml file per experiment/group', and check 'Separate ProteinProphet prot.xml file per group/experiment'. On the 'Report' tab, check 'Multi-Experiment Report'.
+
+
+Note: for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
 
  <br>
 
