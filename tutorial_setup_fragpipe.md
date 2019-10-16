@@ -6,13 +6,13 @@ FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases)
 <br>
 #### Install or update Java
 FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [here](https://www.java.com/en/download/manual.jsp) by selecting the Windows Offline 64-bit version.  
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/java_version_selection.png" width=500 align="middle">
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/java_version_selection.png" width=500 align="middle"/>
 
 <br>
 #### Install, update, or use an already downloaded version of MSFragger
 **Use an existing MSFragger .jar file:** In FragPipe, use the 'Browse' button to select the .jar file.
 
-**Update MSFragger:** In FragPipe, use the 'Update' button to upgrade to the latest version of the MSFragger .jar file. Click 'Choose file' to select your current .jar file, and select the latest release (we strongly recommend downloading the zip version, as it can read raw LC-MS files).
+**Update MSFragger:** In FragPipe, use the 'Update' button to upgrade to the latest version of the MSFragger .jar file. Click 'Choose file' to select your current .jar file, and select the latest release (we recommend downloading the zip version, as it can read raw LC-MS files).
 
 **Download MSFragger for the first time:**
 1. In FragPipe, select the 'Download' button to navigate to the download page. On the download page, click the 'BUY' button (cost: $0) to choose the offering appropriate for you (academic users should select the second option, all others should select the first).
@@ -32,15 +32,15 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 
 **If Python 3 is not already installed**:
 1. From the [Anaconda download site](https://www.anaconda.com/distribution/), select the latest Python version (3.7 or higher) and launch the installer.
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install.png" width=500 align="middle">
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install.png" width=500 align="middle"/>
 2. Follow the prompts in the graphical installer. Note the install location that you choose and complete the installation. We do not recommend adding Anaconda to your PATH environment variable, but you can choose to register Anaconda as your default Python 3.
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install_path.png" width=500 align="middle">
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install_path.png" width=500 align="middle"/>
 
 3. From the start menu, search for "Anaconda Prompt" and launch it.
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width=500 align="middle">
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width=500 align="middle"/>
 
 4. In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the package required for spectral library generation.
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/pip_install.png" width=700 align="middle">
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/pip_install.png" width=700 align="middle"/>
 6.  In FragPipe, use the 'Browse' button to navigate to the installation location and select **python.exe**.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_python.png)
 
