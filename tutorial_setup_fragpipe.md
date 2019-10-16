@@ -1,12 +1,15 @@
 
 ## Setting up FragPipe
 
-FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.  When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
-
 <br>
 #### Install or update Java
 FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [here](https://www.java.com/en/download/manual.jsp) by selecting the Windows Offline 64-bit version.  
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/java_version_selection.png" width="500px" align="middle"/>
+
+
+<br>
+#### Install or update FragPipe
+FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.  When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 
 
 <br>
@@ -34,7 +37,7 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 **If Python 3 is not already installed**:
 1. From the [Anaconda download site](https://www.anaconda.com/distribution/), select the latest Python version (3.7 or higher) and launch the installer.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install.png" width="500px" align="middle"/>
-2. Follow the prompts in the graphical installer. Note the install location that you choose and complete the installation. We do not recommend adding Anaconda to your PATH environment variable, but you can choose to register Anaconda as your default Python 3.
+2. Follow the prompts in the graphical installer. Note the install location that you choose and complete the installation. We do not recommend adding Anaconda to your PATH environment variable, but you can choose to register Anaconda as your default Python.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install_path.png" width="500px" align="middle"/>
 
 3. From the start menu, search for "Anaconda Prompt" and launch it.
