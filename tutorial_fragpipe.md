@@ -2,6 +2,10 @@
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
+Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform:
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
+
 #### Configure FragPipe:
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button. [(MSFragger installation help)](http://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#install-update-or-use-an-already-downloaded-version-of-msfragger)
@@ -31,7 +35,7 @@ In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein rep
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates.png)
 
 **For reports with results from different fractionated replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates_fractions.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_fractions.png)
 <br>
 
 **Note:** for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
