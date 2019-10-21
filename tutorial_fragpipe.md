@@ -4,11 +4,11 @@
 
 #### Configure FragPipe:
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
-1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button.
-2. Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'.
-3. Optional: Python is needed to perform database splitting (necessary in complex searches/low memory situations) and spectral library generation. If you already have Python 3 or greater plus a few additional packages installed (**numpy**, **pandas**, **Cython**, and **msproteomicstools**) use 'Browse' to locate your python.exe file.
+1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button. [(MSFragger installation help)](http://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#install-update-or-use-an-already-downloaded-version-of-msfragger)
+2. Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'. [(Philosopher installation help)](http://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#install-update-or-use-an-already-downloaded-version-of-philosopher)
+3. Optional: Python is needed to perform database splitting (necessary in complex searches/low memory situations) and spectral library generation. If you already have Python 3 or greater plus a few additional packages installed (**numpy**, **pandas**, **Cython**, and **msproteomicstools**) use 'Browse' to locate your python.exe file. [(Python installation help)](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python) 
 
-For more help, see our [tutorial for FragPipe configuration](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html).
+For more help, see the full [tutorial on FragPipe configuration](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html).
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_1.png)
  
@@ -32,16 +32,21 @@ In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein rep
 
 **For reports with results from different fractionated replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates_fractions.png)
+<br>
 
-Note: for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
-
+**Note:** for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
  <br>
 
  
 #### Specify a protein sequence database:
 In the 'Database' tab,
-1. 'Browse' for the FASTA sequence database file that you want to use in the search, or select 'Download' to fetch one from Uniprot. The FASTA file must contain decoy sequences. For help adding decoys and database formatting, see [this page](https://github.com/Nesvilab/philosopher/wiki/Database).
-2. Make sure the decoy prefix tag in the sequence database file is correct (necessary for target/decoy validation of identifications). If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag.
+
+If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from Uniprot. Then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli).
+
+Use 'Browse' to select a FASTA file from a previous FragPipe/Philosopher analysis.
+
+If you need to use a custom FASTA database, it must follow a certain format and contain decoy sequences. Click 'Browse' to navigate to your custom FASTA. If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag. For help adding decoys and database formatting, see the instructions on the 'Database' tab or [here](https://github.com/Nesvilab/philosopher/wiki/Database).
+
   
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_3.png)
 
@@ -56,7 +61,10 @@ In the 'MSFragger' tab,
 
    **Open search**: To perform an open search (large precursor mass tolerance, used for finding unspecified post translational modifications), select 'Open Search'. This will prompt you to also update the downstream parameters for open searching, select 'Yes'.
 
-   **Non-specific search**: To perform a closed search where peptides are not required to have any enzymatic terminus, select 'Non-specific Search'. This will prompt you to also update the downstream parameters for non-specific search, select 'Yes'.
+   **Non-specific search**: To perform a closed search where peptides are not required to have any enzymatic terminus, select 'Non-specific Search'. This will prompt you to also update the downstream parameters for non-specific search, select 'Yes'. 
+   
+**Note:** For non-specific searches or for searches with many variable modifications, you may need to use the database splitting option, which will require 
+   
  2. Fill in the amount of memory (in GB) that FragPipe will be allowed to use. We recommend at least 8-16 GB, but complex closed searches and open searches will require more.
  3. Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
  
