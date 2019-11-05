@@ -9,6 +9,7 @@ precursor_true_units = 1                    # True precursor mass tolerance unit
 fragment_mass_tolerance = 20                # Fragment mass tolerance (window is +/- this value).
 fragment_mass_units = 1                     # Fragment mass tolerance units (0 for Da, 1 for ppm).
 calibrate_mass = 2                          # Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
+write_calibrated_mgf = 1                    # Write calibrated MS2 scan to a MGF file (0 for No, 1 for Yes).
 decoy_prefix = rev_                         # Prefix added to the decoy protein ID.
 
 isotope_error = 0/1/2                       # Isotope correction for MS/MS events triggered on isotopic peaks. 
@@ -40,7 +41,7 @@ variable_mod_02 = 42.01060 [^
 # variable_mod_06 = 0.00000 site_06
 # variable_mod_07 = 0.00000 site_07
 
-allow_multiple_variable_mods_on_residue = 1 # Allow each amino acid to be modified by multiple variable modifications (0 or 1).
+allow_multiple_variable_mods_on_residue = 0 # Allow each amino acid to be modified by multiple variable modifications (0 or 1).
 max_variable_mods_per_mod = 3               # Maximum number of residues that can be occupied by each variable modification (maximum of 5).
 max_variable_mods_combinations = 5000       # Maximum allowed number of modified variably modified peptides from each peptide sequence, (maximum of 65534).
 

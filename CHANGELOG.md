@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 2.2 - 2019-09-08
+- Check spectral files at the beginning.
+- Add a parameter (`write_calibrated_mgf`) to write calibrated spectra to MGF files.
+- Add `uncalibrated_precursor_neutral_mass` attribute to pepXML file.
+- Change the default value of `allow_multiple_variable_mods_on_residue` to `0`.
+- Change the default values of `min_fragments_modelling` in open search to `2`.
+- Change the default values of `min_matched_fragments` in open search to `4`.
+- Check `intensity_transform` and `remove_precursor_range` in parameter optimization step.
+- Improve parameter optimization algorithm.
+- Various minor bug fixes and improvements.
+
 ## 2.1 - 2019-09-08
 - Fixed bugs.
 - In parameter optimization step, improve the top-N peak candidates.
