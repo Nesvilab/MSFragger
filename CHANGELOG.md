@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## 2.2 - 2019-11-06
+## 2.2 - 2019-11-08
 - Check spectral files at the beginning.
 - Add a parameter (`write_calibrated_mgf`) to write calibrated spectra to MGF files.
 - Add `uncalibrated_precursor_neutral_mass` attribute to pepXML file.
