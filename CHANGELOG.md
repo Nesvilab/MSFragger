@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Change the default value of `allow_multiple_variable_mods_on_residue` to `0`.
 - Change the default values of `min_fragments_modelling` in open search to `2`.
 - Change the default values of `min_matched_fragments` in open search to `4`.
+- Limit the minimum value of `precursor_mass_lower` to -150 Da.
 - Check `intensity_transform` and `remove_precursor_range` in parameter optimization step.
 - Improve parameter optimization algorithm.
 - Various minor bug fixes and improvements.
