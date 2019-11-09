@@ -25,7 +25,7 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 Whether you run it through FragPipe, PD, or stand-alone, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
 ### Release Notes
-The latest version of MSFragger was released on 2019-09-08.
+The latest version of MSFragger was released on 2019-11-08.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ### Running MSFragger
