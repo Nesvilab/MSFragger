@@ -29,12 +29,15 @@ In the next tab, 'Select LC/MS Files', drag & drop LC/MS files into the window o
 #### Group input files:
 In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein reports to be generated.
 
-**For a single set of reports (search results from all input files merged)**, leave the 'Experiment' and 'Replicate' fields blank, and ensure that the 'Multi-Experiment Report' box on the 'Report' tab is not checked.
+##### For a single set of reports (search results from all input files merged)
+Leave the 'Experiment' and 'Replicate' fields blank, and ensure that the 'Multi-Experiment Report' box on the 'Report' tab is not checked.
 
-**For reports with results from different replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where there are three replicates for two experimental conditions. On the 'Report' tab, check 'Multi-Experiment Report'. 
+##### For reports with results from different replicates shown in separate columns
+Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where there are three replicates for two experimental conditions. On the 'Report' tab, check 'Multi-Experiment Report'. 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates.png)
 
-**For reports with results from different fractionated replicates shown in separate columns**, indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
+##### For reports with results from different fractionated replicates shown in separate columns
+Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_fractions.png)
 <br>
 
