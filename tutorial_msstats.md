@@ -3,7 +3,7 @@
 ##### Using the .d folders (raw timsTOF data) as input according to the [FragPipe tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe.html#for-reports-with-results-from-different-fractionated-replicates-shown-in-separate-columns), IMQuant can generate a [MSstats](https://bioconductor.org/packages/release/bioc/html/MSstats.html) compatible file `MSstats.csv`.  
 ##### Given an experimental setup that looks like this in the 'Select LC/MS Files' tab of FragPipe:
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_LCMS_msstats.png)
-##### the `MSstats.csv` file output from IMQuant (via FragPipe):
+##### the `MSstats.csv` file output from IMQuant (via FragPipe) will look something like this:
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_table_to_msstats.png)
 <!---
 | ProteinName | PeptideSequence             | PrecursorCharge | FragmentIon | ProductCharge | IsotopeLabelType | Condition | BioReplicate | Run                                                                        | Intensity |
@@ -17,7 +17,7 @@
 | A0A024RBG1  | YPDQWIVPGGGMEPEEEPGGAAVR    | 2               | NA          | NA            | L                | 1         | 3            | 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_3_A1_01_2769 | 116.3815  |
 | A0A024RBG1  | YPDQWIVPGGGMEPEEEPGGAAVR    | 2               | NA          | NA            | L                | 1         | 4            | 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_4_A1_01_2770 | 114.43072 |
 -->
-##### It can be read by MSstats without any conversion. The R command for installing `MSstats` is:
+##### This `MSstats.csv` file can be read by MSstats without any conversion. The R command for installing `MSstats` is:
 
 ```shell
 if (!requireNamespace("BiocManager", quietly = TRUE))
