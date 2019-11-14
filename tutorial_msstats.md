@@ -39,16 +39,19 @@ suppressWarnings(suppressMessages(library(stringr)))
 suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(MSstats)))
 
-rootDir <- "folder_with_MSstats.csv"
+rootDir <- "folder_with_MSstats.csv" # Specify the path of the directory containing MSstats.csv.
 print(str_c("Using IMQuant's result from ", rootDir))
+
+# Read MSstats.csv file.
 raw <- read_csv(str_c(rootDir, "MSstats.csv"), na = c("", "NA", "0"))
 raw$ProteinName <- factor(raw$ProteinName)
 raw$PeptideSequence <- factor(raw$PeptideSequence)
 
+# Change root directory for MSstats
 print(str_c("Root DIR: ", rootDir))
 setwd(rootDir)
 
-# Processing data using MSstats
+# Processing the data using MSstats
 processedData <- dataProcess(raw, logTrans = 10)
 
 # Downstream analysis...
@@ -70,23 +73,28 @@ suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(MSstats)))
 suppressWarnings(suppressMessages(library(matrixStats)))
 
-rootDir <- "folder_with_MSstats.csv"
+rootDir <- "folder_with_MSstats.csv" # Specify the path of the directory containing MSstats.csv.
 print(str_c("Using IMQuant's result from ", rootDir))
+
+# Read MSstats.csv file.
 raw <- read_csv(str_c(rootDir, "MSstats.csv"), na = c("", "NA", "0"))
 raw$ProteinName <- factor(raw$ProteinName)
 raw$PeptideSequence <- factor(raw$PeptideSequence)
 
+# Change root directory for MSstats
 print(str_c("Root DIR: ", rootDir))
 setwd(rootDir)
 
-# Processing data using MSstats
+# Processing the data using MSstats
 processedData <- dataProcess(raw, logTrans = 10)
 
-# Only need run level data.
+# Only need run level data in generating protein intensity table.
 runLevelData <- processedData$RunlevelData
 
 # Prepare a protein intensity table. The Run number and names need to be changed according to your experiments.
-proteinIntensityTable <- data.frame(Protein = unique(runLevelData$Protein), Run1 = rep(NA, length(unique(runLevelData$Protein))), Run2 = rep(NA, length(unique(runLevelData$Protein))), Run3 = rep(NA, length(unique(runLevelData$Protein))), Run4 = rep(NA, length(unique(runLevelData$Protein))), Run5 = rep(NA, length(unique(runLevelData$Protein))), Run6 = rep(NA, length(unique(runLevelData$Protein))))
+# In this example, we have four runs named "Run1", "Run2", "Run3", and "Run4". If there are more runs with different names, you need to increase the column of proteinIntensityTable data frame accordingly.
+
+proteinIntensityTable <- data.frame(Protein = unique(runLevelData$Protein), Run1 = rep(NA, length(unique(runLevelData$Protein))), Run2 = rep(NA, length(unique(runLevelData$Protein))), Run3 = rep(NA, length(unique(runLevelData$Protein))), Run4 = rep(NA, length(unique(runLevelData$Protein))))
 for (protein in runLevelData$Protein) {
   if (length(runLevelData[runLevelData$RUN == 1 & runLevelData$Protein == protein,]$LogIntensities) > 0) {
     proteinIntensityTable[proteinIntensityTable$Protein == protein,]$Run1 <- runLevelData[runLevelData$RUN == 1 & runLevelData$Protein == protein,]$LogIntensities
@@ -99,12 +107,6 @@ for (protein in runLevelData$Protein) {
   }
   if (length(runLevelData[runLevelData$RUN == 4 & runLevelData$Protein == protein,]$LogIntensities) > 0) {
     proteinIntensityTable[proteinIntensityTable$Protein == protein,]$Run4 <- runLevelData[runLevelData$RUN == 4 & runLevelData$Protein == protein,]$LogIntensities
-  }
-  if (length(runLevelData[runLevelData$RUN == 5 & runLevelData$Protein == protein,]$LogIntensities) > 0) {
-    proteinIntensityTable[proteinIntensityTable$Protein == protein,]$Run5 <- runLevelData[runLevelData$RUN == 5 & runLevelData$Protein == protein,]$LogIntensities
-  }
-  if (length(runLevelData[runLevelData$RUN == 6 & runLevelData$Protein == protein,]$LogIntensities) > 0) {
-    proteinIntensityTable[proteinIntensityTable$Protein == protein,]$Run6 <- runLevelData[runLevelData$RUN == 6 & runLevelData$Protein == protein,]$LogIntensities
   }
 }
 
