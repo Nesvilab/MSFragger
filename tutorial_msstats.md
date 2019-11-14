@@ -69,7 +69,6 @@ suppressWarnings(suppressMessages(library(stringr)))
 suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(MSstats)))
 suppressWarnings(suppressMessages(library(matrixStats)))
-that the `Run` names and `rootDir`
 
 rootDir <- "folder_with_MSstats.csv"
 print(str_c("Using IMQuant's result from ", rootDir))
