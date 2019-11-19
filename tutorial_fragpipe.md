@@ -2,7 +2,7 @@
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
-Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform:
+Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
 
