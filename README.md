@@ -67,4 +67,4 @@ For other tools developed by the Nesvizhskii lab, see our website [www.nesvilab.
 
 
 ### Disclaimer
-The pepXML files produced by MSFragger may has additional attributes (e.g., `uncalibrated_precursor_neutral_mass` and `ion_mobility`) no in the [schema](http://sashimi.sourceforge.net/schema_revision/pepXML/pepXML_v118.xsd). According to our test, both [PeptideProphet](http://peptideprophet.sourceforge.net/) and [Philosopher](https://philosopher.nesvilab.org/) can process those additional attributes.
+The pepXML files produced by MSFragger may have additional attributes (e.g., `uncalibrated_precursor_neutral_mass` and `ion_mobility`) not in the original [schema](http://sashimi.sourceforge.net/schema_revision/pepXML/pepXML_v118.xsd). According to our tests, both [PeptideProphet](http://peptideprophet.sourceforge.net/) and [Philosopher](https://philosopher.nesvilab.org/) can process those additional attributes.
