@@ -17,14 +17,14 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 ### Supported instruments and file formats  
 **mzML/mzXML**: Data from any instrument in mzML/mzXML format can be used.
 
-**Thermo RAW**: MSFragger supports direct reading Thermo RAW files. MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools. FragPipe has limited support for RAW files (no MS1-based label-free quantification); conversion to mzML when running FragPipe is recommended.      
+**Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (no MS1-based label-free quantification), so conversion to mzML is recommended. The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
 
-**Bruker TimsTOF**: MSFragger support direct reading from Bruker timsTOF raw files (.d folder) and MGF files converted by Bruker DataAnalysis. Note that FragPipe currently supports for timsTOF data.
+**Bruker TimsTOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
 
 ### Download MSFragger 
-Whether you run it through FragPipe, PD, or stand-alone, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
+Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
 ### Release Notes
 The latest version of MSFragger was released on 2019-11-08.
@@ -46,7 +46,7 @@ Please visit our [PD-Nodes page](https://www.nesvilab.org/PD-Nodes/) for more in
 <br><br><br><br>
 
 #### Command line
-See the [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-MSFragger) section of the Wiki page.
+See [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-MSFragger) on the Wiki page.
 
 
 #### Philosopher pipeline
