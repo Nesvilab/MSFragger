@@ -70,7 +70,7 @@ In the 'MSFragger' tab,
 
    **Non-specific search**: To perform a closed search where peptides are not required to have any enzymatic terminus, select 'Non-specific Search'. This will prompt you to also update the downstream parameters for non-specific search, select 'Yes'. 
    
-**Note:** For non-specific searches or for searches with many variable modifications, you may need to use the database splitting option, which will require 
+**Note:** For non-specific searches or for searches with many variable modifications, you may need to use the database splitting option, which requires an installation of [Python](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python).
    
  2. Fill in the amount of memory (in GB) that FragPipe will be allowed to use. We recommend at least 8-16 GB, but complex closed searches and open searches will require more.
  3. Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
