@@ -95,7 +95,7 @@ In the 'Downstream' tab,
 #### Specify filtering criteria and reports:
 In the 'Report' tab,
 1. Select 'Create report' to output tab-delimited tables of the search results.
-2. Select 'Run Quantitation' to perform label-free quantification if desired. (Note: Quantification of Bruker timsTOF data may require 32 GB RAM.)
+2. Select 'Run Quantitation' to perform label-free quantification if desired.
 3. If you are performing an open search, select 'Run PTMShepherd' to perform additional modification analysis.
 4. Select 'Generate Spectral Library from search results' to generate spectral library if desired.
 
