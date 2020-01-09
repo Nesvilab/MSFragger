@@ -50,10 +50,17 @@ See [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-M
 
 
 #### Philosopher pipeline
-Complete analyses can be performed with the Philosopher pipeline, a command line tool: [Tutorial](https://github.com/Nesvilab/philosopher/wiki/Processing-Filtering-and-Analyzing-Open-Search-Results-Using-Philosopher).
+Complete analyses can be performed with the Philosopher pipeline, a command line tool, see this [tutorial](https://github.com/Nesvilab/philosopher/wiki/Simple-Data-Analysis) for a simple workflow.
 
 ### Documentation
-For documentation on MSFragger (hardware requirements, search parameters, etc.), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki).  
+For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the MSFragger [Wiki page](https://github.com/Nesvilab/MSFragger/wiki). Tutorials for common MSFragger-related workflows are listed below.
+
+- [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
+- [Basic FragPipe use](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
+- [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
+- [Running MSstats on timsTOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
+- [Importing results to Skyline](https://msfragger.nesvilab.org/tutorial_pasef_skyline.html)
+
 
 ### Questions and Technical Support
 See our [Frequently Asked Questions (FAQ)](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions) page.
