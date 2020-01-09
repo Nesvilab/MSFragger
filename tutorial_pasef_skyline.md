@@ -10,8 +10,8 @@ Make sure the PeptideProphet output files ('interact-pep.xml'), raw spectral fil
 Launch Skyline and select **'Import DDA Peptide Search'** from the Start Page. Follow the prompts to choose a name and location for the new document to be saved.
 
 #### Import peptide results
-Once the new document is saved, **'Add Files'** to select the 'interact-pep.xml' files for the search results you want to import. To generate a spectral library that is filtered to 1% ion FDR and 1% protein FDR, we recommend specifying the peptide probability threshold that corresponds to 1% ion FDR as the **'Cut-off score'**. (This can be found in the FragPipe log or .log file, the value 0.8437 would be used in this example:
-_INFO[15:56:39] Converged to 0.08 % FDR with 57671 Ions       decoy=51 threshold=**0.8437** total=57722_)
+Once the new document is saved, **'Add Files'** to select the 'interact-pep.xml' files for the search results you want to import. To generate a spectral library that is filtered to 1% ion FDR and 1% protein FDR, we recommend specifying the peptide probability threshold that corresponds to 1% ion FDR as the **'Cut-off score'**. (This can be found in the FragPipe log or .log file, a cut-off of 0.9024 would be used in this example:
+_INFO[15:56:25] Converged to 1.00 % FDR with 57143 Ions       decoy=576 threshold=**0.9024** total=57719_)
 
 
 Then press **'Next'**, prompting Skyline to build the spectral library from these peptide search results.
