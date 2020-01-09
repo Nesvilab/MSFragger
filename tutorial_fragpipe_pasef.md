@@ -72,6 +72,8 @@ In the 'MSFragger' tab,
  2. Fill in the amount of memory (in GB) that FragPipe will be allowed to use. We recommend leaving this set to '0', which will allow MSFragger to analyze the TIMS-TOF data as quickly as possible.
  3. Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
  
+
+ 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_pasef_4.png)
  
  
