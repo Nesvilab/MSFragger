@@ -4,7 +4,7 @@
 
 # MSFragger
 
-MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including timsTOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides.
+MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including TIMS-TOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides.
 
 MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
 
@@ -19,7 +19,7 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 
 **Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (no MS1-based label-free quantification), so conversion to mzML is recommended. The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
 
-**Bruker TimsTOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
+**Bruker TIMS-TOF**: MSFragger can read Bruker TIMS-TOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
 
@@ -57,6 +57,7 @@ For technical documentation on MSFragger (hardware requirements, search paramete
 
 - [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
 - [Basic FragPipe use](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
+- [Using TIMS-TOF PASEF data in FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe_pasef.html)
 - [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
 - [Running MSstats on timsTOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
 - [Importing results to Skyline](https://msfragger.nesvilab.org/tutorial_pasef_skyline.html)
