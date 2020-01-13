@@ -41,7 +41,7 @@ Precursor charge states greater than 2 can be added at this point. Press **'Next
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/Skyline_PASEF_7.png)
 
 #### Add FASTA file
-**'Browse'** for the sequence database, and select the number of missed cleavages that was used in the database search. Press **'Next'** to insert the 'protein.fas' file.
+**'Browse'** for the sequence database, and select the number of missed cleavages that was used in the database search. Press **'Next'** to insert the 'protein.fas' file output by FragPipe/Philosopher, which contains the sequences of proteins filtered to 1% FDR.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/Skyline_PASEF_8.png)
 
