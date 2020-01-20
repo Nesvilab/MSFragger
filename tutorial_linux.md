@@ -18,7 +18,7 @@ crystalcParameterPath="crystalc.pepXML.params"
 decoyPrefix="rev_"
 
 # Run MSFragger. Change the number behind -Xmx according to your computer's memory size.
-java -Xmx64G -jar $msfraggerPath $fraggerParamsPath $dataDirPath/*.mzML
+java -Xmx64G -jar $msfraggerPath $fraggerParamsPath $dataDirPath/<spectral files end with raw, d, mzML, mzXML, or mgf>
 
 # Move pepXML files to current directory.
 mv $dataDirPath/*.pepXML ./
