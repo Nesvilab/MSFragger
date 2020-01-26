@@ -18,6 +18,7 @@ fraggerParamsPath="fragger.params"
 philosopherPath="philosopher.2.0.0"
 crystalcPath="CrystalC-1.0.5.jar"
 crystalcParameterPath="crystalc.params"
+imquantPath="IMQuant.jar"
 decoyPrefix="rev_"
 
 # Run MSFragger. Change the -Xmx value according to your computer's memory.
@@ -51,13 +52,12 @@ $philosopherPath proteinprophet --maxppmdiff 2000000 ./*.pep.xml
 $philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./interact.prot.xml # closed or non-specific closed search
 $philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./interact.prot.xml # Open search
 
-# Run IMQuant. Change the -Xmx value according to your computer's memory.
-java -Xmx64G -jar IMQuant.jar --psm <path to psm.tsv> <path to .d> <path to .pepXML>
-
 # Make reports.
 $philosopherPath report
 $philosopherPath workspace --clean
 
+# Run IMQuant. Change the -Xmx value according to your computer's memory.
+java -Xmx64G -jar $imquantPath <options> <path to .d> <path to .pepXML>
 ```
 **Please note: The [IMQuant.jar](https://github.com/Nesvilab/IMQuant/releases/latest) file must be in the same directory as the `ext` folder.** To see the IMQuant help, run `java -jar IMQuant.jar`.
 
