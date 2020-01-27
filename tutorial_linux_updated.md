@@ -1,6 +1,6 @@
 # Running a FragPipe-equivalent workflow on Linux
 
-Example shell scripts for TIMS-TOF PASEF data (with [IMQuant](https://github.com/Nesvilab/IMQuant)) and non-ion mobility data are shown below, modify them to suit your configuration.
+Example shell scripts for TIMS-TOF PASEF data (with [IMQuant](https://github.com/Nesvilab/IMQuant)) and non-ion mobility data are shown below, modify them to suit your configuration. Download a stand-alone IMQuant.jar file [here](https://github.com/Nesvilab/IMQuant/releases/latest). 
 <br>
 
 ### TIMS-TOF data:
