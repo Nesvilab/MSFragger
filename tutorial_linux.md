@@ -1,6 +1,6 @@
 # Running a FragPipe-equivalent workflow on Linux
 
-Example shell scripts for TIMS-TOF PASEF data (with [IMQuant](https://github.com/Nesvilab/IMQuant)) and non-ion mobility data are shown below, modify them to suit your configuration. Download a stand-alone IMQuant.jar file [here](https://github.com/Nesvilab/IMQuant/releases/latest). 
+Example shell scripts for TIMS-TOF PASEF data (with [IonQuant](https://github.com/Nesvilab/IonQuant)) and non-ion mobility data are shown below, modify them to suit your configuration. Download a stand-alone IonQuant.jar file [here](https://github.com/Nesvilab/IonQuant/releases/latest). 
 <br>
 
 ### TIMS-TOF data:
@@ -18,7 +18,7 @@ fraggerParamsPath="fragger.params"
 philosopherPath="philosopher.2.0.0"
 crystalcPath="CrystalC-1.0.5.jar"
 crystalcParameterPath="crystalc.params"
-imquantPath="IMQuant.jar"
+ionquantPath="IonQuant.jar"
 decoyPrefix="rev_"
 
 # Run MSFragger. Change the -Xmx value according to your computer's memory.
@@ -56,10 +56,10 @@ $philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepx
 $philosopherPath report
 $philosopherPath workspace --clean
 
-# Run IMQuant. Change the -Xmx value according to your computer's memory.
-java -Xmx64G -jar $imquantPath <options> <path to .d> <path to .pepXML>
+# Run IonQuant. Change the -Xmx value according to your computer's memory.
+java -Xmx64G -jar $ionquantPath <options> <path to .d> <path to .pepXML>
 ```
-**Please note: The [IMQuant.jar](https://github.com/Nesvilab/IMQuant/releases/latest) file must be in the same directory as the `ext` folder.** To see the IMQuant help, run `java -jar IMQuant.jar`.
+**Please note: The [IonQuant.jar](https://github.com/Nesvilab/IonQuant/releases/latest) file must be in the same directory as the `ext` folder.** To see the IonQuant help, run `java -jar IonQuant.jar`.
 
 <br>
 
