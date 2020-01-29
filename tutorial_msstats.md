@@ -1,11 +1,11 @@
-## Running MSstats using MSstats.csv from IMQuant
+## Running MSstats using MSstats.csv from IonQuant
 
-Using the .d folders (raw TIMS-TOF PASEF data) as input according to the [FragPipe tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe.html#for-reports-with-results-from-different-fractionated-replicates-shown-in-separate-columns), IMQuant can generate a [MSstats](https://bioconductor.org/packages/release/bioc/html/MSstats.html) compatible file `MSstats.csv`.  
+Using the .d folders (raw TIMS-TOF PASEF data) as input according to the [FragPipe tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe.html#for-reports-with-results-from-different-fractionated-replicates-shown-in-separate-columns), IonQuant can generate a [MSstats](https://bioconductor.org/packages/release/bioc/html/MSstats.html) compatible file `MSstats.csv`.  
 Given an experimental setup that looks like this in the 'Select LC/MS Files' tab of FragPipe:
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_LCMS_msstats.png" width="450"/>
 
-The `MSstats.csv` file output from IMQuant (via FragPipe) will look something like this:
+The `MSstats.csv` file output from IonQuant (via FragPipe) will look something like this:
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_table_to_msstats.png" width="700"/>
 
@@ -40,7 +40,7 @@ suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(MSstats)))
 
 rootDir <- "folder_with_MSstats.csv" # Specify the path of the directory containing MSstats.csv.
-print(str_c("Using IMQuant's result from ", rootDir))
+print(str_c("Using IonQuant's result from ", rootDir))
 
 # Read MSstats.csv file.
 raw <- read_csv(str_c(rootDir, "MSstats.csv"), na = c("", "NA", "0"))
@@ -74,7 +74,7 @@ suppressWarnings(suppressMessages(library(MSstats)))
 suppressWarnings(suppressMessages(library(matrixStats)))
 
 rootDir <- "folder_with_MSstats.csv" # Specify the path of the directory containing MSstats.csv.
-print(str_c("Using IMQuant's result from ", rootDir))
+print(str_c("Using IonQuant's result from ", rootDir))
 
 # Read MSstats.csv file.
 raw <- read_csv(str_c(rootDir, "MSstats.csv"), na = c("", "NA", "0"))
