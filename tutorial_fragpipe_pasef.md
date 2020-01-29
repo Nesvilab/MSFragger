@@ -93,7 +93,7 @@ In the 'Downstream' tab,
 #### Set quantification
 In the 'Report' tab,
 1. Select 'Generate report' to output tab-delimited tables of the search results.
-2. Select 'Run Quantification' to perform label-free quantification if desired. Make sure 'IMQuant' is selected. Boundaries for 3D LC-IM-MS feature detection can optionally be set here, we recommend using the defaults.
+2. Select 'Run Quantification' to perform label-free quantification if desired. Make sure 'IonQuant' is selected. Boundaries for 3D LC-IM-MS feature detection can optionally be set here, we recommend using the defaults.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_pasef_6.png)
 
