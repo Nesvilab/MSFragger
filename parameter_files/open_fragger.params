@@ -12,54 +12,53 @@ calibrate_mass = 2                          # Perform mass calibration (0 for OF
 write_calibrated_mgf = 1                    # Write calibrated MS2 scan to a MGF file (0 for No, 1 for Yes).
 decoy_prefix = rev_                         # Prefix added to the decoy protein ID.
 
-isotope_error = 0                           # Isotope correction for MS/MS events triggered on isotopic peaks. 
+isotope_error = 0                           # Also search for MS/MS events triggered on specified isotopic peaks.
 mass_offsets = 0                            # Creates multiple precursor tolerance windows with specified mass offsets.
 precursor_mass_mode = selected              # One of isolated/selected/recalculated.
 
-localize_delta_mass = 1                     # This allows shifted fragment ions - fragment ions with mass increased by the calculated mass difference,
-                                            # to be included in scoring.
+localize_delta_mass = 1                     # Include fragment ions mass-shifted by unknown modifications (recommended for open
+                                            # and mass offset searches) (0 for OFF, 1 for ON).
 delta_mass_exclude_ranges = (-1.5,3.5)      # Exclude mass range for shifted ions searching.
-fragment_ion_series = b,y                   # Ion series used in search.
+fragment_ion_series = b,y                   # Ion series used in search, specify any of a,b,c,x,y,z (comma separated).
 
 search_enzyme_name = Trypsin                # Name of enzyme to be written to the pepXML file.
 search_enzyme_cutafter = KR                 # Residues after which the enzyme cuts.
 search_enzyme_butnotafter = P               # Residues that the enzyme will not cut before.
 
 num_enzyme_termini = 2                      # 0 for non-enzymatic, 1 for semi-enzymatic, and 2 for fully-enzymatic.
-allowed_missed_cleavage = 1                 # Allowed number of missed cleavages.
+allowed_missed_cleavage = 1                 # Allowed number of missed cleavages per peptide. Maximum value is 5.
 
 clip_nTerm_M = 1                            # Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
 
-# maximum of 7 mods - amino acid codes, * for any amino acid,
+# maximum of 16 mods - amino acid codes, * for any amino acid,
 # [ and ] specifies protein termini, n and c specifies
 # peptide termini
-variable_mod_01 = 15.99490 M
-variable_mod_02 = 42.01060 [^
-# variable_mod_03 = 79.96633 STY
-# variable_mod_04 = -17.02650 nQnC
-# variable_mod_05 = -18.01060 nE
-# variable_mod_06 = 0.00000 site_06
-# variable_mod_07 = 0.00000 site_07
+variable_mod_01 = 15.99490 M 3
+variable_mod_02 = 42.01060 [^ 1
+# variable_mod_03 = 79.96633 STY 3
+# variable_mod_04 = -17.02650 nQnC 1
+# variable_mod_05 = -18.01060 nE 1
+# variable_mod_06 = 0.00000 site_06 3
+# variable_mod_07 = 0.00000 site_07 3
 
-allow_multiple_variable_mods_on_residue = 0 # Allow each amino acid to be modified by multiple variable modifications (0 or 1).
-max_variable_mods_per_mod = 3               # Maximum number of residues that can be occupied by each variable modification (maximum of 5).
-max_variable_mods_combinations = 5000       # Maximum allowed number of modified variably modified peptides from each peptide sequence, (maximum of 65534).
+allow_multiple_variable_mods_on_residue = 0 # Allow each residue to be modified by multiple variable modifications (0 or 1).
+max_variable_mods_per_peptide = 3           # Maximum total number of variable modifications per peptide.
+max_variable_mods_combinations = 5000       # Maximum number of modified forms allowed for each peptide (up to 65534).
 
 output_file_extension = pepXML              # File extension of output files.
 output_format = pepXML                      # File format of output files (pepXML or tsv).
 output_report_topN = 1                      # Reports top N PSMs per input spectrum.
-output_max_expect = 50                      # Suppresses reporting of PSM if top hit has expectation greater than this threshold.
+output_max_expect = 50                      # Suppresses reporting of PSM if top hit has expectation value greater than this threshold.
 report_alternative_proteins = 0             # Report alternative proteins for peptides that are found in multiple proteins (0 for no, 1 for yes).
 
-precursor_charge = 1 4                      # Assume range of potential precursor charge states. Only relevant when override_charge is set to 1.
+precursor_charge = 1 4                      # Assumed range of potential precursor charge states. Only relevant when override_charge is set to 1.
 override_charge = 0                         # Ignores precursor charge and uses charge state specified in precursor_charge range (0 or 1).
 
 digest_min_length = 7                       # Minimum length of peptides to be generated during in-silico digestion.
 digest_max_length = 50                      # Maximum length of peptides to be generated during in-silico digestion.
 digest_mass_range = 500.0 5000.0            # Mass range of peptides to be generated during in-silico digestion in Daltons.
 max_fragment_charge = 2                     # Maximum charge state for theoretical fragments to match (1-4).
-# excluded_scan_list_file =                 # If providing a text file containing a list of scan names, those scans would 
-                                            # be ignored in the searching.
+# excluded_scan_list_file =                 # Text file containing a list of scan names to be ignored in the search.
 
 track_zero_topN = 0                         # Track top N unmodified peptide results separately from main results internally for boosting features. Should be
                                             # set to a number greater than output_report_topN if zero bin boosting is desired.
@@ -69,6 +68,8 @@ add_topN_complementary = 0                  # Inserts complementary ions corresp
 
 minimum_peaks = 15                          # Minimum number of peaks in experimental spectrum for matching.
 use_topN_peaks = 100                        # Pre-process experimental spectrum to only use top N peaks.
+deisotope = 1                               # Perform deisotoping or not (0=no, 1=yes and assume singleton peaks single charged, 2=yes and assume singleton
+                                            # peaks single or double charged).
 min_fragments_modelling = 2                 # Minimum number of matched peaks in PSM for inclusion in statistical modeling.
 min_matched_fragments = 4                   # Minimum number of matched peaks for PSM to be reported.
 minimum_ratio = 0.01                        # Filters out all peaks in experimental spectrum less intense than this multiple of the base peak intensity.

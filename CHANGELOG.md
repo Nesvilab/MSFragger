@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 2.3 - 2020-01-30
+- Add a MS/MS eisotoping module.
+- Add one more column to variable modification settings.
+- Replace `max_variable_mods_per_mod` with `max_variable_mods_per_peptide`.
+- Print the number of peptides with modification pattern more than `max_variable_mods_combinations`.
+- Print all decimal points to the tsv file.
+- Support water-loss ions: `b-18` and `y-18`.
+- Change the minimum allowed `precursor_mass_lower` to -230.
+- Improve the parameter optimization procedure.
+- Increase estimated memory usage by including the sizes of spectra and result.
+- Various minor bug fixes and improvements.
+
 ## 2.2 - 2019-11-08
 - Check spectral files at the beginning.
 - Add a parameter (`write_calibrated_mgf`) to write calibrated spectra to MGF files.
