@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 2.3 - 2020-01-30
-- Add a MS/MS deisotoping module. Default is set to 1 (use deisotoping).  
+- Add a MS/MS deisotoping module, with a new input file parameter 'deisotope'. Default is set to 1 (use deisotoping).  
 - Support water-loss ions: ion types `b-18` and `y-18`.
 - Add one more column to variable modification setting specifying the maximum allowed number of instances of that particular  modification on the peptide.
 - Replace `max_variable_mods_per_mod` with `max_variable_mods_per_peptide` that specifies the maximum allowed number of variable  
