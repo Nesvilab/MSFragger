@@ -40,7 +40,7 @@ FragPipe includes post-database search tool Philosopher (for downstream analysis
 
 #### ProteomeDiscoverer node
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" width="200px" hspace="3px" align="right"/>
-MSFragger and Philosopher (PeptideProphet) are also available as processing nodes in Proteome Discoverer (PD, Thermo Scientific). Currently, the MSFragger-PD node can be used in PD v2.2 and v2.3.
+MSFragger and Philosopher (PeptideProphet) are also available as processing nodes in Proteome Discoverer (PD, Thermo Scientific). Currently, the MSFragger-PD node can be used in PD versions 2.2, 2.3 and 2.4.
 
 Please visit our [PD-Nodes page](https://www.nesvilab.org/PD-Nodes/) for more information.
 <br><br><br><br>
