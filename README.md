@@ -21,6 +21,8 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 
 **Bruker TIMS-TOF**: MSFragger can read Bruker TIMS-TOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
 
+_It needs [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows._ If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
+
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
 
 ### Download MSFragger 
