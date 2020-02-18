@@ -2,6 +2,8 @@
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
+__Bruker's native library needs [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows.__ If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
+
 #### Configure FragPipe
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 1. Connect FragPipe to a MSFragger .jar program file. **Make sure the original directory structure of the MSFragger download is maintained, where the .jar is in the same place as the 'ext' folder.**  If you have already downloaded MSFragger, use the 'Browse' button to select the .jar file or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button. [(MSFragger installation help)](http://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#install-update-or-use-an-already-downloaded-version-of-msfragger)
