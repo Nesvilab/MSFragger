@@ -29,7 +29,7 @@ _It needs [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/
 Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
 ### Release Notes
-The latest version of MSFragger was released on 2020-01-30.
+The latest version of MSFragger was released on 2020-03-21.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ### Running MSFragger

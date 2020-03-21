@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 2.4 - 2020-03-21
+- Write original spectral file extension to pepXML after mass calibration.
+- Write `native_id` to pepXML give mzML or mzXML file.
+- Add 5 ppm and 50 ppm to the fragment mass tolerance list.
+- Improve printed message.
+- Support non-zero mass offsets in first search, mass calibration, and parameter optimization.
+- Various minor bug fixes and improvements.
+
 ## 2.3 - 2020-01-30
 - Add a MS/MS deisotoping module, with a new input file parameter `deisotope`. Default is set to 1 (use deisotoping).  
 - Support water-loss ions: ion types `b-18` and `y-18`.
