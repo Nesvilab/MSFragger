@@ -32,13 +32,34 @@ In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein rep
 ##### For a single set of reports (search results from all input files merged)
 Leave the 'Experiment' and 'Replicate' fields blank, and ensure that the 'Multi-Experiment Report' box on the 'Report' tab is not checked.
 
-##### For reports with results from different replicates shown in separate columns
-Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where there are three replicates for two experimental conditions. On the 'Report' tab, check 'Multi-Experiment Report'. 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_replicates.png)
-
 ##### For reports with results from different fractionated replicates shown in separate columns
-Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate (rep1, rep2) of two experimental conditions is composed of two fractions. Different fractions (1 & 2) from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/specify_fractions.png)
+Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate of two experimental conditions is composed of two fractions. Different fractions from the same sample should have the same 'Experiment'/'Replicate' name. On the 'Report' tab, check 'Multi-Experiment Report'.
+
+| Path            | Experiment | Replicate |
+|-----------------|------------|-----------|
+| run_name_1.mzML | Control    | 1         |
+| run_name_2.mzML | Control    | 1         |
+| run_name_3.mzML | Control    | 2         |
+| run_name_4.mzML | Control    | 2         |
+| run_name_5.mzML | Treatment  | 3         |
+| run_name_6.mzML | Treatment  | 3         |
+| run_name_7.mzML | Treatment  | 4         |
+| run_name_8.mzML | Treatment  | 4         |
+
+**Note:** the 'Replicate' ID (e.g., 1, 2, 3, and 4 in the above table) should not be reused by different replicates from different experiments. However, if each pair of 'Control' and 'Treatment' is from the same study subject, you should use the same 'Replicate' ID for the corresponding 'Control' runs and 'Treatment' runs (detailed discussion can be found from [https://github.com/Nesvilab/FragPipe/issues/183](https://github.com/Nesvilab/FragPipe/issues/183). We appreciate @tobiasko for the suggestion.):
+
+| Path            | Experiment | Replicate |
+|-----------------|------------|-----------|
+| run_name_1.mzML | Control    | 1         |
+| run_name_2.mzML | Control    | 1         |
+| run_name_3.mzML | Control    | 2         |
+| run_name_4.mzML | Control    | 2         |
+| run_name_5.mzML | Treatment  | 1         |
+| run_name_6.mzML | Treatment  | 1         |
+| run_name_7.mzML | Treatment  | 2         |
+| run_name_8.mzML | Treatment  | 2         |
+
+where 'run_name_1.mzML', 'run_name_2.mzML', 'run_name_5.mzML', and 'run_name_6.mzML' are controls and treatments from the same study subject; 'run_name_3.mzML', 'run_name_4.mzML', 'run_name_7.mzML', and 'run_name_8.mzML' are controls and treatments from another study subject. 
 <br>
 
 **Note:** for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
