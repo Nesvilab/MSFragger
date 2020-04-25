@@ -62,7 +62,11 @@ Indicate the 'Experiment' and 'Replicate' for each input file as shown below, wh
 where 'run_name_1.mzML', 'run_name_2.mzML', 'run_name_5.mzML', and 'run_name_6.mzML' are controls and treatments from the same study subject; 'run_name_3.mzML', 'run_name_4.mzML', 'run_name_7.mzML', and 'run_name_8.mzML' are controls and treatments from another study subject. 
 <br>
 
-**Note:** for compatibility with REPRINT ([Resource for Evaluation of Protein Interaction Networks](https://reprint-apms.org/)), 'Experiment' names should be written as `gene_condition`, e.g. `HDAC8_control`.
+**Note:** for compatibility with the Resource for Evaluation of Protein Interaction Networks ([REPRINT](https://reprint-apms.org/)), 'Experiment' names should be written as follows:
+
+Negative controls: `CONTROL_1`, `CONTROL_2`, `CONTROL_3`, etc.
+
+Bait IPs: `[GENE]_[replicate]`, where `[GENE]` is the official gene symbol of the protein, e.g. `HDAC5_1`. If there are multiple conditions for the same bait protein (e.g. mutant and wt), use `HDAC5_wt_1` and `HDAC5_mutant_1` format.
  <br>
 
  
