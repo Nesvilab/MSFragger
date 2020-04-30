@@ -35,7 +35,7 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 **If you already have Python 3 or above**, make sure the following packages are installed: `numpy`, `pandas`, `matplotlib`, `Cython`, and `msproteomicstools`. The `easypqp` package is also required to build spectral libraries from timsTOF data. In most cases, you can run `pip install [package name]` to install each.
 
 **If Python 3 is not already installed**:
-1. From the [Anaconda download site](https://www.anaconda.com/distribution/), select the latest Python version (3.7 or higher) and launch the installer.
+1. From the [Anaconda download site](https://www.anaconda.com/distribution/), click 'Download' and select the latest Python version (3.7 or higher) and launch the installer.
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install.png" width="500px" align="middle"/>
 2. Follow the prompts in the graphical installer. Note the install location that you choose and complete the installation. We do not recommend adding Anaconda to your PATH environment variable, but you can choose to register Anaconda as your default Python.
