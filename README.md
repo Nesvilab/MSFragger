@@ -19,11 +19,11 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 
 **Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (no MS1-based label-free quantification), so conversion to mzML is recommended. The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
 
-**Bruker TIMS-TOF**: MSFragger can read Bruker TIMS-TOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
+**Bruker TIMS-TOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
 
-_It needs [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows._ If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
+_TIMS-TOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows._ If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="500px" align="middle"/>
 
 ### Download MSFragger 
 Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
