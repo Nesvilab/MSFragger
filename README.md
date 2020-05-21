@@ -64,6 +64,7 @@ For technical documentation on MSFragger (hardware requirements, search paramete
 - [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
 - [Running MSstats on timsTOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
 - [Importing results to Skyline](https://msfragger.nesvilab.org/tutorial_pasef_skyline.html)
+- [Glycoproteomics searching with MSFragger](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
 
 
 ### Questions and Technical Support
