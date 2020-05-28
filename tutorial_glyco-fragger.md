@@ -1,46 +1,43 @@
 # Performing glycoproteomics searches with MSFragger-Glyco
 
+## Contents
+1. Getting Started
+2. Glyco-search with MSFragger: Search Types and Parameters
+3. Using FragPipe to run MSFragger glyco searches
+4. Running MSFragger glyco searches from terminal/Linux
+
+## 1) Getting Started
+
 #### MSFragger can be downloaded [here](https://msfragger.nesvilab.org/)
 #### FragPipe (a graphical interface and pipeline for MSFragger on Windows) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). 
 Follow the instructions on the FragPipe Releases page to launch the program. We recommend using 
 FragPipe for Windows users. All parameters for running glyco searches detailed below can be 
-found in the MSFragger tab of FragPipe. 
+found in the MSFragger tab of FragPipe, and detailed instructions for running glyco searches can 
+be found in section (3) of this tutorial.  
 
 #### System Requirements: 
 Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, 
 we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html), for Bruker data, see this 
-[tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe_pasef.html)):
+[tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe_pasef.html)).      
+See the main MSFragger wiki page [here](https://github.com/Nesvilab/MSFragger/wiki) for full details of system requirements. 
  
-##### Hardware
-MSFragger requires substantial amounts of memory due to its in-memory fragment index. We recommend at least 8-16 GB, but complex closed 
-searches will require more. Specifying additional variable modifications, or performing semi/non-enzymatic searches may require more.
 
-The processor requirements of MSFragger depend on the complexity of your search 
-(and your patience to wait for search results). For complex glyco-searches (hundreds of mass offsets), search time approaches that of open searches (scales with
-the number of mass offsets). For an open search (500 Da precursor mass window) using a 
-tryptic digest of the human proteome, a single processor core can search roughly 40,000 MS/MS spectra in under an hour. MSFragger scales well with the number of processor cores. A desktop workstation with a quad core processor is sufficient for most workflows.
-##### Software
-Operating System requirements  
-MSFragger has been tested on Mac OS X, Windows 7, and a number of Linux distributions. Note that a 64-bit operating system is required to access more than 4 GB of memory.
-
-Java requirements  
-MSFragger is written using Java 1.8 and requires the Java 8 Runtime Environment. We recommend the Oracle Java 8 Runtime Environment (download and 
-installation instructions are available at www.java.com).
-## Search Types for Glycoproteomics:
+## 2) Glyco-search with MSFragger: Search Types and Parameters:
 
 The types of searches that can be performed for glycoproteomics data are detailed below, along with several
 key parameters and recommended settings. Details on all parameters can be found in the MSFragger documentation
 [here](https://github.com/Nesvilab/MSFragger/wiki). The key parameters listed here are the differences required
 to perform a glyco-search; all other parameters can generally be used as in a normal MSFragger search (i.e.
-left as default or set to appropriate values for your instrument/analysis). **Default parameter files for 
-several types of glyco-searches can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).** 
+left as default or set to appropriate values for your instrument/analysis). Default parameter files for 
+several types of glyco-searches can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files),
+or by loading a glyco workflow in FragPipe. 
 
 ### Mass Offset Search
 
 This is the primary search method recommended for glycoproteomics searches with MSFragger. It uses
 involves setting glycan masses of interest as mass offsets (similar to an open search, but only considering
 a narrow window around each mass offset). This allows MSFragger to simultaneously search for peptides that have lost none, 
-part, or all of their original glycan, making it ideal for searching collisional, hybrid, and photo-activation datasets.
+part, or all of their original glycan, making it ideal for searching collisional, hybrid, and photo-activation datasets.    
 **Key Parameters**:
 
 1. **labile_search_mode**: *(possible values: nglycan, labile, off)* nglycan mode checks for N-glycosylation motif N-X-S/T (X is not P), but is otherwise identical to "labile" mode. Labile mode should be used for all labile modifications (other than N-glycans), including O-glycans. Specify the allowed residues in deltamass_allowed_residues. "Off" results in a standard (non-glyco) MSFragger search, in which all mass offsets are assumed to remain intact during activation.  
@@ -64,7 +61,7 @@ number of masses used. If more than a few thousand masses are being considered (
 Open searches can be performed on glycoproteomics data, for example to determine what glycans are present in the data.
 Open searches function similarly to the mass offset search in that delta masses (mass offsets) between precursor and sequence masses are used to define glycans
 and other modifications, but with a few key differences. Because any mass shift (within the provided tolerance)
-is allowed, not all mass shifts correspond to glycans. For this reason, **oxonium filtering is disabled for open searches**. 
+is allowed, not all mass shifts correspond to glycans. For this reason, **oxonium filtering is currently disabled for open searches**. 
 However, glycopeptide-specific fragments ions (Y, b~, y~) can still be generated for peptides containing 
 the sequon/residue(s) of interest to effectively search for glycopeptides. If glycans of interest are known, a mass offset 
 search will likely be more sensitive.    
@@ -89,8 +86,89 @@ modifications at once.
 3. **mass_offsets**: not used. (mass_offsets = 0)
 
 
-## Running MSFragger
-On Windows, we recommend using [FragPipe](https://github.com/Nesvilab/FragPipe/releases) to run MSFragger. 
+## 3) Performing a glycoproteomics search with FragPipe
+
+#### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
+
+#### Please use the main FragPipe tutorial [here](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe.md) to learn the basics of FragPipe. This tutorial will cover only the differences needed for glycoproteomics searches from the basic workflow outlined there 
+
+### Getting Started
+
+FragPipe includes a number of pre-packaged **workflows**, including several for glycoproteomics
+searches. We recommend using one of these workflows as a starting point, but parameters can be entered
+ manually as well. 
+
+#### To load a workflow:
+![](https://github.com/Nesvilab/MSFragger/blob/master/images/Fragpipe-glyco_1.PNG)
+
+Navigate to the workflow tab, select a glycoproteomics workflow from the dropdown menu, and press the "Load" button. All default glycoproteomics 
+workflows begin with "glyco-", followed by the type of glycan (N-linked or O-linked), and activation
+type (HCD or Hybrid). "HCD" is optimized for beam-type CID fragmentation but can be used as a starting point
+for any vibrational activation (trap CID, IRMPD, etc). "Hybrid" refers to combined electronic (e.g. ETD) and
+vibrational activation, for example, EThcD or ETciD. 
+
+The workflow will initialize default parameters on several of the subsequent tabs.
+
+
+### Editing glyco-relevant parameters
+
+#### Database tab:
+See the FragPipe tutorial for information on how to load a database file. No differences are present for glycoproteomics searches.
+
+
+#### MSFragger tab:
+The vast majority of differences between regular and glycoproteomics searches can be found on 
+MSFragger tab. The key areas are highlighted here. Standard parameters are modified as in
+a typical search - see the main FragPipe tutorial for details about the parameters on this page.
+Open searches are performed by changing the precursor mass range and units here.      
+![](https://github.com/Nesvilab/MSFragger/blob/master/images/Fragpipe-glyco_2.PNG)
+
+##### Advanced parameters
+![](https://github.com/Nesvilab/MSFragger/blob/master/images/Fragpipe-glyco_3.PNG)     
+Most of the glyco-search options can be found in the advanced section. For mass offset glyco searches,
+input all glycan masses of interest in the mass offset box **(1)**. Open searches leave this box empty.     
+**(2)** Adjust the options in the Glyco/Labile mods box.
+1. **Search Mode**: distinguishes between types of mass offset and open searches. Options are:    
+	*nglycan*: for N-linked glycans. Uses consensus sequon N-X-S/T (X is not P) for glycosites    
+	*labile*: for all other labile modifications, **including O-linked glycans**    
+	*off*: for modifications that do not dissociate. Should not be used for glyco search.        
+2. **Allowed Resides**: for **labile** search type **only**. Determines the allowed residues
+for mass offsets to be considered. Input is single letter amino acid codes. For O-linked glycan searches, default is ST.      
+3. **Diagnostic Ion Minimum Intensity**: Used to filter spectra considered for searching glycans
+based on the presence of oxonium ions. If set to 0, filter will not be used. Otherwise, value is the
+minimum for the summed relative intensity of all detected oxonium ions for the spectrum to be considered
+ for glyco searching. Default value is 0.1, meaning that the sum of all oxonium ion intensities
+ must be at least 10% of the base peak in the spectrum to pass the check.     
+4. **Y ion masses**: If searching for Y ions (intact peptide with partial glycan), enter the list
+of masses to use here. Masses should be the mass of sugar residues only, no charging proton or terminal groups. 
+Note: these ions will be searched for ALL glycans, so keeping the list short
+and including only ions that appear frequently will improve performance. *These values are only used*
+*if "Y" is included in the fragment ion series (see below)*          
+5. **Diagnostic Fragment Masses**: Enter masses of oxonium ions to search for potential glyco-spectra.
+This list can include rare ions without negatively impacting performance. *Masses should be entered as the observed m/z value of the oxonium ion, i.e. [M+H]+*     
+ 
+**(3)** Enter the fragment ion types appropriate to your analysis in the "Fragment ion series" box. Recommendations are as follows, but should be adjusted based 
+the types of glycans being studied and/or acquisition parameters:     
+**N-glycan CID/HCD**: b,y,b~,y~,Y      
+**N-glycan hybrid (EThcD, etc)**: b,y,c,z,Y      
+**O-glycan CID/HCD**: b,y      
+**O-glycan hybrid (EThcD, etc)**: b,y,c,z      
+**N- or O-glycan ETD/ECD**: c,z *(NOTE: this search should be done with glycans as variable modifications, NOT mass offsets, as glycans are not expected to dissociate in this mode.)*     
+
+#### Validation tab:
+For highly enriched N-glycopeptides (at least 10-20% of all spectra are of glycopeptides), setting the "--glyc" tag in the
+PeptideProphet options can help by modeling peptides with the consensus sequon (N-X-S/T) separately from peptides without. 
+Otherwise, there are no differences on this page between a glyco-search and a standard mass offset or open search. 
+
+#### All other tabs:
+No difference between a regular MSFragger search and a glyco search. See the main FragPipe tutorial linked
+at the beginning of this document for details and instructions. 
+
+
+
+## 4) Running MSFragger glyco searches from terminal/Linux
+On Windows, we strongly recommend using FragPipe (above) to run MSFragger, but the linux commands below
+can be adapted to run via command line if desired.  
 
 On Linux, the following shell script includes commands to run MSFragger and downstream processing with Philosopher
 for glyco-searches. These commands are identical to standard MSFragger operation, the only difference for
