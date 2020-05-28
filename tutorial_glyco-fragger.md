@@ -99,7 +99,8 @@ searches. We recommend using one of these workflows as a starting point, but par
  manually as well. 
 
 #### To load a workflow:
-![](https://github.com/Nesvilab/MSFragger/blob/master/images/Fragpipe-glyco_1.PNG)
+
+![](./images/Fragpipe-glyco_1.PNG)
 
 Navigate to the workflow tab, select a glycoproteomics workflow from the dropdown menu, and press the "Load" button. All default glycoproteomics 
 workflows begin with "glyco-", followed by the type of glycan (N-linked or O-linked), and activation
@@ -108,7 +109,6 @@ for any vibrational activation (trap CID, IRMPD, etc). "Hybrid" refers to combin
 vibrational activation, for example, EThcD or ETciD. 
 
 The workflow will initialize default parameters on several of the subsequent tabs.
-
 
 ### Editing glyco-relevant parameters
 
@@ -121,10 +121,10 @@ The vast majority of differences between regular and glycoproteomics searches ca
 MSFragger tab. The key areas are highlighted here. Standard parameters are modified as in
 a typical search - see the main FragPipe tutorial for details about the parameters on this page.
 Open searches are performed by changing the precursor mass range and units here.      
-![](https://github.com/Nesvilab/MSFragger/blob/master/images/Fragpipe-glyco_2.PNG)
+![](./images/Fragpipe-glyco_2.PNG)
 
 ##### Advanced parameters
-![](https://github.com/Nesvilab/MSFragger/blob/master/images/Fragpipe-glyco_3.PNG)     
+![](./images/Fragpipe-glyco_3.PNG)   
 Most of the glyco-search options can be found in the advanced section. For mass offset glyco searches,
 input all glycan masses of interest in the mass offset box **(1)**. Open searches leave this box empty.     
 **(2)** Adjust the options in the Glyco/Labile mods box.
