@@ -5,6 +5,7 @@
 2. Glyco-search with MSFragger: Search Types and Parameters
 3. Using FragPipe to run MSFragger glyco searches
 4. Running MSFragger glyco searches from terminal/Linux
+5. Interpreting the output
 
 ## 1) Getting Started
 
@@ -223,5 +224,32 @@ Linux shell script:
 >
 >\# Make reports.  
 >$philosopherPath report
+
+
+## 5) Interpreting the output
+
+Mass offset and open searches will generate PSMs with delta mass values corresponding
+to glycan masses. These delta mass values do not contain localization information in 
+the output PSM table (yet) and so will not be rolled up to the peptide and protein.tsv
+output tables. *Conversion of delta masses to modifications with localization information
+is coming soon in a future release of MSFragger*, which will enable use of all typical
+summary reports produced by philosopher and quantification tools. Until then, results
+can be interpreted in several ways:    
+
+- PTM-Shepherd (available in FragPipe) can be used on the output of mass offset
+or open glyco searches. It aggregates observed delta mass values into modifications 
+(matching against entries in Unimod), which can be helpful in distinguishing glycans
+of similar mass. Full support for glyco data is being developed and will be included 
+in a future release.
+- If localize_delta_mass=1 was set in the MSFragger search, a .tsv
+file of localization information is generated in the output directory and 
+can be used to determine glycosylation sites. The localization is calculated
+using all fragment ions searched in MSFragger, so the inclusion of b~/y~ ions
+(for example) can enhance localization results. 
+- The MSFragger option "mass_diff_to_variable_mod" can be used to convert delta
+masses to variable mods. This function is still in beta form as of version 2.5,
+but will be used in the future to support glycoproteomics searches. 
+- Quantitation with philosopher's freequant and labelquant modules should
+work for glycoproteomics results, but have yet to be tested extensively.
 
 
