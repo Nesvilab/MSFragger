@@ -9,8 +9,8 @@ precursor_true_units = 1                    # True precursor mass tolerance unit
 fragment_mass_tolerance = 20                # Fragment mass tolerance (window is +/- this value).
 fragment_mass_units = 1                     # Fragment mass tolerance units (0 for Da, 1 for ppm).
 calibrate_mass = 2                          # Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
-write_calibrated_mgf = 1                    # Write calibrated MS2 scan to a MGF file (0 for No, 1 for Yes).
-decoy_prefix = rev_                         # Prefix added to the decoy protein ID.
+write_calibrated_mgf = 0                    # Write calibrated MS2 scan to a MGF file (0 for No, 1 for Yes).
+decoy_prefix = rev_                         # Prefix of the decoy protein entries. Used for parameter optimization only.
 
 isotope_error = 0                           # Also search for MS/MS events triggered on specified isotopic peaks.
 mass_offsets = 0                            # Creates multiple precursor tolerance windows with specified mass offsets.
@@ -44,6 +44,7 @@ variable_mod_02 = 42.01060 [^ 1
 allow_multiple_variable_mods_on_residue = 0 # Allow each residue to be modified by multiple variable modifications (0 or 1).
 max_variable_mods_per_peptide = 3           # Maximum total number of variable modifications per peptide.
 max_variable_mods_combinations = 5000       # Maximum number of modified forms allowed for each peptide (up to 65534).
+mass_diff_to_variable_mod = 0               # Put mass diff as a variable modification. 0 for no; 1 for yes and change the original mass diff and the calculated mass accordingly; 2 for yes but do not change the original mass diff and the calculated mass.
 
 output_file_extension = pepXML              # File extension of output files.
 output_format = pepXML                      # File format of output files (pepXML or tsv).
@@ -76,7 +77,7 @@ minimum_ratio = 0.01                        # Filters out all peaks in experimen
 clear_mz_range = 0.0 0.0                    # Removes peaks in this m/z range prior to matching.
 remove_precursor_peak = 0                   # Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge;
                                             # 2 = remove the peaks with all charge states.
-remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Unit: Da.
+remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Unit: Th.
 intensity_transform = 0                     # Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
 
 # Fixed modifications
