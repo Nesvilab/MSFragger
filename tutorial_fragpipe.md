@@ -6,7 +6,7 @@ Before you get started, make sure your LC-MS file format is compatible with the 
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
 
-#### Configure FragPipe:
+#### Configure FragPipe
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 1. Connect FragPipe to a MSFragger .jar program file. If you already have such a file downloaded, use the 'Browse' button to select it or 'Update' to upgrade to the latest version. If you have not downloaded MSFragger before, use the 'Download' button. [(MSFragger installation help)](http://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#install-update-or-use-an-already-downloaded-version-of-msfragger)
 2. Connect FragPipe to a Philosopher program file. If you already have it downloaded, select 'Browse', otherwise select 'Download'. [(Philosopher installation help)](http://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#install-update-or-use-an-already-downloaded-version-of-philosopher)
@@ -14,20 +14,23 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 
 For more help, see the full [tutorial on FragPipe configuration](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html).
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_1.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-config.png)
  
 
  <br>
 
-#### Add input files:
-In the next tab, 'Select LC/MS Files', drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).
+#### Select workflow & add input files
+In the 'Workflow' tab:
+1. Choose the workflow you want to use and press 'Load'. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)) are provided, or you can customize, save and load workflows for future use.
+2. Set the amount of memory & number of logical cores to use.
+3. Set 'Regular MS' for non-ion mobility data, and 'IM-MS' for Bruker timsTOF PASEF data.
+4. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_2.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-workflow.png)
 
 <br>
  
-#### Group input files:
-In the 'Select LC/MS Files' tab, indicate how you'd like PSM/peptide/protein reports to be generated.
+Once you've loaded your spectral files, indicate how you'd like PSM/peptide/protein reports to be generated:
 
 ##### For a single set of reports (search results from all input files merged)
 Leave the 'Experiment' and 'Replicate' fields blank, and ensure that the 'Multi-Experiment Report' box on the 'Report' tab is not checked.
@@ -70,9 +73,7 @@ Bait IPs: `[GENE]_[replicate]`, where `[GENE]` is the official gene symbol of th
  <br>
 
  
-#### Specify a protein sequence database:
-In the 'Database' tab,
-
+#### Specify a protein sequence database
 If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from Uniprot. Then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli).
 
 Use 'Browse' to select a FASTA file from a previous FragPipe/Philosopher analysis.
@@ -80,61 +81,73 @@ Use 'Browse' to select a FASTA file from a previous FragPipe/Philosopher analysi
 If you need to use a custom FASTA database, it must follow a certain format and contain decoy sequences. Click 'Browse' to navigate to your custom FASTA. If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag. For help adding decoys and database formatting, see the instructions on the 'Database' tab or [here](https://github.com/Nesvilab/philosopher/wiki/Database).
 
   
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_3.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-database.png)
 
 
  <br>
 
-#### Set MSFragger search parameters:
-In the 'MSFragger' tab,
-1. Select the type of database search you want to perform.
-
-   **Closed search**: To perform a closed search (normal precursor mass tolerance), select 'Closed Search'. This will prompt you to also update the downstream parameters for closed searching, select 'Yes'.
-
-   **Open search**: To perform an open search (large precursor mass tolerance, used for finding unspecified post translational modifications), select 'Open Search'. This will prompt you to also update the downstream parameters for open searching, select 'Yes'.
-
-   **Non-specific search**: To perform a closed search where peptides are not required to have any enzymatic terminus, select 'Non-specific Search'. This will prompt you to also update the downstream parameters for non-specific search, select 'Yes'. 
+#### Set MSFragger search parameters
+In the 'MSFragger' tab, check that the search parameters are suitable for your analysis. You can choose to save a customized parameter file to load for future use, or save the entire workflow (from either the 'Workflow' or the 'Run' tab).
    
 **Note:** For non-specific searches or for searches with many variable modifications, you may need to use the database splitting option, which requires an installation of [Python](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python).
-   
- 2. Fill in the amount of memory (in GB) that FragPipe will be allowed to use. We recommend at least 8-16 GB, but complex closed searches and open searches will require more.
- 3. Specify the search parameters you want to use. For more information on these parameters, see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki/Setting-the-Parameters).
+
  
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_4.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-msfragger.png)
  
  
  <br>
 
-#### Set downstream processing parameters:
-In the 'Downstream' tab,
-1. Select 'Run PeptideProphet' to validate your search results. (More information about PeptideProphet can be found [here](http://peptideprophet.sourceforge.net/).
-2. If you previously updated the downstream parameters when setting MSFragger search parameters, you can skip to the next section. You can also re-load default downstream processing parameters by selecting the appropriate 'Load defaults' button.
-3. Select 'Run ProteinProphet' to validate your protein identifications. (More information about ProteinProphet [here](http://proteinprophet.sourceforge.net/)).
-4. If you are performing an open search, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to further improve filtering and interpretability of your results.
+#### Validation
+If you previously updated the downstream parameters when setting MSFragger search parameters, you can skip to the next section. You can also load default downstream processing parameters by selecting the appropriate 'Load defaults' button. In most cases, search results from MSFragger must be filtered by [PeptideProphet](http://peptideprophet.sourceforge.net/) and [ProteinProphet](http://proteinprophet.sourceforge.net/).
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_5.png)
+For open search workflows, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to remove open search artifacts and improve the interpretability of your results.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-validation.png)
 
 
  <br>
  
-#### Specify filtering criteria and reports:
-In the 'Report' tab,
-1. Select 'Create report' to output tab-delimited tables of the search results.
-2. Select 'Run Quantitation' to perform label-free quantification if desired.
-3. If you are performing an open search, select 'Run PTMShepherd' to perform additional modification analysis.
-4. Select 'Generate Spectral Library from search results' to generate spectral library if desired.
+#### Quantification
+To perform quantification, make sure Label-Free Quantification and/or Isobaric Labeling-Based Quantification are selected in their respective tabs (note that workflows can be performed without any quantification, in which case spectral counts will be reported).
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_6.png)
+For label-free quantification, a match-between-runs (MBR) option through [IonQuant](http://ionquant.nesvilab.org/) can be turned on.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-lfq.png)
+
+For label-based quantification, 
+1. Select a labeling reagent.
+2. For each experiment as set in the 'Workflow' tab, select 'Edit/Create' Sample/Channel Annotation to assign sample information to each TMT/iTRAQ channel.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant.png)
+
+In the annotation pop-up window:
+1. Load the selected TMT/iTRAQ channels.
+2. Provide the experiment/replicate information for each channel.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant-annotate.png)
 
 
  <br>
- 
-#### Run FragPipe:
+
+#### PTMs
+For open search-based workflows, [PTM-Shepherd](https://github.com/Nesvilab/PTM-Shepherd/wiki/PTM-Shepherd) summarizes delta masses and provides reports on residue localization, retention time similarity, and more.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-ptmshepherd.png)
+
+ <br>
+
+#### Spectral library generation
+Spectral libraries can be generated within closed search-based workflows.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-speclib.png)
+
+ <br>
+
+#### Run FragPipe
 1. Browse for the folder where you would like the search results to be written.
-2. The 'Print Commands' button can be used to see every line of commands that will be executed without actually running them.
-3. Press 'RUN' to begin the analysis! See the MSFragger [wiki](https://github.com/Nesvilab/MSFragger/wiki), [FAQ](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions), and previous questions on [Github](https://github.com/Nesvilab/FragPipe/issues?utf8=%E2%9C%93&q=) for help.
+2. Press 'RUN' to begin the analysis! See the MSFragger [wiki](https://github.com/Nesvilab/MSFragger/wiki), [FAQ](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions), and previous questions on [Github](https://github.com/Nesvilab/FragPipe/issues?utf8=%E2%9C%93&q=) for more help.
 
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_7.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-run.png)
  
 
