@@ -1,4 +1,4 @@
-## Performing a database search with FragPipe
+## Using FragPipe
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
@@ -19,12 +19,14 @@ For more help, see the full [tutorial on FragPipe configuration](https://msfragg
 
  <br>
 
-#### Select workflow & add input files
+#### Select workflow & add spectral files
 In the 'Workflow' tab:
-1. Choose the workflow you want to use and press 'Load'. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)) are provided, or you can customize, save and load workflows for future use.
+1. Choose the workflow you want to use and press 'Load'. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)) are provided, or you can customize, save and load workflows for future use (via the 'workflows' folder).
 2. Set the amount of memory & number of logical cores to use.
 3. Set 'Regular MS' for non-ion mobility data, and 'IM-MS' for Bruker timsTOF PASEF data.
-4. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).
+4. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).  Specify the appropriate labels for the replicates/fractions in your experiment.
+
+**Notes about timsTOF data:** For raw PASEF files (.d extension), each data file is a folder, so you may find ‘Add Folder Recursively’ useful. If you have already run MSFragger on the .d files, make sure the .mzBIN files resulting from that analysis are in the same directory as the .d files to speed up the analysis (make sure to remove any .d folders from the input list before continuing). If you don't need to perform quantification, .mgf or _calibrated.mgf_ files can be used instead of raw .d.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-workflow.png)
 
@@ -74,7 +76,7 @@ Bait IPs: `[GENE]_[replicate]`, where `[GENE]` is the official gene symbol of th
 
  
 #### Specify a protein sequence database
-If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from Uniprot. Then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli).
+If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from Uniprot. Specify the download location, then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli).
 
 Use 'Browse' to select a FASTA file from a previous FragPipe/Philosopher analysis.
 
@@ -110,11 +112,11 @@ For open search workflows, select [Crystal-C](https://www.nesvilab.org/Crystal-C
 #### Quantification
 To perform quantification, make sure Label-Free Quantification and/or Isobaric Labeling-Based Quantification are selected in their respective tabs (note that workflows can be performed without any quantification, in which case spectral counts will be reported).
 
-For label-free quantification, a match-between-runs (MBR) option through [IonQuant](http://ionquant.nesvilab.org/) can be turned on.
+For **label-free quantification**, a match-between-runs (MBR) option through [IonQuant](http://ionquant.nesvilab.org/) can be turned on.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-lfq.png)
 
-For label-based quantification, 
+For **label-based quantification**, 
 1. Select a labeling reagent.
 2. For each experiment as set in the 'Workflow' tab, select 'Edit/Create' Sample/Channel Annotation to assign sample information to each TMT/iTRAQ channel.
 
