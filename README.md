@@ -36,9 +36,9 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_config.png" width="300px" hspace="3px" align="right"/>
 
 #### FragPipe
-On Windows, the easiest way to run MSFragger is using [FragPipe GUI](https://fragpipe.nesvilab.org). A tutorial on how to convert Thermo RAW files to mzML/mzXML (recommended for Thermo data to ensure full FragPipe functionality) can be found [here](tutorial_convert.md). FragPipe tutorial can be found [here](tutorial_fragpipe.md). 
+On Windows, the easiest way to run MSFragger is through the [FragPipe GUI](https://fragpipe.nesvilab.org). See this [basic usage tutorial](tutorial_fragpipe.md) and how to [convert Thermo RAW files](tutorial_convert.md). 
 
-FragPipe includes post-database search tool Philosopher (for downstream analysis with PeptideProphet and ProteinProphet), label-free quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). Additional tools (currently supporting Thermo data in mzML/mzXML format only) include DIA-Umpire SE module for DIA data, PTM-Shepherd for generating global PTM profiles, and SpectraST-based spectral library building module.  
+FragPipe includes post-database search tool [Philosopher](https://philosopher.nesvilab.org/) (for downstream analysis with PeptideProphet and ProteinProphet), label-free and label-based quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). Additional tools (currently supporting Thermo data in mzML/mzXML format only) include DIA-Umpire SE module for DIA data, PTM-Shepherd for generating global PTM profiles, and SpectraST-based spectral library building module.  
 
 #### ProteomeDiscoverer node
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" width="200px" hspace="3px" align="right"/>
@@ -52,19 +52,19 @@ See [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-M
 
 
 #### Philosopher pipeline
-Complete analyses can be performed with the Philosopher pipeline, a command line tool, see this [tutorial](https://github.com/Nesvilab/philosopher/wiki/Simple-Data-Analysis) for a simple workflow.
+Complete command line analyses can be performed with Philosopher, see this [tutorial](https://github.com/Nesvilab/philosopher/wiki/Simple-Data-Analysis) for a step-by-step example.
 
 ### Documentation
 For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the MSFragger [Wiki page](https://github.com/Nesvilab/MSFragger/wiki). Tutorials for common MSFragger-related workflows are listed below.
 
 - [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
-- [Basic FragPipe use](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
-- [Using TIMS-TOF PASEF data in FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe_pasef.html)
+- [Using FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
+- [Glycoproteomics with MSFragger](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
 - [Linux shell/command line workflow](https://msfragger.nesvilab.org/tutorial_linux.html)
 - [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
 - [Running MSstats on timsTOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
 - [Importing results to Skyline](https://msfragger.nesvilab.org/tutorial_pasef_skyline.html)
-- [Glycoproteomics searching with MSFragger](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
+
 
 
 ### Questions and Technical Support
