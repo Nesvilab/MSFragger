@@ -17,10 +17,9 @@ found in the MSFragger tab of FragPipe, and detailed instructions for running gl
 be found in section (3) of this tutorial.  
 
 #### System Requirements: 
-Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, 
-we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html), for Bruker data, see this 
-[tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe_pasef.html)).      
-See the main MSFragger wiki page [here](https://github.com/Nesvilab/MSFragger/wiki) for full details of system requirements. 
+Before you get started, make sure your LC-MS file format is [compatible](https://msfragger.nesvilab.org/tutorial_fragpipe.html) with the workflows you want to perform (for Thermo data, 
+we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)).      
+See the [MSFragger wiki](https://github.com/Nesvilab/MSFragger/wiki) for full details of system requirements. 
  
 
 ## 2) Glyco-search with MSFragger: Search Types and Parameters:
@@ -91,7 +90,7 @@ modifications at once.
 
 #### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
-#### Please use the main FragPipe tutorial [here](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe.md) to learn the basics of FragPipe. This tutorial will cover only the differences needed for glycoproteomics searches from the basic workflow outlined there 
+#### Please use the [main FragPipe tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe.html) to learn the basics of FragPipe. This tutorial will cover only the differences needed for glycoproteomics searches from the basic workflow outlined there 
 
 ### Getting Started
 
