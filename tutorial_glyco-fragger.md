@@ -1,11 +1,11 @@
 # Performing glycoproteomics searches with MSFragger-Glyco
 
 ## Contents
-1. Getting Started
-2. Glyco-search with MSFragger: Search Types and Parameters
-3. Using FragPipe to run MSFragger glyco searches
-4. Running MSFragger glyco searches from terminal/Linux
-5. Interpreting the output
+1. [Getting Started](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html#1-getting-started)
+2. [Glyco-search with MSFragger: Search Types and Parameters](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html#2-glyco-search-with-msfragger-search-types-and-parameters)
+3. [Using FragPipe to run MSFragger glyco searches](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html#3-performing-a-glycoproteomics-search-with-fragpipe)
+4. [Running MSFragger glyco searches from terminal/Linux](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html#4-running-msfragger-glyco-searches-from-terminallinux)
+5. [Interpreting the output](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html#5-interpreting-the-output)
 
 ## 1) Getting Started
 
