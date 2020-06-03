@@ -46,13 +46,13 @@ $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --ac
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # Open search
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --nontt --decoy $decoyPrefix --database $fastaPath ./*.pepXML # Non-specific closed search
 
-$philosopherPath proteinprophet --maxppmdiff 2000000 ./*.pep.xml
+$philosopherPath proteinprophet --maxppmdiff 2000000 --output combined ./*.pep.xml
 
 # Pick one from the following two commands and comment the other one.
-$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./interact.prot.xml # closed or non-specific closed search
-$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./interact.prot.xml # Open search
+$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./combined.prot.xml # closed or non-specific closed search
+$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./combined.prot.xml # Open search
 
-# Make reports.
+# Generate reports.
 $philosopherPath report
 $philosopherPath workspace --clean
 
@@ -106,11 +106,11 @@ $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --ac
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # Open search
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --nontt --decoy $decoyPrefix --database $fastaPath ./*.pepXML # Non-specific closed search
 
-$philosopherPath proteinprophet --maxppmdiff 2000000 ./*.pep.xml
+$philosopherPath proteinprophet --maxppmdiff 2000000 --output combined ./*.pep.xml
 
 # Pick one from the following two commands and comment the other one.
-$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./interact.prot.xml # closed or non-specific closed search
-$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./interact.prot.xml # Open search
+$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./combined.prot.xml # closed or non-specific closed search
+$philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./combined.prot.xml # Open search
 
 # Perform quantification.
 $philosopherPath freequant --dir $dataDirPath
