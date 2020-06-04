@@ -28,6 +28,8 @@ In the 'Workflow' tab:
 
 **Notes about timsTOF data:** For raw PASEF files (.d extension), each data file is a folder, so we recommend using ‘Add Folder Recursively’. If you have already run MSFragger on the .d files, make sure the .mzBIN files resulting from that analysis are in the same directory as the .d files to speed up the analysis. If you don't need to perform quantification, .mgf or \_calibrated.mgf files can be used instead of raw .d.
 
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-workflow.png)
+
 <br>
  
 Once you've loaded your spectral files, indicate how you'd like PSM/peptide/protein reports to be generated:
