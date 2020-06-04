@@ -26,9 +26,9 @@ In the 'Workflow' tab:
 3. Set 'Regular MS' for non-ion mobility data, and 'IM-MS' for Bruker timsTOF PASEF data.
 4. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).  Specify the appropriate labels for the replicates/fractions in your experiment.
 
-**Notes about timsTOF data:** For raw PASEF files (.d extension), each data file is a folder, so you may find ‘Add Folder Recursively’ useful. If you have already run MSFragger on the .d files, make sure the .mzBIN files resulting from that analysis are in the same directory as the .d files to speed up the analysis (make sure to remove any .d folders from the input list before continuing). If you don't need to perform quantification, .mgf or _calibrated.mgf_ files can be used instead of raw .d.
+**Notes about timsTOF data:** For raw PASEF files (.d extension), each data file is a folder, so we recommend using ‘Add Folder Recursively’. If you have already run MSFragger on the .d files, make sure the .mzBIN files resulting from that analysis are in the same directory as the .d files to speed up the analysis. If you don't need to perform quantification, .mgf or \_calibrated.mgf files can be used instead of raw .d.
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-workflow.png)
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="550px" align="middle"/>
 
 <br>
  
