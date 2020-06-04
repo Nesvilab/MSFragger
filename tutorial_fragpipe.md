@@ -4,7 +4,7 @@
 
 Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png)
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="550px" align="middle"/>
 
 #### Configure FragPipe
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
@@ -27,8 +27,6 @@ In the 'Workflow' tab:
 4. Drag & drop LC/MS files into the window or select 'Add files' or 'Add Folder Recursively' (to add all files in a folder, including those in subfolders).  Specify the appropriate labels for the replicates/fractions in your experiment.
 
 **Notes about timsTOF data:** For raw PASEF files (.d extension), each data file is a folder, so we recommend using ‘Add Folder Recursively’. If you have already run MSFragger on the .d files, make sure the .mzBIN files resulting from that analysis are in the same directory as the .d files to speed up the analysis. If you don't need to perform quantification, .mgf or \_calibrated.mgf files can be used instead of raw .d.
-
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="550px" align="middle"/>
 
 <br>
  
