@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## 3.0 - 2020-06-01
+## 3.0 - 2020-06-05
 - Add Glycan support.
 - Change the default value of `write_calibrated_mgf` to 0.
 - Add 7 ppm to nonspecific search's fragment tolerance list.
