@@ -112,7 +112,7 @@ For open search workflows, select [Crystal-C](https://www.nesvilab.org/Crystal-C
 #### Quantification
 To perform quantification, make sure Label-Free Quantification and/or Isobaric Labeling-Based Quantification are selected in their respective tabs (note that workflows can be performed without any quantification, in which case spectral counts will be reported).
 
-For **label-free quantification**, a match-between-runs (MBR) option through [IonQuant](http://ionquant.nesvilab.org/) can be turned on.
+For **label-free quantification**, a match-between-runs (MBR) option through [IonQuant](http://ionquant.nesvilab.org/) can be turned on for closed search workflows.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-lfq.png)
 
@@ -139,7 +139,7 @@ For open search-based workflows, [PTM-Shepherd](https://github.com/Nesvilab/PTM-
  <br>
 
 #### Spectral library generation
-Spectral libraries can be generated within closed search-based workflows.
+Spectral libraries can be generated within closed search-based workflows. A library will be generated for each experiment specified in the 'Workflow' tab. Experiments must contain more than one spectral file.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-speclib.png)
 
