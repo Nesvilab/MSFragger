@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 3.0 - 2020-06-05
-- Add Glycan support.
+- New Glyco/Labile mode of MSFragger (for N-linked and O-linked glycopeptides; can also be used for other labile modifications)
 - Change the default value of `write_calibrated_mgf` to 0.
-- Add 7 ppm to nonspecific search's fragment tolerance list.
+- Add 7 ppm to nonspecific search's fragment tolerance list (optimization step).
 - Various minor bug fixes and improvements.
 
 ## 2.4 - 2020-03-21
