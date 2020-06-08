@@ -19,7 +19,7 @@ For more help, see the full [tutorial on FragPipe configuration](https://msfragg
 
  <br>
 
-### Select workflow
+### Select workflow and add spectral files
 
 In the 'Workflow' tab:
 
@@ -29,9 +29,6 @@ In the 'Workflow' tab:
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-workflow.png)
 
-<br>
-
-###  Add spectral files
 
 3. Set 'Regular MS' for non-ion mobility data, and 'IM-MS' for Bruker timsTOF PASEF data.
 
