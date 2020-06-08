@@ -35,9 +35,11 @@ In the 'Workflow' tab:
 Once you've loaded your spectral files, annotate your data to specify Experiments and Replicates, which determines how your PSM/peptide/protein etc. reports will be generated:
 
 ##### Single-experiment reports 
+
 Leave the 'Experiment' and 'Replicate' fields blank. Use this option if you want to analyze all input files together and generate a single merged report (including bulding a combined spectral library from all input data). 
 
 ##### Multi-experiment reports and TMT/iTRAQ analysis
+
 Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate of two experimental conditions is composed of two fractions. Different fractions from the same sample should have the same 'Experiment'/'Replicate' name.
 
 | Path            | Experiment | Replicate |
@@ -67,11 +69,11 @@ Indicate the 'Experiment' and 'Replicate' for each input file as shown below, wh
 where 'run_name_1.mzML', 'run_name_2.mzML', 'run_name_5.mzML', and 'run_name_6.mzML' are controls and treatments from the same study subject; 'run_name_3.mzML', 'run_name_4.mzML', 'run_name_7.mzML', and 'run_name_8.mzML' are controls and treatments from another study subject. 
 <br>
 
-**Note:** when analyzing affinity-purification mass spectrometry (AP-MS) and related data (e.g. BioID), for the compatibility with the Resource for Evaluation of Protein Interaction Networks ([REPRINT](https://reprint-apms.org/)), 'Experiment' names should be written as follows:
+**Note: when analyzing affinity-purification mass spectrometry (AP-MS)** and related data (e.g. BioID), for the compatibility with the Resource for Evaluation of Protein Interaction Networks ([REPRINT](https://reprint-apms.org/)), 'Experiment' names should be written as follows:
 
 Negative controls: Put Control (or CONTROL) in the Experiment column, and label each biological replicate with a different replicate number.
 
-Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[GENE]` is the official gene symbol of the bait protein, e.g. `HDAC5`. If there are multiple conditions for the same bait protein (e.g. mutant and wt), add 'condition', e.g. `HDAC5_mutant` format.
+Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[GENE]` is the official gene symbol of the bait protein, e.g. `HDAC5`. If there are multiple conditions for the same bait protein (e.g. mutant and wt), add can add 'condition', e.g. `HDAC5_mut`.
 
 | Path            | Experiment | Replicate |
 |-----------------|------------|-----------|
@@ -81,11 +83,6 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 | run_name_4.mzML | HDAC5      | 1         |
 | run_name_5.mzML | HDAC5      | 2         |
 | run_name_6.mzML | HDAC5      | 3         |
-<br>
-
-and if you also have the mutant version of HDAC5 protein as bait:
-
-|-----------------|------------|-----------|
 | run_name_7.mzML | HDAC5_mut  | 1         |
 | run_name_8.mzML | HDAC5_mut  | 2         |
 | run_name_9.mzML | HDAC5_mut  | 3         |
