@@ -38,7 +38,7 @@ Once you've loaded your spectral files, annotate your data to specify Experiment
 
 Leave the 'Experiment' and 'Replicate' fields blank. Use this option if you want to analyze all input files together and generate a single merged report (including bulding a combined spectral library from all input data). 
 
-##### Multi-experiment reports and TMT/iTRAQ analysis
+##### Multi-experiment reports
 
 Indicate the 'Experiment' and 'Replicate' for each input file as shown below, where each replicate of two experimental conditions is composed of two fractions. Different fractions from the same sample should have the same 'Experiment'/'Replicate' name.
 
@@ -92,6 +92,22 @@ Note that all negative controls should be labeled the same, as 'Control', even i
 
  <br>
 
+
+##### TMT/iTRAQ data
+
+For TMT/iTRAQ analysis, spectral data should be in mzML format. Raw data is curerntly not supported.
+<br>
+
+TMT/iTRAQ data typically consist of one or more plexes, each containing multiple spectral (mzML) files (peptide fractions). 
+Use'Experiment' to denote spectral files from the same plex. Leave Replicate column empty. We recommend organizing data in folders, one for each plex. E.g. if you have 2 TMT plexes, with 2 spectral files (peptide fractions) each, you can create a folder (e.g. named 'MyData'), containing two subfolders (e.g. 'TMT1' and 'TMT2') each containing the corresponding mzML files. Load data by clicking on **Add folder recursively** and selecting 'Mydata' folder, then Assign Files by Expeiments/Groups : 'By Parent Directory', resulting in the following file annotation:   
+
+| Path                 | Experiment | Replicate |
+|----------------------|------------|-----------|
+| run_name_tmt1_1.mzML | TMT1       |           |
+| run_name_tmt1_2.mzML | TMT1       |           |
+| run_name_tmt2_1.mzML | TMT2       |           |
+| run_name_tmt2_2.mzML | TMT2       |           |
+ <br>
  
 #### Specify a protein sequence database
 If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from Uniprot. Specify the download location, then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli).
