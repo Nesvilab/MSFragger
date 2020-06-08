@@ -85,6 +85,7 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 
 and if you also have the mutant version of HDAC5 protein as bait:
 
+|-----------------|------------|-----------|
 | run_name_7.mzML | HDAC5_mut  | 1         |
 | run_name_8.mzML | HDAC5_mut  | 2         |
 | run_name_9.mzML | HDAC5_mut  | 3         |
