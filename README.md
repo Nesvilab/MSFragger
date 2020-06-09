@@ -4,11 +4,11 @@
 
 # MSFragger
 
-MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including TIMS-TOF data), for enzyme unconstrained searches, and for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides.
+MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including TIMS-TOF PASSEF data), for enzyme unconstrained searches (e.g. peptidome), for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides, and for glycopeptide identification (N-linked and O-linked) with MSFragger Glyco mode.  
 
 MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
 
-1. With [FragPipe](https://fragpipe.nesvilab.org) GUI (Graphical User Interface)
+1. With [FragPipe](https://fragpipe.nesvilab.org) GUI (Graphical User Interface).
 2. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 3. As a standalone Java executable (JAR) file
 
@@ -17,7 +17,7 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 ### Supported instruments and file formats  
 **mzML/mzXML**: Data from any instrument in mzML/mzXML format can be used.
 
-**Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (no MS1-based label-free quantification), so conversion to mzML is recommended. The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
+**Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (Spectral library building is currently not compatible with RAW files), so conversion to mzML is recommended. The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
 
 **Bruker TIMS-TOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
 
@@ -38,7 +38,7 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 #### FragPipe
 On Windows, the easiest way to run MSFragger is through the [FragPipe GUI](https://fragpipe.nesvilab.org). See this [basic usage tutorial](tutorial_fragpipe.md) and how to [convert Thermo RAW files](tutorial_convert.md). 
 
-FragPipe includes post-database search tool [Philosopher](https://philosopher.nesvilab.org/) (for downstream analysis with PeptideProphet and ProteinProphet), label-free and label-based quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). Additional tools (currently supporting Thermo data in mzML/mzXML format only) include DIA-Umpire SE module for DIA data, PTM-Shepherd for generating global PTM profiles, and SpectraST-based spectral library building module.  
+FragPipe includes post-database search tool [Philosopher](https://philosopher.nesvilab.org/) (for downstream analysis with PeptideProphet and ProteinProphet), label-free and label-based quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). Additional tools include [DIA-Umpire SE](https://diaumpire.nesvilab.org/) module for DIA data (currently supporting Thermo data in mzXML format only), [Crystal-C](https://www.nesvilab.org/Crystal-C/) for removing open search artifacts, [IonQuant](https://github.com/Nesvilab/IonQuant) for label-free quantification (including match-beetween-runs functionality), [TMT-Integrator](http://tmt-integrator.nesvilab.org) for iTRAQ/TMT analysis, [PTM-Shepherd](https://github.com/Nesvilab/PTM-Shepherd) for generating global PTM profiles, and SpectraST or [EasyPQP](https://github.com/grosenberger/easypqp)-based spectral library building module.  
 
 #### ProteomeDiscoverer node
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" width="200px" hspace="3px" align="right"/>
