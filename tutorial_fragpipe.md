@@ -4,10 +4,11 @@
 
 Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
 
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="550px" align="middle"/>
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="450px" align="middle"/>
+<br>
 <br>
 
-Tutorial contents:
+##### Tutorial contents
 * [Select workflow and add spectral files](https://msfragger.nesvilab.org/tutorial_fragpipe.html#select-workflow-and-add-spectral-files)
   * [Single-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#single-experiment-report)
   * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
