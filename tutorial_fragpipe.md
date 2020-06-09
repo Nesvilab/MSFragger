@@ -7,7 +7,8 @@ Before you get started, make sure your LC-MS file format is compatible with the 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="450px" align="middle"/>
 <br>
 
-##### Tutorial contents
+#### Tutorial contents
+* [Configure FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe)
 * [Select workflow and add spectral files](https://msfragger.nesvilab.org/tutorial_fragpipe.html#select-workflow-and-add-spectral-files)
   * [Single-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#single-experiment-report)
   * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
