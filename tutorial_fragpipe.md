@@ -180,15 +180,15 @@ To perform isobaric labeling-based quantification (TMT/iTRAQ), make sure Label-F
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant.png)
 
 In the annotation pop-up window:
-a. Load the selected TMT/iTRAQ channels.
-b. Provide the experiment/replicate information for each channel.
+1. Load the selected TMT/iTRAQ channels.
+2. Provide the experiment/replicate information for each channel.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant-annotate.png)
 
 Annotation files will be named 'annotation.txt' and saved in each folder.
 
-**Note:** Instead of naming samples/channels in FragPipe using Edit/Create, you can create annotation.txt files in advance. FragPipe will load the annotation.txt file automatically if it finds one in the folder containing mzML files. 
+**Note:** Instead of naming samples/channels in FragPipe using Edit/Create, you can make 'annotation.txt' files in advance, and FragPipe will load it automatically if it is in the same folder as the corresponding mzML files. 
 
-3. If you have multiple plexes and want to use a common (Bridge) channel, select 'Define reference: Reference sample', and enter the text keyword describing the Bridge channel (e.g. 'pool') that matches your naming scheme. Alternatively, select 'Virtual' reference sample approach if you do not have a pooled channel.   
+If you have multiple plexes and want to use a common (Bridge) channel, select 'Define reference: Reference sample', and enter the text keyword describing the Bridge channel (e.g. 'pool') that matches your naming scheme. Alternatively, select 'Virtual' reference sample approach if you do not have a pooled channel.   
 
 
 ### PTMs
