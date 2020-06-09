@@ -6,7 +6,6 @@ Before you get started, make sure your LC-MS file format is compatible with the 
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="450px" align="middle"/>
 <br>
-<br>
 
 ##### Tutorial contents
 * [Select workflow and add spectral files](https://msfragger.nesvilab.org/tutorial_fragpipe.html#select-workflow-and-add-spectral-files)
@@ -22,7 +21,7 @@ Before you get started, make sure your LC-MS file format is compatible with the 
 * [Post-translational modifications](https://msfragger.nesvilab.org/tutorial_fragpipe.html#ptms)
 * [Spectral library generation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#spectral-library-generation)
 * [Run FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-fragpipe)
-
+<br>
 
 ### Configure FragPipe
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
