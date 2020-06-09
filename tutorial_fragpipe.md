@@ -89,6 +89,7 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 | run_name_7.mzML | HDAC5_mut  | 1         |
 | run_name_8.mzML | HDAC5_mut  | 2         |
 | run_name_9.mzML | HDAC5_mut  | 3         |
+
 <br>
 
 Note that all negative controls should be labeled the same, as 'Control', even if you have negative controls generated under different conditions or in different cell lines.  
