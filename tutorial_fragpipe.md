@@ -176,7 +176,7 @@ To perform label-free quantification, make sure Label-Free Quantification is sel
 
 To perform isobaric labeling-based quantification (TMT/iTRAQ), make sure Label-Free Quantification is selected
 1. Select a labeling reagent (e.g. TMT10, TMT6, iTRAQ4, etc).
-2. For each experiment as set in the 'Workflow' tab, select 'Edit/Create' Sample/Channel Annotation to assign sample information to each TMT/iTRAQ channel.
+2. For each experiment as set in the 'Workflow' tab, select 'Edit/Create' Sample/Channel Annotation to assign sample information to each TMT/iTRAQ channel, or 'Browse' to load an existing 'annotation.txt' file.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant.png)
 
