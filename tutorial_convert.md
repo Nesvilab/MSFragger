@@ -1,7 +1,7 @@
 # Converting raw files to mzML
 
 #### FragPipe and MSFragger accept mzML files, which can be generated from your raw LC/MS data with MSConvert, part of the ProteoWizard software package. ProteoWizard can be downloaded [here](http://www.proteowizard.org/download.html). Once ProteoWizard is installed, launch MSConvert.
-#### This page has instructions for using MSConvert to generate mzML files from both Thermo Orbitrap and Bruker TIMS-TOF data formats.
+#### This page has instructions for using MSConvert to generate mzML files from both Thermo Orbitrap and Bruker timsTOF data formats, though we recommend using raw .d format for Bruker data.
 
 <br>
 
@@ -10,7 +10,7 @@ In the MSConvert window:
 1. Browse for the raw files you want to convert, then
 2. add them to the input list.
 3. Select an output directory (where you want to mzML files to be generated).
-4. Set the output file format to 'mzML', and check the boxes for 'Write index', 'TPP compatibility', and 'Use zlib compression'.
+4. Set the output file format to 'mzML', and check the boxes for 'Write index', 'TPP compatibility', and 'Use zlib compression'. **Note:** Do not select 'zlib compression' for use with Proteome Discoverer, which currently does not support this compression function.
 5. Select any additional filters you want to apply to the conversion. We recommend using the default filters (shown here. The "peakPicking" must be the first filter.).
 6. Press 'Start' to begin converting your files.
 
@@ -18,7 +18,7 @@ In the MSConvert window:
 
 <br>
 
-### Convert Bruker timsTOF raw files (Deprecated. MSFragger-2.0 can load raw folder (.d) directly):
+### Convert Bruker timsTOF raw files (DEPRECATED. MSFragger can load .d directly, and .d is needed for label-free quantification):
 In the MSConvert window:
 1. Browse for the raw files you want to convert, then
 2. add them to the input list.
