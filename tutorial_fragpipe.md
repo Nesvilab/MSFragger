@@ -5,6 +5,23 @@
 Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="550px" align="middle"/>
+<br>
+
+Tutorial contents:
+* [Select workflow and add spectral files](https://msfragger.nesvilab.org/tutorial_fragpipe.html#select-workflow-and-add-spectral-files)
+  * [Single-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#single-experiment-report)
+  * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
+  * [Affinity purification data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#affinity-purification-data)
+  * [TMT/iTRAQ data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#tmtitraq-data)
+* [Specify a sequence database](https://msfragger.nesvilab.org/tutorial_fragpipe.html#specify-a-protein-sequence-database)
+* [Configure MSFragger search](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-msfragger-search)
+* [Validation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#validation)
+* [Label-free quantification](https://msfragger.nesvilab.org/tutorial_fragpipe.html#lfq-label-free-quantification)
+* [Isobaric quantification](https://msfragger.nesvilab.org/tutorial_fragpipe.html#isobaric-labeling-based-quantification)
+* [Post-translational modifications](https://msfragger.nesvilab.org/tutorial_fragpipe.html#ptms)
+* [Spectral library generation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#spectral-library-generation)
+* [Run FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-fragpipe)
+
 
 ### Configure FragPipe
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
@@ -55,7 +72,7 @@ Indicate the 'Experiment' and 'Replicate' for each input file as shown below, wh
 | run_name_7.mzML | Treatment  | 4         |
 | run_name_8.mzML | Treatment  | 4         |
 
-**Note:** If you would like to use MSStats for downstream statistical analysis of FragPipe-generated reports, the 'Replicate' ID (e.g., 1, 2, 3, and 4 in the above table) should not be reused by different replicates from different experiments. However, if each pair of 'Control' and 'Treatment' is from the same study subject, you should use the same 'Replicate' ID for the corresponding 'Control' runs and 'Treatment' runs (detailed discussion can be found from [https://github.com/Nesvilab/FragPipe/issues/183](https://github.com/Nesvilab/FragPipe/issues/183).):
+**Note:** If you would like to use MSStats for downstream statistical analysis of FragPipe-generated reports, the 'Replicate' ID (e.g., 1, 2, 3, and 4 in the above table) should not be reused by different replicates from different experiments. However, if each pair of 'Control' and 'Treatment' is from the same study subject, you should use the same 'Replicate' ID for the corresponding 'Control' runs and 'Treatment' runs (detailed discussion can be found [here](https://github.com/Nesvilab/FragPipe/issues/183).):
 
 | Path            | Experiment | Replicate |
 |-----------------|------------|-----------|
@@ -72,7 +89,8 @@ where 'run_name_1.mzML', 'run_name_2.mzML', 'run_name_5.mzML', and 'run_name_6.m
 <br>
 <br>
 
-**Note: when analyzing affinity-purification mass spectrometry (AP-MS)** and related data (e.g. BioID), for the compatibility with the Resource for Evaluation of Protein Interaction Networks ([REPRINT](https://reprint-apms.org/)), 'Experiment' names should be written as follows:
+#### Affinity-purification data
+When analyzing AP-MS and related data (e.g. BioID) for compatibility with the Resource for Evaluation of Protein Interaction Networks ([REPRINT](https://reprint-apms.org/)), 'Experiment' names should be written as follows:
 
 Negative controls: Put Control (or CONTROL) in the Experiment column, and label each biological replicate with a different replicate number.
 
@@ -100,8 +118,7 @@ Note that all negative controls should be labeled the same, as 'Control', even i
 #### TMT/iTRAQ data
 For TMT/iTRAQ analysis, spectral files should be in mzML format. Raw format is currently not supported.
 
-TMT/iTRAQ data typically consist of one or more plexes, each containing multiple spectral files (peptide fractions). 
-Use'Experiment' to denote spectral files from the same plex. Leave 'Replicate' column empty. We recommend organizing data in folders, one for each plex. E.g. if you have 2 TMT plexes, with 2 spectral files (peptide fractions) in each, you can create a folder (e.g. named 'MyData'), containing two subfolders (e.g. 'TMT1' and 'TMT2') each containing the corresponding mzML files. Load data by clicking on **Add folder recursively** and selecting 'Mydata' folder, then Assign Files by Expeiments/Groups : **By Parent Directory**, resulting in the following spectral file annotation:   
+TMT/iTRAQ experiments typically consist of one or more 'plexes' (multiplexed samples), each composed of multiple spectral files (from prefractionation). Use'Experiment' to denote spectral files from the same plex while leaving the 'Replicate' column empty. We recommend organizing data in folders, one for each plex. E.g. if you have 2 TMT plexes, with 2 spectral files (peptide fractions) in each, you can create a folder (e.g. named 'MyData'), containing two subfolders (e.g. 'TMT1' and 'TMT2') each containing the corresponding mzML files. Load data by clicking **Add folder recursively** and selecting 'MyData' folder, then assign files to Experiments/Groups **By parent directory**, resulting in the following spectral file annotation:   
 
 | Path                 | Experiment | Replicate |
 |----------------------|------------|-----------|
@@ -109,6 +126,7 @@ Use'Experiment' to denote spectral files from the same plex. Leave 'Replicate' c
 | run_name_tmt1_2.mzML | TMT1       |           |
 | run_name_tmt2_1.mzML | TMT2       |           |
 | run_name_tmt2_2.mzML | TMT2       |           |
+
  <br>
  
 ### Specify a protein sequence database
@@ -166,11 +184,11 @@ a. Load the selected TMT/iTRAQ channels.
 b. Provide the experiment/replicate information for each channel.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant-annotate.png)
 
-Annotation files will be named annotation.txt and saved in each folder. 
+Annotation files will be named 'annotation.txt' and saved in each folder.
 
 **Note** Instead of naming samples/channels in FragPipe using Edit/Create, you can create annotation.txt files in advance. FragPipe will load the annotation.txt file automatically if it finds one in the folder containing mzML files. 
 
-3. If you have multiple plexes and want to use a common (Bridge) channel, select 'Define reference: Reference sample', and enter the text keyword describing the Bridge channel (e.g. 'pool') that matches your naming scheme. Alternatively, select 'Virtual' reference sample approach.   
+3. If you have multiple plexes and want to use a common (Bridge) channel, select 'Define reference: Reference sample', and enter the text keyword describing the Bridge channel (e.g. 'pool') that matches your naming scheme. Alternatively, select 'Virtual' reference sample approach if you do not have a pooled channel.   
 
 
 ### PTMs
@@ -182,6 +200,9 @@ For open search-based workflows, [PTM-Shepherd](https://github.com/Nesvilab/PTM-
 
 ### Spectral library generation
 Spectral libraries can be generated within closed search-based workflows. A library will be generated for each experiment specified in the 'Workflow' tab. Experiments must contain more than one spectral file.
+**Note**: to use EasyPQP, you will need to update to the latest version. Open an Anaconda Prompt command line window and run these two commands:
+`pip uninstall --yes easypqp`
+`pip install git+https://github.com/grosenberger/easypqp.git@master`
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-speclib.png)
 
