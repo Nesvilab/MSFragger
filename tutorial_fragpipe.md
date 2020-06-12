@@ -202,6 +202,8 @@ For open search-based workflows, [PTM-Shepherd](https://github.com/Nesvilab/PTM-
 ### Spectral library generation
 Spectral libraries can be generated within closed search-based workflows. A library will be generated for each experiment specified in the 'Workflow' tab. Experiments must contain more than one spectral file.
 
+When building a library from fractionated data, using one of the fractions for reference retention time (RT) calibration is not recommended. Instead, select ciRT for human samples or iRT spike-in peptides for other organisms if possible.
+
 **Note:** To use EasyPQP, you will need to update to the latest version. Open an Anaconda Prompt command line window and run these two commands:
 
 `pip uninstall --yes easypqp`
