@@ -1,5 +1,7 @@
 # Running a FragPipe-equivalent workflow on Linux
 
+For most desktop users, we recommend using [FragPipe](http://fragpipe.nesvilab.org/). To analyze your data in a server/HPC environment, we recommend Philosopher [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline). For quantitative analysis of Bruker ion mobility data on a server, use the ‘TIMS-TOF data’ script below (ID-only workflows for TIMS-TOF data can also be done with [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline)).
+
 Example shell scripts for TIMS-TOF PASEF data (with [IonQuant](https://github.com/Nesvilab/IonQuant)) and non-ion mobility data are shown below, modify them to suit your configuration. Download a stand-alone IonQuant.jar file [here](https://github.com/Nesvilab/IonQuant/releases/latest). 
 <br>
 
