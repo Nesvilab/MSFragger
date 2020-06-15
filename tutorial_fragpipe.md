@@ -204,7 +204,7 @@ Spectral libraries can be generated within closed search-based workflows. A libr
 
 When building a library from fractionated data, using one of the fractions for reference retention time (RT) calibration is not recommended. Instead, select ciRT for human samples or iRT spike-in peptides for other organisms if possible.
 
-**Note:** To use EasyPQP, you will need to update to the latest version. Open an Anaconda Prompt command line window and run these two commands (if you don't have Git you can install it from [here](https://gitforwindows.org/):
+**Note:** To use EasyPQP, you will need to update to the latest version. Open an Anaconda Prompt command line window and run these two commands (if you don't have Git you can install it from [here](https://gitforwindows.org/)):
 
 `pip uninstall --yes easypqp`
 
