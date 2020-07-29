@@ -189,9 +189,9 @@ In the annotation pop-up window:
 
 Annotation files will be named 'annotation.txt' and saved in each folder.
 
-**Note:** Instead of naming samples/channels in FragPipe using Edit/Create, you can make 'annotation.txt' files in advance, and FragPipe will load it automatically if it is in the same folder as the corresponding mzML files. 
+**Note:** Instead of naming samples/channels in FragPipe using Edit/Create, you can make 'annotation.txt' files in advance, and FragPipe will load it automatically if it is in the same folder as the corresponding mzML files. When creating these files, make sure the value in first column (channel) and in the second column (sample) are separated using space, not using tab or any other character. 
 
-If you have multiple plexes and want to use a common (Bridge) channel, select 'Define reference: Reference sample', and enter the text keyword describing the Bridge channel (e.g. 'pool') that matches your naming scheme. Alternatively, select 'Virtual' reference sample approach if you do not have a pooled channel.   
+**Note** If you have multiples plexes and added a common reference sample to each plex for bridging purposes, label these common reference samples as commonprefix_plexnumber (e.g. pool_01, pool_02, etc). If you want to use this common reference as the basis for computing the TMT/iTRAQ ratios for each PSM (in TMT-Integrator), select 'Define reference: Reference sample', and enter the text keyword describing the common reference channel (e.g. 'pool') that matches your naming scheme. Alternatively, select 'Virtual' reference sample approach if you do not have a reference channel. With the vitual reference approach, individual channel intensities for each PSM will be converted to ratios by dividing each channel intensity by the average intensity across all channels in that PSM.     
 
 
 ### PTMs
