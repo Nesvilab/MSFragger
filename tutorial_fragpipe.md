@@ -176,7 +176,7 @@ To perform label-free quantification, make sure Label-Free Quantification is sel
 
 **Note:** IonQuant provides a lot of flexibility with how identifications are transfered between runs with MBR. Two of the key parameters controlling MBR are 'Min MBR correlation' and 'MBR top runs'. **Min MBR correlation** parameter allows MBR only between runs with an overlap-weighted correlation (Pearson correlation of ion abundances * overlap in IDs) above the specified threshold (0.5 by default). In addition, **MBR top runs** is applied to allow transfer of IDs only from the highest N (by default 2) correlated runs that are above the 'Min MBR correlation'.
 
-The optimal choice of MBR parameters depends on the experimental design. For example, in an AP-MS experiment with three replicates of Bait protein and 3 replicates of Negative Controls (see HDAC5 example above), one may want to set 'MBR top runs' parameter to 2, so only experiments (runs) of the same kind can be used as donor runs for MBR. As a result, MBR will be performed only between Bait IP runs, or between the Control runs, but not between the two groups. 
+The optimal choice of MBR parameters depends on the experimental design. For example, in an AP-MS experiment with three replicates of Bait protein and 3 replicates of Negative Controls, one may want to set 'MBR top runs' parameter to 2, so only runs of the same kind can be used as donor runs for MBR. As a result, MBR will be performed only between Bait IP runs, or between the Control runs, but not between the two groups. 
  
 If you want to allow transfer between all runs in the dataset, set 'MBR top runs' to a large value (larger than the number of runs in the dataset) and set 'Min MBR correlation' to 0.
  
