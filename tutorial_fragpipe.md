@@ -110,14 +110,10 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 | run_name_8.mzML | HDAC5_mut  | 2         |
 | run_name_9.mzML | HDAC5_mut  | 3         |
 
-<br>
 **Note:** All negative controls should be labeled the same, as 'Control', even if you have negative controls generated under different conditions or in different cell lines.  
-
-<br>
 
 **Note:** When the files are annotated with non-empty 'Experiment' and/or 'Replicate' field (as described above), FragPipe multi-experiment workflow is used, which includes running Philosopher Abacus command for generating combined summary reports at the protein and (optionally) peptide levels. Abacus is run with '--reprint' option, generating reprint-spc.tsv (spectral count-based) and reprint-int.tsv (intensity-based) files. These files can be uploaded to [REPRINT](https://reprint-apms.org/) for interaction scoring using SAINT or SAINTexpress and downstream visualization of the resulting interaction network. 
  
-<br>
 <br>
 
 #### TMT/iTRAQ data
