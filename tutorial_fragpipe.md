@@ -111,8 +111,9 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 
 <br>
 
-Note that all negative controls should be labeled the same, as 'Control', even if you have negative controls generated under different conditions or in different cell lines.  
+**Note:** All negative controls should be labeled the same, as 'Control', even if you have negative controls generated under different conditions or in different cell lines.  
 
+**Note:** When the files are annotated with non-empty 'Experiment' and/or 'Replicate' field (as described above), FragPipe multi-experiment workflow is used, which includes running Philosopher Abacus command for generating combined summary reports at the protein and (optionally) peptide levels. Abacus is run with '--reprint' option, generating reprint-spc.tsv (spectral count-based) and reprint-int.tsv (intensity-based) files. These files can be uploaded to [REPRINT](https://reprint-apms.org/) for interaction scoring using SAINT or SAINTexpress and downstream visualization of the resulting interaction network. 
  <br>
 
 
@@ -182,6 +183,7 @@ If you want to allow transfer between all runs in the dataset, set 'MBR top runs
  
 MBR is also controlled using FDR. We recommend 0.01 (i.e. 1%) ion-level FDR (default value). However, to allow more transfers (at the risk of introducing more quantification errors), FDR threshold can be relaxed, e.g. to 0.05 (5 %). 
 
+<br>
 
 ### Isobaric Labeling-Based Quantification 
 
@@ -202,6 +204,7 @@ Annotation files will be named 'annotation.txt' and saved in each folder.
 
 **Note:** If you have multiples plexes and added a common reference sample to each plex for bridging purposes, label these common reference samples as commonprefix_plexnumber (e.g. pool1, pool2, etc). If you want to use this common reference as the basis for computing the TMT/iTRAQ ratios for each PSM (within TMT-Integrator), select 'Define reference: Reference sample', and enter the text keyword describing the common reference channel (e.g. 'pool') that matches your naming scheme. Alternatively, select Virtual Reference approach if you do not have a reference sample. With the vitual reference approach, individual channel intensities for each PSM will be converted to ratios by dividing each channel intensity by the average intensity across all channels in that PSM.     
 
+<br>
 
 ### PTMs
 For open search-based workflows, [PTM-Shepherd](https://github.com/Nesvilab/PTM-Shepherd/wiki/PTM-Shepherd) summarizes delta masses and provides reports on residue localization, retention time similarity, and more.
