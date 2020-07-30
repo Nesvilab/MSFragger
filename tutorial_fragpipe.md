@@ -75,6 +75,8 @@ Indicate the 'Experiment' and 'Replicate' for each input file as shown below, wh
 
 **Note:** If you would like to use MSStats for downstream statistical analysis of FragPipe-generated reports, the 'Replicate' ID (e.g., 1, 2, 3, and 4 in the above table) should not be reused by different replicates from different experiments. However, if each pair of 'Control' and 'Treatment' is from the same study subject, you should use the same 'Replicate' ID for the corresponding 'Control' runs and 'Treatment' runs (detailed discussion can be found [here](https://github.com/Nesvilab/FragPipe/issues/183).):
 
+<br>
+
 | Path            | Experiment | Replicate |
 |-----------------|------------|-----------|
 | run_name_1.mzML | Control    | 1         |
@@ -110,12 +112,14 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 | run_name_9.mzML | HDAC5_mut  | 3         |
 
 <br>
-
 **Note:** All negative controls should be labeled the same, as 'Control', even if you have negative controls generated under different conditions or in different cell lines.  
 
-**Note:** When the files are annotated with non-empty 'Experiment' and/or 'Replicate' field (as described above), FragPipe multi-experiment workflow is used, which includes running Philosopher Abacus command for generating combined summary reports at the protein and (optionally) peptide levels. Abacus is run with '--reprint' option, generating reprint-spc.tsv (spectral count-based) and reprint-int.tsv (intensity-based) files. These files can be uploaded to [REPRINT](https://reprint-apms.org/) for interaction scoring using SAINT or SAINTexpress and downstream visualization of the resulting interaction network. 
- <br>
+<br>
 
+**Note:** When the files are annotated with non-empty 'Experiment' and/or 'Replicate' field (as described above), FragPipe multi-experiment workflow is used, which includes running Philosopher Abacus command for generating combined summary reports at the protein and (optionally) peptide levels. Abacus is run with '--reprint' option, generating reprint-spc.tsv (spectral count-based) and reprint-int.tsv (intensity-based) files. These files can be uploaded to [REPRINT](https://reprint-apms.org/) for interaction scoring using SAINT or SAINTexpress and downstream visualization of the resulting interaction network. 
+ 
+<br>
+<br>
 
 #### TMT/iTRAQ data
 For TMT/iTRAQ analysis, spectral files should be in mzML format. Raw format is currently not supported.
@@ -129,6 +133,7 @@ TMT/iTRAQ experiments typically consist of one or more 'plexes' (multiplexed sam
 | run_name_tmt2_1.mzML | TMT2       |           |
 | run_name_tmt2_2.mzML | TMT2       |           |
 
+ <br>
  <br>
  
 ### Specify a protein sequence database
