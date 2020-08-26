@@ -2,7 +2,7 @@
 
 For most desktop users, we recommend using [FragPipe](http://fragpipe.nesvilab.org/). To analyze your data in a server/HPC environment, we recommend Philosopher [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline). For quantitative analysis of Bruker ion mobility data on a server, use the ‘TIMS-TOF data’ script below (ID-only workflows for TIMS-TOF data can also be done with [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline)).
 
-Example shell scripts for TIMS-TOF PASEF data (with [IonQuant](https://github.com/Nesvilab/IonQuant)) and non-ion mobility data are shown below, modify them to suit your configuration. Download a stand-alone IonQuant.jar file [here](https://github.com/Nesvilab/IonQuant/releases/latest). 
+Example shell scripts for TIMS-TOF PASEF data (with [IonQuant](https://github.com/Nesvilab/IonQuant)) and non-ion mobility data are shown below, modify them to suit your configuration.
 <br>
 
 ### TIMS-TOF data:
@@ -15,12 +15,12 @@ set -xe
 # Specify paths of tools and files to be analyzed.
 dataDirPath="data/"
 fastaPath="2020-01-22-decoys-reviewed-contam-UP000005640.fas"
-msfraggerPath="MSFragger-2.2.jar"
+msfraggerPath="MSFragger.jar" # download from https://msfragger.arsci.com/upgrader/
 fraggerParamsPath="fragger.params"
-philosopherPath="philosopher.2.0.0"
-crystalcPath="CrystalC-1.0.5.jar"
+philosopherPath="philosopher" # download from https://github.com/Nesvilab/philosopher/releases/latest
+crystalcPath="CrystalC.jar" # download from https://github.com/Nesvilab/Crystal-C/releases/latest
 crystalcParameterPath="crystalc.params"
-ionquantPath="IonQuant.jar"
+ionquantPath="IonQuant.jar" # download from https://github.com/Nesvilab/IonQuant/releases/latest
 decoyPrefix="rev_"
 
 # Run MSFragger. Change the -Xmx value according to your computer's memory.
@@ -35,7 +35,7 @@ mv $dataDirPath/*.tsv ./ # Comment this line if localize_delta_mass = 0 in your 
 # For open searches, run Crystal-C. Otherwise, don't run Crystal-C (comment this for-loop).
 for myFile in ./*.pepXML
 do
-	java -Xmx64G -cp $crystalcPath Main $crystalcParameterPath $myFile
+	java -Xmx64G -jar $crystalcPath $crystalcParameterPath $myFile
 done
 
 # Run PeptideProphet, ProteinProphet, and FDR filtering with Philosopher
@@ -45,7 +45,8 @@ $philosopherPath database --annotate $fastaPath --prefix $decoyPrefix
 
 # Pick one from the following three commands and comment the other two.
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --decoy $decoyPrefix --database $fastaPath ./*.pepXML # Closed search
-$philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # Open search
+$philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*_c.pepXML # Open search if you ran Crystal-C
+$philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # Open search if you did NOT ran Crystal-C
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --nontt --decoy $decoyPrefix --database $fastaPath ./*.pepXML # Non-specific closed search
 
 $philosopherPath proteinprophet --maxppmdiff 2000000 --output combined ./*.pep.xml
@@ -76,11 +77,12 @@ set -xe
 # Specify paths of tools and files to be analyzed.
 dataDirPath="data/"
 fastaPath="2020-01-22-decoys-reviewed-contam-UP000005640.fas"
-msfraggerPath="MSFragger-2.2.jar"
+msfraggerPath="MSFragger.jar" # download from https://msfragger.arsci.com/upgrader/
 fraggerParamsPath="fragger.params"
-philosopherPath="philosopher.2.0.0"
-crystalcPath="CrystalC-1.0.5.jar"
+philosopherPath="philosopher" # download from https://github.com/Nesvilab/philosopher/releases/latest
+crystalcPath="CrystalC.jar" # download from https://github.com/Nesvilab/Crystal-C/releases/latest
 crystalcParameterPath="crystalc.params"
+ionquantPath="IonQuant.jar" # download from https://github.com/Nesvilab/IonQuant/releases/latest
 decoyPrefix="rev_"
 
 # Run MSFragger. Change the -Xmx value according to your computer's memory.
@@ -105,7 +107,8 @@ $philosopherPath database --annotate $fastaPath --prefix $decoyPrefix
 
 # Pick one from the following three commands and comment the other two.
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --decoy $decoyPrefix --database $fastaPath ./*.pepXML # Closed search
-$philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # Open search
+$philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*_c.pepXML # Open search if you ran Crystal-C
+$philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --masswidth 1000.0 --clevel -2 --decoy $decoyPrefix --combine --database $fastaPath ./*.pepXML # Open search if you did NOT ran Crystal-C
 $philosopherPath peptideprophet --nonparam --expectscore --decoyprobs --ppm --accmass --nontt --decoy $decoyPrefix --database $fastaPath ./*.pepXML # Non-specific closed search
 
 $philosopherPath proteinprophet --maxppmdiff 2000000 --output combined ./*.pep.xml
