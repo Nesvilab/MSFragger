@@ -41,7 +41,11 @@ part, or all of their original glycan, making it ideal for searching collisional
 **Key Parameters**:
 
 1. **labile_search_mode**: *(possible values: nglycan, labile, off)* nglycan mode checks for N-glycosylation motif N-X-S/T (X is not P), but is otherwise identical to "labile" mode. Labile mode should be used for all labile modifications (other than N-glycans), including O-glycans. Specify the allowed residues in deltamass_allowed_residues. "Off" results in a standard (non-glyco) MSFragger search, in which all mass offsets are assumed to remain intact during activation.  
-2. **deltamass_allowed_residues**: (used in "labile" mode ONLY). Specify which amino acids (single letter codes) are allowed to contain the glycan mass offsets. Default: ST (for O-glycoproteomics searches). NOT used in nglycan mode. 
+2. **deltamass_allowed_residues**: (overridden in nglycan mode). Specify which amino acids (single letter codes) are allowed to contain the 
+glycan mass offsets. Allowed values are single letter amino acid codes. When labile_search_mode is 'off', '-' can be used to allow non-localized
+matches (i.e. matches to labile mods that have dissociated), by setting the value to 'STY-', for example. It is not necessary to include '-' for labile and nglycan modes,
+as labile modifications are considered by default.
+Default value: 'all'. For typical O-glycoproteomics searches, should be set to 'ST'. NOT used in nglycan mode. 
 3. **mass_offsets**: (value: 0/mass1/mass2/...) All possible glycan masses should be specified as mass offsets (separated by '/'). Depending on 
 the type of data and search, the glycans considered can vary. The masses of all glycans of interest should be determined and converted to 
 a list separated by '/' (see example parameter file). An arbitrary number of mass offsets can be searched, but search speed decreases with the 
@@ -54,7 +58,7 @@ number of masses used. If more than a few thousand masses are being considered (
 6. **Y_type_masses**: (value: 0/mass1/mass2/...) Masses of Y-type ions (intact peptide plus partially fragmented glycan) to consider in search. Note that ALL Y masses are applied to ALL peptide searches, so including too many can reduce search performance. Can be used in non-glyco searches as well (any modification that partially fragments, leaving behind some mass can be considered). 
 7. **diagnostic_fragments**: (value: mass1/mass2/...) m/z values of diagnostic fragment ions (e.g. Oxonium ions) that appear in spectra of peptides containing a mod of interest. If diagnostic_intensity_filter > 0, at least one of the masses provided here must be found at sufficient intensity for any mass offset to be searched for the spectrum. To disable this checking, change diagnostic_intensity_filter to 0.
 8. **diagnostic_intensity_filter**: Minimum relative intensity (relative to base peak height) for the SUM of intensities of all diagnostic fragment ions found in the spectrum to consider this a potential glyco (or other labile mod) spectrum. Set to 0 to disable. A value of 0.1 means summed intensity must be 10% the height of the base peak in the MS/MS spectrum to be considered. 
-9. **deisotope**: (values: 0, 1, or 2) glycopeptides tend to be larger than tryptic peptides, making deisotoping very helpful. Recommended setting 1 for glyco data. 
+9. **deisotope**: (values: 0 or 1) glycopeptides tend to be larger than tryptic peptides, making deisotoping very helpful. Recommended setting '1' for glyco data. 
 
 ### Open Search
 
@@ -67,12 +71,11 @@ the sequon/residue(s) of interest to effectively search for glycopeptides. If gl
 search will likely be more sensitive.    
 **Key Parameters**:
 
-1. **labile_search_mode, fragment_ion_series, Y_type_masses, and deisotope** should be used as in mass offset glyco-searches (see above).
+1. **labile_search_mode, fragment_ion_series, Y_type_masses, deltamass_allowed_residues, diagnostic_fragments, and diagnostic_intensity_filter, and deisotope** should be used as in mass offset glyco-searches (see above).
 2. **localize_delta_mass**: shifted ions are not necessary for fully labile modifications (like glycosylation in CID/HCD searches), but can be useful for determining the presence of other types of modifications. 
-If interested only in glycans, use the recommended settings for mass offset search; if interested in other modifications as well, set to 1. 
+If interested only in glycans in CID/HCD data, this can be set to 0; otherwise, and if interested in other modifications as well as glycans, set to 1. 
 3. **mass_offsets, isotope_error**: set to 0
 4. **precursor_mass_lower, precursor_mass_upper**: these define the range of the open search. For example, precursor_mass_lower = -200, precursor_mass_upper = 2500 would allow any mass shift between -200 and 2500 Da, accounting for many types of glycans (and many other peptide modifications). 
-5. **deltamass_allowed_residues, diagnostic_fragments, and diagnostic_intensity_filter** are NOT yet supported for open searches. 
 
 ### Variable Modification Search
 Recommended only for ETD/ECD data. Enter glycans of interest as variable modifications (see the
@@ -125,15 +128,18 @@ Open searches are performed by changing the precursor mass range and units here.
 
 ##### Advanced parameters
 ![](./images/Fragpipe-glyco_3.PNG)   
-Most of the glyco-search options can be found in the advanced section. For mass offset glyco searches,
-input all glycan masses of interest in the mass offset box **(1)**. Open searches leave this box empty.     
+Most of the glyco-search options can be found in the advanced section. 
+
+**(1)** For mass offset glyco searches,
+input all glycan masses of interest in the mass offset box. Open searches leave this box empty.     
 **(2)** Adjust the options in the Glyco/Labile mods box.
 1. **Search Mode**: distinguishes between types of mass offset and open searches. Options are:    
 	*nglycan*: for N-linked glycans. Uses consensus sequon N-X-S/T (X is not P) for glycosites    
 	*labile*: for all other labile modifications, **including O-linked glycans**    
 	*off*: for modifications that do not dissociate. Should not be used for glyco search.        
-2. **Allowed Resides**: for **labile** search type **only**. Determines the allowed residues
-for mass offsets to be considered. Input is single letter amino acid codes. For O-linked glycan searches, default is ST.      
+2. **Allowed Resides**: note: NOT used in nglycan mode. Determines the allowed residues
+for mass offsets to be considered. Input is single letter amino acid codes (see above for details).
+ For O-linked glycan searches, default is ST.      
 3. **Diagnostic Ion Minimum Intensity**: Used to filter spectra considered for searching glycans
 based on the presence of oxonium ions. If set to 0, filter will not be used. Otherwise, value is the
 minimum for the summed relative intensity of all detected oxonium ions for the spectrum to be considered
@@ -246,9 +252,9 @@ can be used to determine glycosylation sites. The localization is calculated
 using all fragment ions searched in MSFragger, so the inclusion of b~/y~ ions
 (for example) can enhance localization results. 
 - The MSFragger option "mass_diff_to_variable_mod" can be used to convert delta
-masses to variable mods. This function is still in beta form as of version 2.5,
-but will be used in the future to support glycoproteomics searches. 
-- Quantitation with philosopher's freequant and labelquant modules should
-work for glycoproteomics results, but have yet to be tested extensively.
+masses to variable mods, allowing them to be propagated and used in quantification (for example).
+ Only delta masses that are successfully localized will be placed as variable mods; all others
+ will remain as delta masses.
+
 
 
