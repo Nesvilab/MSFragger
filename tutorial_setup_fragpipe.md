@@ -3,8 +3,7 @@
 
 <br>
 #### Install or update Java
-FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [here](https://www.java.com/en/download/manual.jsp) by selecting the Windows Offline 64-bit version. Launch the installer and follow the prompts. (You may need to restart FragPipe after updating Java.)  
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/java_version_selection.png" width="700px" align="middle"/>
+FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [here](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html) by selecting the **Windows x64 Installer**. Launch the installer and follow the prompts. (You may need to restart FragPipe after updating Java.)
 
 
 <br>
