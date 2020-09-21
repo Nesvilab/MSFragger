@@ -20,11 +20,10 @@ mass_offsets = 0/146.0579/203.0794/349.1373/365.1322/406.1587/494.1748/511.1901/
 labile_search_mode = labile					# Set the type of glycan/modification search used. Restricts Y, b~, and y~ ions (if specified in 'fragment_ion_series')
 											# to peptides containing the amino acid(s)/sequon for the particular mode. Options:
 											# nglycan 		N-glycan mode. Requires N-X-S/T motif in peptide for any mass offset, disables shifted b/y ions
-											# labile 		Any other labile modification, including O-glycans. Only peptides with residues specified in deltamass_allowed_residues
+											# labile 		Any other labile modification, including O-glycans. Only peptides with residues specified in restrict_deltamass_to
 											# 				will be allowed to contain mass offsets. Disables shifted b/y ions. 
 											# off			Default (non-labile) mode. Does not restrict searches with sequences/residues, does not restrict ion types
-deltamass_allowed_residues = ST				# Mass offset allowed modification sites. Must have at least one in peptide for mass offsets to be searched. 
-
+restrict_deltamass_to = ST-				# Mass offset allowed modification sites. Must have at least one in peptide for mass offsets to be searched. 
 localize_delta_mass = 1                     # Include fragment ions mass-shifted by unknown modifications (recommended for open
                                             # and mass offset searches) (0 for OFF, 1 for ON).
 											# For glyco-searches, recommended setting is 0 for vibrational activation (CID/HCD/etc), 
