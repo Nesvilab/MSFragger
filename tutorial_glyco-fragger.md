@@ -40,8 +40,8 @@ a narrow window around each mass offset). This allows MSFragger to simultaneousl
 part, or all of their original glycan, making it ideal for searching collisional, hybrid, and photo-activation datasets.    
 **Key Parameters**:
 
-1. **labile_search_mode**: *(possible values: nglycan, labile, off)* nglycan mode checks for N-glycosylation motif N-X-S/T (X is not P), but is otherwise identical to "labile" mode. Labile mode should be used for all labile modifications (other than N-glycans), including O-glycans. Specify the allowed residues in deltamass_allowed_residues. "Off" results in a standard (non-glyco) MSFragger search, in which all mass offsets are assumed to remain intact during activation.  
-2. **deltamass_allowed_residues**: (overridden in nglycan mode). Specify which amino acids (single letter codes) are allowed to contain the 
+1. **labile_search_mode**: *(possible values: nglycan, labile, off)* nglycan mode checks for N-glycosylation motif N-X-S/T (X is not P), but is otherwise identical to "labile" mode. Labile mode should be used for all labile modifications (other than N-glycans), including O-glycans. Specify the allowed residues in restrict_deltamass_to. "Off" results in a standard (non-glyco) MSFragger search, in which all mass offsets are assumed to remain intact during activation.  
+2. **restrict_deltamass_to**: (overridden in nglycan mode). Specify which amino acids (single letter codes) are allowed to contain the 
 glycan mass offsets. Allowed values are single letter amino acid codes. When labile_search_mode is 'off', '-' can be used to allow non-localized
 matches (i.e. matches to labile mods that have dissociated), by setting the value to 'STY-', for example. It is not necessary to include '-' for labile and nglycan modes,
 as labile modifications are considered by default.
@@ -59,7 +59,13 @@ number of masses used. If more than a few thousand masses are being considered (
 7. **diagnostic_fragments**: (value: mass1/mass2/...) m/z values of diagnostic fragment ions (e.g. Oxonium ions) that appear in spectra of peptides containing a mod of interest. If diagnostic_intensity_filter > 0, at least one of the masses provided here must be found at sufficient intensity for any mass offset to be searched for the spectrum. To disable this checking, change diagnostic_intensity_filter to 0.
 8. **diagnostic_intensity_filter**: Minimum relative intensity (relative to base peak height) for the SUM of intensities of all diagnostic fragment ions found in the spectrum to consider this a potential glyco (or other labile mod) spectrum. Set to 0 to disable. A value of 0.1 means summed intensity must be 10% the height of the base peak in the MS/MS spectrum to be considered. 
 9. **deisotope**: (values: 0 or 1) glycopeptides tend to be larger than tryptic peptides, making deisotoping very helpful. Recommended setting '1' for glyco data. 
-
+10. **mass_diff_to_variable_mod**: (values: 0, 1, or 2) For delta masses that are 
+successfully localized, places the theoretical mass offset (i.e. glycan mass) as an "assigned modification" in the peptide sequence that can be read by quantification
+tools. "0" is off. "1" assigns the modification and subtracts the theoretical modification mass from the delta mass. NOTE: this prevents extended mass modeling in 
+PeptideProphet and is not recommended for glyco searches. "2" assigns the modification but does not change the delta mass. This makes the output table incompatible
+with PTM-Shepherd, but is the recommended setting for quantification. Not recommended for open searches. NOTE: for N-glycan searches, if localization does not succeed,
+the delta mass will still be placed on the first sequon in the peptide. For peptides containing multiple sequons, reported assigned position may not be correct. Post-search 
+localization is strongly recommended in these cases.
 ### Open Search
 
 Open searches can be performed on glycoproteomics data, for example to determine what glycans are present in the data.
@@ -71,7 +77,7 @@ the sequon/residue(s) of interest to effectively search for glycopeptides. If gl
 search will likely be more sensitive.    
 **Key Parameters**:
 
-1. **labile_search_mode, fragment_ion_series, Y_type_masses, deltamass_allowed_residues, diagnostic_fragments, and diagnostic_intensity_filter, and deisotope** should be used as in mass offset glyco-searches (see above).
+1. **labile_search_mode, fragment_ion_series, Y_type_masses, restrict_deltamass_to, diagnostic_fragments, and diagnostic_intensity_filter, and deisotope** should be used as in mass offset glyco-searches (see above).
 2. **localize_delta_mass**: shifted ions are not necessary for fully labile modifications (like glycosylation in CID/HCD searches), but can be useful for determining the presence of other types of modifications. 
 If interested only in glycans in CID/HCD data, this can be set to 0; otherwise, and if interested in other modifications as well as glycans, set to 1. 
 3. **mass_offsets, isotope_error**: set to 0
@@ -235,11 +241,10 @@ Linux shell script:
 
 Mass offset and open searches will generate PSMs with delta mass values corresponding
 to glycan masses. These delta mass values do not contain localization information in 
-the output PSM table (yet) and so will not be rolled up to the peptide and protein.tsv
-output tables. *Conversion of delta masses to modifications with localization information
-is coming soon in a future release of MSFragger*, which will enable use of all typical
-summary reports produced by philosopher and quantification tools. Until then, results
-can be interpreted in several ways:    
+the output PSM table (by default) and so will not be rolled up to the peptide and protein.tsv
+output tables. This can be changed with the mass_diff_to_variable_mod parameter (see above), which
+can be used to make the output compatible with quantification tools. Note, however, that this prevents
+re-localization with PTM-Shepherd, which should be disabled when using. 
 
 - PTM-Shepherd (available in FragPipe) can be used on the output of mass offset
 or open glyco searches. It aggregates observed delta mass values into modifications 
@@ -253,8 +258,12 @@ using all fragment ions searched in MSFragger, so the inclusion of b~/y~ ions
 (for example) can enhance localization results. 
 - The MSFragger option "mass_diff_to_variable_mod" can be used to convert delta
 masses to variable mods, allowing them to be propagated and used in quantification (for example).
- Only delta masses that are successfully localized will be placed as variable mods; all others
- will remain as delta masses.
+ Delta masses that are successfully localized will be placed as variable mods. If localization is 
+ambiguous, for N-glycan mode searches, the delta mass will be placed on the first sequon. NOTE: for 
+ peptides containing multiple sequons, this means the reported assigned position may not be correct if localization
+  did not succeed. For peptides 
+ containing multiple sequons, follow-up localization after the search is strongly recommended. For all other 
+searches, the modification will remain as a delta masses if not localized.
 
 
 

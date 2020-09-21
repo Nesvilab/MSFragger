@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Add a MS2 resolution check.
 - Change "O"'s mass to pyrrolysine's mass, and print two comments for "O" and "U".
 - Print the number's all digits to the output file.
+- Improve open glyco-searches by restricting nglycan and labile mode searches to spectra with diagnostic fragments (if specified) and peptides with allowed residue(s)/sequon. 
+- Fix bug to improve N-glycan localization by considering b~/y~ ions correctly
 - Various minor bug fixes and improvements.
 
 ## 3.0 - 2020-06-05
