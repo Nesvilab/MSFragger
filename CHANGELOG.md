@@ -4,8 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 3.1 - 2020-09-xx
+- Support precursor isotope error correction with parameter `precursor_mass_mode = corrected`.
+- Support restricting delta mass to certain amino acids with parameter `restrict_deltamass_to`.
+- Support DIA data with parameter `precursor_mass_units = 2/3`.
+- Support pin format output, which is compatible with Percolator.
+- Upgrade timsdata library (from Bruker for timsTOF data) to 2.7.0.
+- Write localization information to pepXML file with tag `ptm_result`.
+- Reduce the PSMs required for mass calibration from 500 to 250, and increase the expectation threshold from 0.001 to 0.005.
+- Improve parameter optimization procedure.
+- Add a MS2 resolution check.
+- Change "O"'s mass to pyrrolysine's mass, and print two comments for "O" and "U".
+- Print the number's all digits to the output file.
+- Various minor bug fixes and improvements.
+
 ## 3.0 - 2020-06-05
-- New Glyco/Labile mode of MSFragger (for N-linked and O-linked glycopeptides; can also be used for other labile modifications)
+- New Glyco/Labile mode of MSFragger (for N-linked and O-linked glycopeptides; can also be used for other labile modifications).
 - Change the default value of `write_calibrated_mgf` to 0.
 - Add 7 ppm to nonspecific search's fragment tolerance list (optimization step).
 - Various minor bug fixes and improvements.
