@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - New DIA search mode of MSFragger, supporting searching DIA data with parameter `precursor_mass_units = 2/3`.
 - Precursor isotope error correction with parameter `precursor_mass_mode = corrected`.
 - Support restricting delta mass (open/mass offset searches) to certain amino acids with parameter `restrict_deltamass_to`.
+- Support putting localized delta mass to peptides as variable modifications with parameter `mass_diff_to_variable_mod = 0/1/2`. For N-Glyco data, will also put unlocalized glycans to the "N" of the first "N-X-S/T" sequon.
 - Support pin format output, which is compatible with Percolator.
 - Upgrade timsdata library (for Bruker timsTOF data) to 2.7.0.
 - Write localization information to pepXML file with tag `ptm_result`.
@@ -16,7 +17,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Improve parameter optimization procedure.
 - Add a MS2 resolution check.
 - Change "O"'s mass to pyrrolysine's mass, and print two comments for "O" and "U".
-- Print more significant digits for masses andother key parameters in the output file.
+- Print more significant digits for masses and other key parameters in the output file.
 - Various minor bug fixes and improvements.
 
 ## 3.0 - 2020-06-05
