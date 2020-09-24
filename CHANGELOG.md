@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Improve parameter optimization procedure.
 - Add a MS2 resolution check.
 - Change "O"'s mass to pyrrolysine's mass, and print two comments for "O" and "U".
+- Change the default value of `allowed_missed_cleavage` to 2.
+- Change the default enzyme to stricttrypsin.
 - Print more significant digits for masses and other key parameters in the output file.
 - Various minor bug fixes and improvements.
 
