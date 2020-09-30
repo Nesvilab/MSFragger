@@ -3,7 +3,7 @@ database_name = test.fasta                  # Path to the protein database file 
 
 precursor_mass_lower = -50                  # Lower bound of the precursor mass window.
 precursor_mass_upper = 50                   # Upper bound of the precursor mass window.
-precursor_mass_units = 1                    # Precursor mass tolerance units (0 for Da, 1 for ppm).
+precursor_mass_units = 1                    # Precursor mass tolerance units (0 for Da, 1 for ppm, 2 for DIA-MS1, 3 for DIA-all).
 precursor_true_tolerance = 20               # True precursor mass tolerance (window is +/- this value).
 precursor_true_units = 1                    # True precursor mass tolerance units (0 for Da, 1 for ppm).
 fragment_mass_tolerance = 20                # Fragment mass tolerance (window is +/- this value).
@@ -14,28 +14,29 @@ decoy_prefix = rev_                         # Prefix of the decoy protein entrie
 
 isotope_error = 0/1/2                       # Also search for MS/MS events triggered on specified isotopic peaks.
 mass_offsets = 0                            # Creates multiple precursor tolerance windows with specified mass offsets.
-precursor_mass_mode = selected              # One of isolated/selected/recalculated.
+restrict_deltamass_to = all                 # Specify amino acids on which delta masses (mass offsets or search modifications) can occur. Allowed values are single letter codes (e.g. ACD), must be capitalized. Use 'all' to allow any amino acid. 
+precursor_mass_mode = selected              # One of isolated/selected/corrected.
 
 localize_delta_mass = 0                     # Include fragment ions mass-shifted by unknown modifications (recommended for open
                                             # and mass offset searches) (0 for OFF, 1 for ON).
 delta_mass_exclude_ranges = (-1.5,3.5)      # Exclude mass range for shifted ions searching.
-fragment_ion_series = b,y                   # Ion series used in search, specify any of a,b,c,x,y,z (comma separated).
-
-search_enzyme_name = Trypsin                # Name of enzyme to be written to the pepXML file.
+fragment_ion_series = b,y                   # Ion series used in search, specify any of a,b,c,x,y,z,b-18,y-18,b~,y~,Y (comma separated).
+# ion_series_definitions =                  # User defined ion series. Example: "b* N -17.026548;b0 N -18.010565".
+search_enzyme_name = stricttrypsin                # Name of enzyme to be written to the pepXML file.
 search_enzyme_cutafter = KR                 # Residues after which the enzyme cuts.
-search_enzyme_butnotafter = P               # Residues that the enzyme will not cut before.
+search_enzyme_butnotafter =                # Residues that the enzyme will not cut before.
 
 num_enzyme_termini = 2                      # 0 for non-enzymatic, 1 for semi-enzymatic, and 2 for fully-enzymatic.
-allowed_missed_cleavage = 1                 # Allowed number of missed cleavages per peptide. Maximum value is 5.
+allowed_missed_cleavage = 2                 # Allowed number of missed cleavages per peptide. Maximum value is 5.
 
 clip_nTerm_M = 1                            # Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
 
 # maximum of 16 mods - amino acid codes, * for any amino acid,
 # [ and ] specifies protein termini, n and c specifies
 # peptide termini
-variable_mod_01 = 15.99490 M 3
-variable_mod_02 = 42.01060 [^ 1
-# variable_mod_03 = 79.96633 STY 3
+variable_mod_01 = 15.994915 M 3
+variable_mod_02 = 42.010565 [^ 1
+# variable_mod_03 = 79.966331 STY 3
 # variable_mod_04 = -17.02650 nQnC 1
 # variable_mod_05 = -18.01060 nE 1
 # variable_mod_06 = 0.00000 site_06 3
@@ -44,10 +45,10 @@ variable_mod_02 = 42.01060 [^ 1
 allow_multiple_variable_mods_on_residue = 0 # Allow each residue to be modified by multiple variable modifications (0 or 1).
 max_variable_mods_per_peptide = 3           # Maximum total number of variable modifications per peptide.
 max_variable_mods_combinations = 5000       # Maximum number of modified forms allowed for each peptide (up to 65534).
-mass_diff_to_variable_mod = 0               # Put mass diff as a variable modification. 0 for no; 1 for yes and change the original mass diff and the calculated mass accordingly; 2 for yes but do not change the original mass diff and the calculated mass.
+mass_diff_to_variable_mod = 0               # Put mass diff as a variable modification. 0 for no; 1 for yes and change the original mass diff and the calculated mass accordingly; 2 for yes but do not change the original mass diff.
 
 output_file_extension = pepXML              # File extension of output files.
-output_format = pepXML                      # File format of output files (pepXML or tsv).
+output_format = pepxml                      # File format of output files (tsv, pin, pepxml, tsv_pin, tsv_pepxml, pepxml_pin, or tsv_pepxml_pin).
 output_report_topN = 1                      # Reports top N PSMs per input spectrum.
 output_max_expect = 50                      # Suppresses reporting of PSM if top hit has expectation value greater than this threshold.
 report_alternative_proteins = 0             # Report alternative proteins for peptides that are found in multiple proteins (0 for no, 1 for yes).
@@ -76,8 +77,8 @@ min_matched_fragments = 4                   # Minimum number of matched peaks fo
 minimum_ratio = 0.01                        # Filters out all peaks in experimental spectrum less intense than this multiple of the base peak intensity.
 clear_mz_range = 0.0 0.0                    # Removes peaks in this m/z range prior to matching.
 remove_precursor_peak = 0                   # Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge;
-                                            # 2 = remove the peaks with all charge states.
-remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Unit: Th.
+                                            # 2 = remove the peaks with all charge states (only for DDA mode).
+remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
 intensity_transform = 0                     # Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
 
 # Fixed modifications
@@ -107,7 +108,7 @@ add_Y_tyrosine = 0.000000
 add_W_tryptophan = 0.000000
 add_B_user_amino_acid = 0.000000
 add_J_user_amino_acid = 0.000000
-add_O_user_amino_acid = 0.000000
-add_U_user_amino_acid = 0.000000
+add_O_user_amino_acid = 0.000000              # O = pyrrolysine (255.15829 Da)
+add_U_user_amino_acid = 0.000000              # U = selenocysteine (150.95363 Da)
 add_X_user_amino_acid = 0.000000
 add_Z_user_amino_acid = 0.000000

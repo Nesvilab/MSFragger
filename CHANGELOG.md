@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## 3.1 - 2020-09-xx
+## 3.1 - 2020-09-30
 - New DIA search mode of MSFragger, supporting searching DIA data with parameter `precursor_mass_units = 2/3`.
 - Precursor isotope error correction with parameter `precursor_mass_mode = corrected`.
 - Support restricting delta mass (open/mass offset searches) to certain amino acids with parameter `restrict_deltamass_to`.

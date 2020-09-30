@@ -119,8 +119,8 @@ add_Y_tyrosine = 0.000000
 add_W_tryptophan = 0.000000
 add_B_user_amino_acid = 0.000000
 add_J_user_amino_acid = 0.000000
-add_O_user_amino_acid = 0.000000
-add_U_user_amino_acid = 0.000000
+add_O_user_amino_acid = 0.000000              # O = pyrrolysine (255.15829 Da)
+add_U_user_amino_acid = 0.000000              # U = selenocysteine (150.95363 Da)
 add_X_user_amino_acid = 0.000000
 add_Z_user_amino_acid = 0.000000
 
