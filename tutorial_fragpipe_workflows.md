@@ -1,19 +1,20 @@
-### FragPipe workflows
+## FragPipe workflows
 
-#### [FragPipe](https://fragpipe.nesvilab.org/) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
+##### [FragPipe](https://fragpipe.nesvilab.org/) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
 Listed below are the analysis workflows provided with FragPipe. Any of these workflows can be customized and saved for later use, each customized workflow should be saved with a unique name.
 
 
+###### Closed (standard) database searches
 * [Basic search (Default)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search-default)
 * [Basic search & quantification (LFQ)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-lfq)
 * [Basic search & quantification with match-between-runs (LFQ-MBR)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-with-match-between-runs-lfq-mbr)
 
-###### Non-specific digestion workflows:
+###### Non-specific digestion
 * [HLA peptide search (Nonspecific-HLA)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#hla-peptide-search-nonspecific-hla)
 * [Peptidome search (Nonspecific-peptidome)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#peptidome-search-nonspecific-peptidome)
 
-###### Label-based quantification workflows
+###### Label-based quantification
 * [TMT-10 quantification (TMT10)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-tmt10)
 * [TMT-10 MS3 quantification (TMT10-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-ms3-quantification-tmt10-ms3)
 * [Phospho TMT-10 MS3 quantification (TMT10-MS3-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-ms3-quantification-tmt10-ms3-phospho)
@@ -24,11 +25,11 @@ Listed below are the analysis workflows provided with FragPipe. Any of these wor
 * [TMT-16 MS3 quantification (TMT16-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-ms3-quantification-tmt16-ms3)
 * [iTRAQ search and quantification (iTRAQ4)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#itraq-search-and-quantification-itraq4)
 
-###### Open (mass-tolerant) and mass offset workflows:
+###### Open (mass-tolerant) and mass offset
 * [Basic open search (Open)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-open-search-open)
 * [Mass shift search (common-mass-offsets)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#mass-shift-search-common-mass-offsets)
 
-###### Glyco workflows:
+###### Glyco
 * [N-glycopeptide search (glyco-N-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-glyco-n-hcd)
 * [N-glycopeptide search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-hybrid-activation-glyco-n-hybrid)
 * [N-glycopeptide open search (glyco-N-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-hybrid)
