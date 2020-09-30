@@ -33,12 +33,12 @@ fragment_ion_series = b,y,c,z,Y      		# Ion series used in search, specify any 
 											# Y, b~, y~ are for glycan searches. Y = intact peptide + glycan fragments. b~,y~ = b,y + HexNAc
 											# NGlycan defaults to Y,b~,y~ included; OGlycan defaults to no additional glyco-fragments
 
-search_enzyme_name = Trypsin                # Name of enzyme to be written to the pepXML file.
+search_enzyme_name = stricttrypsin          # Name of enzyme to be written to the pepXML file.
 search_enzyme_cutafter = KR                 # Residues after which the enzyme cuts.
-search_enzyme_butnotafter = P               # Residues that the enzyme will not cut before.
+search_enzyme_butnotafter =                	# Residues that the enzyme will not cut before.
 
 num_enzyme_termini = 2                      # 0 for non-enzymatic, 1 for semi-enzymatic, and 2 for fully-enzymatic.
-allowed_missed_cleavage = 1                 # Allowed number of missed cleavages per peptide. Maximum value is 5.
+allowed_missed_cleavage = 2                 # Allowed number of missed cleavages per peptide. Maximum value is 5.
 
 clip_nTerm_M = 1                            # Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
 
