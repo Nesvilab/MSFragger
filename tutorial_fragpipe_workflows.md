@@ -2,8 +2,48 @@
 
 #### [FragPipe](https://fragpipe.nesvilab.org/) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
-Below is an alphabetical list of the analysis workflows provided with FragPipe. Any of these workflows can be customized and saved for later use, each customized workflow should be saved with a unique name.
+Listed below are the analysis workflows provided with FragPipe. Any of these workflows can be customized and saved for later use, each customized workflow should be saved with a unique name.
 
+
+* [Basic search (Default)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search-default)
+* [Basic search & quantification (LFQ)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-lfq)
+* [Basic search & quantification with match-between-runs (LFQ-MBR)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-with-match-between-runs-lfq-mbr)
+
+###### Non-specific digestion workflows:
+* [HLA peptide search (Nonspecific-HLA)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#hla-peptide-search-nonspecific-hla)
+* [Peptidome search (Nonspecific-peptidome)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#peptidome-search-nonspecific-peptidome)
+
+###### Label-based quantification workflows
+* [TMT-10 quantification (TMT10)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-tmt10)
+* [TMT-10 MS3 quantification (TMT10-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-ms3-quantification-tmt10-ms3)
+* [Phospho TMT-10 MS3 quantification (TMT10-MS3-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-ms3-quantification-tmt10-ms3-phospho)
+* [TMT-10 quantification with bridge/pooled sample (TMT10-bridge)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-with-bridgepooled-sample-tmt10-bridge)
+* [Phospho TMT-10 quantification (TMT10-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-quantification-tmt10-phospho)
+* [Phospho TMT-10 quantification with bridge/pooled sample (TMT10-phospho-bridge)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-quantification-with-bridgepooled-sample-tmt10-phospho-bridge)
+* [TMT-16 quantification (TMT16)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-quantification-tmt16)
+* [TMT-16 MS3 quantification (TMT16-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-ms3-quantification-tmt16-ms3)
+* [iTRAQ search and quantification (iTRAQ4)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#itraq-search-and-quantification-itraq4)
+
+###### Open (mass-tolerant) and mass offset workflows:
+* [Basic open search (Open)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-open-search-open)
+* [Mass shift search (common-mass-offsets)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#mass-shift-search-common-mass-offsets)
+
+###### Glyco workflows:
+* [N-glycopeptide search (glyco-N-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-glyco-n-hcd)
+* [N-glycopeptide search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-hybrid-activation-glyco-n-hybrid)
+* [N-glycopeptide open search (glyco-N-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-hybrid)
+* [N-glycopeptide open search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-hybrid)
+* [N-glycopeptide search & quantification (glyco-N-quant-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search--quantification-glyco-n-quant-hcd)
+* [O-glycopeptide search (glyco-O-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-glyco-o-hcd)
+* [O-glycopeptide search, hybrid activation (glyco-O-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-hybrid-activation-glyco-o-hybrid)
+* [O-glycopeptide open search (glyco-O-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-open-search-glyco-o-open-hcd)
+* [O-glycopeptide open search, hybrid activation (glyco-O-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-open-search-hybrid-activation-glyco-o-hybrid)
+
+###### DIA spectral library building workflows
+* [DIA-MSFragger spectral library building (DIA-MSFragger_SpecLib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-msfragger-spectral-library-building-dia-msfragger_speclib)
+* [DIA-Umpire spectral library building (DIA-Umpire_Speclib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-umpire-spectral-library-building-dia-umpire_speclib)
+
+<br>
 
 ##### Basic search (Default)
 Simple closed search, no quantification. MSFragger search with 'stricttrypsin' (Trypsin/P) enzyme, fully tryptic peptides only, up to 2 missed cleavages. Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering).
