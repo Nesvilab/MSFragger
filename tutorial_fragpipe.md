@@ -14,6 +14,7 @@ Before you get started, make sure your LC-MS file format is compatible with the 
   * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
   * [Affinity purification data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#affinity-purification-data)
   * [TMT/iTRAQ data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#tmtitraq-data)
+* [DIA-Umpire SE](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-diaumpire-se)
 * [Specify a sequence database](https://msfragger.nesvilab.org/tutorial_fragpipe.html#specify-a-protein-sequence-database)
 * [Configure MSFragger search](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-msfragger-search)
 * [Validation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#validation)
@@ -131,15 +132,26 @@ TMT/iTRAQ experiments typically consist of one or more 'plexes' (multiplexed sam
  <br>
  <br>
  
+### Run DIA-Umpire SE
+[DIA-Umpire](https://diaumpire.nesvilab.org/)'s signal extraction module can now be used through FragPipe. Please note that this tool only accepts the mzXML file format. To use the SE module, select the 'Enable DIA-Umpire' checkbox on the Config tab, then load the 'DIA-Umpire_SpecLib' workflow from the Workflow tab. 
+For more information, see the Signal Extraction Module section of the DIA-Umpire [manual](https://diaumpire.nesvilab.org/DIA_Umpire_Manual_v2.0.pdf). Specify the path to the MSConvert binary file (can be downloaded [here](http://proteowizard.sourceforge.net/download.html)). The 'Default config file' path can be left blank, only provide this configuration file if using advanced parameters not shown in the GUI. 
+
+  
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-diaumpire.png)
+
+
+ <br>
+ 
 ### Specify a protein sequence database
 If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from UniProt. Specify the download location, then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli). We generally recommend using 'Reviewed' subset of UniProt. If needed, add iRT sequences (e.g. if you are building a spectral library for DIA analysis and added iRT peptides to your samples).   
 
 You can use 'Browse' to select a FASTA file from a previous FragPipe/Philosopher analysis.
 
-If you need to use a custom FASTA database, it must follow a certain format and contain decoy sequences. Click 'Browse' to navigate to your custom FASTA. If you select 'Try Auto-Detect', 50% of the entries should contain the decoy tag. For help adding decoys and database formatting, see the instructions on the 'Database' tab or [here](https://github.com/Nesvilab/philosopher/wiki/Database).
+If you need to use a custom FASTA database, use the 'Add decoys' button to add decoys (common contaminants can also be added). Then click 'Browse' to navigate to your updated custom FASTA file. If you 50% of the entries should contain the decoy tag. Some additional information is also provided in the 'Quick start with protein sequence databases' section.
 
   
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-database.png)
+
 
 
  <br>
