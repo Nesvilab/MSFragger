@@ -42,7 +42,7 @@ For more help, see the full [tutorial on FragPipe configuration](https://msfragg
 
 In the 'Workflow' tab:
 
-1. Choose the workflow you want to use and press 'Load'. Use **Default** workflow for simple conventional (closed) searches. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)) are provided. You can also customize and save workflows for future use (all workflows are stored in the FragPipe 'workflows' folder). You can even share your workflow files with other FragPipe users. 
+1. Choose the [workflow](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html) you want to use and press 'Load'. Use **Default** workflow for simple conventional (closed) searches. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)) are provided. You can also customize and save workflows for future use (all workflows are stored in the FragPipe 'workflows' folder). You can even share your workflow files with other FragPipe users. 
 
 2. Set the amount of memory & number of logical cores to use.
 
