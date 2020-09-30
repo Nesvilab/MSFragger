@@ -14,7 +14,7 @@ Before you get started, make sure your LC-MS file format is compatible with the 
   * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
   * [Affinity purification data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#affinity-purification-data)
   * [TMT/iTRAQ data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#tmtitraq-data)
-* [DIA-Umpire SE](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-diaumpire-se)
+* [DIA-Umpire SE](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-dia-umpire-se)
 * [Specify a sequence database](https://msfragger.nesvilab.org/tutorial_fragpipe.html#specify-a-protein-sequence-database)
 * [Configure MSFragger search](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-msfragger-search)
 * [Validation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#validation)
