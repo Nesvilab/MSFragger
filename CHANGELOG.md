@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 3.1.1 - 2020-10-01
+- Fix a bug that does not write calibrated MGF.
+- Fix a bug that do not allow labile modifications in mass offset search with `restrict_deltamass_to = all`.
+
 ## 3.1 - 2020-09-30
 - New DIA search mode of MSFragger, supporting searching DIA data with parameter `precursor_mass_units = 2/3`.
 - Precursor isotope error correction with parameter `precursor_mass_mode = corrected`.
