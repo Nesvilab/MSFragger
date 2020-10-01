@@ -38,16 +38,16 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 `pip install git+https://github.com/grosenberger/easypqp.git@master`
 
 **If Python 3 is not already installed**:
-1. Click 'Download' in the Python section of the Config tab in FragPipe or [click here](https://www.anaconda.com/distribution/) to go to the Anaconda site, click 'Download', then select the latest Python version (3.7 or higher) and launch the installer.
-
+1) Click 'Download' in the Python section of the Config tab in FragPipe or [click here](https://www.anaconda.com/distribution/) to go to the Anaconda site, click 'Download', then select the latest Python version (3.7 or higher) and launch the installer.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install.png" width="500px" align="middle"/>
-2. Follow the prompts in the graphical installer. **Note the install location** that you choose and complete the installation. We do not recommend adding Anaconda to your PATH environment variable, but you can choose to register Anaconda as your default Python.
+
+2) Follow the prompts in the graphical installer. **Note the install location** that you choose and complete the installation. We do not recommend adding Anaconda to your PATH environment variable, but you can choose to register Anaconda as your default Python.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_install_path.png" width="500px" align="middle"/>
 
-3. From the start menu, search for "Anaconda Prompt" and launch it.
+3) From the start menu, search for "Anaconda Prompt" and launch it.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width="700px" align="middle"/>
 
-4. In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the _msproteomicstools_ package. Repeat this for the remaining packages (`numpy`, `pandas`, `matplotlib`, `cython`).
+4) In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the _msproteomicstools_ package. Repeat this for the remaining packages (`numpy`, `pandas`, `matplotlib`, `cython`).
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/pip_install.png" width="700px" align="middle"/>
   To install `easypqp` for spectral library generation, you will need to 1) [install Git](https://gitforwindows.org/update) if you don't already have it, then 2) run these two commands:
 
@@ -55,7 +55,7 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 
 `pip install git+https://github.com/grosenberger/easypqp.git@master`
 
-5. In FragPipe, use the 'Browse' button to navigate to the installation location and select **python.exe**.
+5) In FragPipe, use the 'Browse' button to navigate to the installation location and select **python.exe**.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_python.png)
 
 <br>
