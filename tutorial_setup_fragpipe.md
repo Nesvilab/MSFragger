@@ -47,9 +47,10 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 3. From the start menu, search for "Anaconda Prompt" and launch it.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width="700px" align="middle"/>
 
-4. In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the package required for spectral library generation.
+4. In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the _msproteomicstools_ package. Repeat this for the remaining packages (`numpy`, `pandas`, `matplotlib`, `cython`).
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/pip_install.png" width="700px" align="middle"/>
-5.  In FragPipe, use the 'Browse' button to navigate to the installation location and select **python.exe**.
+
+5. In FragPipe, use the 'Browse' button to navigate to the installation location and select **python.exe**.
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_python.png)
 
 <br>
