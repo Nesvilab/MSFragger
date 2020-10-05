@@ -75,7 +75,9 @@ Please post all questions/bug reports regarding MSFragger itself on the [MSFragg
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
 
 ### How to Cite
-Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry-based proteomics. Nature Methods 14:513–520 (2017). [Manuscript](https://www.nature.com/articles/nmeth.4256). 
+[Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry-based proteomics. Nature Methods 14:513–520 (2017).](https://www.nature.com/articles/nmeth.4256)
+
+[Yu F, Teo GC, Kong AT, Haynes SE, Avtonomov DM, Geiszler DJ, Nesvizhskii AI. Identification of modified peptides using localization-aware open search. Nature communications 11, 4056 (2020).](https://doi.org/10.1038/s41467-020-17921-y)
 
 For other tools developed by the Nesvizhskii lab, see our website [www.nesvilab.org](http://www.nesvilab.org)
 
