@@ -10,6 +10,9 @@ FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [
 #### Install or update FragPipe
 FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.  When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 
+<br>
+#### Reading Thermo raw file in Linux
+Linux users need to install Mono [https://www.mono-project.com/download/stable/#download-lin](https://www.mono-project.com/download/stable/#download-lin) to read raw files.
 
 <br>
 #### Install, update, or use an already downloaded version of MSFragger
