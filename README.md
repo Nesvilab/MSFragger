@@ -4,7 +4,7 @@
 
 # MSFragger
 
-MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. The speed of MSFragger makes it particularly suitable for the analysis of large datasets (including TIMS-TOF PASSEF data), for enzyme unconstrained searches (e.g. peptidome), for ‘open’ database searches (with the precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides, and for glycopeptide identification (N-linked and O-linked) with MSFragger Glyco mode.  
+MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. MSFragger is suitable for standard shotgun proteomics analyses as well as large datasets (including timsTOF PASEF data), enzyme unconstrained searches (e.g. peptidome), ‘open’ database searches (i.e. precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides, and glycopeptide identification (N-linked and O-linked) with MSFragger Glyco mode.  
 
 MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
 
