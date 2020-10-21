@@ -15,7 +15,7 @@ set -xe
 # Specify paths of tools and files to be analyzed.
 dataDirPath="data/"
 fastaPath="2020-01-22-decoys-reviewed-contam-UP000005640.fas"
-msfraggerPath="MSFragger.jar" # download from https://msfragger.arsci.com/upgrader/
+msfraggerPath="MSFragger.jar" # download from http://msfragger-upgrader.nesvilab.org/upgrader/
 fraggerParamsPath="fragger.params"
 philosopherPath="philosopher" # download from https://github.com/Nesvilab/philosopher/releases/latest
 crystalcPath="CrystalC.jar" # download from https://github.com/Nesvilab/Crystal-C/releases/latest
@@ -77,7 +77,7 @@ set -xe
 # Specify paths of tools and files to be analyzed.
 dataDirPath="data/"
 fastaPath="2020-01-22-decoys-reviewed-contam-UP000005640.fas"
-msfraggerPath="MSFragger.jar" # download from https://msfragger.arsci.com/upgrader/
+msfraggerPath="MSFragger.jar" # download from http://msfragger-upgrader.nesvilab.org/upgrader/
 fraggerParamsPath="fragger.params"
 philosopherPath="philosopher" # download from https://github.com/Nesvilab/philosopher/releases/latest
 crystalcPath="CrystalC.jar" # download from https://github.com/Nesvilab/Crystal-C/releases/latest
