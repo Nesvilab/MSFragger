@@ -145,7 +145,7 @@ For more information, see the Signal Extraction Module section of the DIA-Umpire
  <br>
  
 ### Specify a protein sequence database
-If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from UniProt. Specify the download location, then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli). We generally recommend using 'Reviewed' subset of UniProt. If needed, add iRT sequences (e.g. if you are building a spectral library for DIA analysis and added iRT peptides to your samples).   
+Protein database files need to follow specific [formatting](https://github.com/Nesvilab/philosopher/wiki/How-to-prepare-a-protein-database#header-formatting). If you haven't made a database file using FragPipe/Philosopher before, select 'Download' to fetch one from UniProt. Specify the download location, then choose your options and select an organism (use the uniprot proteome ID to specify your own, e.g. 'UP000000625' for E. coli). We generally recommend using 'Reviewed' subset of UniProt. If needed, add iRT sequences (e.g. if you are building a spectral library for DIA analysis and added iRT peptides to your samples).   
 
 You can use 'Browse' to select a FASTA file from a previous FragPipe/Philosopher analysis.
 
