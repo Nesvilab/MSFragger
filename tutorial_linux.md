@@ -1,11 +1,11 @@
 # Running a FragPipe-equivalent workflow on Linux
 
-For most desktop users, we recommend using [FragPipe](http://fragpipe.nesvilab.org/). To analyze your data in a server/HPC environment, we recommend Philosopher [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline). For quantitative analysis of Bruker ion mobility data on a server, use the ‘TIMS-TOF data’ script below (ID-only workflows for TIMS-TOF data can also be done with [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline)).
+For most desktop users, we recommend using [FragPipe](http://fragpipe.nesvilab.org/). To analyze your data in a server/HPC environment, we recommend Philosopher [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline). For quantitative analysis of Bruker ion mobility data on a server, use the ‘timsTOF data’ script below (ID-only workflows for non-timsTOF data can also be done with [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline)).
 
-Example shell scripts for TIMS-TOF PASEF data (with [IonQuant](https://github.com/Nesvilab/IonQuant)) and non-ion mobility data are shown below, modify them to suit your configuration.
+Example shell scripts for timsTOF PASEF data and non-ion mobility data are shown below, modify them to suit your configuration.
 <br>
 
-### TIMS-TOF data:
+### timsTOF data:
 
 ```shell
 #!/bin/bash
@@ -60,7 +60,7 @@ $philosopherPath report
 $philosopherPath workspace --clean
 
 # Run IonQuant. Change the -Xmx value according to your computer's memory.
-java -Xmx64G -jar $ionquantPath <options> <path to .d> <path to .pepXML>
+java -Xmx64G -jar $ionquantPath <options> <path to .pepXML>
 ```
 **Please note: The [IonQuant.jar](https://github.com/Nesvilab/IonQuant/releases/latest) file must be in the same directory as the `ext` folder.** To see the IonQuant help, run `java -jar IonQuant.jar`.
 
@@ -86,7 +86,7 @@ ionquantPath="IonQuant.jar" # download from https://github.com/Nesvilab/IonQuant
 decoyPrefix="rev_"
 
 # Run MSFragger. Change the -Xmx value according to your computer's memory.
-java -Xmx64G -jar $msfraggerPath $fraggerParamsPath $dataDirPath/<spectral files ending with .mzML (required for quantification) or .raw>
+java -Xmx64G -jar $msfraggerPath $fraggerParamsPath $dataDirPath/<spectral files ending with .mzML or .raw>
 
 # Move pepXML files to current directory.
 mv $dataDirPath/*.pepXML ./
@@ -117,11 +117,11 @@ $philosopherPath proteinprophet --maxppmdiff 2000000 --output combined ./*.pep.x
 $philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./ --protxml ./combined.prot.xml # closed or non-specific closed search
 $philosopherPath filter --sequential --razor --mapmods --tag $decoyPrefix --pepxml ./interact.pep.xml --protxml ./combined.prot.xml # Open search
 
-# Perform quantification.
-$philosopherPath freequant --dir $dataDirPath
-
 # Make reports.
 $philosopherPath report
 $philosopherPath workspace --clean
 
+# Perform quantification.
+java -Xmx64G -jar $ionquantPath <options> <path to .pepXML>
 ```
+**Please note: The [IonQuant.jar](https://github.com/Nesvilab/IonQuant/releases/latest) file must be in the same directory as the `ext` folder.** To see the IonQuant help, run `java -jar IonQuant.jar`.
