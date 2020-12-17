@@ -37,7 +37,7 @@ If you have already downloaded Philosopher, use the 'Browse' button in FragPipe 
 #### Optional: install, update, or use an already installed version of Python
 Database splitting (to reduce the size of the in-memory fragment ion index-- helpful for workstations with limited memory or for complex searches) and/or spectral library generation will require Python 3 or above.
 
-**If you already have Python 3 or above**, make sure the following packages are installed: `numpy`, `pandas`, `matplotlib`, `cython`, and `msproteomicstools`. The `easypqp` package is also required to build spectral libraries from timsTOF data. Please note: if Python was installed through Anaconda, you will already have all of these packages except for `msproteomicstools` and `easypqp`. In most cases, you can run `pip install [package name]` to install a missing package. To install `easypqp`, you will need to 1) [install Git](https://gitforwindows.org/update) if you don't already have it, then 2) open an Anaconda Prompt command line window and run these two commands:
+**If you already have Python 3 or above**, make sure the following packages are installed: `numpy`, `pandas`, `matplotlib`, `cython`, and `msproteomicstools`. The `easypqp` package is also required to build spectral libraries from timsTOF data. Please note: if Python was installed through Anaconda, you will already have all of these packages except for `msproteomicstools` and `easypqp`. In most cases, you can run `pip install [package name]` to install a missing package. To install `easypqp`, you will need to 1) [install Git](https://github.com/git-guides/install-git) if you don't already have it, then 2) open an Anaconda Prompt command line window and run these two commands:
 
 `pip uninstall --yes easypqp`
 
