@@ -33,3 +33,10 @@ Following is an example of SILAC light, medium, and high labelling.
 
 ### Specify output folder and run
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_5.jpg)
+
+
+## Output
+Each experiment have a folder containing various files. Among them `psm.tsv`, `ion.tsv`, `peptide.tsv`, and `protein.tsv` files that are human readable and can be used for downstream analysis. Entries in these files have been filtered with user defined FDR threshold. The chemical labels are shown as variable modifications.
+
+There are also two files designed for chemical labelling exclusively: `ion_label_quant.tsv` and `peptide_label_quant.tsv`. Entries in these two files are paired light and heavy peptides/ions.
+
