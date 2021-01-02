@@ -1,8 +1,8 @@
-## Analyzing SILAC labelled (or other chemical labelled) sample with FragPipe
+## Analyzing SILAC labelled (or other chemical labelled) samples with FragPipe
 
-[MSFragger](https://msfragger.nesvilab.org/) can be used to identify peptides with chemical labelling.
+[MSFragger](https://msfragger.nesvilab.org/) can be used to identify labelled peptides.
 
-[IonQuant](https://ionquant.nesvilab.org/) inside FragPipe can be used to quantify chemical labelled (e.g. SILAC and dimethyl) samples.
+[IonQuant](https://ionquant.nesvilab.org/) inside FragPipe can be used to perform MS1 quantification for labelled samples.
 
 Following is a step-by-step instruction. Please refer to other tutorials from [here](https://fragpipe.nesvilab.org/) for the basic knowledge of using FragPipe.
 
@@ -18,18 +18,27 @@ Explanations of the build-in workflows can be found from [here](https://msfragge
 
 
 ### Select the right variable modifications
-Following are variable modifications for SILAC. If you are using other kind of chemical labelling, please fill in the right sites and masses.
+Following lists the possible variable modifications for SILAC.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_3.jpg)
 
+If you are using other kind of labelling, please fill in the right sites and masses. 
+
+Taking light and heavy dimethyl labelling for example, the variable modification should be
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_3_2.jpg)
+
 
 ### Use IonQuant in MS1 quantification
-Check `Run MS1 quant` and load the default settings. Then fill in the labels masses. The format is `<site>mass`, and there can be multiple site-mass pairs.
+Check `Run MS1 quant` and load the default settings. Then fill in the labels' masses. The format is `<site>mass`, and there can be multiple site-mass pairs separated by `;`.
 
-Following is an example of SILAC light, medium, and high labelling.
+Following is an example of using SILAC light, medium, and high labelling.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_4.jpg)
 
+If you are using light and heavy dimethyl labelling, please change the fields to
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_4_2.jpg)
 
 ### Specify output folder and run
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_5.jpg)
