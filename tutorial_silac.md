@@ -1,4 +1,4 @@
-## Analyzing SILAC labelled (or other chemical labelled) samples with FragPipe
+## Analyzing SILAC (or other labelling coupled with MS1-based quantification) samples with FragPipe
 
 [MSFragger](https://msfragger.nesvilab.org/) can be used to identify labelled peptides.
 
@@ -18,25 +18,25 @@ Explanations of the build-in workflows can be found from [here](https://msfragge
 
 
 ### Select the right variable modifications
-Following lists the possible variable modifications for SILAC.
+Following illustrates specification of variable modifications for SILAC.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_3.jpg)
 
-If you are using other kind of labelling, please fill in the right sites and masses. 
+If you are using other kind of labelling, please fill in the corresponding sites and modification masses. 
 
 Taking light and heavy dimethyl labelling for example, the variable modification should be
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_3_2.jpg)
 
 
-### Use IonQuant in MS1 quantification
+### Use IonQuant for MS1 quantification
 Check `Run MS1 quant` and load the default settings. Then fill in the labels' masses. The format is `<site>mass`, and there can be multiple site-mass pairs separated by `;`.
 
-Following is an example of using SILAC light, medium, and high labelling.
+Following is an example of using SILAC light, medium, and heavy labelling.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_4.jpg)
 
-If you are using light and heavy dimethyl labelling, please change the fields to
+If you are using light and heavy dimethyl labelling, please change these fields to
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/silac_4_2.jpg)
 
@@ -45,7 +45,7 @@ If you are using light and heavy dimethyl labelling, please change the fields to
 
 
 ## Output
-Each experiment have a folder containing various files. Among them `psm.tsv`, `ion.tsv`, `peptide.tsv`, and `protein.tsv` files that are human readable and can be used for downstream analysis. Entries in these files have been filtered with user defined FDR threshold. The chemical labels are shown as variable modifications.
+For each experiment, the results folder contains various files. As with any typical FragPipe analysis, among them are `psm.tsv`, `ion.tsv`, `peptide.tsv`, and `protein.tsv` files. Entries in these files have been filtered with user defined FDR threshold. The SILAC (or similar) modifications are shown as variable modifications. For SILAC (and similar) samples they may not be sufficient as they do not provide linked (Light/Heavy) abundances at each (ion/peptide/protein) level. Instead, as for label-free data, each PSM/ion/peptide is considered independently, and the protein file shows combined protein intensity based on all peptides, regardless of the label/sample status.   
 
-There are also two files designed for chemical labelling exclusively: `ion_label_quant.tsv` and `peptide_label_quant.tsv`. Entries in these two files are paired light and heavy peptides/ions.
+Thus, for SILAC (and related) data, IonQuant has been extended to generate two additional files, designed for labelled data exclusively: `ion_label_quant.tsv` and `peptide_label_quant.tsv`. Entries in these two files correspond to those in 'ion.tsv' and 'peptide.tsv' files, respecively, but are presented in a paired (Light/Heavy) format. The users will likely find these two files more useful when analyzing SILAC data. At present, however, IonQuant does not generate a similar protein-level file (we are working to add a similar protein-level, paired quantification file in a future release of IonQuant).
 
