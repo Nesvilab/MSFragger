@@ -59,7 +59,7 @@ For technical documentation on MSFragger (hardware requirements, search paramete
 
 - [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
 - [Using FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
-- [Using FragPipe for SILAC (or other chemical) labelled data](https://msfragger.nesvilab.org/tutorial_silac.html)
+- [Using FragPipe for SILAC (or similar) labelled data](https://msfragger.nesvilab.org/tutorial_silac.html)
 - [Glycoproteomics with MSFragger](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
 - [Linux shell/command line workflow](https://msfragger.nesvilab.org/tutorial_linux.html)
 - [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
