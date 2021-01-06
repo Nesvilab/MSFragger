@@ -1,10 +1,12 @@
 ## Importing MSFragger results (including TIMS-TOF PASEF) into Skyline
 
-##### This tutorial covers spectral library building in Skyline from validated MSFragger search results of Bruker TIMS-TOF PASEF data. We used Skyline-daily (v 19.1.9.350) and two files from the dataset published by [Meier et al](https://www.mcponline.org/content/early/2018/11/01/mcp.TIR118.000900), which can be downloaded from [ProteomeXchange](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD010012) (`HeLa_200ng_100ms_raw.zip` on the FTP site). This tutorial can also be used to import Thermo data into Skyline, `.mzML` files can be used in place of `.d` and `.mgf`/`_calibrated.mgf`.
+This tutorial covers spectral library building in Skyline from validated MSFragger search results of Bruker TIMS-TOF PASEF data. We used Skyline-daily (v 19.1.9.350) and two files from the dataset published by [Meier et al](https://www.mcponline.org/content/early/2018/11/01/mcp.TIR118.000900), which can be downloaded from [ProteomeXchange](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD010012) (`HeLa_200ng_100ms_raw.zip` on the FTP site). This tutorial can also be used to import Thermo data into Skyline, `.mzML` files can be used in place of `.d` and `.mgf`/`_calibrated.mgf`.
 
-#### To let MSFragger write `calibrated.mgf`, users need to check `Write calibrated MGF` in FragPipe or set `write_calibrated_mgf = 1` in `fragger.params` if using command line.
+#### Note 1: 
+To let MSFragger write `calibrated.mgf`, users need to check `Write calibrated MGF` in FragPipe or set `write_calibrated_mgf = 1` in `fragger.params` if using command line.
 
-#### Users need to change `deisotope` to 0 in MSFragger if they want to use calibrated.mgf in spectral library building.
+#### Note 2:
+Users need to change `deisotope` to 0 in MSFragger if they want to use calibrated.mgf in spectral library building.
 
 #### Set up the analysis
 Make sure the PeptideProphet output files ('interact-pep.xml'), raw spectral files ('.d'), and .mgf files ('.mgf' or '\_calibrated.mgf') in the same directory or in the same parent directory. You will also need the protein sequence database filtered at 1% FDR which is output from Philosopher ('protein.fas') that you used in the search.
