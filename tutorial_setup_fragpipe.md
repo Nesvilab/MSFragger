@@ -21,13 +21,7 @@ Linux users need to have [Mono](https://www.mono-project.com/download/stable/#do
 #### Install, update, or use an already downloaded version of MSFragger
 **Use an existing MSFragger .jar file:** In FragPipe, use the 'Browse' button to select the .jar file.
 
-**Update MSFragger:** In FragPipe, use the 'Update' button to upgrade to the latest version of the MSFragger .jar file. Click 'Choose file' to select your current .jar file, and select the latest release (we recommend downloading the zip version, as it can read raw LC-MS files).
-
-**Download MSFragger for the first time:**
-1. In FragPipe, select the 'Download' button to navigate to the download page. On the download page, click the 'BUY' button (cost: $0) to choose the offering appropriate for you (academic users should select the second option, all others should select the first).
-2. Fill in your name and email, then review and accept the license terms. Provide the remaining information, and confirm. The bottom of the next page will have a link to download the first MSFragger release. Unzip this compressed file.
-3. Use the 'Update' button in FragPipe to upgrade this first release to the latest version. Click 'Choose file' to select the .jar file you just downloaded, and select the latest release. **The zip version is strongly recommended, as it can read raw LC-MS files. Always keep the original directory structure of the MSFragger download (e.g. do not move the .jar file separately).**
-4. In FragPipe, click 'Browse' to select the updated .jar file.
+**Download MSFragger:** In FragPipe, use the 'Download' button to download the latest version of the MSFragger .jar file.
 
 <br>
 #### Install, update, or use an already downloaded version of Philosopher
