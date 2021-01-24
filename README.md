@@ -58,6 +58,7 @@ Complete command line analyses can be performed with Philosopher, see this [tuto
 For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the MSFragger [Wiki page](https://github.com/Nesvilab/MSFragger/wiki). Tutorials for common MSFragger-related workflows are listed below.
 
 - [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
+- [Setting up FragPipe on remote Linux server (with X forwarding)](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding.html)
 - [Using FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
 - [Using FragPipe for SILAC (or similar) labelled data](https://msfragger.nesvilab.org/tutorial_silac.html)
 - [Glycoproteomics with MSFragger](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
