@@ -1,6 +1,6 @@
-# Running a FragPipe-equivalent workflow on Linux
+# Running a FragPipe-equivalent workflow on Linux using command line
 
-For most desktop users, we recommend using [FragPipe](http://fragpipe.nesvilab.org/). To analyze your data in a server/HPC environment, we recommend Philosopher [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline). For quantitative analysis of Bruker ion mobility data on a server, use the ‘timsTOF data’ script below (ID-only workflows for non-timsTOF data can also be done with [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline)).
+For most desktop users, we recommend using [FragPipe](http://fragpipe.nesvilab.org/). Users can also use FragPipe on remote server with X forwarding ([https://msfragger.nesvilab.org/tutorial_setup_x_forwarding.html](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding.html)). However, if X forwarding cannot be enabled for any reason, one can use the following shell scripts or Philosopher [pipeline](https://github.com/Nesvilab/philosopher/wiki/Pipeline).
 
 Example shell scripts for timsTOF PASEF data and non-ion mobility data are shown below, modify them to suit your configuration.
 <br>
