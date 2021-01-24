@@ -4,9 +4,9 @@ Users can run FragPipe on a remote Linux server with X forwarding. Both of the s
 
 __For the details of setting up FragPipe itself, please refer to [Setting up FragPipe](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html).__
 
-*Disclaimer: different Linux distributions have different ways to install and setup X forwarding. This tutorial is based on our limited experience and may not be exactly fit your system.*
+*Disclaimer: different Linux distributions have different ways to install and setup X forwarding. Thus, instructions below may need to be modified for a particular system.*
 
-### Setup the Linux server
+### Setup the remote Linux server
 1. The server needs to have X window related packages. Different distributions have different ways to install those package. Following is an example for Ubuntu:
 ```shell
 sudo apt-get update
@@ -21,7 +21,7 @@ X11DisplayOffset 10
 3. Restart ssh daemon using `sudo service sshd restart`
 
 
-### Setup the Windows client
+### Setup the Windows client on your Windows machine
 1. Download PuTTY from [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), and install it.
 2. Download Xming from [https://sourceforge.net/projects/xming/](https://sourceforge.net/projects/xming/), and install it.
 3. Make sure that Xming is running in the background. Start Xming by clicking `Xming` from the Start menu:
