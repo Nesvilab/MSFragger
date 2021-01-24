@@ -40,7 +40,6 @@ X11DisplayOffset 10
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/putty3.jpg" width="400px" align="middle"/>
 
-
 7. Go back to `Session` and click `Save` again to save your settings.
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/putty4.jpg" width="400px" align="middle"/>
