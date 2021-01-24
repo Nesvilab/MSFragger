@@ -11,6 +11,7 @@ Linux users: please note that [Mono](https://www.mono-project.com/download/stabl
 
 #### Tutorial contents
 * [Configure FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe)
+* [Setting up FragPipe on remote Linux server (with X forwarding)](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding)
 * [Select workflow and add spectral files](https://msfragger.nesvilab.org/tutorial_fragpipe.html#select-workflow-and-add-spectral-files)
   * [Single-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#single-experiment-report)
   * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
