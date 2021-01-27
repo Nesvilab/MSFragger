@@ -162,9 +162,11 @@ If you need to use a custom FASTA database, use the 'Add decoys' button to add d
 ### Configure MSFragger search
 In the 'MSFragger' tab, check that the search parameters are suitable for your analysis. You can choose to save a customized parameter file to load for future use, or save the entire workflow (from either the 'Workflow' or the 'Run' tab).
 
-**Note:** 'Calibration and Optimization' options is set, by default, to "Mass Calibration, Parameter Optimization". It will effectively perform multiple MSFragger searches with different parameters, selecting the optimal settings. In practice, it results in 5-10% improvement in the number of identified PSMs, at the expense of increasing the search time. Consider changing this option to "Mass Calibration" or even "None", especially if you already know your data (e.g. from previous searches of the same or similar files) and can adjust the corresponding MSFragger parameters (fragment tolerance, number of peaks used, intensity transformation) manually, if needed.    
+**Note about calibration and optimization:** 'Calibration and Optimization' options is set, by default, to "Mass Calibration, Parameter Optimization". It will effectively perform multiple MSFragger searches with different parameters, selecting the optimal settings. In practice, it results in 5-10% improvement in the number of identified PSMs, at the expense of increasing the search time. Consider changing this option to "Mass Calibration" or even "None", especially if you already know your data (e.g. from previous searches of the same or similar files) and can adjust the corresponding MSFragger parameters (fragment tolerance, number of peaks used, intensity transformation) manually, if needed.    
 
-**Note:** For non-specific searches or for searches with many variable modifications, you may need to use the database splitting option, which requires an installation of [Python](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python).
+**Note about highly complex searches:** For non-specific searches or for searches with many variable modifications, you may need to use the database splitting option, which requires an installation of [Python](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python).
+
+**Note about custom enzymes:** To use an enzyme not listed in the digestion rules drop-down menu, enter the custom cleavage rules but be sure to set the 'Enzyme name' field to 'nonspecific'. Select 'ENZYMATIC' from the 'Cleavage' drop-down menu.
 
  
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-msfragger.png)
