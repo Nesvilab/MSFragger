@@ -1,6 +1,6 @@
 ## Setting up FragPipe on remote Linux server (with X forwarding)
 
-Users can run FragPipe on a remote Linux server with X forwarding. Both of the server and client need to be setup.
+Users can run [FragPipe](https://fragpipe.nesvilab.org/) on a remote Linux server with X forwarding. Both of the server and client need to be setup.
 
 __For the details of setting up FragPipe itself, please refer to [Setting up FragPipe](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html).__
 
