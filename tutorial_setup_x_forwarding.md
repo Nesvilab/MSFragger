@@ -49,3 +49,15 @@ X11DisplayOffset 10
 9. Find your FragPipe and start `fragpipe` in `<FragPipe directory>/bin`.
 
 10. Enjoy!
+
+
+### Setup the Mac client on your Mac machine
+1. Download XQuartz from [https://www.xquartz.org/](https://www.xquartz.org/), and install it.
+2. Run Applications -> Utilities -> XQuartz.app
+3. Right click on the XQuartz icon in the dock and select Applications -> Terminal.
+4. In the opened xterm window, log into the server using (replacing `username` and `ip-address` to real ones)
+```shell
+ssh -X username@ip-address
+```
+5. Find your FragPipe and start `fragpipe` in `<FragPipe directory>/bin`.
+6. Enjoy!
