@@ -47,7 +47,7 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 3) From the start menu, search for "Anaconda Prompt" and launch it.
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/anaconda_prompt_search.png" width="700px" align="middle"/>
 
-4) In the Anaconda Prompt window that opens, type `pip install msproteomicstools` and hit enter to install the _msproteomicstools_ package. Repeat this for the remaining packages (`numpy`, `pandas`, `matplotlib`, `cython`).
+4) In the Anaconda Prompt window that opens, type `pip install msproteomicstools==0.8.0` and hit enter to install the _msproteomicstools_ package. Repeat this for the remaining packages (`numpy`, `pandas`, `matplotlib`, `cython`).
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/pip_install.png" width="700px" align="middle"/>
   To install `easypqp` for spectral library generation, you will need to 1) [install Git](https://gitforwindows.org/update) if you don't already have it, then 2) run these two commands:
 
