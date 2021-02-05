@@ -1,8 +1,9 @@
 ## Using FragPipe
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
+FragPipe runs on Windows and Linux operating systems. While very simple analyses may only require 8 GB RAM, large scale/complex analyses or timsTOF data will likely need 24 GB memory or more. Free disk space is needed to run FragPipe analyses and save reports, typically 20-50% of spectral file size for non-ion mobility data. Disk space requirements for quantification of timsTOF data are greater, ~60% spectral file size if .d files are uncompressed, but up to 250% if Bruker's compression function has been used.
 
-Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
+Complete workflows are available for a variety of experiment types, we recommend starting your analysis with a built-in workflow, which can then be customized and saved for future use. For partial processing (e.g. to save time upon reanalysis), steps can be skipped by unchecking the corresponding boxes. Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="450px" align="middle"/>
 
