@@ -59,13 +59,14 @@ number of masses used. If more than a few thousand masses are being considered (
 7. **diagnostic_fragments**: (value: mass1/mass2/...) m/z values of diagnostic fragment ions (e.g. Oxonium ions) that appear in spectra of peptides containing a mod of interest. If diagnostic_intensity_filter > 0, at least one of the masses provided here must be found at sufficient intensity for any mass offset to be searched for the spectrum. To disable this checking, change diagnostic_intensity_filter to 0.
 8. **diagnostic_intensity_filter**: Minimum relative intensity (relative to base peak height) for the SUM of intensities of all diagnostic fragment ions found in the spectrum to consider this a potential glyco (or other labile mod) spectrum. Set to 0 to disable. A value of 0.1 means summed intensity must be 10% the height of the base peak in the MS/MS spectrum to be considered. 
 9. **deisotope**: (values: 0 or 1) glycopeptides tend to be larger than tryptic peptides, making deisotoping very helpful. Recommended setting '1' for glyco data. 
-10. **mass_diff_to_variable_mod**: (values: 0, 1, or 2) For delta masses that are 
-successfully localized, places the theoretical mass offset (i.e. glycan mass) as an "assigned modification" in the peptide sequence that can be read by quantification
-tools. "0" is off. "1" assigns the modification and subtracts the theoretical modification mass from the delta mass. NOTE: this prevents extended mass modeling in 
-PeptideProphet and is not recommended for glyco searches. "2" assigns the modification but does not change the delta mass. This makes the output table incompatible
-with PTM-Shepherd, but is the recommended setting for quantification. Not recommended for open searches. NOTE: for N-glycan searches, if localization does not succeed,
-the delta mass will still be placed on the first sequon in the peptide. For peptides containing multiple sequons, reported assigned position may not be correct. Post-search 
-localization is strongly recommended in these cases.
+10. **mass_diff_to_variable_mod**: (values: 0 ("No"), 1 ("Yes, and remove delta mass", or 2 ("Yes, and keep delta mass")). If on (1 or 2), MSFragger places the theoretical mass offset
+(i.e. glycan mass) as an "assigned modification" in the peptide sequence so that it can be read by downstream tools (e.g quant). "0" is off (default) - no change to PSMs. Option 1 ("Yes, and
+remove delta mass") places the delta mass as a variable modification and subtracts the theoretical modification mass from the delta mass. This should be used with the accurate mass
+modeling option (--accmass) in PeptideProphet, and is NOT compatible with the extended mass model. It should be used only if there are few mass offsets being searched (e.g. a phospho search)
+and NOT for open or glyco searches. Option 2 ("Yes, and keep delta mass") assigns the modification as  in Option 1, but does not change the delta mass. This allows the extended mass model 
+to be used in PeptideProphet (recommended for glyco and open searches). *NOTE: For both options 1 and 2, MSFragger will attempt to place the mass shift at the site supported by the most evidence in the spectrum. If 
+ there is no evidence or it is ambiguous, the mass shift will be placed at the first allowed site.* Post-search localization is needed in PTMProphet or other tool.
+
 ### Open Search
 
 Open searches can be performed on glycoproteomics data, for example to determine what glycans are present in the data.
