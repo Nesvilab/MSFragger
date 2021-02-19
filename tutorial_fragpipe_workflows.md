@@ -29,6 +29,10 @@ Listed below are the analysis workflows provided with FragPipe. Any of these wor
 * [Basic open search (Open)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-open-search-open)
 * [Mass shift search (common-mass-offsets)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#mass-shift-search-common-mass-offsets)
 
+###### Labile PTM Searches
+* [Labile_phospho](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#labile-phosphopeptide-search-labile_phospho)
+* [Labile_ADP-ribosylation](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#labile-mode-adp-ribosylation-search-labile_adp-ribosylation)
+
 ###### Glyco
 * [N-glycopeptide search (glyco-N-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-glyco-n-hcd)
 * [N-glycopeptide search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-hybrid-activation-glyco-n-hybrid)
@@ -114,6 +118,14 @@ Met oxidation, protein N-term Acetyl, n-term TMT are specified as variable modif
 
 ##### Mass shift search (common-mass-offsets)
 Mass Offset (also known as Multinotch) search workflow for a fast search for most common modifications (list of mass shifts specified in MSFragger 'Mass Offset' field). MSFragger localization-aware open search (LOS) algorithm, filtered to report PSMs with specified mass shifts only (with isotope errors allowed). No variable modifications are specified. Mass calibration, parameter optimization, and precursor monoisotope error correction are enabled. PeptideProphet with extended mass model. PTM-Shepherd for mass shift summarization. 
+<br>
+
+##### Labile phosphopeptide search (Labile_phospho)
+For CID/HCD search of phosphopeptides. Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Phosphorylation specified as both a variable modification and a mass offset to consider labile and nonlabile cases. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with accurate mass model, PTMProphet localization, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). 
+<br>
+
+##### Labile mode ADP-ribosylation search (Labile_ADP-ribosylation)
+For CID/HCD search of ADP-ribosylated peptides. Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. ADP-ribosylation specified as both a variable modification and a mass offset to consider labile and nonlabile cases. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, PTMProphet localization, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). 
 <br>
 
 ##### N-glycopeptide search (glyco-N-HCD)
