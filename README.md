@@ -17,9 +17,9 @@ MSFragger writes output in either tabular or pepXML formats, making it fully com
 ### Supported instruments and file formats  
 **mzML/mzXML**: Data from any instrument in mzML/mzXML format can be used.
 
-**Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (Spectral library building is currently not compatible with RAW files), so conversion to mzML is recommended. The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
+**Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (TMT analysis is currently not compatible with RAW files, so conversion to mzML is required for TMT data). The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
 
-**Bruker TIMS-TOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification requires .d files.
+**Bruker TIMS-TOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification with IonQuant requires .d files (or mzML files with unfiltered or minimally filtered MS1 scans; .d are recommended). 
 
 _TIMS-TOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows._ If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
