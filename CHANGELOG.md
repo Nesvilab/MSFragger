@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 3.2 - 2021-03-09
+- Add FAIMS support.
+- Tracing fragment and refine scores in DIA mode.
+- Support DIA data without any MS1 scans in DIA mode.
+- Support fragment mass calibration in DIA mode.
+- Add `data_type = 0/1/2` option.
+- Add `deneutralloss = 0/1` option.
+- Check MS2 resolution before the search.
+- Require at least two sequence ions in glyco mode.
+- Add `check_spectral_files = 0/1` option.
+- Always write `_calubrated/_uncalibrated.mgf` for ddaPASEF data (.d).
+- Filter out scans outside of `[200, 15000]`.
+- Update pepXML schema to version 1.2.2.
+- Improve help doc and change `--config` to `--config closed/open/nonspecific/glyco`.
+- Remove `output_file_extension` option
+- Various minor bug fixes and improvements.
+
 ## 3.1.1 - 2020-10-01
 - Fix a bug that does not write calibrated MGF.
 - Fix a bug that do not allow labile modifications in mass offset search with `restrict_deltamass_to = all`.

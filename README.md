@@ -29,7 +29,7 @@ _TIMS-TOF data requires [Visual C++ Redistributable for Visual Studio 2017](http
 Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
 ### Release Notes
-The latest version of MSFragger was released on 2020-10-01.
+The latest version of MSFragger was released on 2021-03-09.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ### Running MSFragger
