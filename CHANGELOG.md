@@ -6,16 +6,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 3.2 - 2021-03-09
 - Add FAIMS support.
-- Tracing fragment and refine scores in DIA mode.
-- Support directly searching DIA data without any MS1 scans in DIA mode.
-- Support fragment mass calibration in DIA mode.
-- Add `data_type = 0/1/2` option to specify data types: 0 = DDA, 1 = DIA, 2 = DIA with narrow window.
-- Support de-neutral loss fragment peaks, and add `deneutralloss = 0/1` option.
+- Tracing fragment and refinement of scores in the DIA mode.
+- Support directly searching DIA data without any MS1 scans in the DIA mode.
+- Support fragment mass calibration in the DIA mode.
+- Add `data_type = 0/1/2` option to specify data types: 0 = DDA (default), 1 = DIA, 2 = DIA with narrow windows (e.g. GPF data).
+- Support removal of neutral loss fragment peaks (default), and add `deneutralloss = 0/1` option.
 - Check MS2 resolution before the search.
-- Require at least two sequence ions in glyco mode.
+- Require at least two sequence ions matched in the Glyco mode.
 - Add `check_spectral_files = 0/1` option to turn on and off file checking.
-- Always write `_calubrated/_uncalibrated.mgf` for ddaPASEF data (.d).
-- Filter out scans outside of `[200, 15000]`.
+- Always write `_calibrated/_uncalibrated.mgf` for ddaPASEF data (.d).
+- Filter out scans outside of `[200, 15000]` range.
 - Update pepXML schema to version 1.2.2.
 - Improve help doc and change `--config` to `--config closed/open/nonspecific/glyco`.
 - Remove `output_file_extension` option.
