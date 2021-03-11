@@ -2,9 +2,9 @@
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
-Complete workflows are available for a variety of experiment types, we recommend starting your analysis with a built-in workflow, which can then be customized and saved for future use. For partial processing (e.g. to save time upon reanalysis), steps can be skipped by unchecking the corresponding boxes. This tutorial walks through each tab in some detail, but once FragPipe is configured, analysis can be as simple as adding spectral files and a database and selecting a workflow.
+Complete workflows are available for a variety of experiment types, we recommend starting your analysis with a built-in workflow, which can then be customized and saved for future use. For partial processing (e.g. to save time upon re-analysis), steps can be skipped by unchecking the corresponding boxes. This tutorial walks through each tab in some detail, but once FragPipe is configured, analysis can be as simple as choosing spectral files, a database, and a workflow to run.
 
-Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
+Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data with or without FAIMS, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)):
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="450px" align="middle"/>
 
@@ -15,19 +15,18 @@ Linux users: please note that [Mono](https://www.mono-project.com/download/stabl
 
 #### Tutorial contents
 * [Configure FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe)
-* [Setting up FragPipe on remote Linux server (with X forwarding)](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding)
 * [Select workflow and add spectral files](https://msfragger.nesvilab.org/tutorial_fragpipe.html#select-workflow-and-add-spectral-files)
   * [Single-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#single-experiment-report)
   * [Multi-experiment report](https://msfragger.nesvilab.org/tutorial_fragpipe.html#multi-experiment-report)
   * [Affinity purification data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#affinity-purification-data)
   * [TMT/iTRAQ data](https://msfragger.nesvilab.org/tutorial_fragpipe.html#tmtitraq-data)
 * [DIA-Umpire SE](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-dia-umpire-se)
-* [Specify a sequence database](https://msfragger.nesvilab.org/tutorial_fragpipe.html#specify-a-protein-sequence-database)
+* [Choose a sequence database](https://msfragger.nesvilab.org/tutorial_fragpipe.html#specify-a-protein-sequence-database)
 * [Configure MSFragger search](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-msfragger-search)
 * [Validation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#validation)
 * [Label-free quantification](https://msfragger.nesvilab.org/tutorial_fragpipe.html#lfq-label-free-quantification)
 * [Isobaric quantification](https://msfragger.nesvilab.org/tutorial_fragpipe.html#isobaric-labeling-based-quantification)
-* [Post-translational modifications](https://msfragger.nesvilab.org/tutorial_fragpipe.html#ptms)
+* [PTMs](https://msfragger.nesvilab.org/tutorial_fragpipe.html#ptms)
 * [Spectral library generation](https://msfragger.nesvilab.org/tutorial_fragpipe.html#spectral-library-generation)
 * [Run FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html#run-fragpipe)
 <br>
@@ -36,7 +35,7 @@ Linux users: please note that [Mono](https://www.mono-project.com/download/stabl
 When FragPipe launches, the first tab in the window ('Config') will be used to configure the program.
 1. Connect FragPipe to a MSFragger .jar program file. If you already have the latest MSFragger version, use the 'Browse' button to select it or 'Download/Update' to fetch the latest version.
 2. Connect FragPipe to a Philosopher program file. If you already have the latest Philosopher release, use 'Browse', otherwise use 'Download/Update'.
-3. Optional: Python is needed to perform database splitting (necessary in complex searches/low memory situations) and spectral library generation. If you already have Python 3 or greater plus a few additional packages installed (numpy, pandas, Cython, and msproteomicstools) use 'Browse' to locate your python.exe file. 'Download' will take you to install the Anaconda distribution of Python, see [(Python installation help)](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python) for details.
+3. Optional: Python is needed to perform database splitting (necessary in complex searches/low memory situations) and spectral library generation. If you already have Python 3 or greater plus a few additional packages installed (numpy, pandas, cython, and version 0.8.0 of msproteomicstools) use 'Browse' to locate your python.exe file. 'Download' will take you to install the Anaconda distribution of Python (comes with numpy, pandas, and cython). See [Python installation help](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html#optional-install-update-or-use-an-already-installed-version-of-python) for details.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-config.png)
  
@@ -58,7 +57,7 @@ In the 'Workflow' tab:
 
 **Notes about timsTOF data:** With timsTOF PASEF data we recommend using raw PASEF files (.d files), where the .d folder is the raw file. If you have already run MSFragger on the .d files, having the .mzBIN files from that analysis in the same directory as the .d files will speed up the analysis. If you don't need to perform quantification, you can use .mgf files (which can be generated by the Bruker's software immediately after data acquisition is completed) instead of .d.
  
-Once you've loaded your spectral files, annotate your data to specify Experiments and Replicates, which determines how your PSM/peptide/protein etc. reports will be generated:
+Once you've loaded your spectral files, annotate your data to specify Experiments and Replicates, which determines how your PSM/peptide/protein etc. reports will be generated (the 'Save as manifest' button stores file locations and annotations for future use):
 
 #### Single-experiment report 
 Leave the 'Experiment' and 'Replicate' fields blank. Use this option if you want to analyze all input files together and generate a single merged report (including bulding a combined spectral library from all input data). 
@@ -116,7 +115,6 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 **Note:** All negative controls should be labeled the same, as `Control`, even if you have negative controls generated under different conditions or in different cell lines.  
 
 **Note:** When the files are annotated with non-empty 'Experiment' and/or 'Replicate' field (as described above), the multi-experiment workflow is used, which includes running the Philosopher Abacus command to generate combined summary reports at the protein and (optionally) peptide levels. Abacus is run with '--reprint' option, generating reprint-spc.tsv (spectral count-based) and reprint-int.tsv (intensity-based) files. These files can be uploaded to [REPRINT](https://reprint-apms.org/) for interaction scoring using SAINT or SAINTexpress and visualization of the resulting interaction network. 
- 
 <br>
 
 #### TMT/iTRAQ data
@@ -176,6 +174,8 @@ If you loaded one of the common workflow file provided with FragPipe, or previou
 
 For open search workflows, select [Crystal-C](https://www.nesvilab.org/Crystal-C/) to remove open search artifacts and improve the interpretability of your results (Note: at present, Crystal-C does not support .d files, and will be disabled by FragPipe when using .d as input).
 
+[PTM-Prophet](http://www.tppms.org/tools/ptm/) can be used to provide localization probabilities from closed search results. Load the phosphorylation defaults or specify custom `--mods` using the format `residues1:modmass1,residues2:modmass2` to provide the amino acids and their respective variable modifications.
+
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-validation.png)
 
 
@@ -232,13 +232,6 @@ Spectral libraries can be generated within closed search-based workflows. A libr
 
 When building a library from fractionated data, using one of the fractions for reference retention time (RT) calibration is not recommended. Instead, select ciRT for human samples or iRT spike-in peptides for other organisms if possible.
 
-**Note:** To use EasyPQP, you will need to 1) [install Git](https://gitforwindows.org/update) if you don't already have it, then 2) open an Anaconda Prompt command line window and run these two commands:
-
-`pip uninstall --yes easypqp`
-
-`pip install git+https://github.com/grosenberger/easypqp.git@master`
-
-
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-speclib.png)
 
  <br>
@@ -249,5 +242,7 @@ When building a library from fractionated data, using one of the fractions for r
 
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-run.png)
- 
+  
+<br>
 
+#### [Back to FragPipe homepage](https://fragpipe.nesvilab.org/)
