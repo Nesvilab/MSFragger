@@ -3,7 +3,7 @@
 
 <br>
 #### Install or update Java
-FragPipe and MSFragger both require a 64-bit Java to run. Download 64-bit Java [here](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html) by selecting the **Windows x64 Installer**. Launch the installer and follow the prompts. (You may need to restart FragPipe after updating Java.)
+FragPipe and MSFragger both require a 64-bit Java to run. Windows users can choose to download the `-jre-` version of FragPipe (see below) or install 64-bit Java [here](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html) by selecting the **Windows x64 Installer**. Launch the installer and follow the prompts. You may need to restart FragPipe after updating Java.
 
 <br>
 #### Install or update FragPipe
@@ -11,7 +11,7 @@ FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases)
 
 <br>
 #### Install Visual C++ Redistributable for Visual Studio 2017
-Bruker's native library needs [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
+Bruker's native library needs [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error that the Bruker native library cannot be found, please try to install the Visual C++ redistibutable.
 
 <br>
 #### Install Mono (required for Thermo .raw file reading on Linux)
@@ -19,19 +19,19 @@ Linux users need to have [Mono](https://www.mono-project.com/download/stable/#do
 
 <br>
 #### Install, update, or use an already downloaded version of MSFragger
-**Use an existing MSFragger .jar file:** In FragPipe, use the 'Browse' button to select the .jar file.
+**Use an existing MSFragger .jar file:** If you already have the latest MSFragger release downloaded, use the 'Browse' button on the Config tab in FragPipe to select the .jar file.
 
-**Download MSFragger:** In FragPipe, use the 'Download' button to download the latest version of the MSFragger .jar file.
+**Download MSFragger:** In FragPipe, use the 'Download/Update' button to get the latest version of MSFragger.
 
 <br>
 #### Install, update, or use an already downloaded version of Philosopher
-If you have already downloaded Philosopher, use the 'Browse' button in FragPipe to select the latest Philosopher executable file. To upgrade to the most recent release or to download for the first time, use the 'Download' button.
+If you have already downloaded the latest Philosopher release, use the 'Browse' button in FragPipe to select the Philosopher executable file. To upgrade to the most recent release or to download for the first time, use the 'Download/Update' button.
 
 <br>
 #### Optional: install, update, or use an already installed version of Python
 Database splitting (to reduce the size of the in-memory fragment ion index-- helpful for workstations with limited memory or for complex searches) and/or spectral library generation will require Python 3 or above.
 
-**If you already have Python 3 or above**, make sure the following packages are installed: `numpy`, `pandas`, `matplotlib`, `cython`, and `msproteomicstools`. The `easypqp` package is also required to build spectral libraries from timsTOF data. Please note: if Python was installed through Anaconda, you will already have all of these packages except for `msproteomicstools` and `easypqp`. In most cases, you can run `pip install [package name]` to install a missing package. To install `easypqp`, you will need to 1) [install Git](https://github.com/git-guides/install-git) if you don't already have it, then 2) open an Anaconda Prompt command line window and run these two commands:
+**If you already have Python 3 or above**, make sure the following packages are installed: `numpy`, `pandas`, `matplotlib`, `cython`, and `msproteomicstools`. The `easypqp` package is also required to build spectral libraries from timsTOF data. Please note: if Python was installed through Anaconda, you will already have all of these packages except for `msproteomicstools` (version 0.8.0) and `easypqp`. In most cases, you can run `pip install [package name]` to install a missing package. To install `easypqp`, you will need to 1) [install Git](https://github.com/git-guides/install-git) if you don't already have it, then 2) open an Anaconda Prompt command line window and run these two commands:
 
 `pip uninstall --yes easypqp`
 
@@ -55,8 +55,8 @@ Database splitting (to reduce the size of the in-memory fragment ion index-- hel
 
 `pip install git+https://github.com/grosenberger/easypqp.git@master`
 
-5) In FragPipe, use the 'Browse' button to navigate to the installation location and select **python.exe**.
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_python.png)
+5) In FragPipe -> Config -> Python, use the 'Browse' button to navigate to the installation location and select **python.exe**. When FragPipe refreshes, DB Splitting and Spectral Library Generation should now be enabled.
+
 
 <br>
 #### Next: see the [FragPipe usage tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe.html).
