@@ -7,27 +7,32 @@ Listed below are the analysis workflows provided with FragPipe. Any of these wor
 
 ###### Closed (standard) database searches
 * [Basic search (Default)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search-default)
-* [Basic search & quantification (LFQ)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-lfq)
 * [Basic search & quantification with match-between-runs (LFQ-MBR)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-with-match-between-runs-lfq-mbr)
 
 ###### Non-specific digestion
 * [HLA peptide search (Nonspecific-HLA)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#hla-peptide-search-nonspecific-hla)
 * [Peptidome search (Nonspecific-peptidome)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#peptidome-search-nonspecific-peptidome)
 
-###### Label-based quantification
+###### Isobaric label-based quantification
+* [Phospho TMT-6 quantification (TMT6-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-6-quantification-tmt6-phospho)
 * [TMT-10 quantification (TMT10)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-tmt10)
 * [TMT-10 MS3 quantification (TMT10-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-ms3-quantification-tmt10-ms3)
-* [Phospho TMT-10 MS3 quantification (TMT10-MS3-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-ms3-quantification-tmt10-ms3-phospho)
 * [TMT-10 quantification with bridge/pooled sample (TMT10-bridge)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-with-bridgepooled-sample-tmt10-bridge)
 * [Phospho TMT-10 quantification (TMT10-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-quantification-tmt10-phospho)
+* [Phospho TMT-10 MS3 quantification (TMT10-MS3-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-ms3-quantification-tmt10-ms3-phospho)
 * [Phospho TMT-10 quantification with bridge/pooled sample (TMT10-phospho-bridge)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-quantification-with-bridgepooled-sample-tmt10-phospho-bridge)
+* [Ubiquitin TMT-10 quantification (TMT10-ubiquitin)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#ubiquitin-tmt-10-quantification-tmt10-ubiquitin)
 * [TMT-16 quantification (TMT16)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-quantification-tmt16)
 * [TMT-16 MS3 quantification (TMT16-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-ms3-quantification-tmt16-ms3)
 * [iTRAQ search and quantification (iTRAQ4)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#itraq-search-and-quantification-itraq4)
 
+###### MS1 label-based quantification
+* [SILAC3](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#silac3)
+* [SILAC3-phospho](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#silac3-phospho)
+
 ###### Open (mass-tolerant) and mass offset
 * [Basic open search (Open)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-open-search-open)
-* [Mass shift search (common-mass-offsets)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#mass-shift-search-common-mass-offsets)
+* [Mass shift search (Mass-Offset-CommonPTMs)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#mass-shift-search-mass-offset-commonptms)
 
 ###### Labile PTM Searches
 * [Labile_phospho](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#labile-phosphopeptide-search-labile_phospho)
@@ -36,17 +41,22 @@ Listed below are the analysis workflows provided with FragPipe. Any of these wor
 ###### Glyco
 * [N-glycopeptide search (glyco-N-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-glyco-n-hcd)
 * [N-glycopeptide search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-hybrid-activation-glyco-n-hybrid)
+* [N-glycopeptide search with quantification (glyco-N-LFQ)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-with-quantification-glyco-n-lfq)
 * [N-glycopeptide open search (glyco-N-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-hybrid)
-* [N-glycopeptide open search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-hybrid)
-* [N-glycopeptide search & quantification (glyco-N-quant-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search--quantification-glyco-n-quant-hcd)
+* [N-glycopeptide open search, hybrid activation (glyco-N-open-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-open-hybrid)
+* [N-glycopeptide search with TMT (glyco-N-TMT)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-with-tmt-glyco-n-tmt)
 * [O-glycopeptide search (glyco-O-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-glyco-o-hcd)
 * [O-glycopeptide search, hybrid activation (glyco-O-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-hybrid-activation-glyco-o-hybrid)
 * [O-glycopeptide open search (glyco-O-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-open-search-glyco-o-open-hcd)
-* [O-glycopeptide open search, hybrid activation (glyco-O-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-open-search-hybrid-activation-glyco-o-hybrid)
+* [O-glycopeptide open search, hybrid activation (glyco-O-open-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-open-search-hybrid-activation-glyco-o-hybrid)
 
-###### DIA spectral library building workflows
-* [DIA-MSFragger spectral library building (DIA-MSFragger_SpecLib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-msfragger-spectral-library-building-dia-msfragger_speclib)
+###### DIA and spectral library building
+* [DIA-Umpire signal extraction (DIA-Umpire)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-umpire-signal-extraction-dia-umpire)
 * [DIA-Umpire spectral library building (DIA-Umpire_Speclib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-umpire-spectral-library-building-dia-umpire_speclib)
+* [MSFragger DIA narrow window SpecLib](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#msfragger-dia-narrow-window-speclib)
+* [MSFragger DIA wide window SpecLib](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#msfragger-dia-wide-window-speclib)
+* [Spectral library building from DDA (SpecLib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#spectral-library-building-from-dda-speclib)
+
 
 <br>
 
@@ -54,33 +64,20 @@ Listed below are the analysis workflows provided with FragPipe. Any of these wor
 Simple closed search, no quantification. MSFragger search with 'stricttrypsin' (Trypsin/P) enzyme, fully tryptic peptides only, up to 2 missed cleavages. Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering).
 <br>
 
-##### DIA-MSFragger spectral library building (DIA-MSFragger_SpecLib)
-MSFragger DIA mode. Recommended options for narrow-window DIA data (using 3 highest scoring hits for each MS/MS spectrum). FDR filtering to 1% at all levels (protein, peptide, PSM) using 2D, picked FDR filtering. Spectral library building with EasyPQP to generate a Spectronaut and DIA-NN compatible spectral library for subsequent quantification using those tools.
-Default is RT alignment using commonly observed peptides (ciRT). Alternatively (recommended for non-human data), when building a library from narrow-window DIA runs, include one (or more) wide-window DIA runs, and choose "Automatic selection of a run as Reference' in EasyPQP. All runs will then be aligned to the reference wide-window DIA run.
-<br>
-
-##### DIA-Umpire spectral library building (DIA-Umpire_Speclib)
-DIA-Umpire based workflow for direct DIA analysis. Requires mzXML files as input. Pseudo-MS/MS spectra are extracted with DIA-Umpire SE module, and searched using MSFragger. 1% FDR filtering at all levels (protein, peptide) using 2D, picked FDR strategy. EasyPQP for generating a spectral library compatible with Spectronaut and DIA-NN for subsequent quantification using those tools.
-<br>
-
-##### Basic search & quantification (LFQ)
-Perform closed search, followed by label free quantification with IonQuant. Need to choose the right MS data type (Regular MS vs IM-MS).
-<br>
-
 ##### Basic search & quantification with match-between-runs (LFQ-MBR)
-Perform closed search, followed by label free quantification and match-between-runs with IonQuant. Need to choose the right MS data type (Regular MS vs IM-MS) and assign experiments to runs.
+Perform closed search, followed by label free quantification and match-between-runs with IonQuant. If using mzML files, need to choose the right MS data type (Regular MS vs IM-MS). Need to assign runs to experiments.
 <br>
 
 ##### HLA peptide search (Nonspecific-HLA)
-Nonspecific search, with recommended settings for HLA peptides. Peptide length 7-25. MSFragger search assumes cysteines were not alkylated (i.e. samples were not treated with iodoacetamide). Cysteinylation (C+119) is specified as variable modification. Protein FDR filter is not applied, so each output file (PSM, ion, peptide) is filtered to 1% FDR at that level. 
+Nonspecific search, with recommended settings for HLA peptides. Peptide length 7-25. MSFragger search assumes cysteines were not alkylated (i.e. samples were not treated with iodoacetamide). Cysteinylation (C+119) is specified as variable modification. Protein FDR filter is not applied, so each output file (PSM, ion, peptide) is filtered to 1% FDR at that level. If needed, extend to add label-free quantifcation (using IonQuant) or spectral library building with EasyPQP. 
 <br>
 
 ##### Peptidome search (Nonspecific-peptidome)
-Nonspecific search, with recommended settings for peptidome data (plasma, CSF, etc.). Peptide length 7-65. MSFragger search assumes cysteines were alkylated. Met oxidation, C-term amidation, and Pyro-Glu are specified as variable modifications. Protein FDR filter is not applied, so each output file (PSM, ion, peptide) is filtered to 1% FDR at that level.
+Nonspecific search, with recommended settings for peptidome data (plasma, CSF, etc.). Peptide length 7-65. MSFragger search assumes cysteines were alkylated. Met oxidation, C-term amidantion, and Pyro-Glu are specified as variable modifications. Protein FDR filter is not applied, so each output file (PSM, ion, peptide) is filtered to 1% FDR at that level.
 <br>
 
-##### Basic open search (Open)
-Open search workflow for PTM analysis. MSFragger localization-aware open search (LOS) algorithm, with deisotoping, mass calibration, parameter optimization, and monoisotope correction enabled. Mass range -150 to 500 Da, with Met oxidation and protein N-term Acetyl included as variable modifications. PeptideProphet with extended mass model. Crystal-C for artifact removal. PTM-Shepherd for mass shift summarization. 
+##### Phospho TMT-6 quantification (TMT6-phospho)
+TMT 6-plex workflow with quantification from MS3. TMT-Integrator with virtual reference approach, median-centering normalization, data summarization to all levels. If a reference/bridge sample is available, specify the corresponding channel/sample name tag in the annotation file(s) and in TMT-Integrator tab. 
 <br>
 
 ##### TMT-10 quantification (TMT10)
@@ -116,7 +113,23 @@ Basic TMT 16-plex workflow, with quantification from MS3 and identification form
 Met oxidation, protein N-term Acetyl, n-term TMT are specified as variable modifications. TMT-Integrator with virtual reference approach, median-centering normalization, data summarization at the gene level. If a reference/bridge sample is available, specify the corresponding channel/sample name tag in the annotation file(s) and in TMT-Integrator tab.
 <br>
 
-##### Mass shift search (common-mass-offsets)
+##### iTRAQ search and quantification (iTRAQ4)
+Closed search and basic iTRAQ 4-plex workflow, with quantification from MS2. TMT-Integrator with virtual reference approach, median-centering normalization, data summarization at the gene level. 
+<br>
+
+##### SILAC3
+Triple-SILAC quantification workflow. Closed search with MSFragger, SILAC quantification with IonQuant.
+<br>
+
+##### SILAC3-phospho
+Triple-SILAC, phosphopeptide-enriched workflow. Closed search with MSFragger, site localization with PTM-Prophet, SILAC quantification with IonQuant. PTM-Prophet (optional) requires mzML files as input.
+<br>
+
+##### Basic open search (Open)
+Open search workflow for PTM analysis. MSFragger localization-aware open search (LOS) algorithm, with deisotoping, mass calibration, parameter optimization, and monoisotope correction enabled. Mass range -150 to 500 Da, with Met oxidation and protein N-term Acetyl included as variable modifications. PeptideProphet with extended mass model. Crystal-C for artifact removal. PTM-Shepherd for mass shift summarization. 
+<br>
+
+##### Mass shift search (Mass-Offset-CommonPTMs)
 Mass Offset (also known as Multinotch) search workflow for a fast search for most common modifications (list of mass shifts specified in MSFragger 'Mass Offset' field). MSFragger localization-aware open search (LOS) algorithm, filtered to report PSMs with specified mass shifts only (with isotope errors allowed). No variable modifications are specified. Mass calibration, parameter optimization, and precursor monoisotope error correction are enabled. PeptideProphet with extended mass model. PTM-Shepherd for mass shift summarization. 
 <br>
 
@@ -136,16 +149,20 @@ For CID/HCD search of enriched N-glycopeptides. Met oxidation and protein N-term
 For hybrid activation (EThcD, etc) search of enriched N-glycopeptides. Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). PTM-Shepherd used for summarization.
 <br>
 
+##### N-glycopeptide search with quantification (glyco-N-LFQ)
+For search and label-free quantitation of enriched N-glycopeptides fragmented with CID/HCD. Method can be adapted for other fragmentation methods by comparing MSFragger settings to the glyco-N-hybrid workflow.
+<br>
+
 ##### N-glycopeptide open search (glyco-N-open-HCD)
 For CID/HCD open search of enriched N-glycopeptides. Mass range -200 to +4,000 Da, Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). PTM-Shepherd used for summarization.
 <br>
 
-##### N-glycopeptide open search, hybrid activation (glyco-N-Hybrid)
+##### N-glycopeptide open search, hybrid activation (glyco-N-open-Hybrid)
 For hybrid activation (EThcD, etc) open search of enriched N-glycopeptides. Mass range -200 to +4,000 Da, Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). PTM-Shepherd used for summarization.
 <br>
 
-##### N-glycopeptide search & quantification (glyco-N-quant-HCD)
-For CID/HCD search and quantification of enriched N-glycopeptides. Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). Label-free quantification with IonQuant. PTM-Shepherd used for summarization.
+##### N-glycopeptide search with TMT (glyco-N-TMT)
+For search and TMT quantitation of enriched N-glycopeptides fragmented with CID/HCD. Settings are provided for TMT-10 with virtual reference channel - method can be adapated for other TMT settings by adjusting TMT-Integrator parameters. See other TMT workflows for examples. Method can be adapted for other fragmentation methods by comparing MSFragger settings to the glyco-N-hybrid workflow.
 <br>
 
 ##### O-glycopeptide search (glyco-O-HCD)
@@ -160,12 +177,29 @@ For hybrid activation (EThcD, etc) search of enriched O-glycopeptides. Met oxida
 For CID/HCD open search of enriched O-glycopeptides. Mass range -200 to +4,000 Da, Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). PTM-Shepherd used for summarization.
 <br>
 
-##### O-glycopeptide open search, hybrid activation (glyco-O-Hybrid)
+##### O-glycopeptide open search, hybrid activation (glyco-O-open-Hybrid)
 For hybrid activation (EThcD, etc) open search of enriched O-glycopeptides. Mass range -200 to +4,000 Da, Met oxidation and protein N-term Acetyl specified as variable modifications, and C+57 as fixed modification. Deisotoping, mass calibration, and parameter optimization are enabled. Post-processing with Philosopher (PeptideProphet with extended mass model, ProteinProphet), with 1% FDR filtering at the PSM and protein levels (sequential filtering). PTM-Shepherd used for summarization.
 <br>
 
-##### iTRAQ search and quantification (iTRAQ4)
-Closed search and basic iTRAQ 4-plex workflow, with quantification from MS2. TMT-Integrator with virtual reference approach, median-centering normalization, data summarization at the gene level. 
+##### DIA-Umpire signal extraction (DIA-Umpire)
+DIA-Umpire SE module to extract pseudo-MS/MS spectra. Supports RAW, mzML, and mzXML for Thermo data. Requires mzML files for AB Sciex or timsTOF PASEF data. Use this workflow if you would like to run DIA-Umpire on DIA data with an aim to process DIA-Umpire-extracted mzML files at a later stage. For example, to search them together with DDA data to build a combined (hybrid) DIA+DDA spectral library using SpecLib workflow.
+<br>
+
+##### DIA-Umpire spectral library building (DIA-Umpire_Speclib)
+DIA-Umpire based workflow for direct DIA analysis and building spectral libraries. Supports RAW, mzML, and mzXML for Thermo data. Requires mzML files for AB Sciex and timsTOF PASEF data. Pseudo-MS/MS spectra are extracted with DIA-Umpire SE module, and searched using MSFragger. 1% FDR filtering at all levels (protein, peptide) using 2D, picked FDR strategy. EasyPQP for generating a spectral library compatible with Spectronaut and DIA-NN for subsequent quantification using those tools.
+<br>
+
+##### MSFragger DIA narrow window SpecLib
+MSFragger-DIA mode for direct identification of peptides from DIA data. Recommended options for narrow-window DIA data such as GFP DIA data for building a spectral library. Reporting 3 highest scoring hits for each MS/MS spectrum. FDR filtering to 1% at all levels (protein, peptide, PSM) using 2D, picked FDR filtering. Spectral library building with EasyPQP to generate a Spectronaut and DIA-NN compatible spectral library for subsequent quantification using those tools.
+Default is RT alignment using commonly observed peptides (ciRT). Alternatively (recommended for non-human data), when building a library from narrow-window DIA runs, include one (or more) wide-window single-shot DIA runs, and choose "Automatic selection of a run as Reference' in EasyPQP. All runs will then be aligned to the reference wide-window DIA run.
+<br>
+
+##### MSFragger DIA wide window SpecLib
+MSFragger-DIA based workflow for direct identification of peptides from wide-window DIA data (or combined narrow- and wide-window DIA data). This is an alternative workflow to using DIA-Umpire as peptides are identified by MSFragger directly from raw DIA data. Reporting 3 highest scoring hits for each MS/MS spectrum, followed by PeptideProphet, ProteinProphet, and FDR filtering to 1% at all levels (protein, peptide, PSM) with 2D, picked FDR approach. Spectral library building with EasyPQP to generate a Spectronaut and DIA-NN compatible spectral library for subsequent quantification using those tools. RT alignment in EasyPQP using "Automatic selection of a run as RT Reference".
+<br>
+
+##### Spectral library building from DDA (SpecLib)
+Workflow for building spectral libraries using DDA data, or using pseudo-MS/MS spectra extracted with DIA-Umpire (or using both data types if building a combined DIA+DDA library). Closed search with MSFragger, peptide/protein validation and protein inference with PeptideProphet/ProteinProphet via Philosopher. Building a consensus spectral library with EasyPQP. The library is filtered to 1% FDR at the protein and peptide levels. If using fractionated DDA data, in EasyPQP choose RT Calibration option: "ciRT" (choose iRT if using organisms other than yeast or human). If using DDA data together with DIA-Umpire extracted mzML files, choose RT Calibration option: "Automatic selection of a run as reference RT". Supports DDA RAW/.d files, mzML, and MGF files. Generated library.tsv file is directly compatible with DIA-NN and Spectronaut for targeted extraction of quantitative information.
 <br>
 <br>
 
