@@ -2,7 +2,7 @@
 
 ##### [FragPipe](https://fragpipe.nesvilab.org) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program. See [here](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe) for help configuring FragPipe.
 
-##### FragPipe has several options for analyzing DIA data with spectral libraries:
+FragPipe has several options for analyzing DIA data with spectral libraries:
 
 * **[Build a library from DDA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dda-data)**
 * **[Build a library from DIA data (direct DIA using DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dia-data)**
@@ -12,7 +12,7 @@ We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/
 <br>
 <br>
 
-### Build a spectral library from DDA data
+### Build a library from DDA data
 1. Select the 'SpecLib' workflow from the dropdown menu and 'Load'.
 2. Load DDA spectral files in mzML or RAW format. (In this example, 6 DDA fractions were loaded.)
 3. In the 'Database' tab, download or select an existing database. (In this case, a mouse database was downloaded with reviewed sequences, decoys, common contaminants, and iRT peptides. [UPS protein sequences] were also added manually.)
