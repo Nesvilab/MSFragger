@@ -2,14 +2,13 @@
 
 ##### [FragPipe](https://fragpipe.nesvilab.org) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program. See [here](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe) for help configuring FragPipe.
 
-FragPipe has several options for analyzing DIA data with spectral libraries:
+##### FragPipe has several options for analyzing DIA data with spectral libraries:
 
-https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe
-* [Build a library from DDA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dda-data)
-* [Build a library from DIA data (direct DIA using DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dia-data)
-* [Build a library from combined DDA and DIA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-combined-dda-and-dia-data)
+* **[Build a library from DDA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dda-data)**
+* **[Build a library from DIA data (direct DIA using DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dia-data)**
+* **[Build a library from combined DDA and DIA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-combined-dda-and-dia-data)**
 
-We recommend [using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantification-with-dia-nn).
+We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantification-with-dia-nn)**.
 <br>
 <br>
 
