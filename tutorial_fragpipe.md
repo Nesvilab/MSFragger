@@ -46,7 +46,7 @@ When FragPipe launches, the first tab in the window ('Config') will be used to c
 
 In the 'Workflow' tab:
 
-1. Choose the [workflow](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html) you want to use from the dropdown menu and press 'Load'. Use the **Default** workflow for simple conventional (closed) searches. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)) are provided. We always recommend starting with one of the provided workflows and customizing it as needed. Customized workflows can be saved (with a unique name) for future use or sharing with other users (all workflows are stored in the FragPipe 'workflows' folder).
+1. Choose the [workflow](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html) you want to use from the dropdown menu and press 'Load'. Use the **Default** workflow for simple conventional (closed) searches. A number of common workflows (including [glyco](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html) and [DIA](https://msfragger.nesvilab.org/tutorial_DIA.html)) are provided. We always recommend starting with one of the provided workflows and customizing it as needed. Customized workflows can be saved (with a unique name) for future use or sharing with other users (all workflows are stored in the FragPipe 'workflows' folder).
 
 2. Set the amount of memory & number of logical cores to use.
 
@@ -133,9 +133,7 @@ TMT/iTRAQ experiments typically consist of one or more "plexes" (multiplexed sam
  <br>
  
 ### Run DIA-Umpire SE
-[DIA-Umpire](https://diaumpire.nesvilab.org/)'s signal extraction module can be used for .raw and .mzML files.
-For more information, see the Signal Extraction Module section of the DIA-Umpire [manual](https://diaumpire.nesvilab.org/DIA_Umpire_Manual_v2.0.pdf).
-
+[DIA-Umpire](https://diaumpire.nesvilab.org/)'s signal extraction module can be used for .raw and .mzML files. See this [tutorial](https://msfragger.nesvilab.org/tutorial_DIA.html) for more detail.
   
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-diaumpire.png)
 
