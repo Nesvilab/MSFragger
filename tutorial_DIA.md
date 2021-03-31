@@ -8,7 +8,7 @@
 * **[Build a library from DIA data (direct DIA using DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dia-data)**
 * **[Build a library from combined DDA and DIA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-combined-dda-and-dia-data)**
 
-We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantification-with-dia-nn)**.
+We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantify-with-dia-nn)**.
 <br>
 <br>
 
@@ -25,7 +25,7 @@ We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/
 <br>
 
 
-### Build a spectral library from DIA data
+### Build a library from DIA data
 1. Select the 'DIA-Umpire_SpecLib' workflow from the dropdown menu and 'Load'.
 2. Load DIA spectral files in mzML or RAW format. (In this example, 10 DIA runs were loaded.)
 3. On the 'Umpire' tab, choose the appropriate settings:
@@ -39,7 +39,7 @@ We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/
 <br>
 
 
-### Build a spectral library from combined DDA and DIA data
+### Build a library from combined DDA and DIA data
 This workflow is composed of two steps:
 
 A) extract pseudo-MS/MS spectra from DIA data using DIA-Umpire, and
