@@ -9,6 +9,9 @@ FragPipe has several options for building spectral libraries for DIA data analys
 * **[Build a library from combined DDA and DIA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-combined-dda-and-dia-data)**
 
 We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantify-with-dia-nn)**.
+
+Please note that only the first option (library building from DDA) currently works with timsTOF data. In this case, timsTOF DDA-PASEF raw files (.d) can be used directly for spectral library building, as well as .mgf files converted by Bruker DataAnalysis. To use .mgf, each .mgf file needs to copied out of its .d folder to a new joint folder (FragPipe cannot "see" .mgf files inside of .d folders for now).
+
 <br>
 <br>
 
