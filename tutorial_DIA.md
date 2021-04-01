@@ -72,9 +72,13 @@ B) build the library from the pseudo-MS/MS DDA files and additional DDA files**
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/DIA-tutorial_DIANN.png)
 <br>
 
-#### References
-- DIA-Umpire: [Cho KC, Clark DJ, Schnaubelt M, Teo GC, Leprevost FD, Bocik W, Boja ES, Hiltke T, Nesvizhskii AI, Zhang H. Deep proteomics using two dimensional data independent acquisition mass spectrometry. Analytical Chemistry (2020).](https://doi.org/10.1021/acs.analchem.9b04418)
-- DIA-NN and FragPipe: [Demichev V, Yu F, Teo GC, Szyrwiel L, Rosenberger G, Decker J, Kaspar-Schoenefeld S, Lilley KS, Mülleder M, Nesvizhskii AI, Ralser M. High sensitivity dia-PASEF proteomics with DIA-NN and FragPipe. bioRxiv (2021).](https://www.biorxiv.org/content/10.1101/2021.03.08.434385v1.full)
+#### Key References
+
+Tsou CC, Avtonomov D, Larsen B, Tucholska M, Choi H, Gingras AC, Nesvizhskii AI.[DIA-Umpire: comprehensive computational framework for data-independent acquisition proteomics](https://doi.org/10.1021/acs.analchem.9b04418) Nature Methods 12:258-64 (2015).
+
+
+ 
+Demichev V, Yu F, Teo GC, Szyrwiel L, Rosenberger G, Decker J, Kaspar-Schoenefeld S, Lilley KS, Mülleder M, Nesvizhskii AI, Ralser M. [High sensitivity dia-PASEF proteomics with DIA-NN and FragPipe] (https://www.biorxiv.org/content/10.1101/2021.03.08.434385v1.full) bioRxiv (2021)
 
 <br>
 <br>
