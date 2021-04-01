@@ -62,6 +62,7 @@ B) build the library from the pseudo-MS/MS DDA files and additional DDA files**
 <br>
 
 ### Quantify with DIA-NN
+DIA-NN is available for download [here](https://github.com/vdemichev/DiaNN) 
 1. Click 'Raw' and load mzML files (or RAW format if DIA-NN has been configured to read the RAW format).
 2. Select the spectral library generated using FragPipe ('library.tsv' file).
 3. Choose where to write the output and the file name (e.g. 'DIA-NN_DIALib.tsv').
@@ -73,9 +74,9 @@ B) build the library from the pseudo-MS/MS DDA files and additional DDA files**
 <br>
 
 #### Key References
-Tsou CC, Avtonomov D, Larsen B, Tucholska M, Choi H, Gingras AC, Nesvizhskii AI. [DIA-Umpire: comprehensive computational framework for data-independent acquisition proteomics](https://doi.org/10.1021/acs.analchem.9b04418) Nature Methods 12:258-64 (2015).
+Tsou CC, Avtonomov D, Larsen B, Tucholska M, Choi H, Gingras AC, Nesvizhskii AI. [DIA-Umpire: comprehensive computational framework for data-independent acquisition proteomics](https://doi.org/10.1021/acs.analchem.9b04418), Nature Methods 12:258-64 (2015).
 
-Demichev V, Yu F, Teo GC, Szyrwiel L, Rosenberger G, Decker J, Kaspar-Schoenefeld S, Lilley KS, Mülleder M, Nesvizhskii AI, Ralser M. [High sensitivity dia-PASEF proteomics with DIA-NN and FragPipe](https://www.biorxiv.org/content/10.1101/2021.03.08.434385v1.full) bioRxiv (2021).
+Demichev V, Yu F, Teo GC, Szyrwiel L, Rosenberger G, Decker J, Kaspar-Schoenefeld S, Lilley KS, Mülleder M, Nesvizhskii AI, Ralser M. [High sensitivity dia-PASEF proteomics with DIA-NN and FragPipe](https://www.biorxiv.org/content/10.1101/2021.03.08.434385v1.full), bioRxiv (2021).
 
 <br>
 <br>
