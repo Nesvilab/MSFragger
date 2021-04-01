@@ -63,6 +63,8 @@ B) build the library from the pseudo-MS/MS DDA files and additional DDA files**
 
 ### Quantify with DIA-NN
 DIA-NN is available for download [here](https://github.com/vdemichev/DiaNN) 
+<br>
+
 1. Click 'Raw' and load mzML files (or RAW format if DIA-NN has been configured to read the RAW format).
 2. Select the spectral library generated using FragPipe ('library.tsv' file).
 3. Choose where to write the output and the file name (e.g. 'DIA-NN_DIALib.tsv').
