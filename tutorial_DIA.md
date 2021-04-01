@@ -2,7 +2,7 @@
 
 ##### [FragPipe](https://fragpipe.nesvilab.org) can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program. See [here](https://msfragger.nesvilab.org/tutorial_fragpipe.html#configure-fragpipe) for help configuring FragPipe.
 
-FragPipe has several options for analyzing DIA data with spectral libraries:
+FragPipe has several options for building spectral libraries for DIA data analysis:
 
 * **[Build a library from DDA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dda-data)**
 * **[Build a library from DIA data (direct DIA using DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-dia-data)**
@@ -14,7 +14,7 @@ We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/
 
 ### Build a library from DDA data
 1. Select the 'SpecLib' workflow from the dropdown menu and 'Load'.
-2. Load DDA spectral files in mzML or RAW format. (In this example, 6 DDA fractions were loaded.)
+2. Load DDA spectral files in mzML or RAW format. (In this example, 6 DDA files corresponding to 6 fractionated peptide samples were loaded.)
 3. In the 'Database' tab, download or select an existing database. (In this case, a mouse database was downloaded with reviewed sequences, decoys, common contaminants, and iRT peptides. [UPS protein sequences] were also added manually.)
 
 **Note**: If you're working with a non-human dataset, change the 'RT calibration' option on the 'Spec Lib' tab to 'iRT' if these peptides have been spiked-in. EasyPQP will use the ciRT option (Biognosys common HeLa peptides) by default.
@@ -25,12 +25,12 @@ We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/
 <br>
 
 
-### Build a library from DIA data
+### Build a library directly from DIA data
 1. Select the 'DIA-Umpire_SpecLib' workflow from the dropdown menu and 'Load'.
 2. Load DIA spectral files in mzML or RAW format. (In this example, 10 DIA runs were loaded.)
 3. On the 'Umpire' tab, choose the appropriate settings:
- - Change 'Max Missed Scans' to 2 if building a library from DDA data only (slower run time but higher identification sensitivity).
- - Check 'Remove Background' if building a hybrid DDA+DIA library and if there are many DIA runs (fastest run time).
+ - Change 'Max Missed Scans' to 2 if building a library from DIA data only (slower run time but higher identification sensitivity).
+ - Check 'Remove Background' if building a hybrid DDA+DIA library (see below) and if there are many DIA runs (fastest run time).
  - Uncheck 'Mass Defect Filter' if DIA data is generated on modification-enriched peptides (e.g. phospho), or if you're interested in extended PTM searches.
 4. In the 'Database' tab, download or select an existing sequence database.
 5. On the 'Run' tab, choose the location to output the results and click 'RUN'.
@@ -42,7 +42,7 @@ We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/
 ### Build a library from combined DDA and DIA data
 This workflow is composed of two steps:
 
-A) extract pseudo-MS/MS spectra from DIA data using DIA-Umpire, and
+A) run just the DIA-Umpire step to extract pseudo-MS/MS spectra from DIA data, and
 
 B) build the library from the pseudo-MS/MS DDA files and additional DDA files**
 
