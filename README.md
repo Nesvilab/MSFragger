@@ -55,16 +55,17 @@ See [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-M
 Complete command line analyses can be performed with Philosopher, see this [tutorial](https://github.com/Nesvilab/philosopher/wiki/Simple-Data-Analysis) for a step-by-step example.
 
 ### Documentation
-For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the MSFragger [Wiki page](https://github.com/Nesvilab/MSFragger/wiki). Tutorials for common MSFragger-related workflows are listed below.
+For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the MSFragger [Wiki page](https://github.com/Nesvilab/MSFragger/wiki). Tutorials for common MSFragger-related workflows (via [FragPipe](https://fragpipe.nesvilab.org/)) are listed below.
 
+- [Using FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html) (most comprehensive tutorial covering all FragPipe modules)
 - [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
-- [Setting up FragPipe on remote Linux server (with X forwarding)](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding.html)
-- [Using FragPipe (main tutorial)](https://msfragger.nesvilab.org/tutorial_fragpipe.html)
-- [Using FragPipe for SILAC (or similar) labelled data](https://msfragger.nesvilab.org/tutorial_silac.html)
-- [Glycoproteomics with MSFragger](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
-- [Linux shell/command line workflow](https://msfragger.nesvilab.org/tutorial_linux.html)
+- [Built-in workflows](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html)
+- [Analyzing glycoproteomics data](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
+- [Building spectral libraries (from DDA, direct DIA with DIA-Umpire, and combined) for DIA analysis](https://msfragger.nesvilab.org/tutorial_DIA.html)
 - [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
-- [Running MSstats on timsTOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
+- [Setting up FragPipe on remote Linux server (with X forwarding)](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding.html)
+- [Using FragPipe for SILAC (or other MS1-labeled) data](https://msfragger.nesvilab.org/tutorial_silac.html)
+- [Running MSstats on TIMS-TOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
 - [Importing results to Skyline](https://msfragger.nesvilab.org/tutorial_skyline.html)
 
 
