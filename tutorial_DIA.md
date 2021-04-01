@@ -10,8 +10,9 @@ FragPipe has several options for building spectral libraries for DIA data analys
 
 We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantify-with-dia-nn)**.
 
-Please note that only the first option (library building from DDA) currently works with timsTOF data. In this case, timsTOF DDA-PASEF raw files (.d) can be used directly for spectral library building, as well as .mgf files converted by Bruker DataAnalysis. To use .mgf, each .mgf file needs to copied out of its .d folder to a new joint folder (FragPipe cannot "see" .mgf files inside of .d folders for now).
+Skyline users may also choose to import interact-.pep.xml files into Skyline for spectral library building and further analysis of DIA experiments, see this [tutorial](https://msfragger.nesvilab.org/tutorial_skyline.html).
 
+Please note that only the first option (library building from DDA) currently works with timsTOF data. In this case, timsTOF DDA-PASEF raw files (.d) can be used directly for spectral library building, as well as .mgf files converted by Bruker DataAnalysis. To use .mgf, each .mgf file needs to copied out of its .d folder to a new joint folder (FragPipe cannot "see" .mgf files inside of .d folders for now).
 <br>
 <br>
 
@@ -70,17 +71,12 @@ B) build the library from the pseudo-MS/MS DDA files and additional DDA files**
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/DIA-tutorial_DIANN.png)
 <br>
+
+#### References
+- DIA-Umpire: [Cho KC, Clark DJ, Schnaubelt M, Teo GC, Leprevost FD, Bocik W, Boja ES, Hiltke T, Nesvizhskii AI, Zhang H. Deep proteomics using two dimensional data independent acquisition mass spectrometry. Analytical Chemistry (2020).](https://doi.org/10.1021/acs.analchem.9b04418)
+- DIA-NN and FragPipe: [Demichev V, Yu F, Teo GC, Szyrwiel L, Rosenberger G, Decker J, Kaspar-Schoenefeld S, Lilley KS, Mülleder M, Nesvizhskii AI, Ralser M. High sensitivity dia-PASEF proteomics with DIA-NN and FragPipe. bioRxiv (2021).](https://www.biorxiv.org/content/10.1101/2021.03.08.434385v1.full)
+
 <br>
+<br>
+
 #### [Back to FragPipe homepage](https://fragpipe.nesvilab.org/)
-
-
-
-
-
-
-
-
-
-
-
-
