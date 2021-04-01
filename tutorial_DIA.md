@@ -8,7 +8,7 @@ FragPipe has several options for building spectral libraries for DIA data analys
 * **[Build a library from DIA data (direct DIA using DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-directly-from-dia-data)**
 * **[Build a library from combined DDA and DIA data](https://msfragger.nesvilab.org/tutorial_DIA.html#build-a-library-from-combined-dda-and-dia-data)**
 
-We recommend **[using DIA-NN for quantification](https://msfragger.nesvilab.org/tutorial_DIA.html#quantify-with-dia-nn)**.
+FragPipe generated libraries can be used for quantification from DIA data using **[DIA-NN]**(https://msfragger.nesvilab.org/tutorial_DIA.html#quantify-with-dia-nn)**.
 
 Skyline users may also choose to import interact-.pep.xml files into Skyline for spectral library building and further analysis of DIA experiments, see this [tutorial](https://msfragger.nesvilab.org/tutorial_skyline.html).
 
