@@ -16,10 +16,12 @@ Please note that only the first option (library building from DDA) currently wor
 <br>
 <br>
 
+The dataset used below for illustration was downloaded from [PXD011691](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD011691). It contains 10 samples analyzed using DIA (10 mouse brain tissue, with UPS proteins spiked in at varying concentration). It also contains 6 DDA runs (pool of the same 10 brain tissues, with peptides fractionated into 6 fractions) collected for building a spectrum library.     
+
 ### Build a library from DDA data
-1. Select the 'SpecLib' workflow from the dropdown menu and 'Load'.
+1. In Workflow tab of FragPipe, Select the 'SpecLib' workflow from the dropdown menu and 'Load'.
 2. Load DDA spectral files in mzML or RAW format. (In this example, 6 DDA files corresponding to 6 fractionated peptide samples were loaded.)
-3. In the 'Database' tab, download or select an existing database. (In this case, a mouse database was downloaded with reviewed sequences, decoys, common contaminants, and iRT peptides. [UPS protein sequences] were also added manually.)
+3. In the 'Database' tab, download or select an existing database. (In this case, a mouse database was downloaded with reviewed sequences, decoys, common contaminants, and iRT peptides. UPS protein sequences were also added manually)
 
 **Note**: If you're working with a non-human dataset, change the 'RT calibration' option on the 'Spec Lib' tab to 'iRT' if these peptides have been spiked-in. EasyPQP will use the ciRT option (Biognosys common HeLa peptides) by default.
 
