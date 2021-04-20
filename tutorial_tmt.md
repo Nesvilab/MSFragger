@@ -15,6 +15,8 @@ We will use this CPTAC dataset which can be found [here](https://cptac-data-port
 * [Validation settings](https://msfragger.nesvilab.org/tutorial_tmt.html#validation-settings)
 * [Quantification settings](https://msfragger.nesvilab.org/tutorial_tmt.html#quantification-settings)
 * [Run the analysis](https://msfragger.nesvilab.org/tutorial_tmt.html#run-the-analysis)
+* [Results](https://msfragger.nesvilab.org/tutorial_tmt.html#results)
+
 
 <br>
 
@@ -87,6 +89,18 @@ In the PTMs section (on the 'Quant' tab), 'Mod tag' needs to be set for the modi
 ### Run the analysis
 On the 'Run' tab, set the output directory to a new folder within the 'TMT_tutorial' directory, e.g. 'TMT_tutorial/results', then press 'RUN'.
 
+<br>
+
+### Results
+When the analysis is finished, identification reports with raw quantification values (psm.tsv, ion.tsv, peptide.tsv, protein.tsv) will be in the main results folder (e.g. 'TMT_tutorial/results'). If multiple experiments were set during the file input step on the 'Workflow' tab, these identification reports will be in a separate folder for each experiment. 
+
+TMT-Integrator reports will be in a new folder, 'tmt-reports'. These reports contain normalized log2-transformed values, with separate files for both abundances (intensities) and ratios at each level (gene, protein, peptide, etc.).
+
+If PTM-specific quantification was performed, multi-site and single-site reports will be generated for the specified modification. In single-site reports, peptides identified with multiple specified modifications are converted to single-site form. When using PTM-Prophet for localization (supported for phosphopeptide-enriched workflows only for now), single site reports contain only confidently localized sites.
+
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-site-reports.png)
+
+<br>
 <br>
 <br>
 <br>
