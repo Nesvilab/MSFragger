@@ -16,13 +16,10 @@ We will use this CPTAC dataset which can be found [here](https://cptac-data-port
 * [Quantification settings](https://msfragger.nesvilab.org/tutorial_tmt.html#quantification-settings)
 * [Run the analysis](https://msfragger.nesvilab.org/tutorial_tmt.html#run-the-analysis)
 
-
-<br>
 <br>
 
 ### Download data
-For this tutorial, we will use a publicly-available LC-MS spectral file from a single fraction of a TMT 10-plex human cell line sample described [in this publication](https://pubs.acs.org/doi/10.1021/acs.jproteome.8b00165). Download the first file, _01_CPTAC_TMTS1-NCI7_P_JHUZ_20170509_LUMOS.mzML_, from the dataset [FTP location](ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2018/05/PXD008952) (the full experiment listing can be found [here](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD008952)). Place the file in a new directory named 'TMT_tutorial'.
-<br>
+For this tutorial, we will use a publicly-available LC-MS spectral file from a single fraction of a TMT 10-plex human cell line sample described [in this publication](https://pubs.acs.org/doi/10.1021/acs.jproteome.8b00165). Download the first file, _01_CPTAC_TMTS1-NCI7_P_JHUZ_20170509_LUMOS.mzML_, from the dataset [FTP location](ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2018/05/PXD008952) (the full experiment listing can be found [here](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD008952)). Place the file in a new folder named 'TMT_tutorial'.
 <br>
 
 ### Start FragPipe
@@ -30,7 +27,6 @@ Find the `fragpipe` folder and open the `fragpipe/bin` subfolder. Double-click t
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-config.png)
 
-<br>
 <br>
 
 ### Set workflow and load files
@@ -43,7 +39,6 @@ If you have more than one multiplexed sample, each sample needs to be placed in 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-workflow.png)
 
 <br>
-<br>
 
 ### Fetch database
 On the 'Database' tab, click 'Download', which will first prompt you to specify a download location, which you can set to be the 'TMT_tutorial' folder. After you 'Select directory', use the default settings to fetch a database from UniProt (reviewed human sequences plus decoys and common contaminants).
@@ -51,14 +46,12 @@ On the 'Database' tab, click 'Download', which will first prompt you to specify 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-database.png)
 
 <br>
-<br>
 
 ### MSFragger search settings
 For this tutorial, the parameters on the 'MSFragger' tab automatically loaded with the TMT10 workflow do not need to be modified. In other situations, variable modifications or other parameters could be adjusted here. Check that the TMT tag masses (+229.1629 for TMT-10 in this case) are set correctly for your experiment.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-msfragger.png)
 
-<br>
 <br>
 
 ### Validation settings
@@ -72,7 +65,6 @@ where modification masses are specified with their respective modified residues.
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-validation.png)
 
-<br>
 <br>
 
 ### Quantification settings
@@ -88,17 +80,12 @@ Median centering normalization is recommend and set as the default.
 
 In the PTMs section (on the 'Quant' tab), 'Mod tag' needs to be set for the modification of interest (e.g., phosphorylation should be `S[167],T[181],Y[243]`, where the bracketed values are the total residue mass including the modification). To generate reports for modified sites regardless of whether they have been localized by PTM-Prophet (or if the PTM-Prophet step is not included in your analysis), set the 'Min site probability' to 0. See the phospho example below:
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-quant-phospho.png)
+![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/tmt-quant-phospho.PNG)
 
-
-<br>
 <br>
 
 ### Run the analysis
 On the 'Run' tab, set the output directory to a new folder within the 'TMT_tutorial' directory, e.g. 'TMT_tutorial/results', then press 'RUN'.
-<br>
-<br>
-
 
 <br>
 <br>
