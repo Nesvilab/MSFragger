@@ -2,7 +2,7 @@
 
 ##### FragPipe can be downloaded [here](https://github.com/Nesvilab/FragPipe/releases). Follow the instructions on that same Releases page to launch the program.
 
-Complete workflows are available for a variety of experiment types, we recommend starting your analysis with a built-in workflow, which can then be customized and saved for future use. For partial processing (e.g. to save time upon re-analysis), steps can be skipped by unchecking the corresponding boxes. This tutorial walks through each tab in some detail, but once FragPipe is configured, analysis can be as simple as choosing spectral files, a database, and a workflow to run.
+Complete workflows are available for a variety of experiment types, we recommend starting your analysis with a built-in workflow, which can then be customized and saved for future use. For partial processing (e.g. to save time upon re-analysis), steps can be skipped by unchecking the corresponding boxes. This tutorial walks through each tab in some detail, but once FragPipe is configured, analysis can be as simple as choosing spectral files, a database, and a workflow to run. Find a guide to output files [here](https://msfragger.nesvilab.org/tutorial_fragpipe_outputs.html).
 
 Before you get started, make sure your LC-MS file format is compatible with the workflows you want to perform (for Thermo data with or without FAIMS, we recommend [converting .raw files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)) _Please note Bruker .d indicates ddaPASEF files from timsTOF, other Bruker .d files should be converted to .mzML._:
 
@@ -236,7 +236,7 @@ When building a library from fractionated data, using one of the fractions for r
 
 ### Run FragPipe
 1. Browse for the folder where you would like the search results to be written.
-2. Press 'RUN' to begin the analysis! For more help, see the MSFragger [wiki](https://github.com/Nesvilab/MSFragger/wiki), [FAQ](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions), or search issues on [Github](https://github.com/Nesvilab/FragPipe/issues?q=is%3Aissue).
+2. Press 'RUN' to begin the analysis! A guide to output files can be found [here](https://msfragger.nesvilab.org/tutorial_fragpipe_outputs.html). For more help, see the MSFragger [wiki](https://github.com/Nesvilab/MSFragger/wiki), [FAQ](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions), or search issues on [Github](https://github.com/Nesvilab/FragPipe/issues?q=is%3Aissue).
 
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-run.png)
