@@ -94,7 +94,7 @@ On the 'Run' tab, set the output directory to a new folder within the 'TMT_tutor
 ### Results
 When the analysis is finished, identification reports with raw quantification values (psm.tsv, ion.tsv, peptide.tsv, protein.tsv) will be in the main results folder (e.g. 'TMT_tutorial/results'). If multiple experiments were set during the file input step on the 'Workflow' tab, these identification reports will be in a separate folder for each experiment. 
 
-TMT-Integrator reports will be in a new folder, 'tmt-reports'. These reports contain normalized log2-transformed values, with separate files for both abundances (intensities) and ratios at each level (gene, protein, peptide, etc.).
+TMT-Integrator reports will be in a new folder, 'tmt-reports'. These reports contain normalized log2-transformed values, with separate files for both abundances (intensities) and ratios at each level (gene, protein, peptide, etc.). See the TMT/iTRAQ section on [this page](https://msfragger.nesvilab.org/tutorial_fragpipe_outputs.html) for more details.
 
 If PTM-specific quantification was performed, multi-site and single-site reports will be generated for the specified modification. In single-site reports, peptides identified with multiple specified modifications are converted to single-site form. When using PTM-Prophet for localization (supported for phosphopeptide-enriched workflows only for now), single site reports contain only confidently localized sites.
 
