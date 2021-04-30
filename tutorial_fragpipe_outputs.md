@@ -621,7 +621,7 @@ Isobaric labeling reports are found in the 'tmt-report' folder. Two sets of isob
 
 **ReferenceIntensity** real reference channel abundance if one has been provided, otherwise these values are virtual reference abundances from the average abundance across the channels, more information [here](https://msfragger.nesvilab.org/tutorial_tmt.html#quantification-settings)
 
-**[sample/channel name]** normalized and log2 transformed abundance/ratio for the given reporter ion channel from summarization to the stripped peptide sequence level
+**[sample/channel name]** normalized and log2 transformed abundance/ratio for the given reporter ion channel from summarization to the multiple-mod site level
 <br>
 <br>
 <br>
@@ -639,7 +639,7 @@ Isobaric labeling reports are found in the 'tmt-report' folder. Two sets of isob
 
 **ReferenceIntensity** real reference channel abundance if one has been provided, otherwise these values are virtual reference abundances from the average abundance across the channels, more information [here](https://msfragger.nesvilab.org/tutorial_tmt.html#quantification-settings)
 
-**[sample/channel name]** normalized and log2 transformed abundance/ratio for the given reporter ion channel from summarization to the stripped peptide sequence level
+**[sample/channel name]** normalized and log2 transformed abundance/ratio for the given reporter ion channel from summarization to the single modification site level (sites are quantified from PSMs with only the site of interest if available, otherwise the median of all localized sites is used if the site is only found with additional sites)
 <br>
 <br>
 <br>
