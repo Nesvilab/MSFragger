@@ -120,7 +120,7 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 #### TMT/iTRAQ data
 For TMT/iTRAQ analysis, spectral files should be in mzML format. Raw files are not currently supported.
 
-TMT/iTRAQ experiments typically consist of one or more "plexes" (multiplexed samples), each composed of multiple spectral files (if samples were prefractionated). Use 'Experiment' to denote spectral files/fractions from the same plex while leaving the 'Replicate' column empty. We recommend organizing data in folders, one for each plex. E.g., if you have 2 TMT plexes, with 2 spectral files (peptide fractions) in each, you can create a folder (e.g. named 'MyData'), containing two subfolders (e.g. 'TMT1' and 'TMT2') each containing the corresponding mzML files. Load data by clicking 'Add folder recursively' and selecting 'MyData' folder, then assign files to Experiments/Groups 'By parent directory', resulting in the following spectral file annotation:   
+TMT/iTRAQ experiments typically consist of one or more "plexes" (multiplexed samples), each composed of multiple spectral files (if samples were prefractionated). Use 'Experiment' to denote spectral files/fractions from the same plex while leaving the 'Replicate' column empty. Different plexes must be organized into separate, uniquely-named folders. E.g., if you have 2 TMT plexes, with 2 spectral files (peptide fractions) in each, you can create a folder (e.g. named 'MyData'), containing two subfolders (e.g. 'TMT1' and 'TMT2') each containing the corresponding mzML files. We recommend you load data by clicking 'Add folder recursively' and selecting 'MyData' folder, then assign files to Experiments/Groups 'By parent directory', resulting in the following spectral file annotation:   
 
 | Path                 | Experiment | Replicate |
 |----------------------|------------|-----------|
@@ -201,7 +201,7 @@ MBR is [FDR-controlled](https://www.biorxiv.org/content/10.1101/2020.11.02.36543
 
 To perform isobaric labeling-based quantification (TMT/iTRAQ),
 1. Check that the correct 'Label type' is selected (e.g. TMT10, TMT6, iTRAQ4, etc). If you need to change it at this point, we recommend going to the 'Workflow' tab and loading the correct workflow since the label also needs to be specified properly in the MSFragger search.
-2. For each experiment set in the 'Workflow' tab, select 'Edit/Create' Sample/Channel Annotation to assign sample information to each TMT/iTRAQ channel, or 'Browse' to load an existing 'annotation.txt' file.
+2. For each experiment set in the 'Workflow' tab, select 'Edit/Create' Sample/Channel Annotation to assign sample information to each TMT/iTRAQ channel, or 'Browse' to load an existing 'annotation.txt' file. (Each folder can have only one 'annotation.txt' file, so be sure that fractions/replicates of each plex are in their own uniquely-named folder that corresponds to the experiment name. FragPipe will automatically find the right annotation file if these are set correctly.)
 
 ![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_tutorial-labelquant.png)
 
