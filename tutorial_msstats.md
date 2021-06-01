@@ -1,6 +1,6 @@
 ## Running MSstats using MSstats.csv from IonQuant
 
-Using the .d folders (raw TIMS-TOF PASEF data) as input according to the [FragPipe tutorial](https://msfragger.nesvilab.org/tutorial_fragpipe.html#for-reports-with-results-from-different-fractionated-replicates-shown-in-separate-columns), IonQuant can generate a [MSstats](https://bioconductor.org/packages/release/bioc/html/MSstats.html) compatible file `MSstats.csv`.  
+IonQuant can generate a [MSstats](https://bioconductor.org/packages/release/bioc/html/MSstats.html) compatible file `MSstats.csv`.  
 Given an experimental setup that looks like this in the 'Select LC/MS Files' tab of FragPipe:
 
 <img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_LCMS_msstats.png" width="450"/>
