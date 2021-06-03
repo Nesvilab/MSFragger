@@ -1,4 +1,8 @@
 ### Offset search for PTMs with FragPipe
+Traditional closed search requires that precursor masses match the identified peptide within a small mass tolerance (e.g., +/-20 ppm), often with variable modifications allowed on only one or a few amino acid residues. In contrast, the open search strategy allows precursor masses to differ from the identified peptide by any mass within a large range (e.g., -100 to +150). Mass offset search is an intermediate strategy, allowing selected mass differences (within a tolerance, e.g. 20 ppm) on any peptide match, with no residue restriction (far right, below).
+
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/closed-open-offset_search.png" width="600px" align="middle"/>
+
 Parthenolide is a protein-reactive compound frequently used by cytoskeleton researchers to inhibit tubulin detyrosinases, but it is suspected to hit more than just those enzymes. Labeled peptides should have a +248.14125 Da mass shift, and we want to allow modification of any amino acid so we can learn more about parthenolide's specificity. This is a case for mass offset search.
 
 The samples we will use for this tutorial are purified tubulin treated with either DMSO (control) or parthenolide. Citation: Hotta, Takashi, et al. "Parthenolide Destabilizes Microtubules by Covalently Modifying Tubulin." Current Biology 31.4 (2021): 900-907.
@@ -13,7 +17,6 @@ The samples we will use for this tutorial are purified tubulin treated with eith
 * [Set the output location and run](https://msfragger.nesvilab.org/tutorial_offset.html#set-the-output-location-and-run)
 * [Examine the results](https://msfragger.nesvilab.org/tutorial_offset.html#examine-the-results)
 
-<br>
 
 ### Open FragPipe
 When you launch FragPipe, check that MSFragger and Philosopher are both configured. If you haven’t downloaded them yet, use their respective ‘Download / Update’ buttons. See [this page](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html) for more help, Python is not needed for this exercise.
