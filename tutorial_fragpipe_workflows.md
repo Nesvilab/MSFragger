@@ -6,56 +6,56 @@ Listed below are the analysis workflows provided with FragPipe. Any of these wor
 
 
 ###### Closed (standard) database searches
-* [Basic search (Default)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search-default)
-* [Basic search & quantification with match-between-runs (LFQ-MBR)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-search--quantification-with-match-between-runs-lfq-mbr)
+* [Basic search (Default)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#basic-search-default)
+* [Basic search & quantification with match-between-runs (LFQ-MBR)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#basic-search--quantification-with-match-between-runs-lfq-mbr)
 
 ###### Non-specific digestion
-* [HLA peptide search (Nonspecific-HLA)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#hla-peptide-search-nonspecific-hla)
-* [Peptidome search (Nonspecific-peptidome)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#peptidome-search-nonspecific-peptidome)
+* [HLA peptide search (Nonspecific-HLA)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#hla-peptide-search-nonspecific-hla)
+* [Peptidome search (Nonspecific-peptidome)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#peptidome-search-nonspecific-peptidome)
 
 ###### Isobaric label-based quantification
-* [Phospho TMT-6 quantification (TMT6-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-6-quantification-tmt6-phospho)
-* [TMT-10 quantification (TMT10)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-tmt10)
-* [TMT-10 MS3 quantification (TMT10-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-ms3-quantification-tmt10-ms3)
-* [TMT-10 quantification with bridge/pooled sample (TMT10-bridge)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-10-quantification-with-bridgepooled-sample-tmt10-bridge)
-* [Phospho TMT-10 quantification (TMT10-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-quantification-tmt10-phospho)
-* [Phospho TMT-10 MS3 quantification (TMT10-MS3-phospho)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-ms3-quantification-tmt10-ms3-phospho)
-* [Phospho TMT-10 quantification with bridge/pooled sample (TMT10-phospho-bridge)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#phospho-tmt-10-quantification-with-bridgepooled-sample-tmt10-phospho-bridge)
-* [Ubiquitin TMT-10 quantification (TMT10-ubiquitin)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#ubiquitin-tmt-10-quantification-tmt10-ubiquitin)
-* [TMT-16 quantification (TMT16)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-quantification-tmt16)
-* [TMT-16 MS3 quantification (TMT16-MS3)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#tmt-16-ms3-quantification-tmt16-ms3)
-* [iTRAQ search and quantification (iTRAQ4)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#itraq-search-and-quantification-itraq4)
+* [Phospho TMT-6 quantification (TMT6-phospho)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#phospho-tmt-6-quantification-tmt6-phospho)
+* [TMT-10 quantification (TMT10)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#tmt-10-quantification-tmt10)
+* [TMT-10 MS3 quantification (TMT10-MS3)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#tmt-10-ms3-quantification-tmt10-ms3)
+* [TMT-10 quantification with bridge/pooled sample (TMT10-bridge)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#tmt-10-quantification-with-bridgepooled-sample-tmt10-bridge)
+* [Phospho TMT-10 quantification (TMT10-phospho)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#phospho-tmt-10-quantification-tmt10-phospho)
+* [Phospho TMT-10 MS3 quantification (TMT10-MS3-phospho)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#phospho-tmt-10-ms3-quantification-tmt10-ms3-phospho)
+* [Phospho TMT-10 quantification with bridge/pooled sample (TMT10-phospho-bridge)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#phospho-tmt-10-quantification-with-bridgepooled-sample-tmt10-phospho-bridge)
+* [Ubiquitin TMT-10 quantification (TMT10-ubiquitin)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#ubiquitin-tmt-10-quantification-tmt10-ubiquitin)
+* [TMT-16 quantification (TMT16)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#tmt-16-quantification-tmt16)
+* [TMT-16 MS3 quantification (TMT16-MS3)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#tmt-16-ms3-quantification-tmt16-ms3)
+* [iTRAQ search and quantification (iTRAQ4)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#itraq-search-and-quantification-itraq4)
 
 ###### MS1 label-based quantification
-* [SILAC3](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#silac3)
-* [SILAC3-phospho](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#silac3-phospho)
+* [SILAC3](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#silac3)
+* [SILAC3-phospho](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#silac3-phospho)
 
 ###### Open (mass-tolerant) and mass offset
-* [Basic open search (Open)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#basic-open-search-open)
-* [Mass shift search (Mass-Offset-CommonPTMs)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#mass-shift-search-mass-offset-commonptms)
+* [Basic open search (Open)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#basic-open-search-open)
+* [Mass shift search (Mass-Offset-CommonPTMs)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#mass-shift-search-mass-offset-commonptms)
 
 ###### Labile PTM Searches
-* [Labile_phospho](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#labile-phosphopeptide-search-labile_phospho)
-* [Labile_ADP-ribosylation](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#labile-mode-adp-ribosylation-search-labile_adp-ribosylation)
+* [Labile_phospho](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#labile-phosphopeptide-search-labile_phospho)
+* [Labile_ADP-ribosylation](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#labile-mode-adp-ribosylation-search-labile_adp-ribosylation)
 
 ###### Glyco
-* [N-glycopeptide search (glyco-N-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-glyco-n-hcd)
-* [N-glycopeptide search, hybrid activation (glyco-N-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-hybrid-activation-glyco-n-hybrid)
-* [N-glycopeptide search with quantification (glyco-N-LFQ)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-with-quantification-glyco-n-lfq)
-* [N-glycopeptide open search (glyco-N-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-glyco-n-open-hcd)
-* [N-glycopeptide open search, hybrid activation (glyco-N-open-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-open-search-hybrid-activation-glyco-n-open-hybrid)
-* [N-glycopeptide search with TMT (glyco-N-TMT)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#n-glycopeptide-search-with-tmt-glyco-n-tmt)
-* [O-glycopeptide search (glyco-O-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-glyco-o-hcd)
-* [O-glycopeptide search, hybrid activation (glyco-O-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-hybrid-activation-glyco-o-hybrid)
-* [O-glycopeptide open search (glyco-O-open-HCD)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-open-search-glyco-o-open-hcd)
-* [O-glycopeptide open search, hybrid activation (glyco-O-open-Hybrid)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#o-glycopeptide-search-hybrid-activation-glyco-o-hybrid)
+* [N-glycopeptide search (glyco-N-HCD)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#n-glycopeptide-search-glyco-n-hcd)
+* [N-glycopeptide search, hybrid activation (glyco-N-Hybrid)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#n-glycopeptide-search-hybrid-activation-glyco-n-hybrid)
+* [N-glycopeptide search with quantification (glyco-N-LFQ)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#n-glycopeptide-search-with-quantification-glyco-n-lfq)
+* [N-glycopeptide open search (glyco-N-open-HCD)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#n-glycopeptide-open-search-glyco-n-open-hcd)
+* [N-glycopeptide open search, hybrid activation (glyco-N-open-Hybrid)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#n-glycopeptide-open-search-hybrid-activation-glyco-n-open-hybrid)
+* [N-glycopeptide search with TMT (glyco-N-TMT)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#n-glycopeptide-search-with-tmt-glyco-n-tmt)
+* [O-glycopeptide search (glyco-O-HCD)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#o-glycopeptide-search-glyco-o-hcd)
+* [O-glycopeptide search, hybrid activation (glyco-O-Hybrid)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#o-glycopeptide-search-hybrid-activation-glyco-o-hybrid)
+* [O-glycopeptide open search (glyco-O-open-HCD)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#o-glycopeptide-open-search-glyco-o-open-hcd)
+* [O-glycopeptide open search, hybrid activation (glyco-O-open-Hybrid)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#o-glycopeptide-search-hybrid-activation-glyco-o-hybrid)
 
 ###### DIA and spectral library building
-* [DIA-Umpire signal extraction (DIA-Umpire)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-umpire-signal-extraction-dia-umpire)
-* [DIA-Umpire spectral library building (DIA-Umpire_Speclib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#dia-umpire-spectral-library-building-dia-umpire_speclib)
-* [MSFragger DIA narrow window SpecLib](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#msfragger-dia-narrow-window-speclib)
-* [MSFragger DIA wide window SpecLib](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#msfragger-dia-wide-window-speclib)
-* [Spectral library building from DDA (SpecLib)](https://github.com/Nesvilab/MSFragger/blob/master/tutorial_fragpipe_workflows.md#spectral-library-building-from-dda-speclib)
+* [DIA-Umpire signal extraction (DIA-Umpire)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#dia-umpire-signal-extraction-dia-umpire)
+* [DIA-Umpire spectral library building (DIA-Umpire_Speclib)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#dia-umpire-spectral-library-building-dia-umpire_speclib)
+* [MSFragger DIA narrow window SpecLib](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#msfragger-dia-narrow-window-speclib)
+* [MSFragger DIA wide window SpecLib](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#msfragger-dia-wide-window-speclib)
+* [Spectral library building from DDA (SpecLib)](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html#spectral-library-building-from-dda-speclib)
 
 
 <br>
@@ -134,7 +134,7 @@ Open search workflow for PTM analysis. MSFragger localization-aware open search 
 <br>
 
 ##### Mass shift search (Mass-Offset-CommonPTMs)
-Mass Offset (also known as Multinotch) search workflow for a fast search for most common modifications (list of mass shifts specified in MSFragger 'Mass Offset' field). MSFragger localization-aware open search (LOS) algorithm, filtered to report PSMs with specified mass shifts only (with isotope errors allowed). No variable modifications are specified. Mass calibration, parameter optimization, and precursor monoisotope error correction are enabled. PeptideProphet with extended mass model. PTM-Shepherd for mass shift summarization. 
+Mass Offset (also known as Multinotch) search workflow for a fast search for most common modifications (list of mass shifts specified in MSFragger 'Mass Offset' field). The mass/modification list used can be found [here](https://msfragger.nesvilab.org/common_mass_offsets.html). MSFragger localization-aware open search (LOS) algorithm, filtered to report PSMs with specified mass shifts only (with isotope errors allowed). No variable modifications are specified. Mass calibration, parameter optimization, and precursor monoisotope error correction are enabled. PeptideProphet with extended mass model. PTM-Shepherd for mass shift summarization. 
 <br>
 
 ##### Labile phosphopeptide search (Labile_phospho)
