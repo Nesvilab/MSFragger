@@ -11,7 +11,7 @@ This tutorial will use a custom workflow to seach a single .mzML spectral file o
 * [Pick an output location and run](https://msfragger.nesvilab.org/tutorial_offset.html#pick-an-output-location-and-run)
 * [Examine the results](https://msfragger.nesvilab.org/tutorial_offset.html#examine-the-results)
 
-<br>
+
 
 ### Load a custom workflow
 Download the XRNAX-MassOffset.workflow file from [Dropbox](https://www.dropbox.com/sh/biwqa6dw3ti4bfz/AADRvn5mRxA3ple9DAC7LMvka?dl=0). Then in the fragpipe directory, locate the workflows subfolder, and copy the XRNAX-MassOffset.workflow file into this folder.
