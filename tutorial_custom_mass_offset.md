@@ -50,7 +50,7 @@ Now we can start the analysis from the ‘Run’ tab after specifying an output 
 ### Examine the results
 Inspect the global.profile.tsv file and compare it to the figure below (generated from the pepxml file with [DeltaMass](https://github.com/Nesvilab/deltamass)). This is a histogram of the full range of delta masses observed from all peptide-spectrum matches. Two of the most prominent peaks are labeled (U and cyclic-U), and the higher mass peaks, between 600-700 Da and 900-1015 Da) correspond to various combinations of two and three attached nucleotides, respectively. 
 
-![](https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/custom-offset-deltamass.png)
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/custom-offset-deltamass.png" width="600px" align="middle"/>
 
 You should observe the mass shifts discussed in the [manuscript](https://doi.org/10.1016/j.cell.2018.11.004) (Figure 2B, shown below). What are the mapped_mass_1 names given to the top two entries in the global.profile.tsv file? Do these two mass shifts each predominantly localize to a particular residue(s)? Does the annotation (mapped_mass_1 name) of the top mass shift show up elsewhere in the table?
 
