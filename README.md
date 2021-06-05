@@ -4,26 +4,24 @@
 
 # MSFragger
 
-MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. MSFragger is suitable for standard shotgun proteomics analyses as well as large datasets (including timsTOF PASEF data), enzyme unconstrained searches (e.g. peptidome), ‘open’ database searches (i.e. precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides, and glycopeptide identification (N-linked and O-linked) with MSFragger Glyco mode.  
+MSFragger is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. It has demonstrated excellent performance across a wide range of datasets and applications. MSFragger is suitable for standard shotgun proteomics analyses as well as large datasets (including timsTOF PASEF data), enzyme unconstrained searches (e.g., peptidome), open database searches (e.g., precursor mass tolerance set to hundreds of Daltons) for identification of modified peptides, and glycopeptide identification (N-linked and O-linked).  
 
-MSFragger is implemented in the cross-platform Java programming language, and can be used three different ways:
+MSFragger is implemented in the cross-platform Java programming language and can be used three different ways:
 
-1. With [FragPipe](https://fragpipe.nesvilab.org) GUI (Graphical User Interface).
-2. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
-3. As a standalone Java executable (JAR) file
+1. With [FragPipe](https://fragpipe.nesvilab.org) user interface
+2. As a standalone Java executable, which we recommend using with [Philosopher](https://philosopher.nesvilab.org/) pipeline
+3. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 
-MSFragger writes output in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).  See the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
+MSFragger writes peptide-spectrum matches in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).  See the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
 
-### Supported instruments and file formats  
-**mzML/mzXML**: Data from any instrument in mzML/mzXML format can be used.
+### Supported file formats
+The following spectral file formats can be searched directly with MSFragger, see the [FragPipe homepage](https://fragpipe.nesvilab.org/) for compatibility with workflow components downstream from MSFragger.
 
-**Thermo RAW**: MSFragger can read Thermo raw files (.raw) directly. FragPipe has limited support for RAW files (TMT analysis is currently not compatible with RAW files, so conversion to mzML is required for TMT data). The MSFragger ProteomeDiscoverer (PD) node is fully compatible with all downstream PD tools.     
+* mzML/mzXML - data from any instrument in mzML/mzXML format can be used
 
-**Bruker TIMS-TOF**: MSFragger can read Bruker timsTOF raw files (.d) directly, as well as MGF files converted by Bruker DataAnalysis. Quantification with IonQuant requires .d files (or mzML files with unfiltered or minimally filtered MS1 scans; .d are recommended). 
+* Thermo RAW - Thermo raw files (.raw) can be read directly, conversion to mzML is not required
 
-_TIMS-TOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows._ If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
-
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/workflow_support.png" width="500px" align="middle"/>
+* Bruker timsTOF PASEF - MSFragger can read Bruker timsTOF PASEF (DDA) raw files (.d) directly, as well as MGF files converted by the Bruker DataAnalysis program. **Please note**: timsTOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
 ### Download MSFragger 
 Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
@@ -33,42 +31,21 @@ The latest version of MSFragger was released on 2021-03-09.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ### Running MSFragger
-<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragpipe_config.png" width="300px" hspace="3px" align="right"/>
 
 #### FragPipe
-On Windows, the easiest way to run MSFragger is through the [FragPipe GUI](https://fragpipe.nesvilab.org). See this [basic usage tutorial](tutorial_fragpipe.md) and how to [convert Thermo RAW files](tutorial_convert.md). 
-
-FragPipe includes post-database search tool [Philosopher](https://philosopher.nesvilab.org/) (for downstream analysis with PeptideProphet and ProteinProphet), label-free and label-based quantification, FDR filtering, and report generation (at the PSM/ion/peptide/protein-levels). Additional tools include [DIA-Umpire SE](https://diaumpire.nesvilab.org/) module for DIA data (currently supporting Thermo data in mzXML format only), [Crystal-C](https://www.nesvilab.org/Crystal-C/) for removing open search artifacts, [IonQuant](https://github.com/Nesvilab/IonQuant) for label-free quantification (including match-beetween-runs functionality), [TMT-Integrator](http://tmt-integrator.nesvilab.org) for iTRAQ/TMT analysis, [PTM-Shepherd](https://github.com/Nesvilab/PTM-Shepherd) for generating global PTM profiles, and SpectraST or [EasyPQP](https://github.com/grosenberger/easypqp)-based spectral library building module.  
-
-#### ProteomeDiscoverer node
-<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" width="200px" hspace="3px" align="right"/>
-MSFragger and Philosopher (PeptideProphet) are also available as processing nodes in Proteome Discoverer (PD, Thermo Scientific). Currently, the MSFragger-PD node can be used in PD versions 2.2, 2.3 and 2.4.
-
-Please visit our [PD-Nodes page](https://www.nesvilab.org/PD-Nodes/) for more information.
-<br><br><br><br>
-
-#### Command line
-See [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-MSFragger) on the Wiki page.
-
+On Windows or Linux, the easiest way to run MSFragger is through [FragPipe](https://fragpipe.nesvilab.org), which has a variety of built-in workflows for complete data analysis. 
 
 #### Philosopher pipeline
 Complete command line analyses can be performed with Philosopher, see this [tutorial](https://github.com/Nesvilab/philosopher/wiki/Simple-Data-Analysis) for a step-by-step example.
 
+#### ProteomeDiscoverer node
+MSFragger and Philosopher (PeptideProphet) are also available as processing nodes in Proteome Discoverer (PD, Thermo Scientific). Currently, the [MSFragger-PD node](https://www.nesvilab.org/PD-Nodes/) can be used in PD versions 2.2, 2.3 and 2.4.
+
+#### Command line
+See [Launching MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Launching-MSFragger) on the Wiki page.
+
 ### Documentation
-For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the MSFragger [Wiki page](https://github.com/Nesvilab/MSFragger/wiki). Tutorials for common MSFragger-related workflows (via [FragPipe](https://fragpipe.nesvilab.org/)) are listed below.
-
-- [Using FragPipe](https://msfragger.nesvilab.org/tutorial_fragpipe.html) (most comprehensive tutorial covering all FragPipe modules)
-- [FragPipe setup](https://msfragger.nesvilab.org/tutorial_setup_fragpipe.html)
-- [Built-in workflows](https://msfragger.nesvilab.org/tutorial_fragpipe_workflows.html)
-- [Analyzing glycoproteomics data](https://msfragger.nesvilab.org/tutorial_glyco-fragger.html)
-- [Building spectral libraries (from DDA, direct DIA with DIA-Umpire, and combined) for DIA analysis](https://msfragger.nesvilab.org/tutorial_DIA.html)
-- [Converting LC/MS data files to mzML](https://msfragger.nesvilab.org/tutorial_convert.html)
-- [Setting up FragPipe on remote Linux server (with X forwarding)](https://msfragger.nesvilab.org/tutorial_setup_x_forwarding.html)
-- [Using FragPipe for SILAC (or other MS1-labeled) data](https://msfragger.nesvilab.org/tutorial_silac.html)
-- [Running MSstats on TIMS-TOF data](https://msfragger.nesvilab.org/tutorial_msstats.html)
-- [Importing results to Skyline](https://msfragger.nesvilab.org/tutorial_skyline.html)
-
-
+For technical documentation on MSFragger (hardware requirements, search parameters, etc.), see the [MSFragger wiki page](https://github.com/Nesvilab/MSFragger/wiki).
 
 ### Questions and Technical Support
 See our [Frequently Asked Questions (FAQ)](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions) page.
@@ -83,7 +60,3 @@ If you would like to propose a new collaboration that can take advantage of MSFr
 - Polasky, D. A., Yu, F., Teo, G. C., & Nesvizhskii, A. I. (2020). Fast and Comprehensive N-and O-glycoproteomics analysis with MSFragger-Glyco. Nature Methods, 17, 1125-1132.
 
 For other tools developed by the Nesvizhskii lab, see our website [www.nesvilab.org](http://www.nesvilab.org)
-
-
-### Disclaimer
-The pepXML files produced by MSFragger may have additional attributes (e.g., `uncalibrated_precursor_neutral_mass` and `ion_mobility`) not in the original [schema](http://sashimi.sourceforge.net/schema_revision/pepXML/pepXML_v118.xsd). According to our tests, both [PeptideProphet](http://peptideprophet.sourceforge.net/) and [Philosopher](https://philosopher.nesvilab.org/) can process those additional attributes.
