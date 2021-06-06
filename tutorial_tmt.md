@@ -17,11 +17,10 @@ We will use this CPTAC dataset which can be found [here](https://cptac-data-port
 * [Run the analysis](https://msfragger.nesvilab.org/tutorial_tmt.html#run-the-analysis)
 * [Results](https://msfragger.nesvilab.org/tutorial_tmt.html#results)
 
-
 <br>
 
 ### Download data
-For this tutorial, we will use a publicly-available LC-MS spectral file from a single fraction of a TMT 10-plex human cell line sample described [in this publication](https://pubs.acs.org/doi/10.1021/acs.jproteome.8b00165). Download the first file, _01_CPTAC_TMTS1-NCI7_P_JHUZ_20170509_LUMOS.mzML_, from the dataset [FTP location](ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2018/05/PXD008952) (the full experiment listing can be found [here](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD008952)). Place the file in a new folder named 'TMT_tutorial'.
+For this tutorial, we will use a publicly-available LC-MS spectral file from a single fraction of a TMT 10-plex human cell line sample described [in this publication](https://pubs.acs.org/doi/10.1021/acs.jproteome.8b00165), which you can download from [Dropbox](https://www.dropbox.com/sh/ok32xrlragj9ulr/AAB6cgRVHxtXNAwT-LmarxhYa?dl=0). (You can also navigate to the public dataset [FTP location](ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2018/05/PXD008952) and download the first file, _01_CPTAC_TMTS1-NCI7_P_JHUZ_20170509_LUMOS.mzML_. The full experiment listing can be found [here](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD008952).) Place the file in a new folder named 'TMT_tutorial'.
 <br>
 
 ### Start FragPipe
