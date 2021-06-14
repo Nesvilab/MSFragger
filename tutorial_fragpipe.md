@@ -118,7 +118,7 @@ Bait IPs: Use `[GENE]_[condition]` format to describe the experiments, where `[G
 <br>
 
 #### TMT/iTRAQ data
-For TMT/iTRAQ analysis, spectral files should be in mzML format. Raw files are not currently supported.
+For TMT/iTRAQ analysis, spectral files should be in mzML format (with centroiding/peak-picking, see the [conversion tutorial](https://msfragger.nesvilab.org/tutorial_convert.html)). Raw files are not currently supported.
 
 TMT/iTRAQ experiments typically consist of one or more "plexes" (multiplexed samples), each composed of multiple spectral files (if samples were prefractionated). Use 'Experiment' to denote spectral files/fractions from the same plex while leaving the 'Replicate' column empty. Different plexes must be organized into separate, uniquely-named folders. E.g., if you have 2 TMT plexes, with 2 spectral files (peptide fractions) in each, you can create a folder (e.g. named 'MyData'), containing two subfolders (e.g. 'TMT1' and 'TMT2') each containing the corresponding mzML files. We recommend you load data by clicking 'Add folder recursively' and selecting 'MyData' folder, then assign files to Experiments/Groups 'By parent directory', resulting in the following spectral file annotation:   
 
