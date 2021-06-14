@@ -19,7 +19,7 @@ In the MSConvert window:
 
 <br>
 
-### Convert Bruker timsTOF .d files (NOT RECOMMENDED. MSFragger can load .d directly.):
+### Convert Bruker timsTOF .d files (NOT RECOMMENDED. MSFragger and IonQuant can load .d directly.):
 In the MSConvert window:
 1. Browse for the raw files you want to convert.
 2. Add them to the input list.
