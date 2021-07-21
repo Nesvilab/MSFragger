@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 3.3 - 2021-07-22
+- Support prmPASEF in Windows platform.
+- Add `use_all_mods_in_first_search` parameter to use all specified variable modifications in first search.
+- If users specify variable modifications on cysteine, use them in first search.
+- Add `retentiontime`, `isotope_error`, and `mass_diff_score` columns to pin files.
+- Remove `abs_mass_diff`, `matched_ion_fraction`, `delta_hyperscore`, and `abs_ppm` columns from pin files.
+- Add `protein_descr` and `modified_peptide` attributes to pepXML file.
+- Always write `calibrated.mgf` file for .raw and .d files.
+- Do not write tsv file by default.
+- Improve peak denoising for low-resolution MS2.
+- Calibrating mass by median shift if there are only more than 100 high quality PSMs.
+- Improve the parameter optimization step.
+- Various minor bug fixes and improvements.
+
 ## 3.2 - 2021-03-09
 - Add FAIMS support.
 - Tracing fragment and refinement of scores in the DIA mode.
