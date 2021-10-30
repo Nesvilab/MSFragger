@@ -1,4 +1,4 @@
-# MSFragger-3.2
+# MSFragger-3.4
 num_threads = 0                             # Number of CPU threads to use.
 database_name = test.fasta                  # Path to the protein database file in FASTA format.
 
@@ -11,6 +11,7 @@ precursor_true_units = 1                    # True precursor mass tolerance unit
 fragment_mass_tolerance = 20                # Fragment mass tolerance (window is +/- this value).
 fragment_mass_units = 1                     # Fragment mass tolerance units (0 for Da, 1 for ppm).
 calibrate_mass = 2                          # Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
+use_all_mods_in_first_search = 0            # Use all variable modifications in first search (0 for No, 1 for Yes).
 write_calibrated_mgf = 0                    # Write calibrated MS2 scan to a MGF file (0 for No and 1 for writing MGF file).
 decoy_prefix = rev_                         # Prefix of the decoy protein entries. Used for parameter optimization only.
 
@@ -24,12 +25,17 @@ localize_delta_mass = 1                     # Include fragment ions mass-shifted
 delta_mass_exclude_ranges = (-1.5,3.5)      # Exclude mass range for shifted ions searching.
 fragment_ion_series = b,y                   # Ion series used in search, specify any of a,b,c,x,y,z,b-18,y-18,b~,y~,Y (comma separated).
 # ion_series_definitions =                  # User defined ion series. Example: "b* N -17.026548;b0 N -18.010565".
-search_enzyme_name = stricttrypsin          # Name of enzyme to be written to the pepXML file.
-search_enzyme_cutafter = KR                 # Residues after which the enzyme cuts.
-search_enzyme_butnotafter =                 # Residues that the enzyme will not cut before.
-
+search_enzyme_name_1 = stricttrypsin        # Name of the first enzyme.
+search_enzyme_name_2 =                      # Name of the second enzyme.
+search_enzyme_cut_1 = KR                    # First enzyme's cutting amino acid.
+search_enzyme_nocut_1 =                     # First enzyme's protecting amino acid.
+allowed_missed_cleavage_1 = 2               # First enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
+search_enzyme_sense_1 = C                   # First enzyme's cutting terminal.
+search_enzyme_cut_2 =                       # Second enzyme's cutting amino acid.
+search_enzyme_nocut_2 =                     # Second enzyme's protecting amino acid.
+allowed_missed_cleavage_2 = 2               # Second enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
+search_enzyme_sense_2 = C                   # Second enzyme's cutting terminal.
 num_enzyme_termini = 2                      # 0 for non-enzymatic, 1 for semi-enzymatic, and 2 for fully-enzymatic.
-allowed_missed_cleavage = 2                 # Allowed number of missed cleavages per peptide. Maximum value is 5.
 
 clip_nTerm_M = 1                            # Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
 
@@ -69,6 +75,7 @@ zero_bin_accept_expect = 0.00               # Ranks a zero-bin hit above all non
 zero_bin_mult_expect = 1.00                 # Multiplies expect value of PSMs in the zero-bin during  results ordering (set to less than 1 for boosting).
 add_topN_complementary = 0                  # Inserts complementary ions corresponding to the top N most intense fragments in each experimental spectra.
 
+check_spectral_files = 1                    # Checking spectral files before searching.
 minimum_peaks = 15                          # Minimum number of peaks in experimental spectrum for matching.
 use_topN_peaks = 100                        # Pre-process experimental spectrum to only use top N peaks.
 deisotope = 1                               # Perform deisotoping or not (0=no, 1=yes and assume singleton peaks single charged, 2=yes and assume singleton
@@ -78,7 +85,7 @@ min_fragments_modelling = 2                 # Minimum number of matched peaks in
 min_matched_fragments = 4                   # Minimum number of matched peaks for PSM to be reported.
 minimum_ratio = 0.01                        # Filters out all peaks in experimental spectrum less intense than this multiple of the base peak intensity.
 clear_mz_range = 0.0 0.0                    # Removes peaks in this m/z range prior to matching.
-remove_precursor_peak = 0                   # Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge;
+remove_precursor_peak = 1                   # Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge;
                                             # 2 = remove the peaks with all charge states (only for DDA mode).
 remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
 intensity_transform = 0                     # Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
@@ -110,7 +117,7 @@ add_Y_tyrosine = 0.000000
 add_W_tryptophan = 0.000000
 add_B_user_amino_acid = 0.000000
 add_J_user_amino_acid = 0.000000
-add_O_user_amino_acid = 0.000000              # O = pyrrolysine (255.15829 Da)
+add_O_user_amino_acid = 0.000000              # O = pyrrolysine (237.14773 Da)
 add_U_user_amino_acid = 0.000000              # U = selenocysteine (150.95363 Da)
 add_X_user_amino_acid = 0.000000
 add_Z_user_amino_acid = 0.000000
