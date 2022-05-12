@@ -47,7 +47,7 @@ For technical documentation on MSFragger (hardware requirements, search paramete
 
 ### Questions and Technical Support
 See our [Frequently Asked Questions (FAQ)](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions) page.
-Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philosopher page](https://github.com/Nesvilab/philosopher).
+Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub issue page](https://github.com/Nesvilab/MSFragger/issues), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philosopher page](https://github.com/Nesvilab/philosopher).
 
 ### Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
