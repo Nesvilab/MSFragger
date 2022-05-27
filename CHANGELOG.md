@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## 3.5 - 2022-05-27
+- Require Java 9+
+- Add `remainder_fragment_masses`, `activation_types`, and `min_sequence_matches` parameters
+- Do not distinguish `I` and `L`
+- Write ion mobility and compensation voltage to `<run name>.tsv` file.
+- Add modification score to the pin file from open and mass-offset searches
+- In pepXML file, change `native_id` to `SpectrumNativeId` to follow the pepXML schema
+- For Thermo raw/mzML/mzXML data, using the native scan number as the scan number
+- Clean up the protein description according to ProteinProphet's rule
+- Print all decimal points in the pepxml files
+- Various minor bug fixes and improvements
+
 ## 3.4 - 2021-10-30
 - Support N-terminal enzymes
 - Support two enzymes

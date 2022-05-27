@@ -1,4 +1,4 @@
-# MSFragger-3.4
+# MSFragger-3.5
 num_threads = 0                             # Number of CPU threads to use. 
 database_name = test.fasta                  # Path to the protein database file in FASTA format.
 
@@ -28,6 +28,8 @@ localize_delta_mass = 0                     # Include fragment ions mass-shifted
 delta_mass_exclude_ranges = (-1.5,3.5)      # Exclude mass range for shifted ions searching.
 fragment_ion_series = b,y,b~,y~,Y           # Ion series used in search, specify any of a,b,c,x,y,z,b~,y~,Y,b-18,y-18 (comma separated).
 # ion_series_definitions =                  # User defined ion series. Example: "b* N -17.026548;b0 N -18.010565".
+remainder_fragment_masses = 203.07937       # masses for b~/y~ ions (multiple values separated by /). Only used if b~/y~ are specified in the fragment_ion_series list
+min_sequence_matches = 2                    # [labile/glyco search only] Minimum number of sequence-specific (not Y) ions to record a match
 search_enzyme_name_1 = stricttrypsin        # Name of the first enzyme.
 search_enzyme_name_2 =                      # Name of the second enzyme.
 search_enzyme_cut_1 = KR                    # First enzyme's cutting amino acid.
@@ -92,6 +94,7 @@ remove_precursor_peak = 1                   # Remove precursor peaks from tandem
                                             # 2 = remove the peaks with all charge states (only for DDA mode).
 remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
 intensity_transform = 0                     # Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
+activation_types =                       	 # Filter to only search scans of provided activation type(s). / separated. Allowed: HCD, CID, ETD, ECD.
 
 # Fixed modifications
 add_Cterm_peptide = 0.000000
