@@ -21,6 +21,11 @@ The following spectral file formats can be searched directly with MSFragger, see
 
 * Bruker timsTOF PASEF - MSFragger can read Bruker timsTOF PASEF (DDA) raw files (.d) directly, as well as MGF files converted by the Bruker DataAnalysis program. **Please note**: timsTOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
+### License
+The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Glyco, MSFragger-DIA, MSFragger-Labile), collectively known as "MSFragger", is distributed as a single JAR file. It is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger.arsci.com/upgrader/MSFragger-LICENSE.pdf). 
+
+Other uses require a __commercial__ license after the initial 60-day evaluation period that can be obtained by contacting Drew Bennett (andbenne@umich.edu) at the University of Michigan Office of Tech Transfer. For questions, please contact Prof. Alexey Nesvizhskii (nesvi@med.umich.edu).
+
 ### Download MSFragger 
 Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
