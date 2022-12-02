@@ -30,7 +30,6 @@ Other uses require a __commercial__ license after the initial 60-day evaluation 
 Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
 ### Release Notes
-The latest version of MSFragger was released on 2022-05-27.
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 ### Running MSFragger

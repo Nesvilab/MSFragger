@@ -1,8 +1,11 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project are documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+## 3.6 - 2022-12-02
+- Require Java 9+
+- Generate `_(un)calibrated.mzML` files. Stop generating `_(un)calibrated.mgf` files
+- Various minor bug fixes and improvements
 
 ## 3.5 - 2022-05-27
 - Require Java 9+
