@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented in this file.
 
-## 3.6 - 2022-12-02
+## 3.6 - 2022-12-03
 - Require Java 9+
 - Generate `_(un)calibrated.mzML` files. Stop generating `_(un)calibrated.mgf` files
 - Various minor bug fixes and improvements
