@@ -1,4 +1,4 @@
-# MSFragger-3.5
+# MSFragger-3.6
 num_threads = 0                             # Number of CPU threads to use. 
 database_name = test.fasta                  # Path to the protein database file in FASTA format.
 
@@ -12,7 +12,7 @@ fragment_mass_tolerance = 20                # Fragment mass tolerance (window is
 fragment_mass_units = 1                     # Fragment mass tolerance units (0 for Da, 1 for ppm).
 calibrate_mass = 2                          # Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
 use_all_mods_in_first_search = 0            # Use all variable modifications in first search (0 for No, 1 for Yes).
-write_calibrated_mgf = 0                    # Write calibrated MS2 scan to a MGF file (0 for No and 1 for writing MGF file).
+write_calibrated_mzml = 0                  # Write calibrated MS2 scans (0 for No and 1 for Yes).
 decoy_prefix = rev_                         # Prefix of the decoy protein entries. Used for parameter optimization only.
 
 isotope_error = 0/1                         # Also search for MS/MS events triggered on specified isotopic peaks.
@@ -37,7 +37,7 @@ search_enzyme_cut_2 =                       # Second enzyme's cutting amino acid
 search_enzyme_nocut_2 =                     # Second enzyme's protecting amino acid.
 allowed_missed_cleavage_2 = 2               # Second enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
 search_enzyme_sense_2 = C                   # Second enzyme's cutting terminal.
-num_enzyme_termini = 0                      # 0 for non-enzymatic, 1 for semi-enzymatic, and 2 for fully-enzymatic.
+num_enzyme_termini = 0                      # 0 for non-enzymatic, 1 for semi-enzymatic, 2 for fully-enzymatic, and 3 for N-term semi-enzymatic.
 
 clip_nTerm_M = 1                            # Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
 
