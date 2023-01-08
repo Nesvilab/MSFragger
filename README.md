@@ -7,17 +7,17 @@ MSFragger is an ultrafast database search tool for peptide identification in mas
 MSFragger is implemented in the cross-platform Java programming language and can be used three different ways:
 
 1. With [FragPipe](https://fragpipe.nesvilab.org) user interface
-2. As a standalone Java executable, which we recommend using with [Philosopher](https://philosopher.nesvilab.org/) pipeline
+2. As a standalone Java executable
 3. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
 
-MSFragger writes peptide-spectrum matches in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline and [Philosopher](https://nesvilab.github.io/philosopher/).  See the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
+MSFragger writes peptide-spectrum matches in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline, Percolator, and Philosopher.  See the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
 
 ### Supported file formats
 The following spectral file formats can be searched directly with MSFragger, see the [FragPipe homepage](https://fragpipe.nesvilab.org/) for compatibility with workflow components downstream from MSFragger.
 
 * mzML/mzXML - data from any instrument in mzML/mzXML format can be used
 
-* Thermo RAW - Thermo raw files (.raw) can be read directly, conversion to mzML is not required
+* Thermo RAW - Thermo raw files (.raw) can be read directly, conversion to mzML is not required. In Linux, [Mono](https://www.mono-project.com/) need to be installed.
 
 * Bruker timsTOF PASEF - MSFragger can read Bruker timsTOF PASEF (DDA) raw files (.d) directly, as well as MGF files converted by the Bruker DataAnalysis program. **Please note**: timsTOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
@@ -27,7 +27,7 @@ The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Gl
 Other uses require a __commercial__ license after the initial 60-day evaluation period that can be obtained by contacting Drew Bennett (andbenne@umich.edu) at the University of Michigan Office of Tech Transfer. For questions, please contact Prof. Alexey Nesvizhskii (nesvi@med.umich.edu).
 
 ### Download MSFragger 
-Whether you run use FragPipe, PD, or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
+Whether you run use FragPipe, Proteome Discoverer (PD, Thermo Scientific), or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
 
 ### Release Notes
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
@@ -36,9 +36,6 @@ Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
 
 #### FragPipe
 On Windows or Linux, the easiest way to run MSFragger is through [FragPipe](https://fragpipe.nesvilab.org), which has a variety of built-in workflows for complete data analysis. 
-
-#### Philosopher pipeline
-Complete command line analyses can be performed with Philosopher, see this [tutorial](https://github.com/Nesvilab/philosopher/wiki/Simple-Data-Analysis) for a step-by-step example.
 
 #### ProteomeDiscoverer node
 MSFragger and Philosopher (PeptideProphet) are also available as processing nodes in Proteome Discoverer (PD, Thermo Scientific). Currently, the [MSFragger-PD node](https://www.nesvilab.org/PD-Nodes/) can be used in PD versions 2.2, 2.3 and 2.4.
@@ -59,6 +56,7 @@ If you would like to propose a new collaboration that can take advantage of MSFr
 ### How to Cite
 - Kong, A. T., Leprevost, F. V., Avtonomov, D. M., Mellacheruvu, D., & Nesvizhskii, A. I. (2017). MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry–based proteomics. Nature Methods, 14(5), 513-520.
 - Yu, F., Teo, G. C., Kong, A. T., Haynes, S. E., Avtonomov, D. M., Geiszler, D. J., & Nesvizhskii, A. I. (2020). Identification of modified peptides using localization-aware open search. Nature Communications, 11(1), 1-9.
-- Polasky, D. A., Yu, F., Teo, G. C., & Nesvizhskii, A. I. (2020). Fast and Comprehensive N-and O-glycoproteomics analysis with MSFragger-Glyco. Nature Methods, 17, 1125-1132.
+- Polasky, D. A., Yu, F., Teo, G. C., & Nesvizhskii, A. I. (2020). Fast and Comprehensive N-and O-glycoproteomics analysis with MSFragger-Glyco. Nature Methods, 17(11), 1125-1132.
+- Yu, F., Haynes, S. E., Teo, G. C., Avtonomov, D. M., Polasky, D. A., & Nesvizhskii, A. I. (2020). Fast Quantitative Analysis of timsTOF PASEF Data with MSFragger and IonQuant. Molecular & Cellular Proteomics, 19(9), 1575-1585.
 
 For other tools developed by the Nesvizhskii lab, see our website [www.nesvilab.org](http://www.nesvilab.org)
