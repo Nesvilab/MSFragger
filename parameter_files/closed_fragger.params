@@ -1,4 +1,4 @@
-# MSFragger-3.6
+# MSFragger-3.7
 num_threads = 0                             # Number of CPU threads to use. 
 database_name = test.fasta                  # Path to the protein database file in FASTA format.
 
@@ -12,7 +12,8 @@ fragment_mass_tolerance = 20                # Fragment mass tolerance (window is
 fragment_mass_units = 1                     # Fragment mass tolerance units (0 for Da, 1 for ppm).
 calibrate_mass = 2                          # Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
 use_all_mods_in_first_search = 0            # Use all variable modifications in first search (0 for No, 1 for Yes).
-write_calibrated_mzml = 0                  # Write calibrated MS2 scans (0 for No and 1 for Yes).
+write_calibrated_mzml = 0                   # Write calibrated MS2 scans (0 for No and 1 for Yes).
+write_uncalibrated_mgf = 0                  # Write uncalibrated MS2 scans (0 for No, 1 for Yes). Only for .raw and .d formats.
 decoy_prefix = rev_                         # Prefix of the decoy protein entries. Used for parameter optimization only.
 
 isotope_error = 0/1/2                       # Also search for MS/MS events triggered on specified isotopic peaks.
@@ -91,7 +92,7 @@ remove_precursor_peak = 1                   # Remove precursor peaks from tandem
                                             # 2 = remove the peaks with all charge states (only for DDA mode).
 remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
 intensity_transform = 0                     # Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
-activation_types =                       	 # Filter to only search scans of provided activation type(s). / separated. Allowed: HCD, CID, ETD, ECD.
+activation_types =                       	 # Filter to only search scans of provided activation type(s). / separated. Allowed: all, HCD, CID, ETD, ECD.
 
 # Fixed modifications
 add_Cterm_peptide = 0.000000

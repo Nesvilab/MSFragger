@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## 3.7 - 2023-01-12
+- Add `write_uncalibrated_mgf` parameter that only works with .raw and .d formats
+- Fix a bug reporting the incorrect `prevAA` and `nextAA` due to the clipped Methionine
+- Various minor bug fixes and improvements
+
 ## 3.6 - 2022-12-03
 - Require Java 9+
 - Generate `_(un)calibrated.mzML` files. Stop generating `_(un)calibrated.mgf` files
