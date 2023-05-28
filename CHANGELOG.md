@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented in this file.
 
+## 3.8 - 2023-05-31
+- Make the decoy prefix support `#`
+- Add group FDR variable support
+- Add `require_precursor` option for DIA data
+- Add `reuse_dia_fragment_peaks` option for DIA data
+- Remove the `output_report_topN` constraint for the DIA data
+- For DIA data, do not remove precursor peaks when the isolation window larger than 20 Th
+- Set `override_charge` to 0 for the first search
+- Do not automatically set `remove_precursor_peak` to 0 for DIA data
+- Various bug fixes and improvements
+
 ## 3.7 - 2023-01-12
 - Add `write_uncalibrated_mgf` parameter that only works with .raw and .d formats
 - Fix a bug reporting the incorrect `prevAA` and `nextAA` due to the clipped Methionine
