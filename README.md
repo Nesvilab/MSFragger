@@ -53,6 +53,25 @@ Please post all questions/bug reports regarding MSFragger itself on the [MSFragg
 ### Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
 
+### Integration
+MSFragger is currently integrated or supported by the following software projects:
+- [Skyline](https://skyline.ms/project/home/software/Skyline/begin.view)
+- [Trans-Proteomic Pipeline (TPP)](http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP)
+- [OpenMS](https://openms.de/)
+- [AlphaPeptDeep](https://github.com/MannLabs/alphapeptdeep)
+- [Percolator](http://percolator.ms/)
+- [Mokapot](https://github.com/wfondrie/mokapot)
+- [Thermo Scientific Proteome Discoverer Node](https://www.nesvilab.org/PD-Nodes/)
+- [Scaffold](https://support.proteomesoftware.com/hc/en-us/articles/360058590492-Running-MSFragger-through-Scaffold)
+- [FragPipe](https://fragpipe.nesvilab.org/)
+- [DIA-Umpire](https://diaumpire.nesvilab.org/)
+- [Crystal-C](https://www.nesvilab.org/Crystal-C/)
+- [MSBooster](https://github.com/Nesvilab/MSBooster)
+- [Philosopher](https://philosopher.nesvilab.org/)
+- [PTM-Shepherd](https://ptmshepherd.nesvilab.org/)
+- [EasyPQP](https://github.com/Nesvilab/easypqp)
+
+
 ### How to Cite
 - Kong, A. T., Leprevost, F. V., Avtonomov, D. M., Mellacheruvu, D., & Nesvizhskii, A. I. (2017). MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry–based proteomics. Nature Methods, 14(5), 513-520.
 - Yu, F., Teo, G. C., Kong, A. T., Haynes, S. E., Avtonomov, D. M., Geiszler, D. J., & Nesvizhskii, A. I. (2020). Identification of modified peptides using localization-aware open search. Nature Communications, 11(1), 1-9.
