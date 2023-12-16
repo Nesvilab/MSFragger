@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented in this file.
 
+## 4.0 - 2023-12-XX
+- Add `DDA+` data type: `data_type=3`. It significantly boosts the number of IDs compared to the DDA data type.
+- Add support for the detailed mass-offset search. Mass-offsets can have their own modified sites, neutral losses, and diagnostic ions.
+- Overhaul the mass calibration and parameter optimization for DIA data type
+- Significantly improve the ddaPASEF .d loading speed
+- In the pin file, write all proteins in one column
+- Extract and print isolation window sizes when checking the LC-MS files
+- Add peptide length `< 8`, `8`, `[9, 30]`, and `> 30` Boolean scores to pin files
+- Remove `log10_kl_negative_1` and `log10_kl_negative_2` from the DDA pin file
+- Remove `peptide_length` score from pin files
+- Remove `add_topN_complementary` option
+- Various bug fixes and improvements
+
 ## 3.8 - 2023-05-31
 - Make the decoy prefix support `#`
 - Add group FDR variable support
