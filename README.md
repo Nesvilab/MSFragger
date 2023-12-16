@@ -77,5 +77,8 @@ MSFragger is currently integrated or supported by the following software project
 - Yu, F., Teo, G. C., Kong, A. T., Haynes, S. E., Avtonomov, D. M., Geiszler, D. J., & Nesvizhskii, A. I. (2020). Identification of modified peptides using localization-aware open search. Nature Communications, 11(1), 1-9.
 - Polasky, D. A., Yu, F., Teo, G. C., & Nesvizhskii, A. I. (2020). Fast and Comprehensive N-and O-glycoproteomics analysis with MSFragger-Glyco. Nature Methods, 17(11), 1125-1132.
 - Yu, F., Haynes, S. E., Teo, G. C., Avtonomov, D. M., Polasky, D. A., & Nesvizhskii, A. I. (2020). Fast Quantitative Analysis of timsTOF PASEF Data with MSFragger and IonQuant. Molecular & Cellular Proteomics, 19(9), 1575-1585.
+- Polasky, D., Geiszler, D., Yu, F., Li, K., Teo, G. C., & Nesvizhskii, A. I., (2023). MSFragger-Labile: A flexible method to improve labile PTM analysis in proteomics. Molecular & Cellular Proteomics, 22(5), 100538.
+- Yu, F., Teo, G. C., Kong, A. T., Fröhlich, K., Li, G. X., Demichev, V., & Nesvizhskii, A. I., (2023). Analysis of DIA proteomics data using MSFragger-DIA and FragPipe computational platform. Nature Communications, 14, 4154.
+
 
 For other tools developed by the Nesvizhskii lab, see our website [www.nesvilab.org](http://www.nesvilab.org)
