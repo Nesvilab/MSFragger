@@ -1,11 +1,11 @@
-# MSFragger-3.8
+# MSFragger-4.0
 num_threads = 0                             # Number of CPU threads to use.
 database_name = test.fasta                  # Path to the protein database file in FASTA format.
 
 precursor_mass_lower = -150                 # Lower bound of the precursor mass window.
 precursor_mass_upper = 500                  # Upper bound of the precursor mass window.
 precursor_mass_units = 0                    # Precursor mass tolerance units (0 for Da, 1 for ppm).
-data_type = 0                               # Data type (0 for DDA, 1 for DIA, 2 for DIA-narrow-window).
+data_type = 0                               # Data type (0 for DDA, 1 for DIA, 2 for DIA-narrow-window, 3 for DDA+).
 precursor_true_tolerance = 20               # True precursor mass tolerance (window is +/- this value).
 precursor_true_units = 1                    # True precursor mass tolerance units (0 for Da, 1 for ppm).
 fragment_mass_tolerance = 20                # Fragment mass tolerance (window is +/- this value).
@@ -76,7 +76,6 @@ track_zero_topN = 0                         # Track top N unmodified peptide res
                                             # set to a number greater than output_report_topN if zero bin boosting is desired.
 zero_bin_accept_expect = 0.00               # Ranks a zero-bin hit above all non-zero-bin hit if it has expectation less than this value.
 zero_bin_mult_expect = 1.00                 # Multiplies expect value of PSMs in the zero-bin during  results ordering (set to less than 1 for boosting).
-add_topN_complementary = 0                  # Inserts complementary ions corresponding to the top N most intense fragments in each experimental spectra.
 
 check_spectral_files = 1                    # Checking spectral files before searching.
 minimum_peaks = 15                          # Minimum number of peaks in experimental spectrum for matching.
