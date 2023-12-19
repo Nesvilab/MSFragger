@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented in this file.
 
-## 4.0 - 2023-12-XX
+## 4.0 - 2023-12-19
 - Implement new MSFragger-DDA+ mode, triggered when DDA data is annotated as `DDA+` (MSFragger parameter `data_type=3`). MSFragger will perform full isolation window search, identifying multiple co-fragmented peptides from chimeric DDA spectra. This mode significantly boosts the number of IDs compared to conventional DDA search.
 - Implement detailed mass-offset search mode. Each specified mass offset can have their own modification sites, neutral losses, and diagnostic ions.
 - Overhaul the mass calibration and parameter optimization procedure for DIA data
