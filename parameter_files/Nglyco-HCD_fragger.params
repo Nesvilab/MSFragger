@@ -1,148 +1,145 @@
 # MSFragger-4.0
-num_threads = 0                             # Number of CPU threads to use. 
-database_name = test.fasta                  # Path to the protein database file in FASTA format.
+database_name = 			# Path to the protein database file in FASTA format.
+num_threads = 11			# Number of CPU threads to use.
 
-precursor_mass_lower = -20                  # Lower bound of the precursor mass window.
-precursor_mass_upper = 20                   # Upper bound of the precursor mass window.
-precursor_mass_units = 1                    # Precursor mass tolerance units (0 for Da, 1 for ppm).
-data_type = 0                               # Data type (0 for DDA, 1 for DIA, 2 for DIA-narrow-window, 3 for DDA+).
-precursor_true_tolerance = 20               # True precursor mass tolerance (window is +/- this value).
-precursor_true_units = 1                    # True precursor mass tolerance units (0 for Da, 1 for ppm).
-fragment_mass_tolerance = 20                # Fragment mass tolerance (window is +/- this value).
-fragment_mass_units = 1                     # Fragment mass tolerance units (0 for Da, 1 for ppm).
-calibrate_mass = 2                          # Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
-use_all_mods_in_first_search = 0            # Use all variable modifications in first search (0 for No, 1 for Yes).
-write_calibrated_mzml = 0                   # Write calibrated MS2 scans (0 for No and 1 for Yes).
-write_uncalibrated_mgf = 0                  # Write uncalibrated MS2 scans (0 for No, 1 for Yes). Only for .raw and .d formats.
-decoy_prefix = rev_                         # Prefix of the decoy protein entries. Used for parameter optimization only.
+precursor_mass_lower = -20			# Lower bound of the precursor mass window.
+precursor_mass_upper = 20			# Upper bound of the precursor mass window.
+precursor_mass_units = 1			# Precursor mass tolerance units (0 for Da, 1 for ppm).
+data_type = 0			# Data type (0 for DDA, 1 for DIA, 2 for gas-phase fractionation DIA, 3 for wide-window acquisition DDA).
+precursor_true_tolerance = 20			# True precursor mass tolerance (window is +/- this value).
+precursor_true_units = 1			# True precursor mass tolerance units (0 for Da, 1 for ppm).
+fragment_mass_tolerance = 20			# Fragment mass tolerance (window is +/- this value).
+fragment_mass_units = 1			# Fragment mass tolerance units (0 for Da, 1 for ppm).
+calibrate_mass = 2			# Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
+use_all_mods_in_first_search = 0			# Use all variable modifications in first search (0 for No, 1 for Yes).
+decoy_prefix = rev_			# Prefix of the decoy protein entries. Used for parameter optimization only.
 
-isotope_error = 0/1/2                       # Also search for MS/MS events triggered on specified isotopic peaks.
-mass_offsets = 0/203.07937/349.137279/406.15874/552.216649/568.21156/714.269469/2026.68694/2188.73976/2350.79258/730.26438/876.322289/892.3172/1038.375109/1054.37002/1200.427929/1216.42284/1362.480749/1378.47566/1524.533569/1458.44199/1540.52848/1686.586389/1702.5813/1864.63412/1095.39657/1241.454479/1257.44939/1403.507299/1694.602716/1549.565208/1840.660625/1548.544807/1419.50221/1565.560119/1856.655536/2147.750952/1710.597627/1581.55503/1727.612939/2018.708356/1872.650447/1298.47594/1444.533849/1589.571357/1460.52876/1606.586669/1897.682086/1752.644578/1751.624177/1622.58158/1768.639489/2059.734906/2350.830322/1914.697398/2205.792815/2496.888231/2351.850724/2642.94614/1913.676997/2204.772413/1784.6344/1930.692309/2221.787726/2076.750218/2075.729817/1946.68722/2092.745129/2237.782637/1501.55531/1647.613219/1938.708636/1793.671128/1663.60813/1809.666039/2100.761456/2391.856872/1955.723948/1954.703547/2245.798963/1825.66095/1971.718859/2262.814276/2553.909692/2117.776768/2408.872185/2263.834677/2116.756367/2407.851783/1987.71377/2133.771679/2424.867096/2715.962512/3007.057929/2279.829588/2570.925005/2425.887497/2716.982914/3008.07833/3299.173747/2571.945406/2863.040823/2278.809187/2569.904603/2861.00002/2586.919916/2878.015332/2311.81941/2457.877319/2619.930139/1704.63468/1850.692589/2141.788006/2432.883422/1996.750498/1866.6875/2012.745409/2158.803318/2157.782917/2028.74032/2174.798229/2465.893646/2756.989062/3048.084479/2320.856138/2611.951555/2466.914047/2190.79314/2336.851049/2627.946466/2482.908958/2774.004375/3065.099791/2481.888557/2772.983973/3064.07939/2352.84596/2789.999286/3081.094702/2644.961778/2936.057195/2791.019687/3082.115104/2643.941377/2935.036793/3226.13221/3517.227626/2952.052106/2805.994197/2676.9516/3114.104926/3405.200342/1907.71405/2053.771959/2069.76687/2215.824779/2393.87251/2539.930419/2555.92533/2701.983239/3575.269489/2717.97815/2864.036059/3155.131476/4028.417725/3009.073567/2110.79342/2256.851329/2272.84624/2434.89906/2580.956969/2759.0047/2921.05752/3083.11034/3229.168249/3448.24253/2313.87279/2459.930699/2475.92561/2621.983519/2800.03125/2946.089159/3432.247619
-                            
-                                            # Creates multiple precursor tolerance windows with specified mass offsets.
-restrict_deltamass_to = all                 # Specify amino acids on which delta masses (mass offsets or search modifications) can occur. Allowed values are single letter codes (e.g. ACD), must be capitalized. Use 'all' to allow any amino acid. 
-labile_search_mode = nglycan                # type of search (nglycan, labile, or off). Off means non-labile/typical search
-precursor_mass_mode = selected              # One of isolated/selected/corrected.
+deisotope = 1			# Perform deisotoping or not (0=no, 1=yes and assume singleton peaks single charged, 2=yes and assume singleton peaks single or double charged).
+deneutralloss = 1			# Perform deneutrallossing or not (0=no, 1=yes).
+isotope_error = 0/1/2			# Also search for MS/MS events triggered on specified isotopic peaks.
+mass_offsets = 0.0/1038.3751/1054.37/1095.3966/1200.428/1216.4229/1241.4545/1257.4493/1298.476/1362.4807/1378.4757/1387.5123/1403.5073/1419.5022/1444.5338/1460.5288/1501.5553/1524.5336/1533.5703/1540.5284/1548.5448/1549.5652/1565.56/1581.555/1589.5714/1606.5867/1622.5815/1647.6132/1663.6082/1686.5864/1694.6027/1695.6232/1702.5813/1704.6346/1710.5977/1711.618/1727.6129/1735.6293/1736.6497/1751.6241/1752.6445/1768.6395/1784.6344/1793.6711/1809.666/1825.661/1848.6392/1850.6926/1856.6555/1857.6759/1864.6342/1866.6875/1872.6504/1873.6709/1880.6667/1889.6658/1897.6821/1898.7025/1907.714/1913.677/1914.6974/1930.6923/1938.7086/1946.6873/1954.7035/1955.724/1971.7189/1987.7137/1996.7505/2010.692/2012.7454/2018.7084/2019.7288/2026.6869/2028.7404/2042.7196/2043.74/2053.772/2059.7349/2060.7554/2069.7668/2075.7297/2076.7502/2092.745/2100.7615/2101.7817/2108.74/2110.7935/2116.7563/2117.7769/2133.7717/2141.788/2142.8083/2157.783/2158.8032/2172.7449/2174.7983/2188.7397/2190.7932/2204.7725/2205.7927/2206.8132/2215.8247/2221.7878/2222.808/2231.8196/2237.7827/2245.799/2246.8193/2254.7979/2256.8513/2262.8142/2263.8347/2270.793/2278.809/2279.8296/2287.846/2313.8728/2320.8562/2334.7976/2336.851/2350.7925/2350.8303/2352.846/2352.871/2366.8252/2391.857/2393.8726/2407.8518/2408.872/2424.8672/2425.8875/2432.8833/2434.8992/2448.8784/2457.8772/2459.9307/2463.8403/2465.8936/2475.9255/2481.8887/2498.9038/2528.8782/2539.9304/2545.8933/2553.9097/2555.9253/2569.9045/2570.925/2571.9453/2580.957/2586.92/2621.9834/2627.9465/2643.9414/2644.9617/2674.936/2701.9832/2715.9624/2716.983/2717.9783/2772.984/2775.0247/2786.9631/2789.9993/2791.0198/2798.0156/2814.0105/2823.0095/2861.0/2864.0361/2871.0571/2878.0154/2880.031/2896.051/2919.042/2935.0369/2937.0776/2966.0315/2968.047/3007.0579/3009.0735/3010.1191/3048.0845/3064.0793/3081.0947/3083.1104/3083.1355/3138.1162/3140.157/3147.1152/3153.1157/3155.1316/3156.1519/3210.1372/3226.1323/3228.173/3229.1682/3234.1484/3284.174/3300.169/3302.2097/3372.1902/3374.2058/3405.2004/3407.2412/3447.2473/3448.2424/3448.2676/3503.2483/3517.2275/3519.2683/3520.2637/3521.2842/3589.2488/3591.2644/3594.3005/3663.2856/3665.3013/3665.3264/3704.312/3720.307/3738.3428/3809.3435/3812.3794/3827.354/3866.365/3882.3599/3886.4163/3959.4326/568.21155/892.3172			# Creates multiple precursor tolerance windows with specified mass offsets.
+mass_offsets_detailed = 			# Optional detailed mass offset list. Overrides mass_offsets if use_detailed_offsets = 1.
+use_detailed_offsets = 0			# Whether to use the regular (0) or detailed (1) mass offset list.
+precursor_mass_mode = corrected			# One of isolated/selected/corrected.
 
-localize_delta_mass = 0                     # Include fragment ions mass-shifted by unknown modifications (recommended for open
-                                            # and mass offset searches) (0 for OFF, 1 for ON).
-delta_mass_exclude_ranges = (-1.5,3.5)      # Exclude mass range for shifted ions searching.
-fragment_ion_series = b,y,b~,y~,Y           # Ion series used in search, specify any of a,b,c,x,y,z,b~,y~,Y,b-18,y-18 (comma separated).
-# ion_series_definitions =                  # User defined ion series. Example: "b* N -17.026548;b0 N -18.010565".
-remainder_fragment_masses = 203.07937       # masses for b~/y~ ions (multiple values separated by /). Only used if b~/y~ are specified in the fragment_ion_series list
-min_sequence_matches = 2                    # [labile/glyco search only] Minimum number of sequence-specific (not Y) ions to record a match
-search_enzyme_name_1 = stricttrypsin        # Name of the first enzyme.
-search_enzyme_name_2 =                      # Name of the second enzyme.
-search_enzyme_cut_1 = KR                    # First enzyme's cutting amino acid.
-search_enzyme_nocut_1 =                     # First enzyme's protecting amino acid.
-allowed_missed_cleavage_1 = 2               # First enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
-search_enzyme_sense_1 = C                   # First enzyme's cutting terminal.
-search_enzyme_cut_2 =                       # Second enzyme's cutting amino acid.
-search_enzyme_nocut_2 =                     # Second enzyme's protecting amino acid.
-allowed_missed_cleavage_2 = 2               # Second enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
-search_enzyme_sense_2 = C                   # Second enzyme's cutting terminal.
-num_enzyme_termini = 2                      # 0 for non-enzymatic, 1 for semi-enzymatic, 2 for fully-enzymatic, and 3 for N-term semi-enzymatic.
+remove_precursor_peak = 1			#  Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge; 2 = remove the peaks with all charge states (only for DDA mode).
+remove_precursor_range = -1.500000,1.500000			# m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
+intensity_transform = 0			# Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
+activation_types = all			# Filter to only search scans of provided activation type(s). Allowed: All, HCD, CID, ETD, ECD.
+group_variable = 0			# Specify the variable used to decide the PSM group in the group FDR estimation. 0 = no group FDR; 1 = num_enzyme_termini; 2 = PE from protein header.
+require_precursor = 1			# If required, PSMs with no precursor peaks will be discarded. For DIA data type only. 0 = no, 1 = yes.
+reuse_dia_fragment_peaks = 0			# Allow the same peak matches to multiple peptides. For DIA data type only. 0 = no, 1 = yes.
 
-clip_nTerm_M = 1                            # Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
+write_calibrated_mzml = 0			# Write calibrated MS2 scan to a mzML file (0 for No, 1 for Yes).
+write_uncalibrated_mgf = 0			# Write uncalibrated MS2 scan to a MGF file (0 for No, 1 for Yes). Only for .raw and .d formats.
+write_mzbin_all = 0
+mass_diff_to_variable_mod = 0			# Put mass diff as a variable modification. 0 for no; 1 for yes and remove delta mass; 2 for yes and keep delta mass.
 
-# maximum of 16 mods - amino acid codes, * for any amino acid,
-# [ and ] specifies protein termini, n and c specifies
-# peptide termini
-variable_mod_01 = 15.994915 M 3
-variable_mod_02 = 42.010565 [^ 1
-# variable_mod_03 = 79.966331 STY 3
-# variable_mod_04 = -17.02650 nQnC 1
-# variable_mod_05 = -18.01060 nE 1
-# variable_mod_06 = 0.00000 site_06 3
-# variable_mod_07 = 0.00000 site_07 3
+localize_delta_mass = 1			# Include fragment ions mass-shifted by unknown modifications (recommended for open and mass offset searches) (0 for OFF, 1 for ON).
+delta_mass_exclude_ranges = (-1.5,3.5)			# Exclude mass range for shifted ions searching.
+fragment_ion_series = b,y,Y			# Ion series used in search, specify any of a,b,c,x,y,z,Y,b-18,y-18 (comma separated).
+ion_series_definitions = 			# User defined ion series. Example: "b* N -17.026548;b0 N -18.010565".
 
-allow_multiple_variable_mods_on_residue = 0 # Allow each residue to be modified by multiple variable modifications (0 or 1).
-max_variable_mods_per_peptide = 3           # Maximum total number of variable modifications per peptide.
-max_variable_mods_combinations = 5000       # Maximum number of modified forms allowed for each peptide (up to 65534).
-mass_diff_to_variable_mod = 0               # Put mass diff as a variable modification. 0 for no; 1 for yes and remove delta mass; 2 for yes and keep delta mass.
+labile_search_mode = nglycan			# type of search (nglycan, labile, or off). Off means non-labile/typical search.
+restrict_deltamass_to = N			# Specify amino acids on which delta masses (mass offsets or search modifications) can occur. Allowed values are single letter codes (e.g. ACD) and '-', must be capitalized. Use 'all' to allow any amino acid.
+diagnostic_intensity_filter = 0.1			# [nglycan/labile search_mode only]. Minimum relative intensity for SUM of all detected oxonium ions to achieve for spectrum to contain diagnostic fragment evidence. Calculated relative to spectrum base peak. 0 <= value.
+Y_type_masses = 0/203.07937/406.15874/568.21156/730.26438/892.3172/349.137279			#  [nglycan/labile search_mode only]. Specify fragments of labile mods that are commonly retained on intact peptides (e.g. Y ions for glycans). Only used if 'Y' is included in fragment_ion_series.
+diagnostic_fragments = 204.086646/186.076086/168.065526/366.139466/144.0656/138.055/512.197375/292.1026925/274.0921325/657.2349/243.026426/405.079246/485.045576/308.09761			# [nglycan/labile search_mode only]. Specify diagnostic fragments of labile mods that appear in the low m/z region. Only used if diagnostic_intensity_filter > 0.
+remainder_fragment_masses = 203.07937			# [labile search_mode only] List of possible remainder fragment ions to consider. Remainder masses are partial modification masses left on b/y ions after fragmentation.
 
-output_format = pepxml                      # File format of output files (tsv, pin, pepxml, tsv_pin, tsv_pepxml, pepxml_pin, or tsv_pepxml_pin).
-output_report_topN = 1                      # Reports top N PSMs per input spectrum.
-output_max_expect = 50                      # Suppresses reporting of PSM if top hit has expectation value greater than this threshold.
-report_alternative_proteins = 0             # Report alternative proteins for peptides that are found in multiple proteins (0 for no, 1 for yes).
+search_enzyme_name_1 = stricttrypsin			# Name of the first enzyme.
+search_enzyme_cut_1 = KR			# First enzyme's cutting amino acid.
+search_enzyme_nocut_1 = 			# First enzyme's protecting amino acid.
+search_enzyme_sense_1 = C			# First enzyme's cutting terminal.
+allowed_missed_cleavage_1 = 2			# First enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
 
-precursor_charge = 1 4                      # Assumed range of potential precursor charge states. Only relevant when override_charge is set to 1.
-override_charge = 0                         # Ignores precursor charge and uses charge state specified in precursor_charge range (0 or 1).
+search_enzyme_name_2 = null			# Name of the second enzyme.
+search_enzyme_cut_2 = 			# Second enzyme's cutting amino acid.
+search_enzyme_nocut_2 = 			# Second enzyme's protecting amino acid.
+search_enzyme_sense_2 = C			# Second enzyme's cutting terminal.
+allowed_missed_cleavage_2 = 2			# Second enzyme's allowed number of missed cleavages per peptide. Maximum value is 5.
 
-digest_min_length = 7                       # Minimum length of peptides to be generated during in-silico digestion.
-digest_max_length = 50                      # Maximum length of peptides to be generated during in-silico digestion.
-digest_mass_range = 500.0 5000.0            # Mass range of peptides to be generated during in-silico digestion in Daltons.
-max_fragment_charge = 2                     # Maximum charge state for theoretical fragments to match (1-4).
-# excluded_scan_list_file =                 # Text file containing a list of scan names to be ignored in the search.
+num_enzyme_termini = 2			# 0 for non-enzymatic, 1 for semi-enzymatic, and 2 for fully-enzymatic.
 
-track_zero_topN = 0                         # Track top N unmodified peptide results separately from main results internally for boosting features. Should be
-                                            # set to a number greater than output_report_topN if zero bin boosting is desired.
-zero_bin_accept_expect = 0.00               # Ranks a zero-bin hit above all non-zero-bin hit if it has expectation less than this value.
-zero_bin_mult_expect = 1.00                 # Multiplies expect value of PSMs in the zero-bin during  results ordering (set to less than 1 for boosting).
+clip_nTerm_M = 1			# Specifies the trimming of a protein N-terminal methionine as a variable modification (0 or 1).
 
-check_spectral_files = 1                    # Checking spectral files before searching.
-minimum_peaks = 15                          # Minimum number of peaks in experimental spectrum for matching.
-use_topN_peaks = 150                        # Pre-process experimental spectrum to only use top N peaks.
-deisotope = 1                               # Perform deisotoping or not (0=no, 1=yes and assume singleton peaks single charged, 2=yes and assume singleton
-                                            # peaks single or double charged).
-deneutralloss = 1                           # Perform deneutrallossing or not (0=no, 1=yes).
-min_fragments_modelling = 2                 # Minimum number of matched peaks in PSM for inclusion in statistical modeling.
-min_matched_fragments = 4                   # Minimum number of matched peaks for PSM to be reported.
-minimum_ratio = 0.01                        # Filters out all peaks in experimental spectrum less intense than this multiple of the base peak intensity.
-clear_mz_range = 0.0 0.0                    # Removes peaks in this m/z range prior to matching.
-remove_precursor_peak = 1                   # Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge;
-                                            # 2 = remove the peaks with all charge states (only for DDA mode).
-remove_precursor_range = -1.5,1.5           # m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
-intensity_transform = 0                     # Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
-activation_types =                       	 # Filter to only search scans of provided activation type(s). / separated. Allowed: all, HCD, CID, ETD, ECD.
-group_variable = 0                          # Specify the variable used to decide the PSM group in the group FDR estimation. 0 = no group FDR; 1 = num_enzyme_termini; 2 = PE from protein header.
-require_precursor = 0                       # If required, PSMs with no precursor peaks will be discarded. For DIA data type only. 0 = no, 1 = yes.
-reuse_dia_fragment_peaks = 0                # Allow the same peak matches to multiple peptides. For DIA data type only. 0 = no, 1 = yes.
+# maximum of 16 mods - amino acid codes, * for any amino acid, [ and ] specifies protein termini, n and c specifies peptide termini
+variable_mod_01 = 15.9949 M 3
+variable_mod_02 = 42.0106 [^ 1
+# variable_mod_03 = 79.96633 STY 3
+# variable_mod_04 = -17.0265 nQnC 1
+# variable_mod_05 = -18.0106 nE 1
+# variable_mod_06 = 4.025107 K 3
+# variable_mod_07 = 6.020129 R 3
+# variable_mod_08 = 8.014199 K 2
+# variable_mod_09 = 10.008269 R 2
+# variable_mod_10 = 0.00000 site_10 1
+# variable_mod_11 = 0.00000 site_11 1
+# variable_mod_12 = 0.00000 site_12 1
+# variable_mod_13 = 0.00000 site_13 1
+# variable_mod_14 = 0.00000 site_14 1
+# variable_mod_15 = 0.00000 site_15 1
+# variable_mod_16 = 0.00000 site_16 1
 
-# Fixed modifications
-add_Cterm_peptide = 0.000000
-add_Nterm_peptide = 0.000000
-add_Cterm_protein = 0.000000
-add_Nterm_protein = 0.000000
-add_G_glycine = 0.000000
-add_A_alanine = 0.000000
-add_S_serine = 0.000000
-add_P_proline = 0.000000
-add_V_valine = 0.000000
-add_T_threonine = 0.000000
-add_C_cysteine = 57.021464
-add_L_leucine = 0.000000
-add_I_isoleucine = 0.000000
-add_N_asparagine = 0.000000
-add_D_aspartic_acid = 0.000000
-add_Q_glutamine = 0.000000
-add_K_lysine = 0.000000
-add_E_glutamic_acid = 0.000000
-add_M_methionine = 0.000000
-add_H_histidine = 0.000000
-add_F_phenylalanine = 0.000000
-add_R_arginine = 0.000000
-add_Y_tyrosine = 0.000000
-add_W_tryptophan = 0.000000
-add_B_user_amino_acid = 0.000000
-add_J_user_amino_acid = 0.000000
-add_O_user_amino_acid = 0.000000              # O = pyrrolysine (237.14773 Da)
-add_U_user_amino_acid = 0.000000              # U = selenocysteine (150.95363 Da)
-add_X_user_amino_acid = 0.000000
-add_Z_user_amino_acid = 0.000000
-Y_type_masses = 0/203.07937/406.15874/568.21156/730.26438/892.3172/349.137279 
-											                         # [nglycan/labile search_mode only]. Specify 
-                                              # fragments of labile mods that are commonly retained on 
-                                              # intact peptides (e.g. Y ions for glycans). Only used if 
-                                              # 'Y' is included in fragment_ion_series.  
-                                              # Default: 0/203.07937/406.15874/568.21156/730.26438/892.3172/349.137279
-diagnostic_fragments = 204.086646/186.076086/168.065526/366.139466/144.0656/138.055/126.055/163.060096/512.197375/292.1026925/274.0921325/657.2349/243.026426/405.079246/485.045576/308.09761 
-               	                             # [nglycan/labile search_mode only]. Specify diagnostic 
-                                              # fragments of labile mods that appear in the low m/z region. 
-                                              # Only used if diagnostic_intensity_filter > 0. Default: 204.086646/186.076086/
-                                              # 168.065526/366.139466/144.0656/138.055/126.055/163.060096/512.197375/ 
-                                              # 292.1026925/274.0921325/657.2349/243.026426/405.079246/485.045576/308.09761
-diagnostic_intensity_filter = 0.1             # [nglycan/labile search_mode only]. Minimum relative 
-                                              # intensity for SUM of all detected oxonium ions to achieve for 
-                                              # spectrum to contain diagnostic fragment evidence. Calculated relative
-                                              # to spectrum base peak. 0 <= value. Default: 0.1 
+allow_multiple_variable_mods_on_residue = 0
+max_variable_mods_per_peptide = 3			# Maximum total number of variable modifications per peptide.
+max_variable_mods_combinations = 5000			# Maximum number of modified forms allowed for each peptide (up to 65534).
+
+output_format = tsv_pepXML			# File format of output files (tsv, pin, pepxml, tsv_pin, tsv_pepxml, pepxml_pin, or tsv_pepxml_pin).
+output_report_topN = 1			# Reports top N PSMs per input spectrum.
+output_max_expect = 50			# Suppresses reporting of PSM if top hit has expectation value greater than this threshold.
+report_alternative_proteins = 1			# Report alternative proteins for peptides that are found in multiple proteins (0 for no, 1 for yes).
+
+precursor_charge = 1 4			# Assumed range of potential precursor charge states. Only relevant when override_charge is set to 1.
+override_charge = 0			# Ignores precursor charge and uses charge state specified in precursor_charge range (0 or 1).
+
+digest_min_length = 7			# Minimum length of peptides to be generated during in-silico digestion.
+digest_max_length = 50			# Maximum length of peptides to be generated during in-silico digestion.
+digest_mass_range = 400.0 5000.0			# Mass range of peptides to be generated during in-silico digestion in Daltons.
+max_fragment_charge = 2			# Maximum charge state for theoretical fragments to match (1-4).
+
+track_zero_topN = 0			# Track top N unmodified peptide results separately from main results internally for boosting features.
+zero_bin_accept_expect = 0			# Ranks a zero-bin hit above all non-zero-bin hit if it has expectation less than this value.
+zero_bin_mult_expect = 1			# Multiplies expect value of PSMs in the zero-bin during  results ordering (set to less than 1 for boosting).
+
+check_spectral_files = 1			# Checking spectral files before searching.
+minimum_peaks = 15			# Minimum number of peaks in experimental spectrum for matching.
+use_topN_peaks = 300			# Pre-process experimental spectrum to only use top N peaks.
+min_fragments_modelling = 2			# Minimum number of matched peaks in PSM for inclusion in statistical modeling.
+min_matched_fragments = 4			# Minimum number of matched peaks for PSM to be reported.
+min_sequence_matches = 2			# [nglycan/labile search_mode only] Minimum number of sequence-specific (not Y) ions to record a match.
+minimum_ratio = 0.00			# Filters out all peaks in experimental spectrum less intense than this multiple of the base peak intensity.
+clear_mz_range = 0.0 0.0			# Removes peaks in this m/z range prior to matching.
+
+add_Cterm_peptide = 0.0
+add_Nterm_peptide = 0.0
+add_Cterm_protein = 0.0
+add_Nterm_protein = 0.0
+
+add_G_glycine = 0.0
+add_A_alanine = 0.0
+add_S_serine = 0.0
+add_P_proline = 0.0
+add_V_valine = 0.0
+add_T_threonine = 0.0
+add_C_cysteine = 57.02146
+add_L_leucine = 0.0
+add_I_isoleucine = 0.0
+add_N_asparagine = 0.0
+add_D_aspartic_acid = 0.0
+add_Q_glutamine = 0.0
+add_K_lysine = 0.0
+add_E_glutamic_acid = 0.0
+add_M_methionine = 0.0
+add_H_histidine = 0.0
+add_F_phenylalanine = 0.0
+add_R_arginine = 0.0
+add_Y_tyrosine = 0.0
+add_W_tryptophan = 0.0
+add_B_user_amino_acid = 0.0
+add_J_user_amino_acid = 0.0
+add_O_user_amino_acid = 0.0
+add_U_user_amino_acid = 0.0
+add_X_user_amino_acid = 0.0
+add_Z_user_amino_acid = 0.0
+
