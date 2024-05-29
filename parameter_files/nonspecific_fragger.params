@@ -1,16 +1,16 @@
-# MSFragger-4.0
+# MSFragger-4.1
 database_name = 			# Path to the protein database file in FASTA format.
 num_threads = 11			# Number of CPU threads to use.
 
 precursor_mass_lower = -20			# Lower bound of the precursor mass window.
 precursor_mass_upper = 20			# Upper bound of the precursor mass window.
 precursor_mass_units = 1			# Precursor mass tolerance units (0 for Da, 1 for ppm).
-data_type = 0			# Data type (0 for DDA, 1 for DIA, 2 for gas-phase fractionation DIA, 3 for wide-window acquisition DDA).
+data_type = 0			# Data type (0 for DDA, 1 for DIA, 2 for gas-phase fractionation DIA, 3 for DDA+).
 precursor_true_tolerance = 15			# True precursor mass tolerance (window is +/- this value).
 precursor_true_units = 1			# True precursor mass tolerance units (0 for Da, 1 for ppm).
 fragment_mass_tolerance = 20			# Fragment mass tolerance (window is +/- this value).
 fragment_mass_units = 1			# Fragment mass tolerance units (0 for Da, 1 for ppm).
-calibrate_mass = 2			# Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters).
+calibrate_mass = 2			# Perform mass calibration (0 for OFF, 1 for ON, 2 for ON and find optimal parameters, 4 for ON and find the optimal fragment mass tolerance).
 use_all_mods_in_first_search = 0			# Use all variable modifications in first search (0 for No, 1 for Yes).
 decoy_prefix = rev_			# Prefix of the decoy protein entries. Used for parameter optimization only.
 
@@ -25,7 +25,8 @@ precursor_mass_mode = selected			# One of isolated/selected/corrected.
 remove_precursor_peak = 1			#  Remove precursor peaks from tandem mass spectra. 0 = not remove; 1 = remove the peak with precursor charge; 2 = remove the peaks with all charge states (only for DDA mode).
 remove_precursor_range = -1.500000,1.500000			# m/z range in removing precursor peaks. Only for DDA mode. Unit: Th.
 intensity_transform = 1			# Transform peaks intensities with sqrt root. 0 = not transform; 1 = transform using sqrt root.
-activation_types = all			# Filter to only search scans of provided activation type(s). Allowed: All, HCD, CID, ETD, ECD.
+activation_types = all			# Filter to only search scans of provided activation type(s), separated by /. Allowed: All, HCD, CID, ETD, ECD.
+analyzer_types = all       # Filter to only include scans matching the provided analyzer type(s) in search, separated by /. Only support the mzML and raw format. Allowed types: all, FTMS, ITMS.
 group_variable = 0			# Specify the variable used to decide the PSM group in the group FDR estimation. 0 = no group FDR; 1 = num_enzyme_termini; 2 = PE from protein header.
 require_precursor = 1			# If required, PSMs with no precursor peaks will be discarded. For DIA data type only. 0 = no, 1 = yes.
 reuse_dia_fragment_peaks = 0			# Allow the same peak matches to multiple peptides. For DIA data type only. 0 = no, 1 = yes.
