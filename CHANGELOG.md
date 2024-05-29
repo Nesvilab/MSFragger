@@ -2,6 +2,33 @@
 
 All notable changes to this project are documented in this file.
 
+## 4.1 - 2024-05-29
+- Require Java 11+
+- Calculate and report more modification-related scores for the open and mass-offset searches
+    - `ptm_mass`: mass of the modification
+    - `localization_peptide`: a peptide string with lowercase amino acids to indicate the sites with the best score
+    - `best_positions`: a list of sites with the best score in the format `<amino acid 1><site index 1>:<amino acid 1><site index 1>:...`. For example `T(4)I(5)`.
+    - `number_best_positions`: number of the sites with the best score
+    - `score_all_unshifted`: the score when matching only unmodified fragments
+    - `score_best_position`: the score when putting the modification on the best site
+    - `score_second_best_position`: the score when putting the modification on the second best site
+    - `score_shifted_all_positions`: the score when putting the modification on all sites and matching only the modified fragments
+    - `position_scores`: a string with peptide sequence and scores when putting the modification on the specific site. For example `P(2.32)E(2.41)P(2.57)T(5.36)I(5.36)D(3.87)E(2.56)K(1.34)`.
+    - `ions_all_unshifted`: the number of matched fragments when matching only unmodified fragments
+    - `ions_best_position`: the number of matched fragments when putting the modification on the best site
+    - `ions_second_best_position`: the number of matched fragments when putting the modification on the second best site
+    - `ions_shifted_all_positions`: the number of matched fragments when putting the modification on all sites and matching the modified fragments
+    - `score_shifted_best_position`: the score when putting the modification on the best site and matching only the modified fragments
+    - `ions_shifted_best_position`: the number of fragments when putting the modification on the best site and matching only the modified fragments
+    - `shifted_only_position_scores`: similar to `position_scores` but only matching modified fragments
+    - `shifted_only_position_ions`: similar to `shifted_only_position_scores` but showing the number of matched fragments
+- DDA+ mode supports ddaPASEF data
+- Add `analyzer_types` parameter
+- Add a new mass calibration and parameter optimization mode, 4, for calibrating the mass and adjusting only the fragment mass tolerance
+- Significantly improved the Thermo raw file loading speed
+- Propagate instrument info to calibrated and uncalibrated mzML files
+- Various bug fixes and improvements
+
 ## 4.0 - 2023-12-19
 - Implement new MSFragger-DDA+ mode, triggered when DDA data is annotated as `DDA+` (MSFragger parameter `data_type=3`). MSFragger will perform full isolation window search, identifying multiple co-fragmented peptides from chimeric DDA spectra. This mode significantly boosts the number of IDs compared to conventional DDA search.
 - Implement detailed mass-offset search mode. Each specified mass offset can have their own modification sites, neutral losses, and diagnostic ions.
