@@ -26,7 +26,7 @@ The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Gl
 
 MSFragger is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger.arsci.com/upgrader/MSFragger-LICENSE.pdf). 
 
-Other uses require a __commercial__ license that can be obtained by visiting Fragmatics (https://www.fragmatics.com) or emailing at info@fragmatics.org.
+Other uses require a __commercial__ license that can be obtained by visiting Fragmatics (https://www.fragmatics.com) or emailing at info@fragmatics.com.
 
 ### Download MSFragger 
 Whether you run MSFragger stand-alone, using FragPipe, or within Proteome Discoverer (PD, Thermo Scientific), you will need to obtain the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger). Note: comercial users must contact Fragmatics to obtain the executable of the program. 
