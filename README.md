@@ -6,9 +6,9 @@ MSFragger is an ultrafast database search tool for peptide identification in mas
 
 MSFragger is implemented in the cross-platform Java programming language and can be used three different ways:
 
-1. With [FragPipe](https://fragpipe.nesvilab.org) user interface
-2. As a standalone Java executable
-3. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/)
+1. As a standalone Java executable
+2. With [FragPipe](https://fragpipe.nesvilab.org) user interface
+3. Through [ProteomeDiscoverer](https://www.nesvilab.org/PD-Nodes/). Note: limited functionality only.
 
 MSFragger writes peptide-spectrum matches in either tabular or pepXML formats, making it fully compatible with downstream data analysis pipelines such as Trans-Proteomic Pipeline, Percolator, and Philosopher.  See the [complete documentation](https://github.com/Nesvilab/MSFragger/wiki), including a list of [Frequently Asked Questions](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions). Example parameter files can be found [here](https://github.com/Nesvilab/MSFragger/tree/master/parameter_files).
 
@@ -22,12 +22,14 @@ The following spectral file formats can be searched directly with MSFragger, see
 * Bruker timsTOF PASEF - MSFragger can read Bruker timsTOF PASEF (DDA) raw files (.d) directly, as well as MGF files converted by the Bruker DataAnalysis program. **Please note**: timsTOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
 ### License
-The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Glyco, MSFragger-DIA, MSFragger-Labile), collectively known as "MSFragger", is distributed as a single JAR file. It is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger.arsci.com/upgrader/MSFragger-LICENSE.pdf). 
+The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Glyco, MSFragger-DIA, MSFragger-Labile, MSFragegr-DDA+), collectively known as "MSFragger", is distributed as a single JAR file. 
 
-Other uses require a __commercial__ license after the initial [60-day evaluation](https://available-inventions.umich.edu/make-order/msfragger-ultrafast-and-comprehensive-identification-of-peptides-from-tandem-mass-spectra/859) period that can be obtained by contacting Drew Bennett (andbenne@umich.edu) at the University of Michigan Office of Tech Transfer. For the commercial licensing details (e.g. pricing), please also contact Drew Bennett (andbenne@umich.edu). For other questions, please contact Prof. Alexey Nesvizhskii (nesvi@med.umich.edu).
+MSFragger is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger.arsci.com/upgrader/MSFragger-LICENSE.pdf). 
+
+Other uses require a __commercial__ license that can be obtained by visiting Fragmatics (https://www.fragmatics.com) or emailing at info@fragmatics.org.
 
 ### Download MSFragger 
-Whether you run use FragPipe, Proteome Discoverer (PD, Thermo Scientific), or the command line, you will need to download the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger).
+Whether you run MSFragger stand-alone, using FragPipe, or within Proteome Discoverer (PD, Thermo Scientific), you will need to obtain the latest MSFragger JAR file. See instructions for [downloading or upgrading MSFragger](https://github.com/Nesvilab/MSFragger/wiki/Preparing-MSFragger#Downloading-MSFragger). Note: comercial users must contact Fragmatics to obtain the executable of the program. 
 
 ### Release Notes
 Check [here](CHANGELOG.md) for the full list of MSFragger versions and changes.
@@ -48,7 +50,7 @@ For technical documentation on MSFragger (hardware requirements, search paramete
 
 ### Questions and Technical Support
 See our [Frequently Asked Questions (FAQ)](https://github.com/Nesvilab/MSFragger/wiki/Frequently-Asked-Questions) page.
-Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub issue page](https://github.com/Nesvilab/MSFragger/issues), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philosopher page](https://github.com/Nesvilab/philosopher).
+Academic users are asked to post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub issue page](https://github.com/Nesvilab/MSFragger/issues), or if more appropriate on [FragPipe page](https://github.com/Nesvilab/FragPipe) or [Philosopher page](https://github.com/Nesvilab/philosopher). Comercial users will receive instructions on how to contact Fragmatics for technical support. 
 
 ### Requests for Collaboration
 If you would like to propose a new collaboration that can take advantage of MSFragger and related tools, please contact us directly. 
