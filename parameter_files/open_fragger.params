@@ -1,6 +1,6 @@
-# MSFragger-4.1
+# MSFragger-4.2
 database_name = 			# Path to the protein database file in FASTA format.
-num_threads = 11			# Number of CPU threads to use.
+num_threads = 0			# Number of CPU threads to use.
 
 precursor_mass_lower = -150			# Lower bound of the precursor mass window.
 precursor_mass_upper = 500			# Upper bound of the precursor mass window.
@@ -32,7 +32,7 @@ require_precursor = 1			# If required, PSMs with no precursor peaks will be disc
 reuse_dia_fragment_peaks = 0			# Allow the same peak matches to multiple peptides. For DIA data type only. 0 = no, 1 = yes.
 
 write_calibrated_mzml = 0			# Write calibrated MS2 scan to a mzML file (0 for No, 1 for Yes).
-write_uncalibrated_mgf = 0			# Write uncalibrated MS2 scan to a MGF file (0 for No, 1 for Yes). Only for .raw and .d formats.
+write_uncalibrated_mzml = 1			# Write uncalibrated MS2 scan to a MGF file (0 for No, 1 for Yes). Only for .raw and .d formats.
 write_mzbin_all = 0
 mass_diff_to_variable_mod = 0			# Put mass diff as a variable modification. 0 for no; 1 for yes and remove delta mass; 2 for yes and keep delta mass.
 

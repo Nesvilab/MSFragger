@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented in this file.
 
+## 4.2 - 2025-05-03
+- Require Java 11+
+- Deprecate `write_uncalibrated_mgf`. Add `write_uncalibrated_mzml`
+- Keep the zero-peak scans in the calibrated and uncalibrated mzML files
+- Write MS1 to the calibrated and uncalibrated mzML files
+- Write calibrated, deisotoped, and deneutrallossed peaks to calibrated.mzML file
+- Optimize the order of search and post-processing to significantly reduce the memory usage
+- In the tsv file, merge the protein and alternative protein columns into one proteins column
+- Filter out the "Z" scans existing in the Stellar data
+- Implement support for low resolution MS1/MS2 DIA (Stellar) data
+- Propagate the parent scan's native ID to the generated mzML files
+- Add the ASTMS analyzer type support
+- Various bug fixes and improvements
+
 ## 4.1 - 2024-05-29
 - Require Java 11+
 - DDA+ mode supports ddaPASEF data
