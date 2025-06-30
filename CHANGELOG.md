@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## 4.3 - 2025-06-30
+- Require Java 11+
+- Reduce memory usage in several steps
+- Accelerate Glyco and Labile searches for HCD and CID data
+- Various bug fixes and improvements
+
 ## 4.2 - 2025-05-03
 - Require Java 11+
 - Deprecate `write_uncalibrated_mgf`. Add `write_uncalibrated_mzml`
