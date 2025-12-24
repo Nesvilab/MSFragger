@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented in this file.
 
+## 4.4 - 2025-12-24
+- Require Java 11+
+- Add the "digestion only" mode. It will be enabled when there are no LC-MS files.
+- Support any ion series being labile in the labile modification search
+- For ddaPASEF data, use the precursor ID as the MS2 scan number
+- Make the native id format to "scan=X" for non-Thermo data
+- Treat the "I" and "L" differently when removing duplicated peptides in digestion
+- Various bug fixes and improvements
+
 ## 4.3 - 2025-06-30
 - Require Java 11+
 - Reduce memory usage in several steps
