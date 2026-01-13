@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented in this file.
 
+## 4.4.1 - 2026-01-13
+- Require Java 11+
+- Fix a bug when analyzing ddaPASEF data.
+
 ## 4.4 - 2025-12-24
 - Require Java 11+
 - Add the "digestion only" mode. It will be enabled when there are no LC-MS files.
