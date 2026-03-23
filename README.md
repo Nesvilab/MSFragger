@@ -24,7 +24,7 @@ The following spectral file formats can be searched directly with MSFragger, see
 ### License
 The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Glyco, MSFragger-DIA, MSFragger-Labile, MSFragegr-DDA+), collectively known as "MSFragger", is distributed as a single JAR file. 
 
-MSFragger is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger.arsci.com/upgrader/MSFragger-LICENSE.pdf). 
+MSFragger is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger-upgrader.nesvilab.org/upgrader/LICENSE-ACADEMIC.pdf). 
 
 Other uses require a __commercial__ license that can be obtained by visiting [Fragmatics](https://www.fragmatics.com) or emailing at info@fragmatics.com.
 
