@@ -17,7 +17,7 @@ The following spectral file formats can be searched directly with MSFragger, see
 
 * mzML/mzXML - data from any instrument in mzML/mzXML format can be used
 
-* Thermo RAW - Thermo raw files (.raw) can be read directly, conversion to mzML is not required. In Linux, [Mono](https://www.mono-project.com/) need to be installed.
+* Thermo RAW - Thermo raw files (.raw) can be read directly, conversion to mzML is not required. They are read by a native program bundled in the `ext/thermo` folder of the .zip release, in both Windows and Linux. Mono is no longer needed (only older MSFragger versions required Mono in Linux).
 
 * Bruker timsTOF PASEF - MSFragger can read Bruker timsTOF PASEF (DDA) raw files (.d) directly, as well as MGF files converted by the Bruker DataAnalysis program. **Please note**: timsTOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
