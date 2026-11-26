@@ -22,7 +22,7 @@ The following spectral file formats can be searched directly with MSFragger, see
 * Bruker timsTOF PASEF - MSFragger can read Bruker timsTOF PASEF (DDA) raw files (.d) directly, as well as MGF files converted by the Bruker DataAnalysis program. **Please note**: timsTOF data requires [Visual C++ Redistributable for Visual Studio 2017](https://aka.ms/vs/16/release/VC_redist.x64.exe) in Windows. If you see an error saying cannot find Bruker native library, please try to install the Visual C++ redistibutable.
 
 ### License
-The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Glyco, MSFragger-DIA, MSFragger-Labile, MSFragegr-DDA+), collectively known as "MSFragger", is distributed as a single JAR file. 
+The entire MSFragger suite of tools (MSFragger-Core, MSFragger-LOS, MSFragger-Glyco, MSFragger-DIA, MSFragger-Labile, MSFragger-DDA+), collectively known as "MSFragger", is distributed as a single JAR file. 
 
 MSFragger is available freely for __academic research__, __non-commercial__ or __educational__ purposes under [academic license](https://msfragger-upgrader.nesvilab.org/upgrader/LICENSE-ACADEMIC.pdf). 
 
@@ -76,12 +76,12 @@ MSFragger is currently integrated or supported by the following software project
 
 ### How to Cite
 - Kong, A. T., Leprevost, F. V., Avtonomov, D. M., Mellacheruvu, D., & Nesvizhskii, A. I. (2017). MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry–based proteomics. Nature Methods, 14(5), 513-520.
-- Yu, F., Teo, G. C., Kong, A. T., Haynes, S. E., Avtonomov, D. M., Geiszler, D. J., & Nesvizhskii, A. I. (2020). Identification of modified peptides using localization-aware open search. Nature Communications, 11(1), 1-9.
+- Yu, F., Teo, G. C., Kong, A. T., Haynes, S. E., Avtonomov, D. M., Geiszler, D. J., & Nesvizhskii, A. I. (2020). Identification of modified peptides using localization-aware open search. Nature Communications, 11, 4065.
 - Polasky, D. A., Yu, F., Teo, G. C., & Nesvizhskii, A. I. (2020). Fast and Comprehensive N-and O-glycoproteomics analysis with MSFragger-Glyco. Nature Methods, 17(11), 1125-1132.
 - Yu, F., Haynes, S. E., Teo, G. C., Avtonomov, D. M., Polasky, D. A., & Nesvizhskii, A. I. (2020). Fast Quantitative Analysis of timsTOF PASEF Data with MSFragger and IonQuant. Molecular & Cellular Proteomics, 19(9), 1575-1585.
 - Polasky, D., Geiszler, D., Yu, F., Li, K., Teo, G. C., & Nesvizhskii, A. I., (2023). MSFragger-Labile: A flexible method to improve labile PTM analysis in proteomics. Molecular & Cellular Proteomics, 22(5), 100538.
 - Yu, F., Teo, G. C., Kong, A. T., Fröhlich, K., Li, G. X., Demichev, V., & Nesvizhskii, A. I., (2023). Analysis of DIA proteomics data using MSFragger-DIA and FragPipe computational platform. Nature Communications, 14, 4154.
-- Yu, F., Yamei Deng, & Nesvizhskii, A. I. (2025). MSFragger-DDA+ Enhances Peptide Identification Sensitivity with Full Isolation Window Search. Nature Communications, 16, 3329.
+- Yu, F., Deng, Y., & Nesvizhskii, A. I. (2025). MSFragger-DDA+ Enhances Peptide Identification Sensitivity with Full Isolation Window Search. Nature Communications, 16, 3329.
 
 
 For other tools developed by the Nesvizhskii lab, see our website [www.nesvilab.org](http://www.nesvilab.org)
